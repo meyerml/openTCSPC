@@ -1,8 +1,8 @@
 # openTCSPC
 
-<img src="https://microbots.io/cdn/shop/files/penny_600x.png?v=1719926378" alt="CodeCell" width="300" align="right" style="margin-left: 20px;">
 
 ## Overview
+<img src="https://github.com/meyerml/openTCSPC/blob/main/images/pcb.png?raw=true" alt="PCB" width="300" align="right" style="margin-left: 20px;">
 
 OpenTCSPC is an open source **Time Correlated Single Photon Counting** (TCSPC) System based on AMD Zynq SoC and a ScioSense GPX2 TDC. 
 
