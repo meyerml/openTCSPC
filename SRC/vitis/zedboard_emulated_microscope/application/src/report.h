@@ -1,0 +1,10 @@
+int ReportHistPerPixel(const u8 *global_destination, u32 num_pixels, u32 num_bins_per_hist);
+int ReportHist(int pixel, void* BufferAddress, int bins_per_hist);
+uint64_t create_upper_bits_selection_mask(int X, int Y);
+uint64_t create_lower_bits_selection_mask(int X);
+double calculateStdDev(uint32_t data[], int n, double mean);
+double calculateMean(uint32_t* data, int n);
+int get_bin_index_division(u32 stopresult, u32 hist_bin_with);
+int get_bin_index_inverse_multiply(u32 stopresult, float inv_hist_bin_with);
+int get_bin_index_binary_search(u32 stopresult, u32 hist_bin_with);
+void clear_hist(u32* pointer, u32 length_of_hist);

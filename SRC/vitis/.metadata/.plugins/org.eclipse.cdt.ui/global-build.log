@@ -1,0 +1,515 @@
+19:03:27 **** Incremental Build of project platform ****
+buildplatform.bat 53595 platform standalone_domain 
+
+****** Software Commandline Tool (XSCT) v2024.2.0
+  **** SW Build 5239620 on Sun Nov 10 09:56:12 MST 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+XSDB Server Channel: tcfchan#3
+Building the BSP Library for domain  - standalone_domain on processor ps7_cortexa9_0
+make --no-print-directory seq_libs
+
+'Finished building libraries sequentially.'
+
+make -j 14 --no-print-directory par_libs
+
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_19/src"
+
+make -C ps7_cortexa9_0/libsrc/axidma_v9_19/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/bram_v4_11/src"
+
+make -C ps7_cortexa9_0/libsrc/bram_v4_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-non
+e-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_21/src"
+
+make -C ps7_cortexa9_0/libsrc/emacps_v3_21/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_13/src"
+
+make -C ps7_cortexa9_0/libsrc/spi_v4_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_20/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_20/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_9/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_19/src"
+
+make -C ps7_cortexa9_0/libsrc/axidma_v9_19/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_11/src"
+
+make -C ps7_cortexa9_0/libsrc/bram_v4_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_21/src"
+
+make -C ps7_cortexa9_0/libsrc/emacps_v3_21/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_13/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_13/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+les -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_13/src"
+
+make -C ps7_cortexa9_0/libsrc/spi_v4_13/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+les -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_20/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_20/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_9/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+xspi.c: In function 'XSpi_Abort':
+xspi.c:1372:13: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+ 1372 |         u32 Status;
+      |             ^~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+xtime_l.c:45:9: note: '#pragma message: For the sleep routines, Global timer is being used'
+   45 | #pragma message ("For the sleep routines, Global timer is being used")
+      |         ^~~~~~~
+'Finished building libraries parallelly.'
+
+make --no-print-directory archive
+
+arm-none-eabi-ar -r  ps7_cortexa9_0/lib/libxil.a ps7_cortexa9_0/lib/_exit.o ps7_cortexa9_0/lib/_open.o ps7_cortexa9_0/lib/_sbrk
+.o ps7_cortexa9_0/lib/abort.o ps7_cortexa9_0/lib/asm_vectors.o ps7_cortexa9_0/lib/boot.o ps7_cortexa9_0/lib/close.o ps7_cortexa
+9_0/lib/cpputest_time.o ps7_cortexa9_0/lib/cpu_init.o ps7_cortexa9_0/lib/errno.o ps7_cortexa9_0/lib/fcntl.o ps7_cortexa9_0/lib/
+fstat.o ps7_cortexa9_0/lib/getentropy.o ps7_cortexa9_0/lib/getpid.o ps7_cortexa9_0/lib/gettimeofday.o ps7_cortexa9_0/lib/inbyte
+.o ps7_cortexa9_0/lib/isatty.o ps7_cortexa9_0/lib/kill.o ps7_cortexa9_0/lib/lseek.o ps7_cortexa9_0/lib/open.o ps7_cortexa9_0/li
+b/outbyte.o ps7_cortexa9_0/lib/print.o ps7_cortexa9_0/lib/putnum.o ps7_cortexa9_0/lib/read.o ps7_cortexa9_0/lib/sbrk.o ps7_cort
+exa9_0/lib/sleep.o ps7_cortexa9_0/lib/time.o ps7_cortexa9_0/lib/translation_table.o ps7_cortexa9_0/lib/unlink.o ps7_cortexa9_0/
+lib/usleep.o ps7_cortexa9_0/lib/vectors.o ps7_cortexa9_0/lib/write.o ps7_cortexa9_0/lib/xadcps.o ps7_cortexa9_0/lib/xadcps_g.o 
+ps7_cortexa9_0/lib/xadcps_intr.o ps7_cortexa9_0/lib/xadcps_selftest.o ps7_cortexa9_0/lib/xadcps_sinit.o ps7_cortexa9_0/lib/xaxi
+dma.o ps7_cortexa9_0/lib/xaxidma_bd.o ps7_cortexa9_0/lib/xaxidma_bdring.o ps7_cortexa9_0/lib/xaxidma_g.o ps7_cortexa9_0/lib/xax
+idma_selftest.o ps7_cortexa9_0/lib/xaxidma_sinit.o ps7_cortexa9_0/lib/xbram.o ps7_cortexa9_0/lib/xbram_g.o ps7_cortexa9_0/lib/x
+bram_intr.o ps7_cortexa9_0/lib/xbram_selftest.o ps7_cortexa9_0/lib/xbram_sinit.o ps7_cortexa9_0/lib/xcoresightpsdcc.o ps7_corte
+xa9_0/lib/xdevcfg.o ps7_cortexa9_0/lib/xdevcfg_g.o ps7_cortexa9_0/lib/xdevcfg_hw.o ps7_cortexa9_0/lib/xdevcfg_intr.o ps7_cortex
+a9_0/lib/xdevcfg_selftest.o ps7_cortexa9_0/lib/xdevcfg_sinit.o ps7_cortexa9_0/lib/xdmaps.o ps7_cortexa9_0/lib/xdmaps_g.o ps7_co
+rtexa9_0/lib/xdmaps_hw.o ps7_cortexa9_0/lib/xdmaps_selftest.o ps7_cortexa9_0/lib/xdmaps_sinit.o ps7_cortexa9_0/lib/xemacps.o ps
+7_cortexa9_0/lib/xemacps_bdring.o ps7_cortexa9_0/lib/xemacps_control.o ps7_cortexa9_0/lib/xemacps_g.o ps7_cortexa9_0/lib/xemacp
+s_hw.o ps7_cortexa9_0/lib/xemacps_intr.o ps7_cortexa9_0/lib/xemacps_sinit.o ps7_cortexa9_0/lib/xgpio.o ps7_cortexa9_0/lib/xgpio
+_extra.o ps7_cortexa9_0/lib/xgpio_g.o ps7_cortexa9_0/lib/xgpio_intr.o ps7_cortexa9_0/lib/xgpio_selftest.o ps7_cortexa9_0/lib/xg
+pio_sinit.o ps7_cortexa9_0/lib/xgpiops.o ps7_cortexa9_0/lib/xgpiops_g.o ps7_cortexa9_0/lib/xgpiops_hw.o ps7_cortexa9_0/lib/xgpi
+ops_intr.o ps7_cortexa9_0/lib/xgpiops_selftest.o ps7_cortexa9_0/lib/xgpiops_sinit.o ps7_cortexa9_0/lib/xil-crt0.o ps7_cortexa9_
+0/lib/xil_assert.o ps7_cortexa9_0/lib/xil_cache.o ps7_cortexa9_0/lib/xil_clocking.o ps7_cortexa9_0/lib/xil_exception.o ps7_cort
+exa9_0/lib/xil_mem.o ps7_cortexa9_0/lib/xil_misc_psreset_api.o ps7_cortexa9_0/lib/xil_mmu.o ps7_cortexa9_0/lib/xil_printf.o ps7
+_cortexa9_0/lib/xil_sleepcommon.o ps7_cortexa9_0/lib/xil_sleeptimer.o ps7_cortexa9_0/lib/xil_spinlock.o ps7_cortexa9_0/lib/xil_
+sutil.o ps7_cortexa9_0/lib/xil_testcache.o ps7_cortexa9_0/lib/xil_testio.o ps7_cortexa9_0/lib/xil_testmem.o ps7_cortexa9_0/lib/
+xil_util.o ps7_cortexa9_0/lib/xinterrupt_wrap.o ps7_cortexa9_0/lib/xl2cc_counter.o ps7_cortexa9_0/lib/xplatform_info.o ps7_cort
+exa9_0/lib/xpm_counter.o ps7_cortexa9_0/lib/xpm_init.o ps7_cortexa9_0/lib/xqspips.o ps7_cortexa9_0/lib/xqspips_g.o ps7_cortexa9
+_0/lib/xqspips_hw.o ps7_cortexa9_0/lib/xqspips_options.o ps7_cortexa9_0/lib/xqspips_selftest.o ps7_cortexa9_0/lib/xqspips_sinit
+.o ps7_cortexa9_0/lib/xscugic.o ps7_cortexa9_0/lib/xscugic_g.o ps7_cortexa9_0/lib/xscugic_hw.o ps7_cortexa9_0/lib/xscugic_intr.
+o ps7_cortexa9_0/lib/xscugic_selftest.o ps7_cortexa9_0/lib/xscugic_sinit.o ps7_cortexa9_0/lib/xscutimer.o ps7_cortexa9_0/lib/xs
+cutimer_g.o ps7_cortexa9_0/lib/xscutimer_selftest.o ps7_cortexa9_0/lib/xscutimer_sinit.o ps7_cortexa9_0/lib/xscuwdt.o ps7_corte
+xa9_0/lib/xscuwdt_g.o ps7_cortexa9_0/lib/xscuwdt_selftest.o ps7_cortexa9_0/lib/xscuwdt_sinit.o ps7_cortexa9_0/lib/xsdps.o ps7_c
+ortexa9_0/lib/xsdps_card.o ps7_cortexa9_0/lib/xsdps_g.o ps7_cortexa9_0/lib/xsdps_host.o ps7_cortexa9_0/lib/xsdps_options.o ps7_
+cortexa9_0/lib/xsdps_sinit.o ps7_cortexa9_0/lib/xspi.o ps7_cortexa9_0/lib/xspi_g.o ps7_cortexa9_0/lib/xspi_options.o ps7_cortex
+a9_0/lib/xspi_selftest.o ps7_cortexa9_0/lib/xspi_sinit.o ps7_cortexa9_0/lib/xspi_stats.o ps7_cortexa9_0/lib/xtime_l.o ps7_corte
+xa9_0/lib/xttcps.o ps7_cortexa9_0/lib/xttcps_g.o ps7_cortexa9_0/lib/xttcps_options.o ps7_cortexa9_0/lib/xttcps_selftest.o ps7_c
+ortexa9_0/lib/xttcps_sinit.o ps7_cortexa9_0/lib/xuartps.o ps7_cortexa9_0/lib/xuartps_g.o ps7_cortexa9_0/lib/xuartps_hw.o ps7_co
+rtexa9_0/lib/xuartps_intr.o ps7_cortexa9_0/lib/xuartps_options.o ps7_cortexa9_0/lib/xuartps_selftest.o ps7_cortexa9_0/lib/xuart
+ps_sinit.o ps7_cortexa9_0/lib/xusbps.o ps7_cortexa9_0/lib/xusbps_endpoint.o ps7_cortexa9_0/lib/xusbps_g.o ps7_cortexa9_0/lib/xu
+sbps_hw.o ps7_cortexa9_0/lib/xusbps_intr.o ps7_cortexa9_0/lib/xusbps_sinit.o
+
+'Finished building libraries'
+
+19:03:37 **** Clean-only build of configuration Debug for project application ****
+make clean 
+rm -rf  ./src/wdt/scuwdt_if.o  ./src/uart/ps7_uart1_if.o  ./src/spi/axi_spi_if.o  ./src/gpx2/gpx2_if.o  ./src/gpio/axi_gpio_if.o ./src/gpio/ps7_gpio_if.o  ./src/dma/dma.o  ./src/intr_sys.o ./src/laser.o ./src/main.o ./src/platform.o ./src/report.o ./src/system_config.o  ./src/wdt/scuwdt_if.d  ./src/uart/ps7_uart1_if.d  ./src/spi/axi_spi_if.d  ./src/gpx2/gpx2_if.d  ./src/gpio/axi_gpio_if.d ./src/gpio/ps7_gpio_if.d  ./src/dma/dma.d  ./src/intr_sys.d ./src/laser.d ./src/main.d ./src/platform.d ./src/report.d ./src/system_config.d  application.elf.size  application.elf
+' '
+19:03:37 **** Incremental Build of configuration Debug for project application ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/wdt/scuwdt_if.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/wdt/scuwdt_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/wdt/scuwdt_if.d" -MT"src/wdt/scuwdt_if.o" -o "src/wdt/scuwdt_if.o" "../src/wdt/scuwdt_if.c"
+../src/wdt/scuwdt_if.c: In function 'checkRebootStatus':
+../src/wdt/scuwdt_if.c:197:21: warning: unused variable 'k' [-Wunused-variable]
+  197 |                 int k = 0; //i dont know how to wait
+      |                     ^
+'Finished building: ../src/wdt/scuwdt_if.c'
+' '
+'Building file: ../src/uart/ps7_uart1_if.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart/ps7_uart1_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/uart/ps7_uart1_if.d" -MT"src/uart/ps7_uart1_if.o" -o "src/uart/ps7_uart1_if.o" "../src/uart/ps7_uart1_if.c"
+'Finished building: ../src/uart/ps7_uart1_if.c'
+' '
+'Building file: ../src/spi/axi_spi_if.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spi/axi_spi_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/spi/axi_spi_if.d" -MT"src/spi/axi_spi_if.o" -o "src/spi/axi_spi_if.o" "../src/spi/axi_spi_if.c"
+'Finished building: ../src/spi/axi_spi_if.c'
+' '
+'Building file: ../src/gpx2/gpx2_if.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpx2/gpx2_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/gpx2/gpx2_if.d" -MT"src/gpx2/gpx2_if.o" -o "src/gpx2/gpx2_if.o" "../src/gpx2/gpx2_if.c"
+In file included from ../src/gpx2/gpx2_if.c:16:
+../src/gpx2/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
+   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+      | 
+../src/gpx2/../global_defines.h:20: note: this is the location of the previous definition
+   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+      | 
+In file included from ../src/gpx2/gpx2_if.c:17:
+../src/gpx2/../dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+'Finished building: ../src/gpx2/gpx2_if.c'
+' '
+'Building file: ../src/gpio/axi_gpio_if.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio/axi_gpio_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/gpio/axi_gpio_if.d" -MT"src/gpio/axi_gpio_if.o" -o "src/gpio/axi_gpio_if.o" "../src/gpio/axi_gpio_if.c"
+'Finished building: ../src/gpio/axi_gpio_if.c'
+' '
+'Building file: ../src/gpio/ps7_gpio_if.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio/ps7_gpio_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/gpio/ps7_gpio_if.d" -MT"src/gpio/ps7_gpio_if.o" -o "src/gpio/ps7_gpio_if.o" "../src/gpio/ps7_gpio_if.c"
+'Finished building: ../src/gpio/ps7_gpio_if.c'
+' '
+'Building file: ../src/dma/dma.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dma/dma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/dma/dma.d" -MT"src/dma/dma.o" -o "src/dma/dma.o" "../src/dma/dma.c"
+In file included from ../src/dma/dma.h:38,
+                 from ../src/dma/dma.c:41:
+../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
+   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+      | 
+../src/dma/../global_defines.h:20: note: this is the location of the previous definition
+   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+      | 
+../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+../src/dma/dma.c: In function 'clear_ram_section':
+../src/dma/dma.c:97:20: warning: comparison of distinct pointer types lacks a cast
+   97 |     while (ram_ptr < end_ptr) {
+      |                    ^
+../src/dma/dma.c:101:9: warning: unused variable 'debug_var' [-Wunused-variable]
+  101 |     int debug_var = 1;
+      |         ^~~~~~~~~
+../src/dma/dma.c: In function 'DMA_IntrHandler':
+../src/dma/dma.c:142:13: warning: unused variable 'rs2' [-Wunused-variable]
+  142 |         int rs2 = (XAxiDma_ReadReg((InstancePtr)->RegBase + \
+      |             ^~~
+../src/dma/dma.c:133:13: warning: unused variable 'rs' [-Wunused-variable]
+  133 |         int rs = (XAxiDma_ReadReg((InstancePtr)->RegBase + \
+      |             ^~
+../src/dma/dma.c: At top level:
+../src/dma/dma.c:405:1: warning: "/*" within comment [-Wcomment]
+  405 | /*****************************************************************************/
+      |  
+'Finished building: ../src/dma/dma.c'
+' '
+'Building file: ../src/intr_sys.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intr_sys.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/intr_sys.d" -MT"src/intr_sys.o" -o "src/intr_sys.o" "../src/intr_sys.c"
+In file included from ../src/dma/dma.h:38,
+                 from ../src/intr_sys.h:44,
+                 from ../src/intr_sys.c:35:
+../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
+   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+      | 
+../src/dma/../global_defines.h:20: note: this is the location of the previous definition
+   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+      | 
+../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+'Finished building: ../src/intr_sys.c'
+' '
+'Building file: ../src/laser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/laser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/laser.d" -MT"src/laser.o" -o "src/laser.o" "../src/laser.c"
+In file included from ../src/dma/dma.h:38,
+                 from ../src/laser.c:2:
+../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
+   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+      | 
+../src/dma/../global_defines.h:20: note: this is the location of the previous definition
+   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+      | 
+../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+../src/laser.c: In function 'prepare_laser_emulator':
+../src/laser.c:31:19: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   31 |         if (IMAGE == "CHECKERBOARD"){
+      |                   ^~
+../src/laser.c:32:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[276953]' {aka 'const long unsigned int (*)[276953]'} [-Wincompatible-pointer-types]
+   32 |                 binary_data = &checkerboard;
+      |                             ^
+../src/laser.c:33:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   33 |         } else if (IMAGE == "CONVALLARIA"){
+      |                          ^~
+../src/laser.c:34:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[16384]' {aka 'const long unsigned int (*)[16384]'} [-Wincompatible-pointer-types]
+   34 |                 binary_data = &convallaria;
+      |                             ^
+../src/laser.c:35:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   35 |         } else if (IMAGE == "BARCODE"){
+      |                          ^~
+../src/laser.c:36:37: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[16384]' {aka 'const long unsigned int (*)[16384]'} [-Wincompatible-pointer-types]
+   36 |                         binary_data = &barcode;
+      |                                     ^
+../src/laser.c:37:25: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   37 |         }else if (IMAGE == "BARCODE_512"){
+      |                         ^~
+../src/laser.c:38:37: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
+   38 |                         binary_data = &barcode_512;
+      |                                     ^
+../src/laser.c:39:25: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   39 |         }else if (IMAGE == "CONVALLARIA_512"){
+      |                         ^~
+../src/laser.c:40:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
+   40 |                 binary_data = &convallaria_512;
+      |                             ^
+../src/laser.c:43:25: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+   43 |         if((NUM_PIXELS)>pow(2,18)){
+      |                         ^~~
+../src/laser.c:8:1: note: include '<math.h>' or provide a declaration of 'pow'
+    7 | #include "images/convallaria_512.h"
+  +++ |+#include <math.h>
+    8 | 
+../src/laser.c:43:25: warning: incompatible implicit declaration of built-in function 'pow' [-Wbuiltin-declaration-mismatch]
+   43 |         if((NUM_PIXELS)>pow(2,18)){
+      |                         ^~~
+../src/laser.c:43:25: note: include '<math.h>' or provide a declaration of 'pow'
+In file included from ../src/laser.c:1:
+../src/laser.h:12:24: error: 'XPAR_MICROSCOPE_EMULATOR_0_BASEADDR' undeclared (first use in this function)
+   12 | #define BRAM_BASE_ADDR XPAR_MICROSCOPE_EMULATOR_0_BASEADDR
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/laser.c:49:22: note: in expansion of macro 'BRAM_BASE_ADDR'
+   49 |     void *bram_ptr = BRAM_BASE_ADDR;
+      |                      ^~~~~~~~~~~~~~
+../src/laser.h:12:24: note: each undeclared identifier is reported only once for each function it appears in
+   12 | #define BRAM_BASE_ADDR XPAR_MICROSCOPE_EMULATOR_0_BASEADDR
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/laser.c:49:22: note: in expansion of macro 'BRAM_BASE_ADDR'
+   49 |     void *bram_ptr = BRAM_BASE_ADDR;
+      |                      ^~~~~~~~~~~~~~
+../src/laser.c:61:60: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   61 |                 if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
+      |                                                           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/laser.c:74:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   74 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
+      |                                 ^
+../src/laser.c:89:60: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   89 |                 if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
+      |                                                           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/laser.c:104:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+  104 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
+      |                                 ^
+make[1]: *** [src/subdir.mk:38: src/laser.o] Error 1
+make: *** [makefile:40: all] Error 2

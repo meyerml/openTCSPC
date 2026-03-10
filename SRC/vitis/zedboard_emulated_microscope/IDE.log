@@ -1,0 +1,157 @@
+19:09:10 DEBUG : Logs will be stored at 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/IDE.log'.
+19:09:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\openTCSPC3\SRC\vitis\zedboard_emulated_microscope\temp_xsdb_launch_script.tcl
+19:09:13 INFO  : Registering command handlers for Vitis TCF services
+19:09:14 INFO  : Platform repository initialization has completed.
+19:09:16 INFO  : XSCT server has started successfully.
+19:09:16 INFO  : Successfully done setting XSCT server connection channel  
+19:09:17 INFO  : plnx-install-location is set to ''
+19:09:17 INFO  : Successfully done setting workspace for the tool. 
+19:09:17 INFO  : Successfully done query RDI_DATADIR 
+19:14:26 INFO  : Result from executing command 'getProjects': top_emulated_microscope
+19:14:26 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:14:26 WARN  : An unexpected exception occurred in the module 'platform project logging'
+19:14:27 INFO  : Platform 'top_emulated_microscope' is added to custom repositories.
+19:14:48 INFO  : Platform 'top_emulated_microscope' is added to custom repositories.
+19:15:43 INFO  : Result from executing command 'getProjects': top_emulated_microscope
+19:15:43 INFO  : Result from executing command 'getPlatforms': top_emulated_microscope|C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/top_emulated_microscope.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:17:46 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+19:20:33 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+19:21:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:21:44 INFO  : Jtag cable 'Digilent Zed 210248BD1333' is selected.
+19:21:44 INFO  : 'jtag frequency' command is executed.
+19:21:44 INFO  : Context for 'APU' is selected.
+19:21:44 INFO  : System reset is completed.
+19:21:47 INFO  : 'after 3000' command is executed.
+19:21:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}' command is executed.
+19:21:49 INFO  : Device configured successfully with "C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit"
+19:21:49 INFO  : Context for 'APU' is selected.
+19:21:49 INFO  : Hardware design and registers information is loaded from 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/hw/top_emulated_microscope.xsa'.
+19:21:49 INFO  : 'configparams force-mem-access 1' command is executed.
+19:21:49 INFO  : Context for 'APU' is selected.
+19:21:49 INFO  : Sourcing of 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/psinit/ps7_init.tcl' is done.
+19:21:50 INFO  : 'ps7_init' command is executed.
+19:21:50 INFO  : 'ps7_post_config' command is executed.
+19:21:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:21:57 INFO  : The application 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:21:57 INFO  : 'configparams force-mem-access 0' command is executed.
+19:21:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}
+fpga -file C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/hw/top_emulated_microscope.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:21:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:21:57 INFO  : 'con' command is executed.
+19:21:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:21:57 INFO  : Launch script is exported to file 'C:\openTCSPC3\SRC\vitis\zedboard_emulated_microscope\application_system\_ide\scripts\systemdebugger_application_system_standalone.tcl'
+21:09:27 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+21:09:37 INFO  : Disconnected from the channel tcfchan#3.
+21:09:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:09:37 INFO  : Jtag cable 'Digilent Zed 210248BD1333' is selected.
+21:09:37 INFO  : 'jtag frequency' command is executed.
+21:09:37 INFO  : Context for 'APU' is selected.
+21:09:37 INFO  : System reset is completed.
+21:09:40 INFO  : 'after 3000' command is executed.
+21:09:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}' command is executed.
+21:09:43 INFO  : Device configured successfully with "C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit"
+21:09:43 INFO  : Context for 'APU' is selected.
+21:09:43 INFO  : Hardware design and registers information is loaded from 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/hw/top_emulated_microscope.xsa'.
+21:09:43 INFO  : 'configparams force-mem-access 1' command is executed.
+21:09:43 INFO  : Context for 'APU' is selected.
+21:09:43 INFO  : Sourcing of 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/psinit/ps7_init.tcl' is done.
+21:09:43 INFO  : 'ps7_init' command is executed.
+21:09:43 INFO  : 'ps7_post_config' command is executed.
+21:09:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:09:50 INFO  : The application 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:09:50 INFO  : 'configparams force-mem-access 0' command is executed.
+21:09:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}
+fpga -file C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/hw/top_emulated_microscope.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:09:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:09:50 INFO  : 'con' command is executed.
+21:09:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:09:50 INFO  : Launch script is exported to file 'C:\openTCSPC3\SRC\vitis\zedboard_emulated_microscope\application_system\_ide\scripts\systemdebugger_application_system_standalone.tcl'
+21:16:43 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+21:16:58 INFO  : Disconnected from the channel tcfchan#4.
+21:16:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:58 INFO  : Jtag cable 'Digilent Zed 210248BD1333' is selected.
+21:16:58 INFO  : 'jtag frequency' command is executed.
+21:16:58 INFO  : Context for 'APU' is selected.
+21:16:59 INFO  : System reset is completed.
+21:17:02 INFO  : 'after 3000' command is executed.
+21:17:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}' command is executed.
+21:17:04 INFO  : Device configured successfully with "C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit"
+21:17:04 INFO  : Context for 'APU' is selected.
+21:17:04 INFO  : Hardware design and registers information is loaded from 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/hw/top_emulated_microscope.xsa'.
+21:17:04 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:04 INFO  : Context for 'APU' is selected.
+21:17:04 INFO  : Sourcing of 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/psinit/ps7_init.tcl' is done.
+21:17:04 INFO  : 'ps7_init' command is executed.
+21:17:04 INFO  : 'ps7_post_config' command is executed.
+21:17:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:11 INFO  : The application 'C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:17:11 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}
+fpga -file C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/hw/top_emulated_microscope.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:12 INFO  : 'con' command is executed.
+21:17:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:17:12 INFO  : Launch script is exported to file 'C:\openTCSPC3\SRC\vitis\zedboard_emulated_microscope\application_system\_ide\scripts\systemdebugger_application_system_standalone.tcl'

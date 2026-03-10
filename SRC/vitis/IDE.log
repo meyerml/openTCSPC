@@ -1,0 +1,41 @@
+17:21:11 DEBUG : Logs will be stored at 'C:/Users/marce/OneDrive/Desktop/openTCSPC3/SRC/vitis/IDE.log'.
+17:21:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\marce\OneDrive\Desktop\openTCSPC3\SRC\vitis\temp_xsdb_launch_script.tcl
+17:21:15 INFO  : Registering command handlers for Vitis TCF services
+17:21:15 INFO  : Platform repository initialization has completed.
+17:21:18 INFO  : XSCT server has started successfully.
+17:21:18 INFO  : plnx-install-location is set to ''
+17:21:18 INFO  : Successfully done setting XSCT server connection channel  
+17:21:18 INFO  : Successfully done query RDI_DATADIR 
+17:21:18 INFO  : Successfully done setting workspace for the tool. 
+17:38:59 DEBUG : Logs will be stored at 'C:/openTCSPC3/SRC/vitis/IDE.log'.
+17:39:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\openTCSPC3\SRC\vitis\temp_xsdb_launch_script.tcl
+17:39:02 INFO  : Registering command handlers for Vitis TCF services
+17:39:02 INFO  : Platform repository initialization has completed.
+17:39:04 INFO  : XSCT server has started successfully.
+17:39:04 INFO  : plnx-install-location is set to ''
+17:39:04 INFO  : Successfully done setting XSCT server connection channel  
+17:39:04 INFO  : Successfully done query RDI_DATADIR 
+17:39:04 INFO  : Successfully done setting workspace for the tool. 
+17:59:02 INFO  : Result from executing command 'getProjects': platform
+17:59:02 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:03:23 INFO  : Result from executing command 'getProjects': platform
+18:03:23 INFO  : Result from executing command 'getPlatforms': platform|C:/openTCSPC3/SRC/vitis/platform/export/platform/platform.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:05:30 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+18:06:45 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+18:58:49 INFO  : Hardware specification for platform project 'platform' is updated.
+18:59:52 INFO  : Result from executing command 'getProjects': platform
+18:59:52 INFO  : Result from executing command 'getPlatforms': platform|C:/openTCSPC3/SRC/vitis/platform/export/platform/platform.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:00:40 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+19:00:52 INFO  : Updating application flags with new BSP settings...
+19:00:53 INFO  : Successfully updated application flags for project application.
+19:00:57 INFO  : The hardware specification used by project 'application' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:00:57 INFO  : The file 'C:\openTCSPC3\SRC\vitis\application\_ide\bitstream\signal_generator_wrapper63.bit' stored in project is removed.
+19:00:57 INFO  : The file 'C:\openTCSPC3\SRC\vitis\application\_ide\bitstream\signal_generator_wrapper63.mmi' stored in project is removed.
+19:00:57 INFO  : The updated bitstream files are copied from platform to folder 'C:\openTCSPC3\SRC\vitis\application\_ide\bitstream' in project 'application'.
+19:00:57 INFO  : The file 'C:\openTCSPC3\SRC\vitis\application\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:01:04 INFO  : The updated ps init files are copied from platform to folder 'C:\openTCSPC3\SRC\vitis\application\_ide\psinit' in project 'application'.
+19:03:36 INFO  : Result from executing command 'getProjects': platform
+19:03:36 INFO  : Result from executing command 'getPlatforms': platform|C:/openTCSPC3/SRC/vitis/platform/export/platform/platform.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:03:37 INFO  : Checking for BSP changes to sync application flags for project 'application'...
+19:05:34 INFO  : Successfully removed platform .
+19:05:35 INFO  : Platform 'platform' is added to custom repositories.

@@ -1,0 +1,947 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3AC2D5E72D5489DB",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../Microscope.gen/sources_1/bd/laser",
+      "name": "laser",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "bram_ctrl_laser": "",
+      "bram_ctrl_sw": "",
+      "laser_signal_generat_0": "",
+      "blk_mem_gen_0": "",
+      "ila_laser": "",
+      "axi_smc": ""
+    },
+    "interface_ports": {
+      "S_AXI": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+        "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "18"
+          },
+          "ARUSER_WIDTH": {
+            "value": "0"
+          },
+          "AWUSER_WIDTH": {
+            "value": "0"
+          },
+          "BUSER_WIDTH": {
+            "value": "0"
+          },
+          "CLK_DOMAIN": {
+            "value": "laser_axi_clk",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_BURST": {
+            "value": "0"
+          },
+          "HAS_CACHE": {
+            "value": "0"
+          },
+          "HAS_LOCK": {
+            "value": "0"
+          },
+          "HAS_PROT": {
+            "value": "1"
+          },
+          "HAS_QOS": {
+            "value": "0"
+          },
+          "HAS_REGION": {
+            "value": "0"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "1"
+          },
+          "ID_WIDTH": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_READ_THREADS": {
+            "value": "1"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "RUSER_WIDTH": {
+            "value": "0"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "WUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "WUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "address_space_ref": "S_AXI",
+        "base_address": {
+          "minimum": "0x00000000",
+          "maximum": "0x0003FFFF",
+          "width": "18"
+        },
+        "port_maps": {
+          "ARADDR": {
+            "physical_name": "S_AXI_araddr",
+            "direction": "I",
+            "left": "17",
+            "right": "0"
+          },
+          "ARPROT": {
+            "physical_name": "S_AXI_arprot",
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "ARREADY": {
+            "physical_name": "S_AXI_arready",
+            "direction": "O"
+          },
+          "ARVALID": {
+            "physical_name": "S_AXI_arvalid",
+            "direction": "I"
+          },
+          "AWADDR": {
+            "physical_name": "S_AXI_awaddr",
+            "direction": "I",
+            "left": "17",
+            "right": "0"
+          },
+          "AWPROT": {
+            "physical_name": "S_AXI_awprot",
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "AWREADY": {
+            "physical_name": "S_AXI_awready",
+            "direction": "O"
+          },
+          "AWVALID": {
+            "physical_name": "S_AXI_awvalid",
+            "direction": "I"
+          },
+          "BREADY": {
+            "physical_name": "S_AXI_bready",
+            "direction": "I"
+          },
+          "BRESP": {
+            "physical_name": "S_AXI_bresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "BVALID": {
+            "physical_name": "S_AXI_bvalid",
+            "direction": "O"
+          },
+          "RDATA": {
+            "physical_name": "S_AXI_rdata",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RREADY": {
+            "physical_name": "S_AXI_rready",
+            "direction": "I"
+          },
+          "RRESP": {
+            "physical_name": "S_AXI_rresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "RVALID": {
+            "physical_name": "S_AXI_rvalid",
+            "direction": "O"
+          },
+          "WDATA": {
+            "physical_name": "S_AXI_wdata",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WREADY": {
+            "physical_name": "S_AXI_wready",
+            "direction": "O"
+          },
+          "WSTRB": {
+            "physical_name": "S_AXI_wstrb",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "WVALID": {
+            "physical_name": "S_AXI_wvalid",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "en": {
+        "direction": "I"
+      },
+      "frame_clk": {
+        "direction": "O"
+      },
+      "image_size": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "line_clk": {
+        "direction": "O"
+      },
+      "pixel_clk": {
+        "direction": "O"
+      },
+      "pulses_per_pixel": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "refclk_out": {
+        "direction": "O"
+      },
+      "stop_out": {
+        "direction": "O"
+      },
+      "axi_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXI",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "axi_aresetn"
+          },
+          "CLK_DOMAIN": {
+            "value": "laser_axi_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "axi_aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "laser_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "aresetn_laser:laser_aresetn"
+          },
+          "CLK_DOMAIN": {
+            "value": "laser_laser_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "10000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "laser_aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "bram_ctrl_laser": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "ip_revision": "11",
+        "xci_name": "laser_bram_ctrl_laser_0",
+        "xci_path": "ip\\laser_bram_ctrl_laser_0\\laser_bram_ctrl_laser_0.xci",
+        "inst_hier_path": "bram_ctrl_laser",
+        "parameters": {
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          },
+          "USE_ECC": {
+            "value": "0"
+          }
+        }
+      },
+      "bram_ctrl_sw": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "ip_revision": "11",
+        "xci_name": "laser_bram_ctrl_sw_0",
+        "xci_path": "ip\\laser_bram_ctrl_sw_0\\laser_bram_ctrl_sw_0.xci",
+        "inst_hier_path": "bram_ctrl_sw",
+        "parameters": {
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          },
+          "USE_ECC": {
+            "value": "0"
+          }
+        }
+      },
+      "laser_signal_generat_0": {
+        "vlnv": "xilinx.com:module_ref:laser_signal_generator:1.0",
+        "ip_revision": "1",
+        "xci_name": "laser_laser_signal_generat_0_0",
+        "xci_path": "ip\\laser_laser_signal_generat_0_0\\laser_laser_signal_generat_0_0.xci",
+        "inst_hier_path": "laser_signal_generat_0",
+        "parameters": {
+          "addr_width": {
+            "value": "18"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "laser_signal_generator",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "AXI4lite_m": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "user_prop"
+              },
+              "DATA_WIDTH": {
+                "value": "32",
+                "value_src": "constant"
+              },
+              "PROTOCOL": {
+                "value": "AXI4LITE",
+                "value_src": "constant"
+              },
+              "ID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "ADDR_WIDTH": {
+                "value": "18",
+                "value_src": "auto"
+              },
+              "AWUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "ARUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "WUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "RUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "BUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "READ_WRITE_MODE": {
+                "value": "READ_ONLY",
+                "value_src": "constant"
+              },
+              "HAS_BURST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_LOCK": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_PROT": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_CACHE": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_QOS": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_REGION": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_WSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_BRESP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_RRESP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0",
+                "value_src": "auto"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "1",
+                "value_src": "auto"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1",
+                "value_src": "auto"
+              },
+              "MAX_BURST_LENGTH": {
+                "value": "1",
+                "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "laser_laser_clk",
+                "value_src": "default_prop"
+              }
+            },
+            "address_space_ref": "AXI4lite_m",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0x0003FFFF",
+              "width": "18"
+            },
+            "port_maps": {
+              "ARADDR": {
+                "physical_name": "m_araddr",
+                "direction": "O",
+                "left": "17",
+                "right": "0"
+              },
+              "ARVALID": {
+                "physical_name": "m_arvalid",
+                "direction": "O"
+              },
+              "ARREADY": {
+                "physical_name": "m_arready",
+                "direction": "I"
+              },
+              "RDATA": {
+                "physical_name": "m_rdata",
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "RVALID": {
+                "physical_name": "m_rvalid",
+                "direction": "I"
+              },
+              "RREADY": {
+                "physical_name": "m_rready",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "en": {
+            "direction": "I"
+          },
+          "aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "AXI4lite_m",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "laser_laser_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "image_size": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pulses_per_pixel": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "refclk_out": {
+            "direction": "O"
+          },
+          "stop_out": {
+            "direction": "O"
+          },
+          "frame_clk_r": {
+            "direction": "O"
+          },
+          "line_clk_r": {
+            "direction": "O"
+          },
+          "pixel_clk_r": {
+            "direction": "O"
+          },
+          "CNTVALUEOUT_dbg": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "warmup_pulse_counter_dbg": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "start_frame_dbg": {
+            "direction": "O"
+          },
+          "state_dbg": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "line_complete_dbg": {
+            "direction": "O"
+          },
+          "pixel_complete_dbg": {
+            "direction": "O"
+          },
+          "m_arvalid_n_dbg": {
+            "direction": "O"
+          },
+          "m_arvalid_r_dbg": {
+            "direction": "O"
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "AXI4lite_m": {
+              "range": "256K",
+              "width": "18"
+            }
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "laser_blk_mem_gen_0_2",
+        "xci_path": "ip\\laser_blk_mem_gen_0_2\\laser_blk_mem_gen_0_2.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Read_Width_A": {
+            "value": "32"
+          },
+          "Write_Width_A": {
+            "value": "32"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "ila_laser": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "16",
+        "xci_name": "laser_ila_0_1",
+        "xci_path": "ip\\laser_ila_0_1\\laser_ila_0_1.xci",
+        "inst_hier_path": "ila_laser",
+        "parameters": {
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "8"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "3"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "5"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          }
+        }
+      },
+      "axi_smc": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "25",
+        "xci_name": "laser_axi_smc_0",
+        "xci_path": "ip\\laser_axi_smc_0\\laser_axi_smc_0.xci",
+        "inst_hier_path": "axi_smc",
+        "parameters": {
+          "NUM_SI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              }
+            },
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "S_AXI_1": {
+        "interface_ports": [
+          "S_AXI",
+          "bram_ctrl_sw/S_AXI"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "bram_ctrl_laser/S_AXI"
+        ]
+      },
+      "bram_ctrl_laser_BRAM_PORTA": {
+        "interface_ports": [
+          "bram_ctrl_laser/BRAM_PORTA",
+          "blk_mem_gen_0/BRAM_PORTB"
+        ]
+      },
+      "bram_ctrl_sw_BRAM_PORTA": {
+        "interface_ports": [
+          "bram_ctrl_sw/BRAM_PORTA",
+          "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "laser_signal_generat_0_AXI4lite_m": {
+        "interface_ports": [
+          "laser_signal_generat_0/AXI4lite_m",
+          "axi_smc/S00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "axi_clk_1": {
+        "ports": [
+          "axi_clk",
+          "bram_ctrl_sw/s_axi_aclk"
+        ]
+      },
+      "en_0_1": {
+        "ports": [
+          "en",
+          "laser_signal_generat_0/en"
+        ]
+      },
+      "image_size_0_1": {
+        "ports": [
+          "image_size",
+          "laser_signal_generat_0/image_size"
+        ]
+      },
+      "laser_aresetn_1": {
+        "ports": [
+          "laser_aresetn",
+          "bram_ctrl_laser/s_axi_aresetn",
+          "axi_smc/aresetn",
+          "laser_signal_generat_0/aresetn"
+        ]
+      },
+      "laser_clk_0_1": {
+        "ports": [
+          "laser_clk",
+          "bram_ctrl_laser/s_axi_aclk",
+          "ila_laser/clk",
+          "axi_smc/aclk",
+          "laser_signal_generat_0/clk"
+        ]
+      },
+      "laser_signal_generat_0_CNTVALUEOUT_dbg": {
+        "ports": [
+          "laser_signal_generat_0/CNTVALUEOUT_dbg",
+          "ila_laser/probe7"
+        ]
+      },
+      "laser_signal_generat_0_frame_clk_r": {
+        "ports": [
+          "laser_signal_generat_0/frame_clk_r",
+          "frame_clk"
+        ]
+      },
+      "laser_signal_generat_0_line_clk_r": {
+        "ports": [
+          "laser_signal_generat_0/line_clk_r",
+          "line_clk"
+        ]
+      },
+      "laser_signal_generat_0_line_complete_dbg": {
+        "ports": [
+          "laser_signal_generat_0/line_complete_dbg",
+          "ila_laser/probe4"
+        ]
+      },
+      "laser_signal_generat_0_m_arvalid_n_dbg": {
+        "ports": [
+          "laser_signal_generat_0/m_arvalid_n_dbg",
+          "ila_laser/probe5"
+        ]
+      },
+      "laser_signal_generat_0_m_arvalid_r_dbg": {
+        "ports": [
+          "laser_signal_generat_0/m_arvalid_r_dbg",
+          "ila_laser/probe6"
+        ]
+      },
+      "laser_signal_generat_0_pixel_clk_r": {
+        "ports": [
+          "laser_signal_generat_0/pixel_clk_r",
+          "pixel_clk"
+        ]
+      },
+      "laser_signal_generat_0_pixel_complete_dbg": {
+        "ports": [
+          "laser_signal_generat_0/pixel_complete_dbg",
+          "ila_laser/probe3"
+        ]
+      },
+      "laser_signal_generat_0_refclk_out": {
+        "ports": [
+          "laser_signal_generat_0/refclk_out",
+          "refclk_out"
+        ]
+      },
+      "laser_signal_generat_0_start_frame_dbg": {
+        "ports": [
+          "laser_signal_generat_0/start_frame_dbg",
+          "ila_laser/probe1"
+        ]
+      },
+      "laser_signal_generat_0_state_dbg": {
+        "ports": [
+          "laser_signal_generat_0/state_dbg",
+          "ila_laser/probe2"
+        ]
+      },
+      "laser_signal_generat_0_stop_out": {
+        "ports": [
+          "laser_signal_generat_0/stop_out",
+          "stop_out"
+        ]
+      },
+      "laser_signal_generat_0_warmup_pulse_counter_dbg": {
+        "ports": [
+          "laser_signal_generat_0/warmup_pulse_counter_dbg",
+          "ila_laser/probe0"
+        ]
+      },
+      "pulses_per_pixel_0_1": {
+        "ports": [
+          "pulses_per_pixel",
+          "laser_signal_generat_0/pulses_per_pixel"
+        ]
+      },
+      "s_axi_aresetn_0_1": {
+        "ports": [
+          "axi_aresetn",
+          "bram_ctrl_sw/s_axi_aresetn"
+        ]
+      }
+    },
+    "addressing": {
+      "/": {
+        "address_spaces": {
+          "S_AXI": {
+            "range": "256K",
+            "width": "18",
+            "segments": {
+              "SEG_bram_ctrl_sw_Mem0": {
+                "address_block": "/bram_ctrl_sw/S_AXI/Mem0",
+                "offset": "0x00000",
+                "range": "256K"
+              }
+            }
+          }
+        }
+      },
+      "/laser_signal_generat_0": {
+        "address_spaces": {
+          "AXI4lite_m": {
+            "segments": {
+              "SEG_bram_ctrl_laser_Mem0": {
+                "address_block": "/bram_ctrl_laser/S_AXI/Mem0",
+                "offset": "0x00000",
+                "range": "256K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
