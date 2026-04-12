@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Tue Mar 10 16:38:29 2026
+//Date        : Sat Apr  4 13:46:21 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target laser.bd
 //Design      : laser
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "laser,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=laser,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "laser.hwdef" *) 
+(* CORE_GENERATION_INFO = "laser,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=laser,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "laser.hwdef" *) 
 module laser
    (S_AXI_araddr,
     S_AXI_arprot,
@@ -139,6 +139,8 @@ module laser
   wire [3:0]laser_signal_generat_0_warmup_pulse_counter_dbg;
   wire line_clk;
   wire pixel_clk;
+  wire [0:0]proc_sys_reset_0_interconnect_aresetn;
+  wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [31:0]pulses_per_pixel;
   wire refclk_out;
   wire stop_out;
@@ -160,7 +162,7 @@ module laser
         .S00_AXI_rready(laser_signal_generat_0_AXI4lite_m_RREADY),
         .S00_AXI_rvalid(laser_signal_generat_0_AXI4lite_m_RVALID),
         .aclk(laser_clk),
-        .aresetn(laser_aresetn));
+        .aresetn(proc_sys_reset_0_interconnect_aresetn));
   laser_blk_mem_gen_0_2 blk_mem_gen_0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,bram_ctrl_sw_BRAM_PORTA_ADDR}),
         .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,bram_ctrl_laser_BRAM_PORTA_ADDR}),
@@ -186,7 +188,7 @@ module laser
         .bram_wrdata_a(bram_ctrl_laser_BRAM_PORTA_DIN),
         .s_axi_aclk(laser_clk),
         .s_axi_araddr(axi_smc_M00_AXI_ARADDR),
-        .s_axi_aresetn(laser_aresetn),
+        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .s_axi_arprot(axi_smc_M00_AXI_ARPROT),
         .s_axi_arready(axi_smc_M00_AXI_ARREADY),
         .s_axi_arvalid(axi_smc_M00_AXI_ARVALID),
@@ -242,7 +244,7 @@ module laser
         .probe7(laser_signal_generat_0_CNTVALUEOUT_dbg));
   laser_laser_signal_generat_0_0 laser_signal_generat_0
        (.CNTVALUEOUT_dbg(laser_signal_generat_0_CNTVALUEOUT_dbg),
-        .aresetn(laser_aresetn),
+        .aresetn(proc_sys_reset_0_peripheral_aresetn),
         .clk(laser_clk),
         .en(en),
         .frame_clk_r(frame_clk),
@@ -265,4 +267,12 @@ module laser
         .state_dbg(laser_signal_generat_0_state_dbg),
         .stop_out(stop_out),
         .warmup_pulse_counter_dbg(laser_signal_generat_0_warmup_pulse_counter_dbg));
+  laser_proc_sys_reset_0_0 proc_sys_reset_0
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(laser_aresetn),
+        .interconnect_aresetn(proc_sys_reset_0_interconnect_aresetn),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .slowest_sync_clk(laser_clk));
 endmodule

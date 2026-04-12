@@ -1,17 +1,19 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.28118",
-   "Default View_TopLeft":"15,42",
+   "Default View_ScaleFactor":"0.717936",
+   "Default View_TopLeft":"-325,389",
+   "DisplayPinsOfHiddenNets":"1",
+   "DisplayTieOff":"1",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x -110 -y 60 -defaultsOSRD
 preplace port port-id_en -pg 1 -lvl 0 -x -110 -y 430 -defaultsOSRD
-preplace port port-id_frame_clk -pg 1 -lvl 4 -x 1940 -y 490 -defaultsOSRD
-preplace port port-id_line_clk -pg 1 -lvl 4 -x 1940 -y 520 -defaultsOSRD
-preplace port port-id_pixel_clk -pg 1 -lvl 4 -x 1940 -y 550 -defaultsOSRD
-preplace port port-id_refclk_out -pg 1 -lvl 4 -x 1940 -y 430 -defaultsOSRD
-preplace port port-id_stop_out -pg 1 -lvl 4 -x 1940 -y 460 -defaultsOSRD
+preplace port port-id_frame_clk -pg 1 -lvl 4 -x 1920 -y 490 -defaultsOSRD
+preplace port port-id_line_clk -pg 1 -lvl 4 -x 1920 -y 520 -defaultsOSRD
+preplace port port-id_pixel_clk -pg 1 -lvl 4 -x 1920 -y 550 -defaultsOSRD
+preplace port port-id_refclk_out -pg 1 -lvl 4 -x 1920 -y 430 -defaultsOSRD
+preplace port port-id_stop_out -pg 1 -lvl 4 -x 1920 -y 460 -defaultsOSRD
 preplace port port-id_axi_clk -pg 1 -lvl 0 -x -110 -y 90 -defaultsOSRD
 preplace port port-id_axi_aresetn -pg 1 -lvl 0 -x -110 -y 120 -defaultsOSRD
 preplace port port-id_laser_clk -pg 1 -lvl 0 -x -110 -y 490 -defaultsOSRD
@@ -20,37 +22,40 @@ preplace portBus image_size -pg 1 -lvl 0 -x -110 -y 520 -defaultsOSRD
 preplace portBus pulses_per_pixel -pg 1 -lvl 0 -x -110 -y 550 -defaultsOSRD
 preplace inst bram_ctrl_laser -pg 1 -lvl 2 -x 1430 -y 650 -defaultsOSRD
 preplace inst bram_ctrl_sw -pg 1 -lvl 2 -x 1430 -y 260 -defaultsOSRD
-preplace inst laser_signal_generat_0 -pg 1 -lvl 1 -x 430 -y 670 -defaultsOSRD
+preplace inst laser_signal_generat_0 -pg 1 -lvl 1 -x 520 -y 670 -defaultsOSRD
 preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 1780 -y 250 -defaultsOSRD
 preplace inst ila_laser -pg 1 -lvl 2 -x 1430 -y 920 -defaultsOSRD
 preplace inst axi_smc -pg 1 -lvl 2 -x 1430 -y 430 -defaultsOSRD
-preplace netloc axi_clk_1 1 0 2 NJ 90 730J
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 520 -y 350 -defaultsOSRD
+preplace netloc axi_clk_1 1 0 2 NJ 90 850J
 preplace netloc en_0_1 1 0 1 -70J 430n
 preplace netloc image_size_0_1 1 0 1 -80J 520n
-preplace netloc laser_aresetn_1 1 0 2 210 460 1290J
-preplace netloc laser_clk_0_1 1 0 2 220 480 1280
-preplace netloc laser_signal_generat_0_frame_clk_r 1 1 3 650J 510 NJ 510 1890
-preplace netloc laser_signal_generat_0_line_clk_r 1 1 3 660J 520 NJ 520 N
-preplace netloc laser_signal_generat_0_line_complete_dbg 1 1 1 670 740n
-preplace netloc laser_signal_generat_0_m_arvalid_n_dbg 1 1 1 650 780n
-preplace netloc laser_signal_generat_0_m_arvalid_r_dbg 1 1 1 640 800n
-preplace netloc laser_signal_generat_0_pixel_clk_r 1 1 3 710J 550 NJ 550 N
-preplace netloc laser_signal_generat_0_pixel_complete_dbg 1 1 1 660 760n
+preplace netloc laser_aresetn_1 1 0 1 -90 330n
+preplace netloc laser_clk_0_1 1 0 2 300 450 1280
+preplace netloc laser_signal_generat_0_CNTVALUEOUT_dbg 1 1 1 770 660n
+preplace netloc laser_signal_generat_0_frame_clk_r 1 1 3 800J 510 NJ 510 1890
+preplace netloc laser_signal_generat_0_line_clk_r 1 1 3 810J 520 NJ 520 N
+preplace netloc laser_signal_generat_0_line_complete_dbg 1 1 1 760 740n
+preplace netloc laser_signal_generat_0_m_arvalid_n_dbg 1 1 1 740 780n
+preplace netloc laser_signal_generat_0_m_arvalid_r_dbg 1 1 1 730 800n
+preplace netloc laser_signal_generat_0_pixel_clk_r 1 1 3 830J 550 NJ 550 N
+preplace netloc laser_signal_generat_0_pixel_complete_dbg 1 1 1 750 760n
 preplace netloc laser_signal_generat_0_refclk_out 1 1 3 NJ 560 NJ 560 1880
-preplace netloc laser_signal_generat_0_start_frame_dbg 1 1 1 700 700n
-preplace netloc laser_signal_generat_0_state_dbg 1 1 1 690 720n
-preplace netloc laser_signal_generat_0_stop_out 1 1 3 680J 570 NJ 570 1900
-preplace netloc laser_signal_generat_0_warmup_pulse_counter_dbg 1 1 1 710 680n
+preplace netloc laser_signal_generat_0_start_frame_dbg 1 1 1 800 700n
+preplace netloc laser_signal_generat_0_state_dbg 1 1 1 790 720n
+preplace netloc laser_signal_generat_0_stop_out 1 1 3 820J 570 NJ 570 1900
+preplace netloc laser_signal_generat_0_warmup_pulse_counter_dbg 1 1 1 820 680n
 preplace netloc pulses_per_pixel_0_1 1 0 1 -90J 550n
-preplace netloc s_axi_aresetn_0_1 1 0 2 NJ 120 720J
-preplace netloc laser_signal_generat_0_CNTVALUEOUT_dbg 1 1 1 680 660n
-preplace netloc S_AXI_1 1 0 2 NJ 60 740J
+preplace netloc s_axi_aresetn_0_1 1 0 2 NJ 120 840J
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 1 1290 370n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 2 310 860 780
+preplace netloc S_AXI_1 1 0 2 NJ 60 860J
 preplace netloc axi_smc_M00_AXI 1 1 2 1300 350 1560
 preplace netloc bram_ctrl_laser_BRAM_PORTA 1 2 1 1570 260n
 preplace netloc bram_ctrl_sw_BRAM_PORTA 1 2 1 1560 240n
-preplace netloc laser_signal_generat_0_AXI4lite_m 1 1 1 640 410n
-levelinfo -pg 1 -110 430 1430 1780 1940
-pagesize -pg 1 -db -bbox -sgen -330 -80 2170 1370
+preplace netloc laser_signal_generat_0_AXI4lite_m 1 1 1 790 410n
+levelinfo -pg 1 -110 520 1430 1780 1920
+pagesize -pg 1 -db -bbox -sgen -330 -100 2170 1370
 "
 }
 {

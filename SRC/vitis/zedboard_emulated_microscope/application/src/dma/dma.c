@@ -436,7 +436,7 @@ int RxSetup(UINTPTR RxBufferPtr)
 	/* Setup Rx BD space */
 	BdCount = XAxiDma_BdRingCntCalc(XAXIDMA_BD_MINIMUM_ALIGNMENT,
 					RX_BD_SPACE_HIGH - RX_BD_SPACE_BASE + 1);
-	//BdCount = 8;
+	BdCount = 8;
 
 	Status = XAxiDma_BdRingCreate(RxRingPtr, RX_BD_SPACE_BASE,
 				      RX_BD_SPACE_BASE,
@@ -458,6 +458,7 @@ int RxSetup(UINTPTR RxBufferPtr)
 
 	/* Attach buffers to RxBD ring so we are ready to receive packets */
 	FreeBdCount = XAxiDma_BdRingGetFreeCnt(RxRingPtr);
+	//FreeBdCount = 1;  //for now, just do one DMA transaction
 
 	Status = XAxiDma_BdRingAlloc(RxRingPtr, FreeBdCount, &BdPtr);
 	if (Status != XST_SUCCESS) {
@@ -466,7 +467,6 @@ int RxSetup(UINTPTR RxBufferPtr)
 	}
 
 	BdCurPtr = BdPtr;
-	FreeBdCount = 1;  //for now, just do one DMA transaction
 	//if we do more, we have to malloc a larger buffer
 
 	//RxBufferPtr = global_destination; //RX_BUFFER_BASE;
@@ -498,7 +498,7 @@ int RxSetup(UINTPTR RxBufferPtr)
 
 		XAxiDma_BdSetId(BdCurPtr, RxBufferPtr);
 
-		RxBufferPtr += HistSizeInWords*4;
+		RxBufferPtr += HistSizeInWords*4*NUM_PIXELS;
 		BdCurPtr = (XAxiDma_Bd *)XAxiDma_BdRingNext(RxRingPtr, BdCurPtr);
 	}
 

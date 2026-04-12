@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8600E43024F13078",
+      "boundary_crc": "0x129B5AB6C499D16B",
       "design_src": "SBD",
       "device": "xc7z020clg484-1",
       "name": "bd_13c1",
@@ -156,7 +156,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -205,7 +205,7 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "16",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "8"
@@ -267,7 +267,7 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "parameters": {
           "ADDR_WIDTH": {
-            "value": "13",
+            "value": "12",
             "value_src": "ip_prop"
           },
           "ARUSER_WIDTH": {
@@ -291,7 +291,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -415,7 +415,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -539,7 +539,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -663,7 +663,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -787,7 +787,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -911,7 +911,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -1035,7 +1035,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -1159,7 +1159,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "125000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -1271,33 +1271,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "125000000",
-            "value_src": "user_prop"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
-      "aclk1": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "emulated_microscope_processing_system7_0_0_FCLK_CLK2",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "10000000",
+            "value": "100000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -1440,10 +1414,6 @@
             "direction": "O"
           },
           "aclk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "aclk1": {
             "type": "clk",
             "direction": "I"
           }
@@ -2560,7 +2530,7 @@
                 "value": "0b0000000000000000000000000000000000000000000000000000000000000000"
               },
               "SEG000_SIZE": {
-                "value": "13"
+                "value": "12"
               },
               "SEG000_SUPPORTS_READ": {
                 "value": "1"
@@ -4084,7 +4054,7 @@
         "inst_hier_path": "m00_sc2axi",
         "parameters": {
           "AXI_ADDR_WIDTH": {
-            "value": "13"
+            "value": "12"
           },
           "AXI_ID_WIDTH": {
             "value": "3"
@@ -5117,7 +5087,7 @@
             "inst_hier_path": "m00_exit_pipeline/m00_exit",
             "parameters": {
               "ADDR_WIDTH": {
-                "value": "13"
+                "value": "12"
               },
               "HAS_BURST": {
                 "value": "1"
@@ -13793,12 +13763,6 @@
       }
     },
     "nets": {
-      "aclk1_1": {
-        "ports": [
-          "aclk1",
-          "clk_map/aclk1"
-        ]
-      },
       "aclk_1": {
         "ports": [
           "clk_map/S00_ACLK",

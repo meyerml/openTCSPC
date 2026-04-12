@@ -1,4 +1,4 @@
-21:16:43 **** Incremental Build of configuration Debug for project application ****
+19:08:38 **** Incremental Build of configuration Debug for project application ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,11 +8,11 @@ make --no-print-directory main-build
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpx2/gpx2_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/gpx2/gpx2_if.d" -MT"src/gpx2/gpx2_if.o" -o "src/gpx2/gpx2_if.o" "../src/gpx2/gpx2_if.c"
 In file included from ../src/gpx2/gpx2_if.c:16:
-../src/gpx2/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/gpx2/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/gpx2/../global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/gpx2/../global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 In file included from ../src/gpx2/gpx2_if.c:17:
 ../src/gpx2/../dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
@@ -25,11 +25,11 @@ In file included from ../src/gpx2/gpx2_if.c:17:
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dma/dma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/dma/dma.d" -MT"src/dma/dma.o" -o "src/dma/dma.o" "../src/dma/dma.c"
 In file included from ../src/dma/dma.h:38,
                  from ../src/dma/dma.c:41:
-../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/dma/../global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/dma/../global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 ../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
    63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
@@ -60,11 +60,11 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intr_sys.o" -mcpu=
 In file included from ../src/dma/dma.h:38,
                  from ../src/intr_sys.h:44,
                  from ../src/intr_sys.c:35:
-../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/dma/../global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/dma/../global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 ../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
    63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
@@ -76,21 +76,21 @@ In file included from ../src/dma/dma.h:38,
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/laser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/laser.d" -MT"src/laser.o" -o "src/laser.o" "../src/laser.c"
 In file included from ../src/dma/dma.h:38,
                  from ../src/laser.c:2:
-../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/dma/../global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/dma/../global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 ../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
    63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
       |  ^~~~~~~
 ../src/laser.c: In function 'prepare_laser_emulator':
 ../src/laser.c:31:19: warning: comparison with string literal results in unspecified behavior [-Waddress]
-   31 |         if (IMAGE == "CHECKERBOARD"){
+   31 |         if (IMAGE == "CHECKERBOARD_512"){
       |                   ^~
-../src/laser.c:32:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[276953]' {aka 'const long unsigned int (*)[276953]'} [-Wincompatible-pointer-types]
-   32 |                 binary_data = &checkerboard;
+../src/laser.c:32:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
+   32 |                 binary_data = &checkerboard_512;
       |                             ^
 ../src/laser.c:33:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
    33 |         } else if (IMAGE == "CONVALLARIA"){
@@ -116,17 +116,17 @@ In file included from ../src/dma/dma.h:38,
 ../src/laser.c:40:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
    40 |                 binary_data = &convallaria_512;
       |                             ^
-../src/laser.c:43:25: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
-   43 |         if((NUM_PIXELS)>pow(2,18)){
+../src/laser.c:46:25: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+   46 |         if((NUM_PIXELS)>pow(2,18)){
       |                         ^~~
 ../src/laser.c:8:1: note: include '<math.h>' or provide a declaration of 'pow'
     7 | #include "images/convallaria_512.h"
   +++ |+#include <math.h>
     8 | 
-../src/laser.c:43:25: warning: incompatible implicit declaration of built-in function 'pow' [-Wbuiltin-declaration-mismatch]
-   43 |         if((NUM_PIXELS)>pow(2,18)){
+../src/laser.c:46:25: warning: incompatible implicit declaration of built-in function 'pow' [-Wbuiltin-declaration-mismatch]
+   46 |         if((NUM_PIXELS)>pow(2,18)){
       |                         ^~~
-../src/laser.c:43:25: note: include '<math.h>' or provide a declaration of 'pow'
+../src/laser.c:46:25: note: include '<math.h>' or provide a declaration of 'pow'
 In file included from ../src/laser.h:7,
                  from ../src/laser.c:1:
 C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include/xparameters.h:223:45: warning: initialization of 'void *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
@@ -135,21 +135,25 @@ C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/exp
 ../src/laser.h:12:24: note: in expansion of macro 'XPAR_MICROSCOPE_EMULATOR_0_BASEADDR'
    12 | #define BRAM_BASE_ADDR XPAR_MICROSCOPE_EMULATOR_0_BASEADDR
       |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/laser.c:49:22: note: in expansion of macro 'BRAM_BASE_ADDR'
-   49 |     void *bram_ptr = BRAM_BASE_ADDR;
+../src/laser.c:52:22: note: in expansion of macro 'BRAM_BASE_ADDR'
+   52 |     void *bram_ptr = BRAM_BASE_ADDR;
       |                      ^~~~~~~~~~~~~~
-../src/laser.c:61:60: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
-   61 |                 if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
-      |                                                           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/laser.c:74:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
-   74 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
+../src/laser.c:80:21: warning: unused variable 'debug_var' [-Wunused-variable]
+   80 |                 int debug_var = 1;
+      |                     ^~~~~~~~~
+../src/laser.c:85:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   85 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
       |                                 ^
-../src/laser.c:89:60: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
-   89 |                 if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
+../src/laser.c:102:60: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  102 |                 if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
       |                                                           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/laser.c:104:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
-  104 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
+../src/laser.c:117:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+  117 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
       |                                 ^
+../src/laser.c: In function 'FrameIntrHandler':
+../src/laser.c:132:9: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  132 |         sleep(1);  //allow transfers to complete before continueing
+      |         ^~~~~
 'Finished building: ../src/laser.c'
 ' '
 'Building file: ../src/main.c'
@@ -159,11 +163,11 @@ In file included from ../src/dma/dma.h:38,
                  from ../src/system_config.h:49,
                  from ../src/main.h:47,
                  from ../src/main.c:31:
-../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/dma/../global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/dma/../global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 ../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
    63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
@@ -180,8 +184,8 @@ In file included from ../src/dma/dma.h:38,
   140 |                 if(pow(2, STOP_DATA_BITWIDTH)<laser_period_ps){
       |                    ^~~
 ../src/main.c:140:20: note: include '<math.h>' or provide a declaration of 'pow'
-../src/main.c:234:13: warning: unused variable 'debugvar' [-Wunused-variable]
-  234 |         int debugvar = 0;
+../src/main.c:235:13: warning: unused variable 'debugvar' [-Wunused-variable]
+  235 |         int debugvar = 0;
       |             ^~~~~~~~
 'Finished building: ../src/main.c'
 ' '
@@ -189,11 +193,11 @@ In file included from ../src/dma/dma.h:38,
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/report.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/report.d" -MT"src/report.o" -o "src/report.o" "../src/report.c"
 In file included from ../src/report.c:6:
-../src/global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 In file included from ../src/report.c:7:
 ../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
@@ -211,11 +215,11 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/system_config.o" -
 In file included from ../src/dma/dma.h:38,
                  from ../src/system_config.h:49,
                  from ../src/system_config.c:36:
-../src/dma/../global_defines.h:26: warning: "FRAME_WIDTH" redefined
-   26 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
+   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
-../src/dma/../global_defines.h:20: note: this is the location of the previous definition
-   20 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+../src/dma/../global_defines.h:25: note: this is the location of the previous definition
+   25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
       | 
 ../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
    63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
@@ -242,9 +246,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size application.elf  |tee "application.elf.size"
    text	   data	    bss	    dec	    hex	filename
-3445027	   2820	268452560	271900407	1034def7	application.elf
+3386297	   2820	134234832	137623949	833f98d	application.elf
 'Finished building: application.elf.size'
 ' '
 
-21:16:47 Build Finished (took 4s.547ms)
+19:08:42 Build Finished (took 4s.761ms)
 

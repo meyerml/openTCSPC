@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "emulated_microscope_LD_LVDS_0",
-    "cell_name": "LD_LVDS",
+    "cell_name": "SECOND_ARESETN",
     "component_reference": "xilinx.com:ip:xlslice:1.0",
     "ip_revision": "4",
     "gen_directory": ".",

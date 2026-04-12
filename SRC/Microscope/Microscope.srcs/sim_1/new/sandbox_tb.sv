@@ -203,7 +203,7 @@ module laser_emulator_tb;
     axi4lite_if axi4lite_master(clk);
     
     
-    laser_wrapper uut(.S_AXI_araddr(axi4lite_master.araddr),
+    Microscope_Emulator_wrapper uut(.S_AXI_araddr(axi4lite_master.araddr),
                         .S_AXI_arprot(axi4lite_master.arprot),
                         .S_AXI_arready(axi4lite_master.arready),
                         .S_AXI_arvalid(axi4lite_master.arvalid),

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD9B59B7F9CCD2F77",
+      "boundary_crc": "0xD9B59B7F4EFA45A9",
       "device": "xc7z020clg484-1",
       "name": "emulated_microscope",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -13,9 +13,9 @@
       "processing_system7_0": "",
       "rst_ps7_0_100M": "",
       "axi_gpio_0": "",
-      "LVDS_en": "",
+      "EMULATOR_en": "",
       "msglen": "",
-      "LD_LVDS": "",
+      "SECOND_ARESETN": "",
       "CNTVALUEIN_LVDS": "",
       "axi_quad_spi_0": "",
       "axi_dma_0": "",
@@ -37,21 +37,26 @@
       "PULSES_PER_PIXEL": "",
       "util_vector_logic_0": "",
       "util_idelay_ctrl_0": "",
-      "axi_smc": "",
+      "axi_smc_main": "",
       "slow_laser_ILA": "",
       "histogram_ILA": "",
       "axi_gpio_2": "",
       "axi_gpio_3": "",
       "MAX_PIXELS": "",
-      "high": "",
       "blk_mem_gen_0": "",
       "axi_bram_ctrl_1": "",
       "axi_bram_ctrl_0": "",
       "ila_LVDS_to_AXIS": "",
       "ila_LVDS_to_axis_axis": "",
+      "ila_DMA_out1": "",
       "Histogramming": "",
+      "LVDS_to_AXIS_IDDR": "",
+      "logic_high": "",
       "Microscope_Emulator_0": "",
-      "LVDS_to_AXI_Stream_0": ""
+      "CNTVALUEIN_CLK": "",
+      "CNTVALUEIN_SDO": "",
+      "IDELAYE2_LD": "",
+      "CNTVALUEIN_FRAME": ""
     },
     "interface_ports": {
       "DDR": {
@@ -365,10 +370,10 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "125.000000"
+            "value": "100.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "250.000000"
+            "value": "10.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -455,10 +460,10 @@
             "value": "0"
           },
           "PCW_CLK0_FREQ": {
-            "value": "125000000"
+            "value": "100000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "250000000"
+            "value": "10000000"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -767,10 +772,10 @@
             "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "125"
+            "value": "100"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "250"
+            "value": "10"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10"
@@ -2201,12 +2206,12 @@
           }
         }
       },
-      "LVDS_en": {
+      "EMULATOR_en": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "4",
         "xci_name": "emulated_microscope_LVDS_en_0",
         "xci_path": "ip\\emulated_microscope_LVDS_en_0\\emulated_microscope_LVDS_en_0.xci",
-        "inst_hier_path": "LVDS_en",
+        "inst_hier_path": "EMULATOR_en",
         "parameters": {
           "DIN_WIDTH": {
             "value": "256"
@@ -2231,12 +2236,12 @@
           }
         }
       },
-      "LD_LVDS": {
+      "SECOND_ARESETN": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "4",
         "xci_name": "emulated_microscope_LD_LVDS_0",
         "xci_path": "ip\\emulated_microscope_LD_LVDS_0\\emulated_microscope_LD_LVDS_0.xci",
-        "inst_hier_path": "LD_LVDS",
+        "inst_hier_path": "SECOND_ARESETN",
         "parameters": {
           "DIN_FROM": {
             "value": "12"
@@ -2293,7 +2298,7 @@
             "value": "0"
           },
           "c_s2mm_burst_size": {
-            "value": "256"
+            "value": "16"
           },
           "c_sg_length_width": {
             "value": "26"
@@ -2570,8 +2575,11 @@
           "C_SLOT_0_AXI_PROTOCOL": {
             "value": "AXI4"
           },
+          "C_TRIGIN_EN": {
+            "value": "true"
+          },
           "C_TRIGOUT_EN": {
-            "value": "false"
+            "value": "true"
           }
         }
       },
@@ -2804,15 +2812,15 @@
         "xci_path": "ip\\emulated_microscope_util_idelay_ctrl_0_0\\emulated_microscope_util_idelay_ctrl_0_0.xci",
         "inst_hier_path": "util_idelay_ctrl_0"
       },
-      "axi_smc": {
+      "axi_smc_main": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "ip_revision": "25",
         "xci_name": "emulated_microscope_axi_smc_0",
         "xci_path": "ip\\emulated_microscope_axi_smc_0\\emulated_microscope_axi_smc_0.xci",
-        "inst_hier_path": "axi_smc",
+        "inst_hier_path": "axi_smc_main",
         "parameters": {
           "NUM_CLKS": {
-            "value": "2"
+            "value": "1"
           },
           "NUM_MI": {
             "value": "8"
@@ -3133,7 +3141,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "7"
+            "value": "8"
           },
           "C_TRIGIN_EN": {
             "value": "true"
@@ -3220,13 +3228,6 @@
             "value": "32"
           }
         }
-      },
-      "high": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "9",
-        "xci_name": "emulated_microscope_high_0",
-        "xci_path": "ip\\emulated_microscope_high_0\\emulated_microscope_high_0.xci",
-        "inst_hier_path": "high"
       },
       "blk_mem_gen_0": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
@@ -3331,18 +3332,62 @@
           }
         }
       },
+      "ila_DMA_out1": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "16",
+        "xci_name": "emulated_microscope_ila_DMA_out_1",
+        "xci_path": "ip\\emulated_microscope_ila_DMA_out_1\\emulated_microscope_ila_DMA_out_1.xci",
+        "inst_hier_path": "ila_DMA_out1",
+        "parameters": {
+          "ALL_PROBE_SAME_MU": {
+            "value": "true"
+          },
+          "C_DATA_DEPTH": {
+            "value": "1024"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "AXI"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "9"
+          },
+          "C_SLOT_0_AXI_PROTOCOL": {
+            "value": "AXI4S"
+          },
+          "C_TRIGIN_EN": {
+            "value": "true"
+          },
+          "C_TRIGOUT_EN": {
+            "value": "false"
+          }
+        }
+      },
       "Histogramming": {
-        "vlnv": "xilinx.com:user:Histogramming:1.0",
+        "vlnv": "xilinx.com:user:Histogramming:1.8",
         "ip_revision": "2",
-        "xci_name": "emulated_microscope_Histogramming_0_0",
-        "xci_path": "ip\\emulated_microscope_Histogramming_0_0\\emulated_microscope_Histogramming_0_0.xci",
+        "xci_name": "emulated_microscope_Histogramming_0_1",
+        "xci_path": "ip\\emulated_microscope_Histogramming_0_1\\emulated_microscope_Histogramming_0_1.xci",
         "inst_hier_path": "Histogramming"
       },
-      "Microscope_Emulator_0": {
-        "vlnv": "EMBL:user:Microscope_Emulator:1.0",
+      "LVDS_to_AXIS_IDDR": {
+        "vlnv": "xilinx.com:user:LVDS_to_AXIS_IDDR:1.23",
         "ip_revision": "2",
-        "xci_name": "emulated_microscope_Microscope_Emulator_0_1",
-        "xci_path": "ip\\emulated_microscope_Microscope_Emulator_0_1\\emulated_microscope_Microscope_Emulator_0_1.xci",
+        "xci_name": "emulated_microscope_LVDS_to_AXIS_IDDR_0_0",
+        "xci_path": "ip\\emulated_microscope_LVDS_to_AXIS_IDDR_0_0\\emulated_microscope_LVDS_to_AXIS_IDDR_0_0.xci",
+        "inst_hier_path": "LVDS_to_AXIS_IDDR"
+      },
+      "logic_high": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "emulated_microscope_xlconstant_0_0",
+        "xci_path": "ip\\emulated_microscope_xlconstant_0_0\\emulated_microscope_xlconstant_0_0.xci",
+        "inst_hier_path": "logic_high"
+      },
+      "Microscope_Emulator_0": {
+        "vlnv": "xilinx.com:user:Microscope_Emulator:1.13",
+        "ip_revision": "2",
+        "xci_name": "emulated_microscope_Microscope_Emulator_1_0",
+        "xci_path": "ip\\emulated_microscope_Microscope_Emulator_1_0\\emulated_microscope_Microscope_Emulator_1_0.xci",
         "inst_hier_path": "Microscope_Emulator_0",
         "interface_ports": {
           "S_AXI": {
@@ -3352,26 +3397,116 @@
           }
         }
       },
-      "LVDS_to_AXI_Stream_0": {
-        "vlnv": "EMBL:user:LVDS_to_AXI_Stream:1.0",
-        "ip_revision": "2",
-        "xci_name": "emulated_microscope_LVDS_to_AXI_Stream_0_1",
-        "xci_path": "ip\\emulated_microscope_LVDS_to_AXI_Stream_0_1\\emulated_microscope_LVDS_to_AXI_Stream_0_1.xci",
-        "inst_hier_path": "LVDS_to_AXI_Stream_0"
+      "CNTVALUEIN_CLK": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "emulated_microscope_MAX_PIXELS_1",
+        "xci_path": "ip\\emulated_microscope_MAX_PIXELS_1\\emulated_microscope_MAX_PIXELS_1.xci",
+        "inst_hier_path": "CNTVALUEIN_CLK",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "164"
+          },
+          "DIN_TO": {
+            "value": "160"
+          },
+          "DIN_WIDTH": {
+            "value": "256"
+          },
+          "DOUT_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "CNTVALUEIN_SDO": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "emulated_microscope_CNTVALUEIN_CLK_0",
+        "xci_path": "ip\\emulated_microscope_CNTVALUEIN_CLK_0\\emulated_microscope_CNTVALUEIN_CLK_0.xci",
+        "inst_hier_path": "CNTVALUEIN_SDO",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "169"
+          },
+          "DIN_TO": {
+            "value": "165"
+          },
+          "DIN_WIDTH": {
+            "value": "256"
+          },
+          "DOUT_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "IDELAYE2_LD": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "emulated_microscope_CNTVALUEIN_CLK_1",
+        "xci_path": "ip\\emulated_microscope_CNTVALUEIN_CLK_1\\emulated_microscope_CNTVALUEIN_CLK_1.xci",
+        "inst_hier_path": "IDELAYE2_LD",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "176"
+          },
+          "DIN_TO": {
+            "value": "175"
+          },
+          "DIN_WIDTH": {
+            "value": "256"
+          },
+          "DOUT_WIDTH": {
+            "value": "2"
+          }
+        }
+      },
+      "CNTVALUEIN_FRAME": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "emulated_microscope_CNTVALUEIN_CLK_2",
+        "xci_path": "ip\\emulated_microscope_CNTVALUEIN_CLK_2\\emulated_microscope_CNTVALUEIN_CLK_2.xci",
+        "inst_hier_path": "CNTVALUEIN_FRAME",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "174"
+          },
+          "DIN_TO": {
+            "value": "170"
+          },
+          "DIN_WIDTH": {
+            "value": "256"
+          },
+          "DOUT_WIDTH": {
+            "value": "5"
+          }
+        }
       }
     },
     "interface_nets": {
       "Histogramming_0_M_AXIS": {
         "interface_ports": [
           "Histogramming/M_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
+          "axi_dma_0/S_AXIS_S2MM",
+          "ila_DMA_out1/SLOT_0_AXIS"
+        ]
+      },
+      "Histogramming_TRIG_OUT": {
+        "interface_ports": [
+          "ila_LVDS_to_axis_axis/TRIG_IN",
+          "Histogramming/TRIG_OUT"
         ]
       },
       "LVDS_to_AXIS_0_M_AXIS_0": {
         "interface_ports": [
           "Histogramming/AXIS_IN",
-          "LVDS_to_AXI_Stream_0/M_AXIS_0",
+          "LVDS_to_AXIS_IDDR/M_AXIS",
           "ila_LVDS_to_axis_axis/SLOT_0_AXIS"
+        ]
+      },
+      "Microscope_Emulator_0_TRIG_OUT": {
+        "interface_ports": [
+          "Microscope_Emulator_0/TRIG_OUT",
+          "LVDS_to_AXIS_IDDR/TRIG_IN"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {
@@ -3407,62 +3542,68 @@
       },
       "axi_smc_M00_AXI": {
         "interface_ports": [
-          "axi_smc/M00_AXI",
+          "axi_smc_main/M00_AXI",
           "axi_bram_ctrl_0/S_AXI"
         ]
       },
       "axi_smc_M01_AXI": {
         "interface_ports": [
-          "axi_smc/M01_AXI",
+          "axi_smc_main/M01_AXI",
           "axi_dma_0/S_AXI_LITE"
         ]
       },
       "axi_smc_M02_AXI": {
         "interface_ports": [
-          "axi_smc/M02_AXI",
+          "axi_smc_main/M02_AXI",
           "axi_gpio_0/S_AXI"
         ]
       },
       "axi_smc_M03_AXI": {
         "interface_ports": [
-          "axi_smc/M03_AXI",
+          "axi_smc_main/M03_AXI",
           "axi_gpio_1/S_AXI"
         ]
       },
       "axi_smc_M04_AXI": {
         "interface_ports": [
-          "axi_smc/M04_AXI",
+          "axi_smc_main/M04_AXI",
           "axi_quad_spi_0/AXI_LITE"
         ]
       },
       "axi_smc_M05_AXI": {
         "interface_ports": [
-          "axi_smc/M05_AXI",
-          "Microscope_Emulator_0/S_AXI"
+          "Microscope_Emulator_0/S_AXI",
+          "axi_smc_main/M05_AXI"
         ]
       },
       "axi_smc_M06_AXI": {
         "interface_ports": [
-          "axi_smc/M06_AXI",
+          "axi_smc_main/M06_AXI",
           "axi_gpio_2/S_AXI"
         ]
       },
       "axi_smc_M07_AXI": {
         "interface_ports": [
-          "axi_smc/M07_AXI",
+          "axi_smc_main/M07_AXI",
           "axi_gpio_3/S_AXI"
         ]
       },
-      "ila_LVDS_to_AXIS_TRIG_OUT": {
+      "histogram_ILA_TRIG_OUT": {
         "interface_ports": [
-          "ila_LVDS_to_AXIS/TRIG_OUT",
-          "ila_LVDS_to_axis_axis/TRIG_IN"
+          "histogram_ILA/TRIG_OUT",
+          "ila_DMA_out/TRIG_IN"
+        ]
+      },
+      "ila_DMA_out_TRIG_OUT": {
+        "interface_ports": [
+          "ila_DMA_out/TRIG_OUT",
+          "ila_DMA_out1/TRIG_IN"
         ]
       },
       "ila_LVDS_to_axis_axis_TRIG_OUT": {
         "interface_ports": [
-          "ila_LVDS_to_AXIS/TRIG_IN",
-          "ila_LVDS_to_axis_axis/TRIG_OUT"
+          "ila_LVDS_to_axis_axis/TRIG_OUT",
+          "Microscope_Emulator_0/TRIG_IN"
         ]
       },
       "processing_system7_0_DDR": {
@@ -3480,7 +3621,7 @@
       "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
-          "axi_smc/S00_AXI"
+          "axi_smc_main/S00_AXI"
         ]
       },
       "slow_laser_ILA_TRIG_OUT": {
@@ -3503,22 +3644,40 @@
           "Histogramming/BINS_TO_READ"
         ]
       },
-      "CNTVALUEIN_LVDS_Dout": {
+      "CNTVALUEIN_CLK_Dout": {
         "ports": [
-          "CNTVALUEIN_LVDS/Dout",
-          "LVDS_to_AXI_Stream_0/CNTVALUEIN"
+          "CNTVALUEIN_CLK/Dout",
+          "LVDS_to_AXIS_IDDR/CNTVALUEIN_CLK"
+        ]
+      },
+      "CNTVALUEIN_FRAME_Dout": {
+        "ports": [
+          "CNTVALUEIN_FRAME/Dout",
+          "LVDS_to_AXIS_IDDR/CNTVALUEIN_FRAME"
+        ]
+      },
+      "CNTVALUEIN_SDO_Dout": {
+        "ports": [
+          "CNTVALUEIN_SDO/Dout",
+          "LVDS_to_AXIS_IDDR/CNTVALUEIN_SDO"
+        ]
+      },
+      "Histogramming_0_buffer_almost_full": {
+        "ports": [
+          "Histogramming/buffer_almost_full",
+          "histogram_ILA/probe7"
+        ]
+      },
+      "IDELAYE2_LD_Dout": {
+        "ports": [
+          "IDELAYE2_LD/Dout",
+          "LVDS_to_AXIS_IDDR/LD"
         ]
       },
       "IMAGE_SIZE_Dout": {
         "ports": [
           "IMAGE_SIZE/Dout",
           "Microscope_Emulator_0/image_size"
-        ]
-      },
-      "LD_LVDS_Dout": {
-        "ports": [
-          "LD_LVDS/Dout",
-          "LVDS_to_AXI_Stream_0/LD"
         ]
       },
       "LOG_2_BINWIDTH_Dout": {
@@ -3529,33 +3688,33 @@
       },
       "LVDS_to_AXIS_0_Buffer_overflow": {
         "ports": [
-          "LVDS_to_AXI_Stream_0/Buffer_overflow",
+          "LVDS_to_AXIS_IDDR/Buffer_overflow",
           "buffer_overflow",
           "xlconcat_1/In5",
           "ila_LVDS_to_AXIS/probe0"
         ]
       },
-      "LVDS_to_AXI_Stream_0_axis_rd_data_count": {
+      "LVDS_to_AXIS_IDDR_0_axis_rd_data_count": {
         "ports": [
-          "LVDS_to_AXI_Stream_0/axis_rd_data_count",
+          "LVDS_to_AXIS_IDDR/axis_rd_data_count",
           "ila_LVDS_to_AXIS/probe1"
         ]
       },
-      "LVDS_to_AXI_Stream_0_axis_wr_data_count": {
+      "LVDS_to_AXIS_IDDR_0_axis_wr_data_count": {
         "ports": [
-          "LVDS_to_AXI_Stream_0/axis_wr_data_count",
+          "LVDS_to_AXIS_IDDR/axis_wr_data_count",
           "ila_LVDS_to_AXIS/probe2"
         ]
       },
-      "LVDS_to_AXI_Stream_0_l_clk_out_n": {
+      "LVDS_to_AXIS_IDDR_0_l_clk_out_n": {
         "ports": [
-          "LVDS_to_AXI_Stream_0/l_clk_out_n",
+          "LVDS_to_AXIS_IDDR/l_clk_out_n",
           "l_clk_out_n"
         ]
       },
-      "LVDS_to_AXI_Stream_0_l_clk_out_p": {
+      "LVDS_to_AXIS_IDDR_0_l_clk_out_p": {
         "ports": [
-          "LVDS_to_AXI_Stream_0/l_clk_out_p",
+          "LVDS_to_AXIS_IDDR/l_clk_out_p",
           "l_clk_out_p"
         ]
       },
@@ -3565,13 +3724,13 @@
           "Histogramming/MAX_PIXELS"
         ]
       },
-      "Microscope_Emulator_0_refclk_out": {
+      "Microscope_Emulator_1_refclk_out": {
         "ports": [
           "Microscope_Emulator_0/refclk_out",
           "refclk_out"
         ]
       },
-      "Microscope_Emulator_0_stop_out": {
+      "Microscope_Emulator_1_stop_out": {
         "ports": [
           "Microscope_Emulator_0/stop_out",
           "stop_out"
@@ -3579,10 +3738,8 @@
       },
       "Net": {
         "ports": [
-          "LVDS_en/Dout",
-          "Histogramming/en",
-          "Microscope_Emulator_0/en",
-          "LVDS_to_AXI_Stream_0/en"
+          "EMULATOR_en/Dout",
+          "Microscope_Emulator_0/en"
         ]
       },
       "PULSES_PER_PIXEL_Dout": {
@@ -3595,6 +3752,13 @@
         "ports": [
           "REFINDEX_BITS/Dout",
           "Histogramming/REFINDEX_BITS"
+        ]
+      },
+      "SECOND_ARESETN_Dout": {
+        "ports": [
+          "SECOND_ARESETN/Dout",
+          "Histogramming/aresetn",
+          "LVDS_to_AXIS_IDDR/aresetn"
         ]
       },
       "STOPRESULT_BITS_Dout": {
@@ -3619,10 +3783,10 @@
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "xlconcat_0/dout",
-          "LVDS_en/Din",
+          "EMULATOR_en/Din",
           "msglen/Din",
           "CNTVALUEIN_LVDS/Din",
-          "LD_LVDS/Din",
+          "SECOND_ARESETN/Din",
           "LOG_2_BINWIDTH/Din",
           "REFINDEX_BITS/Din",
           "STOPRESULT_BITS/Din",
@@ -3630,7 +3794,11 @@
           "BINS_TO_READ/Din",
           "PULSES_PER_PIXEL/Din",
           "IMAGE_SIZE/Din",
-          "MAX_PIXELS/Din"
+          "MAX_PIXELS/Din",
+          "CNTVALUEIN_CLK/Din",
+          "CNTVALUEIN_SDO/Din",
+          "CNTVALUEIN_FRAME/Din",
+          "IDELAYE2_LD/Din"
         ]
       },
       "axi_gpio_0_gpio_io_o1": {
@@ -3696,19 +3864,13 @@
       "frame_n_0_1": {
         "ports": [
           "frame_n",
-          "LVDS_to_AXI_Stream_0/frame_n"
+          "LVDS_to_AXIS_IDDR/frame_n"
         ]
       },
       "frame_p_0_1": {
         "ports": [
           "frame_p",
-          "LVDS_to_AXI_Stream_0/frame_p"
-        ]
-      },
-      "high_dout": {
-        "ports": [
-          "high/dout",
-          "level_shifter_en"
+          "LVDS_to_AXIS_IDDR/frame_p"
         ]
       },
       "histo_0_bin_full_warning": {
@@ -3759,16 +3921,16 @@
           "axi_quad_spi_0/io1_i"
         ]
       },
-      "l_clk_in_n_0_1": {
+      "l_clk_in_n_1": {
         "ports": [
           "l_clk_in_n",
-          "LVDS_to_AXI_Stream_0/l_clk_in_n"
+          "LVDS_to_AXIS_IDDR/l_clk_in_n"
         ]
       },
-      "l_clk_in_p_0_1": {
+      "l_clk_in_p_1": {
         "ports": [
           "l_clk_in_p",
-          "LVDS_to_AXI_Stream_0/l_clk_in_p"
+          "LVDS_to_AXIS_IDDR/l_clk_in_p"
         ]
       },
       "laser_signal_generat_0_frame_clk_r": {
@@ -3792,10 +3954,18 @@
           "Histogramming/pixel_clk"
         ]
       },
+      "logic_high_dout": {
+        "ports": [
+          "logic_high/dout",
+          "Histogramming/en",
+          "level_shifter_en",
+          "LVDS_to_AXIS_IDDR/en"
+        ]
+      },
       "msglen_Dout": {
         "ports": [
           "msglen/Dout",
-          "LVDS_to_AXI_Stream_0/msglen"
+          "LVDS_to_AXIS_IDDR/msglen"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -3813,7 +3983,7 @@
           "axi_mem_intercon/M00_ACLK",
           "ila_DMA_out/clk",
           "axi_gpio_1/s_axi_aclk",
-          "axi_smc/aclk",
+          "axi_smc_main/aclk",
           "histogram_ILA/clk",
           "slow_laser_ILA/clk",
           "axi_gpio_2/s_axi_aclk",
@@ -3823,36 +3993,38 @@
           "axi_dma_0/m_axi_sg_aclk",
           "ila_LVDS_to_AXIS/clk",
           "ila_LVDS_to_axis_axis/clk",
+          "ila_DMA_out1/clk",
           "Histogramming/clk",
+          "rst_ps7_0_100M/slowest_sync_clk",
           "Microscope_Emulator_0/axi_clk",
-          "LVDS_to_AXI_Stream_0/clk"
+          "LVDS_to_AXIS_IDDR/clk"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
         "ports": [
           "processing_system7_0/FCLK_CLK1",
-          "LVDS_to_AXI_Stream_0/lvds_clk"
+          "LVDS_to_AXIS_IDDR/lvds_clk"
         ]
       },
       "processing_system7_0_FCLK_CLK3": {
         "ports": [
           "processing_system7_0/FCLK_CLK3",
           "util_idelay_ctrl_0/ref_clk",
-          "LVDS_to_AXI_Stream_0/ila_clk"
+          "Histogramming/ila_clk",
+          "LVDS_to_AXIS_IDDR/ila_clk"
         ]
       },
       "processing_system7_0_FCLK_CLK4": {
         "ports": [
           "processing_system7_0/FCLK_CLK2",
-          "axi_smc/aclk1",
-          "rst_ps7_0_100M/slowest_sync_clk",
           "Microscope_Emulator_0/laser_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET2_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET2_N",
-          "rst_ps7_0_100M/ext_reset_in"
+          "rst_ps7_0_100M/ext_reset_in",
+          "Microscope_Emulator_0/aresetn_laser"
         ]
       },
       "rst_ps7_0_100M_peripheral_aresetn": {
@@ -3865,27 +4037,24 @@
           "axi_mem_intercon/M00_ARESETN",
           "axi_gpio_1/s_axi_aresetn",
           "util_vector_logic_0/Op1",
-          "axi_smc/aresetn",
+          "axi_smc_main/aresetn",
           "axi_gpio_2/s_axi_aresetn",
           "axi_bram_ctrl_1/s_axi_aresetn",
           "axi_bram_ctrl_0/s_axi_aresetn",
           "axi_gpio_3/s_axi_aresetn",
-          "Histogramming/aresetn",
-          "Microscope_Emulator_0/axi_aresetn",
-          "Microscope_Emulator_0/laser_aresetn",
-          "LVDS_to_AXI_Stream_0/aresetn"
+          "Microscope_Emulator_0/axi_resetn"
         ]
       },
       "sdo_n_0_1": {
         "ports": [
           "sdo_n",
-          "LVDS_to_AXI_Stream_0/sdo_n"
+          "LVDS_to_AXIS_IDDR/sdo_n"
         ]
       },
       "sdo_p_0_1": {
         "ports": [
           "sdo_p",
-          "LVDS_to_AXI_Stream_0/sdo_p"
+          "LVDS_to_AXIS_IDDR/sdo_p"
         ]
       },
       "util_vector_logic_0_Res": {
@@ -3914,7 +4083,7 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x40000000",
-                "range": "8K"
+                "range": "4K"
               },
               "SEG_axi_dma_0_Reg": {
                 "address_block": "/axi_dma_0/S_AXI_LITE/Reg",
@@ -3967,7 +4136,7 @@
               "SEG_axi_bram_ctrl_1_Mem0": {
                 "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
                 "offset": "0x40000000",
-                "range": "8K"
+                "range": "4K"
               }
             }
           }

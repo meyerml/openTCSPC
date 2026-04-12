@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 14:24:27 2026
+//Date        : Fri Apr  3 23:41:13 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target LVDS_to_AXIS.bd
 //Design      : LVDS_to_AXIS
@@ -23,10 +23,6 @@ module LVDS_to_AXIS
     axis_rd_data_count,
     axis_wr_data_count,
     clk,
-    debug_axis_before_fifo_tdata,
-    debug_axis_before_fifo_tlast,
-    debug_axis_before_fifo_tready,
-    debug_axis_before_fifo_tvalid,
     en,
     frame_n,
     frame_p,
@@ -42,18 +38,14 @@ module LVDS_to_AXIS
   output [0:0]Buffer_overflow;
   input [4:0]CNTVALUEIN;
   input LD;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_0, CLK_DOMAIN LVDS_to_AXIS_clk_0, FREQ_HZ 50, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [63:0]M_AXIS_0_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_0, CLK_DOMAIN LVDS_to_AXIS_clk, FREQ_HZ 50, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [63:0]M_AXIS_0_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TLAST" *) output M_AXIS_0_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TREADY" *) input M_AXIS_0_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TVALID" *) output M_AXIS_0_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
   output [31:0]axis_rd_data_count;
   output [31:0]axis_wr_data_count;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF M_AXIS_0, ASSOCIATED_RESET aresetn, CLK_DOMAIN LVDS_to_AXIS_clk_0, FREQ_HZ 50, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TDATA" *) (* X_INTERFACE_MODE = "Monitor SlaveType" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME debug_axis_before_fifo, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [63:0]debug_axis_before_fifo_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TLAST" *) output debug_axis_before_fifo_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TREADY" *) output debug_axis_before_fifo_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TVALID" *) output debug_axis_before_fifo_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF M_AXIS_0, ASSOCIATED_RESET aresetn, CLK_DOMAIN LVDS_to_AXIS_clk, FREQ_HZ 50, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk;
   input en;
   input frame_n;
   input frame_p;
@@ -70,6 +62,10 @@ module LVDS_to_AXIS
   wire \^Buffer_overflow ;
   wire [4:0]CNTVALUEIN;
   wire [0:0]DATA_IBUF_OUT;
+  wire [63:0]DDR_fabric_0_AXIS_TDATA;
+  wire DDR_fabric_0_AXIS_TLAST;
+  wire DDR_fabric_0_AXIS_TREADY;
+  wire DDR_fabric_0_AXIS_TVALID;
   wire [0:0]FRAME_IBUF_OUT;
   wire IDELAY_DATA_DATAOUT;
   wire IDELAY_FRAME_DATAOUT;
@@ -82,10 +78,6 @@ module LVDS_to_AXIS
   wire [31:0]axis_rd_data_count;
   wire [31:0]axis_wr_data_count;
   wire clk;
-  wire [63:0]debug_axis_before_fifo_tdata;
-  wire debug_axis_before_fifo_tlast;
-  wire debug_axis_before_fifo_tready;
-  wire debug_axis_before_fifo_tvalid;
   wire en;
   wire frame_n;
   wire frame_p;
@@ -109,16 +101,16 @@ module LVDS_to_AXIS
        (.IBUF_DS_N(sdo_n),
         .IBUF_DS_P(sdo_p),
         .IBUF_OUT(DATA_IBUF_OUT));
-  LVDS_to_AXIS_DDR_fabric_even_simp_0_0 DDR_fabric_even_simp_0
+  LVDS_to_AXIS_DDR_Stream_to_AXI_St_0_0 DDR_Stream_to_AXI_St_0
        (.C(util_ds_buf_0_BUFG_O),
         .D(IDELAY_DATA_DATAOUT),
         .F(IDELAY_FRAME_DATAOUT),
         .aresetn(aresetn),
         .msglen(msglen),
-        .tdata_delayed(debug_axis_before_fifo_tdata),
-        .tlast_delayed(debug_axis_before_fifo_tlast),
-        .tready(debug_axis_before_fifo_tready),
-        .tvalid_delayed(debug_axis_before_fifo_tvalid));
+        .tdata_delayed(DDR_fabric_0_AXIS_TDATA),
+        .tlast_delayed(DDR_fabric_0_AXIS_TLAST),
+        .tready(DDR_fabric_0_AXIS_TREADY),
+        .tvalid_delayed(DDR_fabric_0_AXIS_TVALID));
   LVDS_to_AXIS_util_ds_buf_0_1 FRAME
        (.IBUF_DS_N(frame_n),
         .IBUF_DS_P(frame_p),
@@ -150,10 +142,10 @@ module LVDS_to_AXIS
         .prog_full(\^Buffer_overflow ),
         .s_axis_aclk(util_ds_buf_0_BUFG_O),
         .s_axis_aresetn(aresetn),
-        .s_axis_tdata(debug_axis_before_fifo_tdata),
-        .s_axis_tlast(debug_axis_before_fifo_tlast),
-        .s_axis_tready(debug_axis_before_fifo_tready),
-        .s_axis_tvalid(debug_axis_before_fifo_tvalid));
+        .s_axis_tdata(DDR_fabric_0_AXIS_TDATA),
+        .s_axis_tlast(DDR_fabric_0_AXIS_TLAST),
+        .s_axis_tready(DDR_fabric_0_AXIS_TREADY),
+        .s_axis_tvalid(DDR_fabric_0_AXIS_TVALID));
   LVDS_to_AXIS_ila_0_0 ila_LVDS
        (.clk(ila_clk),
         .probe0(util_ds_buf_0_BUFG_O),

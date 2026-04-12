@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 14:09:45 2026
+//Date        : Wed Apr  1 14:26:49 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target histo_wrapper.bd
 //Design      : histo_wrapper
@@ -23,13 +23,17 @@ module histo_wrapper
     M_AXIS_tvalid,
     REFINDEX_BITS,
     STOPRESULT_BITS,
+    TRIG_OUT_ack,
+    TRIG_OUT_trig,
     aresetn,
     bin_full_warning,
     bin_written_but_never_read_warning,
+    buffer_almost_full,
     clk,
     disable_p,
     en,
     frame_clk,
+    ila_clk,
     line_clk,
     log_2_BIN_WIDTH,
     negedge_frame,
@@ -48,13 +52,17 @@ module histo_wrapper
   output M_AXIS_tvalid;
   input [5:0]REFINDEX_BITS;
   input [5:0]STOPRESULT_BITS;
+  input TRIG_OUT_ack;
+  output TRIG_OUT_trig;
   input aresetn;
   output bin_full_warning;
   output bin_written_but_never_read_warning;
+  output buffer_almost_full;
   input clk;
   output [0:0]disable_p;
   input en;
   input frame_clk;
+  input ila_clk;
   input line_clk;
   input [15:0]log_2_BIN_WIDTH;
   output negedge_frame;
@@ -74,13 +82,17 @@ module histo_wrapper
   wire M_AXIS_tvalid;
   wire [5:0]REFINDEX_BITS;
   wire [5:0]STOPRESULT_BITS;
+  wire TRIG_OUT_ack;
+  wire TRIG_OUT_trig;
   wire aresetn;
   wire bin_full_warning;
   wire bin_written_but_never_read_warning;
+  wire buffer_almost_full;
   wire clk;
   wire [0:0]disable_p;
   wire en;
   wire frame_clk;
+  wire ila_clk;
   wire line_clk;
   wire [15:0]log_2_BIN_WIDTH;
   wire negedge_frame;
@@ -101,13 +113,17 @@ module histo_wrapper
         .M_AXIS_tvalid(M_AXIS_tvalid),
         .REFINDEX_BITS(REFINDEX_BITS),
         .STOPRESULT_BITS(STOPRESULT_BITS),
+        .TRIG_OUT_ack(TRIG_OUT_ack),
+        .TRIG_OUT_trig(TRIG_OUT_trig),
         .aresetn(aresetn),
         .bin_full_warning(bin_full_warning),
         .bin_written_but_never_read_warning(bin_written_but_never_read_warning),
+        .buffer_almost_full(buffer_almost_full),
         .clk(clk),
         .disable_p(disable_p),
         .en(en),
         .frame_clk(frame_clk),
+        .ila_clk(ila_clk),
         .line_clk(line_clk),
         .log_2_BIN_WIDTH(log_2_BIN_WIDTH),
         .negedge_frame(negedge_frame),

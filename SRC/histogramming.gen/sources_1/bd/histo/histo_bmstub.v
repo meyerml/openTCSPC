@@ -30,7 +30,11 @@ module histo (
   log_2_BIN_WIDTH,
   BINS_TO_READ,
   bin_written_but_never_read_warning,
-  MAX_PIXELS
+  MAX_PIXELS,
+  buffer_almost_full,
+  ila_clk,
+  TRIG_OUT_ack,
+  TRIG_OUT_trig
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AXIS_IN TDATA" *)
@@ -93,6 +97,17 @@ module histo (
   output bin_written_but_never_read_warning;
   (* X_INTERFACE_IGNORE = "true" *)
   input [31:0]MAX_PIXELS;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output buffer_almost_full;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ILA_CLK CLK" *)
+  (* X_INTERFACE_MODE = "slave CLK.ILA_CLK" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ILA_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN histo_clk_0, INSERT_VIP 0" *)
+  input ila_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *)
+  (* X_INTERFACE_MODE = "master TRIG_OUT" *)
+  input TRIG_OUT_ack;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *)
+  output TRIG_OUT_trig;
 
   // stub module has no contents
 

@@ -193,12 +193,13 @@ int main(void){
 		return XST_FAILURE;
 	}
 
-	enableInterrupts();
 	//sleep(100);
 	//int DMAstatus = DMAStart(image_buffer, MAX_PKT_LEN);
 	//axiGpOutClear(LVDS_START);  //the DMA is already waiting, so start the LVDS engine
-	//sleep(1);
-	axiGpOutSet(LVDS_START);  //the DMA is already waiting, so start the LVDS engine
+	axiGpOutSet(SECOND_ARESETN);
+	sleep(1);  //make sure all axi gpio are stable
+	enableInterrupts();
+	axiGpOutSet(EMULATOR_START);  //the DMA is already waiting, so start the LVDS engine
 
 	//int DMAstatus = DMAStart(image_buffer, DESTINATION_LENGTH);
 

@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Tue Mar 10 17:00:13 2026
+// Date        : Tue Mar 10 17:00:10 2026
 // Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/marce/OneDrive/Desktop/openTCSPC3/SRC/Microscope/Microscope.gen/sources_1/bd/laser/ip/laser_axi_smc_0/laser_axi_smc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top laser_axi_smc_0 -prefix
+//               laser_axi_smc_0_ laser_axi_smc_0_stub.v
 // Design      : laser_axi_smc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

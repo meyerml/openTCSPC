@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2A0157419D622B12",
+      "boundary_crc": "0x57B9628FE619FA73",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../histogramming.gen/sources_1/bd/histo",
       "name": "histo",
@@ -20,7 +20,9 @@
       "frame_negedge_detect": "",
       "HIGH": "",
       "pixel_posedge_detect": "",
-      "ila_histo_out": ""
+      "ila_histo_out": "",
+      "ila_histo_int": "",
+      "ila_sorter_out1": ""
     },
     "interface_ports": {
       "AXIS_IN": {
@@ -168,6 +170,21 @@
           },
           "TVALID": {
             "physical_name": "M_AXIS_tvalid",
+            "direction": "O"
+          }
+        }
+      },
+      "TRIG_OUT": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:trigger:1.0",
+        "vlnv": "xilinx.com:interface:trigger_rtl:1.0",
+        "port_maps": {
+          "ACK": {
+            "physical_name": "TRIG_OUT_ack",
+            "direction": "I"
+          },
+          "TRIG": {
+            "physical_name": "TRIG_OUT_trig",
             "direction": "O"
           }
         }
@@ -349,6 +366,35 @@
             "value_src": "ip_prop"
           }
         }
+      },
+      "buffer_almost_full": {
+        "direction": "O"
+      },
+      "ila_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "histo_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -359,8 +405,14 @@
         "xci_path": "ip\\histo_axis_data_fifo_0_0\\histo_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
+          "FIFO_DEPTH": {
+            "value": "2048"
+          },
           "FIFO_MEMORY_TYPE": {
             "value": "auto"
+          },
+          "HAS_AFULL": {
+            "value": "1"
           }
         },
         "interface_ports": {
@@ -576,6 +628,10 @@
                 "value": "AXIS_IN:AXIS_OUT",
                 "value_src": "constant"
               },
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
               "CLK_DOMAIN": {
                 "value": "histo_clk",
                 "value_src": "default_prop"
@@ -623,31 +679,6 @@
             "left": "14",
             "right": "0"
           },
-          "frame": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "pixel_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "line_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "frame_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
           "bin_full_warning": {
             "direction": "O"
           },
@@ -671,6 +702,40 @@
                 "value_src": "ip_prop"
               }
             }
+          },
+          "main_fsm_state_dbg": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "reading_fsm_state_dbg": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "tvalid_dbg": {
+            "direction": "O"
+          },
+          "bram_addr_dbg": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "pixel_counter_dbg": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "tready_dbg": {
+            "direction": "O"
+          },
+          "tlast_dbg": {
+            "direction": "O"
+          },
+          "tdata_dbg": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
           }
         }
       },
@@ -934,7 +999,17 @@
             }
           },
           "edge_valid": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "detect_out": {
             "direction": "O",
@@ -1049,7 +1124,82 @@
             "value": "false"
           },
           "C_TRIGOUT_EN": {
+            "value": "true"
+          }
+        }
+      },
+      "ila_histo_int": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "16",
+        "xci_name": "histo_ila_0_0",
+        "xci_path": "ip\\histo_ila_0_0\\histo_ila_0_0.xci",
+        "inst_hier_path": "ila_histo_int",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "1024"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "18"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "3"
+          },
+          "C_PROBE14_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE15_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE16_WIDTH": {
+            "value": "15"
+          },
+          "C_PROBE17_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "5"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "14"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "64"
+          },
+          "C_TRIGIN_EN": {
+            "value": "true"
+          },
+          "C_TRIGOUT_EN": {
             "value": "false"
+          }
+        }
+      },
+      "ila_sorter_out1": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "16",
+        "xci_name": "histo_ila_histo_out_0",
+        "xci_path": "ip\\histo_ila_histo_out_0\\histo_ila_histo_out_0.xci",
+        "inst_hier_path": "ila_sorter_out1",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "1024"
+          },
+          "C_SLOT_0_AXIS_TDATA_WIDTH": {
+            "value": "64"
+          },
+          "C_SLOT_0_AXI_PROTOCOL": {
+            "value": "AXI4S"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          },
+          "C_TRIGOUT_EN": {
+            "value": "true"
           }
         }
       }
@@ -1074,10 +1224,23 @@
           "axis_data_fifo_0/M_AXIS"
         ]
       },
+      "ila_histo_out_TRIG_OUT": {
+        "interface_ports": [
+          "ila_histo_int/TRIG_IN",
+          "ila_histo_out/TRIG_OUT"
+        ]
+      },
+      "ila_sorter_out1_TRIG_OUT": {
+        "interface_ports": [
+          "TRIG_OUT",
+          "ila_sorter_out1/TRIG_OUT"
+        ]
+      },
       "sorter_0_AXIS_OUT": {
         "interface_ports": [
           "sorter_0/AXIS_OUT",
-          "HISTOGRAM_ARBITER_FSM_0/AXIS_IN"
+          "HISTOGRAM_ARBITER_FSM_0/AXIS_IN",
+          "ila_sorter_out1/SLOT_0_AXIS"
         ]
       }
     },
@@ -1085,7 +1248,8 @@
       "BINS_READ_1": {
         "ports": [
           "BINS_TO_READ",
-          "HISTOGRAM_ARBITER_FSM_0/BINS_TO_READ"
+          "HISTOGRAM_ARBITER_FSM_0/BINS_TO_READ",
+          "ila_histo_int/probe16"
         ]
       },
       "HISTOGRAM_ARBITER_FSM_0_bin_full_warning": {
@@ -1100,16 +1264,65 @@
           "bin_written_but_never_read_warning"
         ]
       },
+      "HISTOGRAM_ARBITER_FSM_0_bram_addr_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/bram_addr_dbg",
+          "ila_histo_int/probe3"
+        ]
+      },
+      "HISTOGRAM_ARBITER_FSM_0_main_fsm_state_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/main_fsm_state_dbg",
+          "ila_histo_int/probe0"
+        ]
+      },
+      "HISTOGRAM_ARBITER_FSM_0_pixel_counter_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/pixel_counter_dbg",
+          "ila_histo_int/probe4"
+        ]
+      },
       "HISTOGRAM_ARBITER_FSM_0_premature_pixel_done_error": {
         "ports": [
           "HISTOGRAM_ARBITER_FSM_0/premature_pixel_done_error",
           "premature_pixel_done_error"
         ]
       },
+      "HISTOGRAM_ARBITER_FSM_0_reading_fsm_state_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/reading_fsm_state_dbg",
+          "ila_histo_int/probe1"
+        ]
+      },
+      "HISTOGRAM_ARBITER_FSM_0_tdata_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/tdata_dbg",
+          "ila_histo_int/probe7"
+        ]
+      },
+      "HISTOGRAM_ARBITER_FSM_0_tlast_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/tlast_dbg",
+          "ila_histo_int/probe6"
+        ]
+      },
+      "HISTOGRAM_ARBITER_FSM_0_tready_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/tready_dbg",
+          "ila_histo_int/probe5"
+        ]
+      },
+      "HISTOGRAM_ARBITER_FSM_0_tvalid_dbg": {
+        "ports": [
+          "HISTOGRAM_ARBITER_FSM_0/tvalid_dbg",
+          "ila_histo_int/probe2"
+        ]
+      },
       "MAX_PIXELS_1": {
         "ports": [
           "MAX_PIXELS",
-          "HISTOGRAM_ARBITER_FSM_0/MAX_PIXELS"
+          "HISTOGRAM_ARBITER_FSM_0/MAX_PIXELS",
+          "ila_histo_int/probe17"
         ]
       },
       "REFINDEX_BITS_0_1": {
@@ -1128,10 +1341,17 @@
         "ports": [
           "aresetn",
           "axis_data_fifo_0/s_axis_aresetn",
-          "HISTOGRAM_ARBITER_FSM_0/aresetn",
           "frame_negedge_detect/aresetn",
           "pixel_posedge_detect/aresetn",
-          "sorter_0/aresetn"
+          "sorter_0/aresetn",
+          "HISTOGRAM_ARBITER_FSM_0/aresetn",
+          "ila_histo_int/probe11"
+        ]
+      },
+      "axis_data_fifo_0_almost_full": {
+        "ports": [
+          "axis_data_fifo_0/almost_full",
+          "buffer_almost_full"
         ]
       },
       "clk_0_1": {
@@ -1139,54 +1359,62 @@
           "clk",
           "axis_data_fifo_0/s_axis_aclk",
           "ila_histo_out/clk",
-          "HISTOGRAM_ARBITER_FSM_0/clk",
           "frame_negedge_detect/clk",
           "pixel_posedge_detect/clk",
-          "sorter_0/clk"
+          "sorter_0/clk",
+          "HISTOGRAM_ARBITER_FSM_0/clk",
+          "ila_sorter_out1/clk"
+        ]
+      },
+      "clk_0_2": {
+        "ports": [
+          "ila_clk",
+          "ila_histo_int/clk"
         ]
       },
       "edge_detect_0_detect_out": {
         "ports": [
           "new_pixel_or_frame_done/Res",
           "refres_p",
-          "HISTOGRAM_ARBITER_FSM_0/pixel_done"
+          "HISTOGRAM_ARBITER_FSM_0/pixel_done",
+          "ila_histo_int/probe13"
         ]
       },
       "en_0_1": {
         "ports": [
           "en",
+          "sorter_0/en",
           "HISTOGRAM_ARBITER_FSM_0/en",
-          "sorter_0/en"
+          "ila_histo_int/probe12"
         ]
       },
       "frame_clk_1": {
         "ports": [
           "frame_clk",
           "in_line_and_in_frame/Op2",
-          "HISTOGRAM_ARBITER_FSM_0/frame",
-          "HISTOGRAM_ARBITER_FSM_0/frame_clk",
-          "frame_negedge_detect/edge_in"
+          "frame_negedge_detect/edge_in",
+          "ila_histo_int/probe9"
         ]
       },
       "frame_clk_edge_detect1_detect_out": {
         "ports": [
           "frame_negedge_detect/detect_out",
           "new_pixel_or_frame_done/Op2",
-          "negedge_frame"
+          "negedge_frame",
+          "ila_histo_int/probe14"
         ]
       },
       "in_line_and_in_frame_Res": {
         "ports": [
           "in_line_and_in_frame/Res",
-          "not_recording/Op1",
-          "pixel_posedge_detect/edge_valid"
+          "not_recording/Op1"
         ]
       },
       "line_clk_1": {
         "ports": [
           "line_clk",
           "in_line_and_in_frame/Op1",
-          "HISTOGRAM_ARBITER_FSM_0/line_clk"
+          "ila_histo_int/probe10"
         ]
       },
       "log_2_BIN_WIDTH_0_1": {
@@ -1198,14 +1426,15 @@
       "pixel_clk_1": {
         "ports": [
           "pixel_clk",
-          "HISTOGRAM_ARBITER_FSM_0/pixel_clk",
-          "pixel_posedge_detect/edge_in"
+          "pixel_posedge_detect/edge_in",
+          "ila_histo_int/probe8"
         ]
       },
       "pixel_posedge_detect_detect_out": {
         "ports": [
           "pixel_posedge_detect/detect_out",
-          "new_pixel_or_frame_done/Op1"
+          "new_pixel_or_frame_done/Op1",
+          "ila_histo_int/probe15"
         ]
       },
       "util_vector_logic_0_Res": {
@@ -1217,7 +1446,8 @@
       "xlconstant_0_dout": {
         "ports": [
           "HIGH/dout",
-          "frame_negedge_detect/edge_valid"
+          "frame_negedge_detect/edge_valid",
+          "pixel_posedge_detect/edge_valid"
         ]
       }
     },

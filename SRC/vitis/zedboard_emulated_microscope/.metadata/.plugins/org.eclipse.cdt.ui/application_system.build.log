@@ -1,7 +1,7 @@
-19:20:39 **** Incremental Build of configuration Debug for project application_system ****
+17:52:10 **** Incremental Build of configuration Debug for project application_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 54366 C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/top_emulated_microscope.xpfm standalone_ps7_cortexa9_0 C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application_system/Debug/system.bif
+generate_system_bif.bat 53873 C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/top_emulated_microscope.xpfm standalone_ps7_cortexa9_0 C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application_system/Debug/system.bif
 
 ****** Software Commandline Tool (XSCT) v2024.2.0
   **** SW Build 5239620 on Sun Nov 10 09:56:12 MST 2024
@@ -13,9 +13,9 @@ Warning: XSCT is deprecated and will be removed in future releases.
 We recommend using the new Python command-line tool for project management and debugging:
 - Run "vitis -i" for interactive mode.
 - Run "vitis -s <script>" for script mode.
-sdcard_gen --xpfm C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/top_emulated_microscope.xpfm --sys_config top_emulated_microscope --bif C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application_system/Debug/system.bif --bitstream C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit --elf C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope.bit
+sdcard_gen --xpfm C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/top_emulated_microscope.xpfm --sys_config top_emulated_microscope --bif C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application_system/Debug/system.bif --bitstream C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope20.bit --elf C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/Debug/application.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application/_ide/bitstream/top_emulated_microscope20.bit
 Running C:/Xilinx/Vitis/2024.2/bin/bootgen  -image C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/application_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-19:20:47 Build Finished (took 7s.647ms)
+17:52:19 Build Finished (took 8s.838ms)
 

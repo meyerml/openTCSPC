@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Memory/>
+<Memory>
+    <Block Addr="image_buffer" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0x4000" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0x03800000" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0x1E6" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0xD4A0" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0xD4A0" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0xD4A0" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="0x40040000" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="0x00235c0c" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="0x00235c0c" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="&amp;binary_data" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="binary_data" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="image_buffer + 0x1568" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="binary_data + 0x10000" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="binary_data + 0x40000" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="bram_ptr" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="bram_ptr + 0x10000" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+    <Block Addr="binary_data" Context="JTAG-jsn-Zed-210248BD1333-4ba00477-0.0" Size="-1"/>
+</Memory>

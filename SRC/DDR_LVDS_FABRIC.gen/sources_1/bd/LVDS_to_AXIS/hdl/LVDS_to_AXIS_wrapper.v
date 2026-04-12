@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 14:24:27 2026
+//Date        : Fri Apr  3 23:41:13 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target LVDS_to_AXIS_wrapper.bd
 //Design      : LVDS_to_AXIS_wrapper
@@ -22,10 +22,6 @@ module LVDS_to_AXIS_wrapper
     axis_rd_data_count,
     axis_wr_data_count,
     clk,
-    debug_axis_before_fifo_tdata,
-    debug_axis_before_fifo_tlast,
-    debug_axis_before_fifo_tready,
-    debug_axis_before_fifo_tvalid,
     en,
     frame_n,
     frame_p,
@@ -49,10 +45,6 @@ module LVDS_to_AXIS_wrapper
   output [31:0]axis_rd_data_count;
   output [31:0]axis_wr_data_count;
   input clk;
-  output [63:0]debug_axis_before_fifo_tdata;
-  output debug_axis_before_fifo_tlast;
-  output debug_axis_before_fifo_tready;
-  output debug_axis_before_fifo_tvalid;
   input en;
   input frame_n;
   input frame_p;
@@ -77,10 +69,6 @@ module LVDS_to_AXIS_wrapper
   wire [31:0]axis_rd_data_count;
   wire [31:0]axis_wr_data_count;
   wire clk;
-  wire [63:0]debug_axis_before_fifo_tdata;
-  wire debug_axis_before_fifo_tlast;
-  wire debug_axis_before_fifo_tready;
-  wire debug_axis_before_fifo_tvalid;
   wire en;
   wire frame_n;
   wire frame_p;
@@ -106,10 +94,6 @@ module LVDS_to_AXIS_wrapper
         .axis_rd_data_count(axis_rd_data_count),
         .axis_wr_data_count(axis_wr_data_count),
         .clk(clk),
-        .debug_axis_before_fifo_tdata(debug_axis_before_fifo_tdata),
-        .debug_axis_before_fifo_tlast(debug_axis_before_fifo_tlast),
-        .debug_axis_before_fifo_tready(debug_axis_before_fifo_tready),
-        .debug_axis_before_fifo_tvalid(debug_axis_before_fifo_tvalid),
         .en(en),
         .frame_n(frame_n),
         .frame_p(frame_p),

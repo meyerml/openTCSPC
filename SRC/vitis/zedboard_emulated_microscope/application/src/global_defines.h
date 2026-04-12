@@ -5,12 +5,17 @@
 
 //GPX2 parameters
 #define REF_INDEX_BITWIDTH 0 //16 //24 //0(no data out),2,4,8,16,24,6,or 12 bits wide
-#define STOP_DATA_BITWIDTH 18 //20 //14, 16, 18, or 20 bits wide
+#define STOP_DATA_BITWIDTH 20 //20 //14, 16, 18, or 20 bits wide
 
 //together with an LVDS_DATA_VALID_ADJUST of -160 ps, this actually works for 250 Mhz of DDR transfer
 
 //LVDS receiver parameters
-#define IDELAY_TAPS 0  //the taps for the idelay on the LVDS clock line
+#define IDELAY_TAPS 0 //the taps for the idelay on the LVDS clock line
+#define CNTVALUEIN_SDO 25
+#define CNTVALUEIN_FRAME 25
+#define CNTVALUEIN_CLK 0
+
+
 #define MEASURE_TIME 0
 
 //microscope parameters
@@ -27,7 +32,7 @@
 #define ORIGINAL_FRAME_WIDTH 512  //used for cropping a part of the image
 #define IMAGE "CONVALLARIA_512"  //CONVALLARIA CHECKERBOARD BARCODE
 #define BRAM_WRAPAROUND 32768  //2^15
-#define PULSES_PER_PIXEL 32  //how many laser pulses should be "fired" at each pixel?
+#define PULSES_PER_PIXEL 4096  //how many laser pulses should be "fired" at each pixel?
 #define LOG_2_HIST_BIN_WIDTH 10  // log 2 of histogram bin width in picoseconds. larger values lead to less precision, but more compact histograms
 
 #define ORIGINAL_NUM_PIXELS (ORIGINAL_FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)  // the number of pixels in a frame

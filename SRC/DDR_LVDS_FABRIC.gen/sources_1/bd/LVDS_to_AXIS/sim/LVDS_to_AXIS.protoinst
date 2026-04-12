@@ -3,7 +3,7 @@
 	"modules": {
 		"LVDS_to_AXIS": {
 			"proto_instances": {
-				"/DDR_fabric_even_simp_0/AXIS": {
+				"/DDR_Stream_to_AXI_St_0/AXIS": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"TDATA": { "actual": "tdata_delayed[63:0]"},

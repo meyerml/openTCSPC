@@ -60,7 +60,7 @@ ENTITY emulated_microscope_axi_bram_ctrl_0_0 IS
   PORT (
     s_axi_aclk : IN STD_LOGIC;
     s_axi_aresetn : IN STD_LOGIC;
-    s_axi_awaddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+    s_axi_awaddr : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -77,7 +77,7 @@ ENTITY emulated_microscope_axi_bram_ctrl_0_0 IS
     s_axi_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_bvalid : OUT STD_LOGIC;
     s_axi_bready : IN STD_LOGIC;
-    s_axi_araddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+    s_axi_araddr : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -95,7 +95,7 @@ ENTITY emulated_microscope_axi_bram_ctrl_0_0 IS
     bram_clk_a : OUT STD_LOGIC;
     bram_en_a : OUT STD_LOGIC;
     bram_we_a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    bram_addr_a : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+    bram_addr_a : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     bram_wrdata_a : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     bram_rddata_a : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
@@ -131,7 +131,7 @@ ARCHITECTURE emulated_microscope_axi_bram_ctrl_0_0_arch OF emulated_microscope_a
       ecc_interrupt : OUT STD_LOGIC;
       ecc_ue : OUT STD_LOGIC;
       s_axi_awid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      s_axi_awaddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+      s_axi_awaddr : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       s_axi_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -150,7 +150,7 @@ ARCHITECTURE emulated_microscope_axi_bram_ctrl_0_0_arch OF emulated_microscope_a
       s_axi_bvalid : OUT STD_LOGIC;
       s_axi_bready : IN STD_LOGIC;
       s_axi_arid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      s_axi_araddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+      s_axi_araddr : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       s_axi_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       s_axi_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s_axi_arburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -185,14 +185,14 @@ ARCHITECTURE emulated_microscope_axi_bram_ctrl_0_0_arch OF emulated_microscope_a
       bram_clk_a : OUT STD_LOGIC;
       bram_en_a : OUT STD_LOGIC;
       bram_we_a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      bram_addr_a : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+      bram_addr_a : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       bram_wrdata_a : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_rddata_a : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_rst_b : OUT STD_LOGIC;
       bram_clk_b : OUT STD_LOGIC;
       bram_en_b : OUT STD_LOGIC;
       bram_we_b : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      bram_addr_b : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+      bram_addr_b : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       bram_wrdata_b : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       bram_rddata_b : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
@@ -202,7 +202,7 @@ ARCHITECTURE emulated_microscope_axi_bram_ctrl_0_0_arch OF emulated_microscope_a
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF emulated_microscope_axi_bram_ctrl_0_0_arch : ARCHITECTURE IS "emulated_microscope_axi_bram_ctrl_0_0,axi_bram_ctrl,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF emulated_microscope_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "emulated_microscope_axi_bram_ctrl_0_0,axi_bram_ctrl,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_bram_ctrl,x_ipVersion=4.1,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BRAM_INST_MODE=EXTERNAL,C_MEMORY_DEPTH=2048,C_BRAM_ADDR_WIDTH=11,C_S_AXI_ADDR_WIDTH=13,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ID_WIDTH=1,C_S_AXI_PROTOCOL=AXI4,C_S_AXI_SUPPORTS_NARROW_BURST=0,C_SINGLE_PORT_BRAM=1,C_FAMILY=zynq,C_READ_LATENCY=1,C_RD_CMD_OPTIMIZATION=0,C_S_AXI_CTRL_ADDR_WIDT" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF emulated_microscope_axi_bram_ctrl_0_0_arch: ARCHITECTURE IS "emulated_microscope_axi_bram_ctrl_0_0,axi_bram_ctrl,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_bram_ctrl,x_ipVersion=4.1,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BRAM_INST_MODE=EXTERNAL,C_MEMORY_DEPTH=1024,C_BRAM_ADDR_WIDTH=10,C_S_AXI_ADDR_WIDTH=12,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ID_WIDTH=1,C_S_AXI_PROTOCOL=AXI4,C_S_AXI_SUPPORTS_NARROW_BURST=0,C_SINGLE_PORT_BRAM=1,C_FAMILY=zynq,C_READ_LATENCY=1,C_RD_CMD_OPTIMIZATION=0,C_S_AXI_CTRL_ADDR_WIDT" & 
 "H=32,C_S_AXI_CTRL_DATA_WIDTH=32,C_ECC=0,C_ECC_TYPE=0,C_FAULT_INJECT=0,C_ECC_ONOFF_RESET_VALUE=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
@@ -213,12 +213,12 @@ ARCHITECTURE emulated_microscope_axi_bram_ctrl_0_0_arch OF emulated_microscope_a
   ATTRIBUTE X_INTERFACE_INFO OF bram_rddata_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
   ATTRIBUTE X_INTERFACE_INFO OF bram_rst_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA RST";
   ATTRIBUTE X_INTERFACE_MODE OF bram_rst_a: SIGNAL IS "master BRAM_PORTA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF bram_rst_a: SIGNAL IS "XIL_INTERFACENAME BRAM_PORTA, MASTER_TYPE BRAM_CTRL, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, READ_WRITE_MODE READ_WRITE, READ_LATENCY 1";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF bram_rst_a: SIGNAL IS "XIL_INTERFACENAME BRAM_PORTA, MASTER_TYPE BRAM_CTRL, MEM_SIZE 4096, MEM_WIDTH 32, MEM_ECC NONE, READ_WRITE_MODE READ_WRITE, READ_LATENCY 1";
   ATTRIBUTE X_INTERFACE_INFO OF bram_we_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA WE";
   ATTRIBUTE X_INTERFACE_INFO OF bram_wrdata_a: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLKIF CLK";
   ATTRIBUTE X_INTERFACE_MODE OF s_axi_aclk: SIGNAL IS "slave CLKIF";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF S_AXI:S_AXI_CTRL, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF S_AXI:S_AXI_CTRL, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_arburst: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI ARBURST";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_arcache: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI ARCACHE";
@@ -233,7 +233,7 @@ ARCHITECTURE emulated_microscope_axi_bram_ctrl_0_0_arch OF emulated_microscope_a
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_arvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI ARVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_MODE OF s_axi_awaddr: SIGNAL IS "slave S_AXI";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 125000000, ID_WIDTH 0, ADDR_WIDTH 13, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, NUM_READ_" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_awaddr: SIGNAL IS "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 12, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, NUM_READ_" & 
 "THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awburst: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWBURST";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awcache: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWCACHE";
@@ -260,9 +260,9 @@ BEGIN
   U0 : axi_bram_ctrl
     GENERIC MAP (
       C_BRAM_INST_MODE => "EXTERNAL",
-      C_MEMORY_DEPTH => 2048,
-      C_BRAM_ADDR_WIDTH => 11,
-      C_S_AXI_ADDR_WIDTH => 13,
+      C_MEMORY_DEPTH => 1024,
+      C_BRAM_ADDR_WIDTH => 10,
+      C_S_AXI_ADDR_WIDTH => 12,
       C_S_AXI_DATA_WIDTH => 32,
       C_S_AXI_ID_WIDTH => 1,
       C_S_AXI_PROTOCOL => "AXI4",

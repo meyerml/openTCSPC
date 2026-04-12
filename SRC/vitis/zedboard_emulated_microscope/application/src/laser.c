@@ -1,9 +1,9 @@
 #include "laser.h"
 #include "dma/dma.h"
-#include "images/checkerboard.h"
 #include "images/convallaria.h"
 #include "images/barcode.h"
 #include "images/barcode_512.h"
+#include "images/checkerboard_512.h"
 #include "images/convallaria_512.h"
 
 int frame_done = 0;
@@ -28,8 +28,8 @@ const size_t binary_data_size = sizeof(binary_data) / sizeof(binary_data[0]);
 
 int prepare_laser_emulator() {
 	uint32_t* binary_data;
-	if (IMAGE == "CHECKERBOARD"){
-		binary_data = &checkerboard;
+	if (IMAGE == "CHECKERBOARD_512"){
+		binary_data = &checkerboard_512;
 	} else if (IMAGE == "CONVALLARIA"){
 		binary_data = &convallaria;
 	} else if (IMAGE == "BARCODE"){
@@ -38,7 +38,10 @@ int prepare_laser_emulator() {
 			binary_data = &barcode_512;
 	}else if (IMAGE == "CONVALLARIA_512"){
 		binary_data = &convallaria_512;
-}
+	}else {
+		xil_printf("error. unknown image name.\n\r");
+		while(1);
+	}
 
 	if((NUM_PIXELS)>pow(2,18)){
 		xil_printf("warning: %d pixels cannot be put into laser emulators BRAM, the BRAM will wraparound.\n\r", NUM_PIXELS);
@@ -51,14 +54,18 @@ int prepare_laser_emulator() {
     int words_written = 0;
     int bram_addr = -1;
     int pixel;
+    int original_row;
+    int original_column;
     //while (fread(&word, sizeof(uint32_t), 1, file) == 1) {
-    for (int i = 0; i<(ORIGINAL_NUM_PIXELS/4); i++){
-    	if(i>=MAX_PIXELS_IN_BRAM/4){
-    		//xil_printf("thats more pixels than fit in the emulators BRAM. BRAM_Wraparound will have to cover it\n\r");
+    for (int i = 0; i<(ORIGINAL_NUM_PIXELS); i+=4){
+    	if(i>=MAX_PIXELS_IN_BRAM){
+    		xil_printf("thats more pixels than fit in the emulators BRAM. BRAM_Wraparound will have to cover it\n\r");
     		break;
     	}
     	if(FRAME_WIDTH < ORIGINAL_FRAME_WIDTH){
-    		if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
+			original_column = i%ORIGINAL_FRAME_WIDTH;
+			original_row = i/ORIGINAL_FRAME_WIDTH;
+    		if((original_column<FRAME_WIDTH)&(original_row<FRAME_WIDTH)){
     			pixel = i*4;
     			bram_addr +=1;
     		} else {
@@ -69,8 +76,12 @@ int prepare_laser_emulator() {
 			bram_addr +=1;
 
     	}
+    	if (pixel == 252){
+    		int debug_var = 1;
+    	}
 
-    	word = (binary_data[pixel+3]<<24)|(binary_data[pixel+2]<<16)|(binary_data[pixel+1]<<8)|binary_data[pixel];
+
+    	word = (binary_data[i+3]<<24)|(binary_data[i+2]<<16)|(binary_data[i+1]<<8)|binary_data[i];
     	uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
         Xil_Out32(bram_ptr_neu, word);
         //xil_printf("%d\n\r", i);
@@ -81,11 +92,13 @@ int prepare_laser_emulator() {
     //int debug_variable2 = Xil_In32(bram_ptr+4);
 
     bram_addr =-1;
-    for (int i = 0; i<(ORIGINAL_NUM_PIXELS/4); i++){
-    	if(i>=MAX_PIXELS_IN_BRAM/4){
+    for (int i = 0; i<(ORIGINAL_NUM_PIXELS); i+=4){
+    	if(i>=MAX_PIXELS_IN_BRAM){
     		break;
     	}
     	if(FRAME_WIDTH < ORIGINAL_FRAME_WIDTH){
+			original_column = i%ORIGINAL_FRAME_WIDTH;
+			original_row = i/ORIGINAL_FRAME_WIDTH;
     		if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
     			pixel = i*4;
     			bram_addr +=1;
@@ -98,7 +111,7 @@ int prepare_laser_emulator() {
 
     	}
 
-    	word = (binary_data[pixel+3]<<24)|(binary_data[pixel+2]<<16)|(binary_data[pixel+1]<<8)|binary_data[pixel];
+    	word = (binary_data[i+3]<<24)|(binary_data[i+2]<<16)|(binary_data[i+1]<<8)|binary_data[i];
 
     	//word = binary_data[pixel];
     	uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
@@ -116,7 +129,7 @@ int prepare_laser_emulator() {
 
 void FrameIntrHandler(){
 	//frame_done = 1;
-	//sleep(1);
+	sleep(1);  //allow transfers to complete before continueing
 	RxDone = 1;  //means that a whole frame has been trasnferred to DDR memory now
 }
 

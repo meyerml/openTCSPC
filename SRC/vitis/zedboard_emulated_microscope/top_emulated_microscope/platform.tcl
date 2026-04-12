@@ -20,3 +20,52 @@ domain active {zynq_fsbl}
 domain active {standalone_ps7_cortexa9_0}
 platform generate -quick
 platform generate
+platform generate
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope.xsa}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope2.xsa}
+platform generate -domains 
+platform generate -domains standalone_ps7_cortexa9_0 
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope3.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope4.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope5.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope6.xsa}
+platform generate -domains 
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope7.xsa}
+platform generate -domains 
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope8.xsa}
+platform generate
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope9.xsa}
+platform generate -domains 
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope10.xsa}
+platform generate
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope11.xsa}
+platform generate
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope12.xsa}
+platform generate -domains 
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope13.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope14.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope15.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope16.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope17.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope18.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope19.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope20.xsa}
+platform generate -domains 

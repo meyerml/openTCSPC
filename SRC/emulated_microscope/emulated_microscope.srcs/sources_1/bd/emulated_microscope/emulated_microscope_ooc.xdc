@@ -8,8 +8,8 @@
 ################################################################################
 create_clock -name l_clk_in_p -period 10 [get_ports l_clk_in_p]
 create_clock -name l_clk_in_n -period 10 [get_ports l_clk_in_n]
-create_clock -name processing_system7_0_FCLK_CLK0 -period 8 [get_pins processing_system7_0/FCLK_CLK0]
-create_clock -name processing_system7_0_FCLK_CLK1 -period 4 [get_pins processing_system7_0/FCLK_CLK1]
+create_clock -name processing_system7_0_FCLK_CLK0 -period 10 [get_pins processing_system7_0/FCLK_CLK0]
+create_clock -name processing_system7_0_FCLK_CLK1 -period 100 [get_pins processing_system7_0/FCLK_CLK1]
 create_clock -name processing_system7_0_FCLK_CLK2 -period 100 [get_pins processing_system7_0/FCLK_CLK2]
 create_clock -name processing_system7_0_FCLK_CLK3 -period 5 [get_pins processing_system7_0/FCLK_CLK3]
 

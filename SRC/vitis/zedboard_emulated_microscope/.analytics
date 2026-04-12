@@ -9,3 +9,253 @@ timestamp=[2026-03-10 19:20:39], mode=BUILD, duration=0:00:06.020, duration_ms=6
 timestamp=[2026-03-10 19:20:47], mode=BUILD, duration=0:00:07.660, duration_ms=7660, data={name=application_system, configuration=Debug, clean_build=false}
 timestamp=[2026-03-10 21:09:32], mode=BUILD, duration=0:00:04.435, duration_ms=4435, data={name=application, configuration=Debug, clean_build=false}
 timestamp=[2026-03-10 21:16:47], mode=BUILD, duration=0:00:04.563, duration_ms=4563, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-11 09:04:01], mode=WORKBENCH_START, duration=0:00:12.760, duration_ms=12760, data={}
+timestamp=[2026-03-11 09:04:03], mode=WORKBENCH_UI_INIT, duration=0:00:01.098, duration_ms=1098, data={editors_count=5, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-03-11 09:04:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.457, duration_ms=457, data={}
+timestamp=[2026-03-11 15:39:24], mode=PLATFORM_GENERATION, duration=0:00:36.430, duration_ms=36430, data={name=top_emulated_microscope}
+timestamp=[2026-03-11 15:39:29], mode=BUILD, duration=0:00:05.116, duration_ms=5116, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-11 21:35:19], mode=BUILD, duration=0:00:02.131, duration_ms=2131, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-11 21:38:46], mode=BUILD, duration=0:00:00.574, duration_ms=574, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-18 13:02:14], mode=WORKBENCH_START, duration=0:00:24.487, duration_ms=24487, data={}
+timestamp=[2026-03-18 13:02:16], mode=WORKBENCH_UI_INIT, duration=0:00:01.862, duration_ms=1862, data={editors_count=8, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-03-18 13:02:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.546, duration_ms=546, data={}
+timestamp=[2026-03-18 14:07:09], mode=PLATFORM_GENERATION, duration=0:00:20.782, duration_ms=20782, data={name=top_emulated_microscope}
+timestamp=[2026-03-18 14:09:01], mode=BUILD, duration=0:00:07.664, duration_ms=7664, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-18 14:09:16], mode=BUILD, duration=0:00:07.700, duration_ms=7700, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-18 16:17:18], mode=WORKBENCH_START, duration=0:00:11.841, duration_ms=11841, data={}
+timestamp=[2026-03-18 16:17:19], mode=WORKBENCH_UI_INIT, duration=0:00:01.178, duration_ms=1178, data={editors_count=8, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-03-18 16:17:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.490, duration_ms=490, data={}
+timestamp=[2026-03-25 10:09:52], mode=WORKBENCH_START, duration=0:00:13.405, duration_ms=13405, data={}
+timestamp=[2026-03-25 10:09:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.957, duration_ms=957, data={editors_count=8, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-03-25 10:09:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.369, duration_ms=369, data={}
+timestamp=[2026-03-30 11:16:32], mode=WORKBENCH_START, duration=0:00:12.333, duration_ms=12333, data={}
+timestamp=[2026-03-30 11:16:34], mode=WORKBENCH_UI_INIT, duration=0:00:01.568, duration_ms=1568, data={editors_count=8, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-03-30 11:16:34], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.603, duration_ms=603, data={}
+timestamp=[2026-03-30 11:42:21], mode=PLATFORM_GENERATION, duration=0:00:28.381, duration_ms=28381, data={name=top_emulated_microscope}
+timestamp=[2026-03-30 11:42:21], mode=BUILD, duration=0:00:00.454, duration_ms=454, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-03-30 11:42:31], mode=BUILD, duration=0:00:09.609, duration_ms=9609, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 12:10:22], mode=BUILD, duration=0:00:07.250, duration_ms=7250, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 15:15:17], mode=PLATFORM_GENERATION, duration=0:00:19.894, duration_ms=19894, data={name=top_emulated_microscope}
+timestamp=[2026-03-30 15:18:32], mode=BUILD, duration=0:00:07.979, duration_ms=7979, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 15:18:48], mode=BUILD, duration=0:00:07.988, duration_ms=7988, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 20:08:16], mode=PLATFORM_GENERATION, duration=0:00:23.106, duration_ms=23106, data={name=top_emulated_microscope}
+timestamp=[2026-03-30 20:08:41], mode=BUILD, duration=0:00:00.478, duration_ms=478, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-03-30 20:09:08], mode=BUILD, duration=0:00:09.101, duration_ms=9101, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 20:09:25], mode=BUILD, duration=0:00:09.142, duration_ms=9142, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 20:10:08], mode=BUILD, duration=0:00:00.296, duration_ms=296, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-03-30 20:10:15], mode=BUILD, duration=0:00:07.331, duration_ms=7331, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-30 20:10:24], mode=BUILD, duration=0:00:08.241, duration_ms=8241, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 00:32:29], mode=PLATFORM_GENERATION, duration=0:00:20.856, duration_ms=20856, data={name=top_emulated_microscope}
+timestamp=[2026-03-31 00:35:25], mode=BUILD, duration=0:00:08.194, duration_ms=8194, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 00:35:41], mode=BUILD, duration=0:00:08.063, duration_ms=8063, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 14:55:08], mode=PLATFORM_GENERATION, duration=0:00:21.620, duration_ms=21620, data={name=top_emulated_microscope}
+timestamp=[2026-03-31 14:55:22], mode=BUILD, duration=0:00:00.490, duration_ms=490, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-03-31 14:55:46], mode=BUILD, duration=0:00:08.025, duration_ms=8025, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 14:56:02], mode=BUILD, duration=0:00:08.365, duration_ms=8365, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 14:56:13], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-03-31 14:56:20], mode=BUILD, duration=0:00:06.475, duration_ms=6475, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 14:56:28], mode=BUILD, duration=0:00:08.178, duration_ms=8178, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 16:22:42], mode=BUILD, duration=0:00:08.554, duration_ms=8554, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 16:39:32], mode=BUILD, duration=0:00:05.576, duration_ms=5576, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 16:43:56], mode=BUILD, duration=0:00:05.278, duration_ms=5278, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 17:33:00], mode=BUILD, duration=0:00:03.412, duration_ms=3412, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 17:33:22], mode=BUILD, duration=0:00:03.145, duration_ms=3145, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 17:36:29], mode=BUILD, duration=0:00:03.348, duration_ms=3348, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 17:40:30], mode=BUILD, duration=0:00:06.664, duration_ms=6664, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 17:56:36], mode=BUILD, duration=0:00:05.245, duration_ms=5245, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 18:42:25], mode=BUILD, duration=0:00:04.025, duration_ms=4025, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 18:53:27], mode=BUILD, duration=0:00:03.351, duration_ms=3351, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 19:03:40], mode=BUILD, duration=0:00:05.350, duration_ms=5350, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 19:24:09], mode=BUILD, duration=0:00:00.778, duration_ms=778, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-03-31 19:24:19], mode=BUILD, duration=0:00:10.057, duration_ms=10057, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 19:24:55], mode=BUILD, duration=0:00:00.678, duration_ms=678, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 19:25:22], mode=BUILD, duration=0:00:05.308, duration_ms=5308, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 19:36:25], mode=BUILD, duration=0:00:03.195, duration_ms=3195, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 19:53:09], mode=BUILD, duration=0:00:03.659, duration_ms=3659, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 20:16:40], mode=BUILD, duration=0:00:02.146, duration_ms=2146, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 20:17:00], mode=BUILD, duration=0:00:03.200, duration_ms=3200, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 20:22:40], mode=BUILD, duration=0:00:03.276, duration_ms=3276, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 20:25:25], mode=BUILD, duration=0:00:03.737, duration_ms=3737, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 22:49:36], mode=BUILD, duration=0:00:04.242, duration_ms=4242, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-03-31 22:53:49], mode=BUILD, duration=0:00:03.420, duration_ms=3420, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 10:51:59], mode=BUILD, duration=0:00:08.338, duration_ms=8338, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 10:54:35], mode=BUILD, duration=0:00:04.877, duration_ms=4877, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 10:58:58], mode=BUILD, duration=0:00:05.116, duration_ms=5116, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 11:41:18], mode=BUILD, duration=0:00:06.358, duration_ms=6358, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 11:47:17], mode=BUILD, duration=0:00:05.249, duration_ms=5249, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 12:40:24], mode=BUILD, duration=0:00:06.725, duration_ms=6725, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 12:50:42], mode=BUILD, duration=0:00:05.161, duration_ms=5161, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 12:55:07], mode=BUILD, duration=0:00:05.153, duration_ms=5153, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 12:57:54], mode=BUILD, duration=0:00:05.107, duration_ms=5107, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 12:57:56], mode=BUILD, duration=0:00:00.615, duration_ms=615, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 13:00:28], mode=BUILD, duration=0:00:05.345, duration_ms=5345, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 13:00:44], mode=BUILD, duration=0:00:05.738, duration_ms=5738, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 13:06:29], mode=BUILD, duration=0:00:05.089, duration_ms=5089, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 14:42:42], mode=BUILD, duration=0:00:13.032, duration_ms=13032, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 14:45:48], mode=BUILD, duration=0:00:06.354, duration_ms=6354, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 16:08:20], mode=BUILD, duration=0:00:07.054, duration_ms=7054, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 16:13:08], mode=BUILD, duration=0:00:00.894, duration_ms=894, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 17:55:43], mode=BUILD, duration=0:00:10.755, duration_ms=10755, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 17:57:34], mode=BUILD, duration=0:00:05.732, duration_ms=5732, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 17:59:54], mode=BUILD, duration=0:00:05.929, duration_ms=5929, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:17:38], mode=BUILD, duration=0:00:06.764, duration_ms=6764, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:21:43], mode=BUILD, duration=0:00:05.297, duration_ms=5297, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:23:59], mode=BUILD, duration=0:00:05.461, duration_ms=5461, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:27:04], mode=BUILD, duration=0:00:05.439, duration_ms=5439, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:29:49], mode=PLATFORM_GENERATION, duration=0:00:08.328, duration_ms=8328, data={name=top_emulated_microscope}
+timestamp=[2026-04-01 20:29:55], mode=BUILD, duration=0:00:05.708, duration_ms=5708, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:32:08], mode=BUILD, duration=0:00:04.978, duration_ms=4978, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:34:55], mode=PLATFORM_GENERATION, duration=0:00:17.688, duration_ms=17688, data={name=top_emulated_microscope}
+timestamp=[2026-04-01 20:35:29], mode=BUILD, duration=0:00:08.098, duration_ms=8098, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 20:35:47], mode=BUILD, duration=0:00:09.248, duration_ms=9248, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 21:15:50], mode=BUILD, duration=0:00:00.488, duration_ms=488, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-01 21:15:57], mode=BUILD, duration=0:00:07.243, duration_ms=7243, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 21:24:24], mode=BUILD, duration=0:00:04.745, duration_ms=4745, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 21:29:12], mode=BUILD, duration=0:00:05.052, duration_ms=5052, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 21:31:45], mode=BUILD, duration=0:00:05.282, duration_ms=5282, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 21:33:57], mode=BUILD, duration=0:00:04.994, duration_ms=4994, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-01 21:36:34], mode=BUILD, duration=0:00:05.247, duration_ms=5247, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-02 16:59:14], mode=WORKBENCH_START, duration=0:00:10.832, duration_ms=10832, data={}
+timestamp=[2026-04-02 16:59:15], mode=WORKBENCH_UI_INIT, duration=0:00:00.836, duration_ms=836, data={editors_count=20, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-04-02 16:59:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.399, duration_ms=399, data={}
+timestamp=[2026-04-04 15:06:35], mode=WORKBENCH_START, duration=0:00:12.703, duration_ms=12703, data={}
+timestamp=[2026-04-04 15:06:36], mode=WORKBENCH_UI_INIT, duration=0:00:00.779, duration_ms=779, data={editors_count=20, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-04-04 15:06:37], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.439, duration_ms=439, data={}
+timestamp=[2026-04-08 21:01:51], mode=PLATFORM_GENERATION, duration=0:00:47.376, duration_ms=47376, data={name=top_emulated_microscope}
+timestamp=[2026-04-08 21:02:47], mode=BUILD, duration=0:00:09.761, duration_ms=9761, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 21:03:03], mode=BUILD, duration=0:00:08.747, duration_ms=8747, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 21:17:06], mode=BUILD, duration=0:00:00.345, duration_ms=345, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-08 21:17:13], mode=BUILD, duration=0:00:06.557, duration_ms=6557, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 21:23:20], mode=BUILD, duration=0:00:00.937, duration_ms=937, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 21:23:29], mode=BUILD, duration=0:00:08.089, duration_ms=8089, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 21:37:14], mode=BUILD, duration=0:00:05.302, duration_ms=5302, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 22:48:09], mode=PLATFORM_GENERATION, duration=0:00:16.059, duration_ms=16059, data={name=top_emulated_microscope}
+timestamp=[2026-04-08 22:49:49], mode=BUILD, duration=0:00:07.428, duration_ms=7428, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 22:50:04], mode=BUILD, duration=0:00:07.818, duration_ms=7818, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 23:20:02], mode=BUILD, duration=0:00:00.662, duration_ms=662, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-08 23:20:10], mode=BUILD, duration=0:00:07.309, duration_ms=7309, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-08 23:24:33], mode=BUILD, duration=0:00:04.239, duration_ms=4239, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 00:40:10], mode=BUILD, duration=0:00:04.257, duration_ms=4257, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 02:46:36], mode=BUILD, duration=0:00:02.513, duration_ms=2513, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 02:56:48], mode=BUILD, duration=0:00:03.896, duration_ms=3896, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 02:59:52], mode=BUILD, duration=0:00:03.010, duration_ms=3010, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 14:09:12], mode=WORKBENCH_START, duration=0:00:11.314, duration_ms=11314, data={}
+timestamp=[2026-04-09 14:09:13], mode=WORKBENCH_UI_INIT, duration=0:00:01.052, duration_ms=1052, data={editors_count=25, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-04-09 14:09:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.388, duration_ms=388, data={}
+timestamp=[2026-04-09 14:31:10], mode=PLATFORM_GENERATION, duration=0:00:37.499, duration_ms=37499, data={name=top_emulated_microscope}
+timestamp=[2026-04-09 14:32:10], mode=BUILD, duration=0:00:01.617, duration_ms=1617, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 14:32:23], mode=BUILD, duration=0:00:00.260, duration_ms=260, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-09 14:32:30], mode=BUILD, duration=0:00:06.664, duration_ms=6664, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 14:42:59], mode=BUILD, duration=0:00:04.379, duration_ms=4379, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 14:46:31], mode=BUILD, duration=0:00:04.371, duration_ms=4371, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 14:51:48], mode=BUILD, duration=0:00:04.365, duration_ms=4365, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 14:56:25], mode=BUILD, duration=0:00:04.634, duration_ms=4634, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 15:02:02], mode=BUILD, duration=0:00:04.428, duration_ms=4428, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 15:02:28], mode=BUILD, duration=0:00:00.567, duration_ms=567, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 15:06:18], mode=BUILD, duration=0:00:04.312, duration_ms=4312, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 15:08:44], mode=BUILD, duration=0:00:04.368, duration_ms=4368, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 15:12:52], mode=BUILD, duration=0:00:04.376, duration_ms=4376, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 16:21:46], mode=WORKBENCH_START, duration=0:00:09.686, duration_ms=9686, data={}
+timestamp=[2026-04-09 16:21:46], mode=WORKBENCH_UI_INIT, duration=0:00:00.847, duration_ms=847, data={editors_count=6, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-04-09 16:21:47], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.322, duration_ms=322, data={}
+timestamp=[2026-04-09 16:24:24], mode=PLATFORM_GENERATION, duration=0:00:39.002, duration_ms=39002, data={name=top_emulated_microscope}
+timestamp=[2026-04-09 16:24:58], mode=BUILD, duration=0:00:06.972, duration_ms=6972, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 16:25:12], mode=BUILD, duration=0:00:07.444, duration_ms=7444, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 16:44:42], mode=WORKBENCH_START, duration=0:00:09.071, duration_ms=9071, data={}
+timestamp=[2026-04-09 16:44:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.692, duration_ms=692, data={editors_count=6, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-04-09 16:44:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.329, duration_ms=329, data={}
+timestamp=[2026-04-09 16:46:49], mode=BUILD, duration=0:00:00.803, duration_ms=803, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-09 16:47:13], mode=BUILD, duration=0:00:08.743, duration_ms=8743, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 16:55:43], mode=BUILD, duration=0:00:04.517, duration_ms=4517, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 16:59:01], mode=BUILD, duration=0:00:04.274, duration_ms=4274, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 17:02:18], mode=BUILD, duration=0:00:04.436, duration_ms=4436, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 17:05:02], mode=BUILD, duration=0:00:04.430, duration_ms=4430, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 17:10:44], mode=BUILD, duration=0:00:04.381, duration_ms=4381, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 17:10:58], mode=BUILD, duration=0:00:04.333, duration_ms=4333, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 20:34:36], mode=PLATFORM_GENERATION, duration=0:00:16.027, duration_ms=16027, data={name=top_emulated_microscope}
+timestamp=[2026-04-09 20:35:06], mode=BUILD, duration=0:00:07.512, duration_ms=7512, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 20:35:20], mode=BUILD, duration=0:00:07.799, duration_ms=7799, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 21:07:32], mode=BUILD, duration=0:00:00.334, duration_ms=334, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-09 21:07:38], mode=BUILD, duration=0:00:06.255, duration_ms=6255, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 21:34:32], mode=BUILD, duration=0:00:04.552, duration_ms=4552, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-09 21:51:13], mode=BUILD, duration=0:00:04.639, duration_ms=4639, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 11:51:44], mode=WORKBENCH_START, duration=0:00:14.327, duration_ms=14327, data={}
+timestamp=[2026-04-11 11:51:46], mode=WORKBENCH_UI_INIT, duration=0:00:01.097, duration_ms=1097, data={editors_count=9, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,application,application_system,top_emulated_microscope}
+timestamp=[2026-04-11 11:51:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.598, duration_ms=598, data={}
+timestamp=[2026-04-11 12:10:29], mode=PLATFORM_GENERATION, duration=0:00:18.006, duration_ms=18006, data={name=top_emulated_microscope}
+timestamp=[2026-04-11 12:13:26], mode=BUILD, duration=0:00:08.094, duration_ms=8094, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 12:13:48], mode=BUILD, duration=0:00:07.832, duration_ms=7832, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 12:19:50], mode=BUILD, duration=0:00:00.434, duration_ms=434, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-11 12:19:58], mode=BUILD, duration=0:00:07.555, duration_ms=7555, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 12:29:23], mode=BUILD, duration=0:00:05.219, duration_ms=5219, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 12:33:52], mode=BUILD, duration=0:00:04.919, duration_ms=4919, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 13:44:57], mode=BUILD, duration=0:00:06.001, duration_ms=6001, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 15:02:47], mode=BUILD, duration=0:00:03.279, duration_ms=3279, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 16:55:21], mode=BUILD, duration=0:00:01.360, duration_ms=1360, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 19:24:15], mode=PLATFORM_GENERATION, duration=0:00:30.991, duration_ms=30991, data={name=top_emulated_microscope}
+timestamp=[2026-04-11 19:24:54], mode=BUILD, duration=0:00:06.829, duration_ms=6829, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 19:25:10], mode=BUILD, duration=0:00:07.980, duration_ms=7980, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 19:32:12], mode=BUILD, duration=0:00:00.426, duration_ms=426, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-11 19:32:19], mode=BUILD, duration=0:00:06.773, duration_ms=6773, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 19:46:16], mode=BUILD, duration=0:00:01.562, duration_ms=1562, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:32:16], mode=BUILD, duration=0:00:00.792, duration_ms=792, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:35:29], mode=BUILD, duration=0:00:02.964, duration_ms=2964, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:40:04], mode=BUILD, duration=0:00:04.964, duration_ms=4964, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:42:21], mode=BUILD, duration=0:00:04.877, duration_ms=4877, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:44:48], mode=BUILD, duration=0:00:04.810, duration_ms=4810, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:49:02], mode=BUILD, duration=0:00:04.667, duration_ms=4667, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:51:23], mode=BUILD, duration=0:00:04.745, duration_ms=4745, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:54:01], mode=BUILD, duration=0:00:04.630, duration_ms=4630, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:57:09], mode=BUILD, duration=0:00:04.722, duration_ms=4722, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 20:59:56], mode=BUILD, duration=0:00:04.783, duration_ms=4783, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 21:02:01], mode=BUILD, duration=0:00:05.842, duration_ms=5842, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 21:03:51], mode=BUILD, duration=0:00:04.631, duration_ms=4631, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 21:05:57], mode=BUILD, duration=0:00:04.732, duration_ms=4732, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 21:10:47], mode=BUILD, duration=0:00:04.655, duration_ms=4655, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 22:00:18], mode=PLATFORM_GENERATION, duration=0:00:17.257, duration_ms=17257, data={name=top_emulated_microscope}
+timestamp=[2026-04-11 22:01:12], mode=BUILD, duration=0:00:07.256, duration_ms=7256, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 22:01:28], mode=BUILD, duration=0:00:08.103, duration_ms=8103, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 22:08:34], mode=BUILD, duration=0:00:00.407, duration_ms=407, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-11 22:08:41], mode=BUILD, duration=0:00:06.672, duration_ms=6672, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-11 22:12:22], mode=BUILD, duration=0:00:04.853, duration_ms=4853, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:00:11], mode=PLATFORM_GENERATION, duration=0:00:20.800, duration_ms=20800, data={name=top_emulated_microscope}
+timestamp=[2026-04-12 00:01:57], mode=BUILD, duration=0:00:08.296, duration_ms=8296, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:02:13], mode=BUILD, duration=0:00:08.272, duration_ms=8272, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:09:32], mode=BUILD, duration=0:00:00.353, duration_ms=353, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-12 00:09:39], mode=BUILD, duration=0:00:06.845, duration_ms=6845, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:16:21], mode=BUILD, duration=0:00:05.078, duration_ms=5078, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:21:34], mode=BUILD, duration=0:00:04.786, duration_ms=4786, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:22:14], mode=BUILD, duration=0:00:00.593, duration_ms=593, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 00:25:54], mode=BUILD, duration=0:00:01.427, duration_ms=1427, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 02:21:12], mode=PLATFORM_GENERATION, duration=0:00:16.935, duration_ms=16935, data={name=top_emulated_microscope}
+timestamp=[2026-04-12 02:21:39], mode=BUILD, duration=0:00:07.343, duration_ms=7343, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 02:21:55], mode=BUILD, duration=0:00:07.912, duration_ms=7912, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:23:52], mode=PLATFORM_GENERATION, duration=0:00:21.945, duration_ms=21945, data={name=top_emulated_microscope}
+timestamp=[2026-04-12 11:24:26], mode=BUILD, duration=0:00:00.481, duration_ms=481, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-12 11:24:49], mode=BUILD, duration=0:00:07.845, duration_ms=7845, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:25:05], mode=BUILD, duration=0:00:08.175, duration_ms=8175, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:30:50], mode=BUILD, duration=0:00:00.685, duration_ms=685, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-12 11:30:57], mode=BUILD, duration=0:00:07.330, duration_ms=7330, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:34:00], mode=BUILD, duration=0:00:05.676, duration_ms=5676, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:35:53], mode=BUILD, duration=0:00:04.927, duration_ms=4927, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:38:15], mode=BUILD, duration=0:00:05.210, duration_ms=5210, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:42:54], mode=BUILD, duration=0:00:04.767, duration_ms=4767, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:44:51], mode=BUILD, duration=0:00:05.025, duration_ms=5025, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:47:32], mode=BUILD, duration=0:00:03.002, duration_ms=3002, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:50:47], mode=BUILD, duration=0:00:02.940, duration_ms=2940, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:52:58], mode=BUILD, duration=0:00:02.869, duration_ms=2869, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 11:56:24], mode=BUILD, duration=0:00:04.907, duration_ms=4907, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 12:02:13], mode=BUILD, duration=0:00:02.530, duration_ms=2530, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 16:18:37], mode=PLATFORM_GENERATION, duration=0:00:19.411, duration_ms=19411, data={name=top_emulated_microscope}
+timestamp=[2026-04-12 16:19:31], mode=BUILD, duration=0:00:08.315, duration_ms=8315, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 16:19:47], mode=BUILD, duration=0:00:08.602, duration_ms=8602, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 16:23:45], mode=BUILD, duration=0:00:00.357, duration_ms=357, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-12 16:23:52], mode=BUILD, duration=0:00:06.672, duration_ms=6672, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 17:51:26], mode=PLATFORM_GENERATION, duration=0:00:17.320, duration_ms=17320, data={name=top_emulated_microscope}
+timestamp=[2026-04-12 17:52:01], mode=BUILD, duration=0:00:07.649, duration_ms=7649, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 17:52:19], mode=BUILD, duration=0:00:08.855, duration_ms=8855, data={name=application_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 18:47:54], mode=BUILD, duration=0:00:00.838, duration_ms=838, data={name=application, configuration=Debug, clean_build=true}
+timestamp=[2026-04-12 18:48:02], mode=BUILD, duration=0:00:08.328, duration_ms=8328, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 18:52:15], mode=BUILD, duration=0:00:04.900, duration_ms=4900, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 19:00:27], mode=BUILD, duration=0:00:03.360, duration_ms=3360, data={name=application, configuration=Debug, clean_build=false}
+timestamp=[2026-04-12 19:08:42], mode=BUILD, duration=0:00:04.784, duration_ms=4784, data={name=application, configuration=Debug, clean_build=false}

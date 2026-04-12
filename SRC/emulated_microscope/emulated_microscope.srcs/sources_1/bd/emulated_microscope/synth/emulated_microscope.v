@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 17:14:03 2026
+//Date        : Sun Apr 12 17:19:30 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target emulated_microscope.bd
 //Design      : emulated_microscope
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "emulated_microscope,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=emulated_microscope,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=38,numNonXlnxBlks=2,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=3,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "emulated_microscope.hwdef" *) 
+(* CORE_GENERATION_INFO = "emulated_microscope,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=emulated_microscope,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=45,numReposBlks=43,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=3,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "emulated_microscope.hwdef" *) 
 module emulated_microscope
    (DDR_addr,
     DDR_ba,
@@ -93,7 +93,9 @@ module emulated_microscope
 
   wire [0:0]ARESETN_1;
   wire [14:0]BINS_TO_READ_Dout;
-  wire [4:0]CNTVALUEIN_LVDS_Dout;
+  wire [4:0]CNTVALUEIN_CLK_Dout;
+  wire [4:0]CNTVALUEIN_FRAME_Dout;
+  wire [4:0]CNTVALUEIN_SDO_Dout;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -119,28 +121,33 @@ module emulated_microscope
   wire Histogramming_0_M_AXIS_TLAST;
   wire Histogramming_0_M_AXIS_TREADY;
   wire Histogramming_0_M_AXIS_TVALID;
+  wire Histogramming_0_buffer_almost_full;
+  wire Histogramming_TRIG_OUT_ACK;
+  wire Histogramming_TRIG_OUT_TRIG;
+  wire [1:0]IDELAYE2_LD_Dout;
   wire [31:0]IMAGE_SIZE_Dout;
-  wire [0:0]LD_LVDS_Dout;
   wire [15:0]LOG_2_BINWIDTH_Dout;
   wire [63:0]LVDS_to_AXIS_0_M_AXIS_0_TDATA;
-  wire LVDS_to_AXIS_0_M_AXIS_0_TLAST;
   wire LVDS_to_AXIS_0_M_AXIS_0_TREADY;
   wire LVDS_to_AXIS_0_M_AXIS_0_TVALID;
-  wire [31:0]LVDS_to_AXI_Stream_0_axis_rd_data_count;
-  wire [31:0]LVDS_to_AXI_Stream_0_axis_wr_data_count;
+  wire [31:0]LVDS_to_AXIS_IDDR_0_axis_rd_data_count;
+  wire [31:0]LVDS_to_AXIS_IDDR_0_axis_wr_data_count;
   wire [31:0]MAX_PIXELS_Dout;
+  wire Microscope_Emulator_0_TRIG_OUT_ACK;
+  wire Microscope_Emulator_0_TRIG_OUT_TRIG;
   wire [0:0]Net;
   wire [31:0]PULSES_PER_PIXEL_Dout;
   wire [5:0]REFINDEX_BITS_Dout;
+  wire [0:0]SECOND_ARESETN_Dout;
   wire [5:0]STOPRESULT_BITS_Dout;
-  wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
+  wire [11:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
-  wire [12:0]axi_bram_ctrl_1_BRAM_PORTA_ADDR;
+  wire [11:0]axi_bram_ctrl_1_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_1_BRAM_PORTA_CLK;
   wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DOUT;
@@ -220,7 +227,7 @@ module emulated_microscope
   wire axi_mem_intercon_M00_AXI_WREADY;
   wire [7:0]axi_mem_intercon_M00_AXI_WSTRB;
   wire axi_mem_intercon_M00_AXI_WVALID;
-  wire [12:0]axi_smc_M00_AXI_ARADDR;
+  wire [11:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
   wire [7:0]axi_smc_M00_AXI_ARLEN;
@@ -229,7 +236,7 @@ module emulated_microscope
   wire axi_smc_M00_AXI_ARREADY;
   wire [2:0]axi_smc_M00_AXI_ARSIZE;
   wire axi_smc_M00_AXI_ARVALID;
-  wire [12:0]axi_smc_M00_AXI_AWADDR;
+  wire [11:0]axi_smc_M00_AXI_AWADDR;
   wire [1:0]axi_smc_M00_AXI_AWBURST;
   wire [3:0]axi_smc_M00_AXI_AWCACHE;
   wire [7:0]axi_smc_M00_AXI_AWLEN;
@@ -371,7 +378,7 @@ module emulated_microscope
   wire axi_smc_M07_AXI_WREADY;
   wire [3:0]axi_smc_M07_AXI_WSTRB;
   wire axi_smc_M07_AXI_WVALID;
-  wire [0:0]buffer_overflow;
+  wire \^buffer_overflow ;
   wire [0:0]disable_p;
   wire frame_n;
   wire frame_p;
@@ -379,8 +386,10 @@ module emulated_microscope
   wire histo_0_bin_written_but_never_read_warning;
   wire histo_0_negedge_frame;
   wire histo_0_premature_pixel_done_error;
-  wire ila_LVDS_to_AXIS_TRIG_OUT_ACK;
-  wire ila_LVDS_to_AXIS_TRIG_OUT_TRIG;
+  wire histogram_ILA_TRIG_OUT_ACK;
+  wire histogram_ILA_TRIG_OUT_TRIG;
+  wire ila_DMA_out_TRIG_OUT_ACK;
+  wire ila_DMA_out_TRIG_OUT_TRIG;
   wire ila_LVDS_to_axis_axis_TRIG_OUT_ACK;
   wire ila_LVDS_to_axis_axis_TRIG_OUT_TRIG;
   wire l_clk_in_n;
@@ -450,15 +459,27 @@ module emulated_microscope
   wire [0:0]util_vector_logic_0_Res;
   wire [5:0]xlconcat_1_dout;
 
+  assign buffer_overflow[0] = \^buffer_overflow ;
   emulated_microscope_BINS_TO_READ_0 BINS_TO_READ
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(BINS_TO_READ_Dout));
-  emulated_microscope_CNTVALUEIN_LVDS_0 CNTVALUEIN_LVDS
+  emulated_microscope_MAX_PIXELS_1 CNTVALUEIN_CLK
        (.Din(axi_gpio_0_gpio_io_o),
-        .Dout(CNTVALUEIN_LVDS_Dout));
-  emulated_microscope_Histogramming_0_0 Histogramming
+        .Dout(CNTVALUEIN_CLK_Dout));
+  emulated_microscope_CNTVALUEIN_CLK_2 CNTVALUEIN_FRAME
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(CNTVALUEIN_FRAME_Dout));
+  emulated_microscope_CNTVALUEIN_LVDS_0 CNTVALUEIN_LVDS
+       (.Din(axi_gpio_0_gpio_io_o));
+  emulated_microscope_CNTVALUEIN_CLK_0 CNTVALUEIN_SDO
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(CNTVALUEIN_SDO_Dout));
+  emulated_microscope_LVDS_en_0 EMULATOR_en
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(Net));
+  emulated_microscope_Histogramming_0_1 Histogramming
        (.AXIS_IN_tdata(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
-        .AXIS_IN_tlast(LVDS_to_AXIS_0_M_AXIS_0_TLAST),
+        .AXIS_IN_tlast(1'b0),
         .AXIS_IN_tready(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
         .AXIS_IN_tvalid(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
         .BINS_TO_READ(BINS_TO_READ_Dout),
@@ -469,44 +490,48 @@ module emulated_microscope
         .M_AXIS_tvalid(Histogramming_0_M_AXIS_TVALID),
         .REFINDEX_BITS(REFINDEX_BITS_Dout),
         .STOPRESULT_BITS(STOPRESULT_BITS_Dout),
-        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .TRIG_OUT_ack(Histogramming_TRIG_OUT_ACK),
+        .TRIG_OUT_trig(Histogramming_TRIG_OUT_TRIG),
+        .aresetn(SECOND_ARESETN_Dout),
         .bin_full_warning(histo_0_bin_full_warning),
         .bin_written_but_never_read_warning(histo_0_bin_written_but_never_read_warning),
+        .buffer_almost_full(Histogramming_0_buffer_almost_full),
         .clk(processing_system7_0_FCLK_CLK0),
         .disable_p(disable_p),
-        .en(Net),
+        .en(level_shifter_en),
         .frame_clk(laser_signal_generat_0_frame_clk_r),
+        .ila_clk(processing_system7_0_FCLK_CLK3),
         .line_clk(laser_signal_generat_0_line_clk_r),
         .log_2_BIN_WIDTH(LOG_2_BINWIDTH_Dout),
         .negedge_frame(histo_0_negedge_frame),
         .pixel_clk(laser_signal_generat_0_pixel_clk_r),
         .premature_pixel_done_error(histo_0_premature_pixel_done_error),
         .refres_p(refres_p));
+  emulated_microscope_CNTVALUEIN_CLK_1 IDELAYE2_LD
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(IDELAYE2_LD_Dout));
   emulated_microscope_IMAGE_SIZE_0 IMAGE_SIZE
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(IMAGE_SIZE_Dout));
-  emulated_microscope_LD_LVDS_0 LD_LVDS
-       (.Din(axi_gpio_0_gpio_io_o),
-        .Dout(LD_LVDS_Dout));
   emulated_microscope_LOG_2_BINWIDTH_0 LOG_2_BINWIDTH
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(LOG_2_BINWIDTH_Dout));
-  emulated_microscope_LVDS_en_0 LVDS_en
-       (.Din(axi_gpio_0_gpio_io_o),
-        .Dout(Net));
-  emulated_microscope_LVDS_to_AXI_Stream_0_1 LVDS_to_AXI_Stream_0
-       (.Buffer_overflow(buffer_overflow),
-        .CNTVALUEIN(CNTVALUEIN_LVDS_Dout),
-        .LD(LD_LVDS_Dout),
-        .M_AXIS_0_tdata(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
-        .M_AXIS_0_tlast(LVDS_to_AXIS_0_M_AXIS_0_TLAST),
-        .M_AXIS_0_tready(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
-        .M_AXIS_0_tvalid(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
-        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .axis_rd_data_count(LVDS_to_AXI_Stream_0_axis_rd_data_count),
-        .axis_wr_data_count(LVDS_to_AXI_Stream_0_axis_wr_data_count),
+  emulated_microscope_LVDS_to_AXIS_IDDR_0_0 LVDS_to_AXIS_IDDR
+       (.Buffer_overflow(\^buffer_overflow ),
+        .CNTVALUEIN_CLK(CNTVALUEIN_CLK_Dout),
+        .CNTVALUEIN_FRAME(CNTVALUEIN_FRAME_Dout),
+        .CNTVALUEIN_SDO(CNTVALUEIN_SDO_Dout),
+        .LD(IDELAYE2_LD_Dout[0]),
+        .M_AXIS_tdata(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
+        .M_AXIS_tready(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
+        .M_AXIS_tvalid(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
+        .TRIG_IN_ack(Microscope_Emulator_0_TRIG_OUT_ACK),
+        .TRIG_IN_trig(Microscope_Emulator_0_TRIG_OUT_TRIG),
+        .aresetn(SECOND_ARESETN_Dout),
+        .axis_rd_data_count(LVDS_to_AXIS_IDDR_0_axis_rd_data_count),
+        .axis_wr_data_count(LVDS_to_AXIS_IDDR_0_axis_wr_data_count),
         .clk(processing_system7_0_FCLK_CLK0),
-        .en(Net),
+        .en(level_shifter_en),
         .frame_n(frame_n),
         .frame_p(frame_p),
         .ila_clk(processing_system7_0_FCLK_CLK3),
@@ -521,7 +546,7 @@ module emulated_microscope
   emulated_microscope_MAX_PIXELS_0 MAX_PIXELS
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(MAX_PIXELS_Dout));
-  emulated_microscope_Microscope_Emulator_0_1 Microscope_Emulator_0
+  emulated_microscope_Microscope_Emulator_1_0 Microscope_Emulator_0
        (.S_AXI_araddr(axi_smc_M05_AXI_ARADDR),
         .S_AXI_arprot(axi_smc_M05_AXI_ARPROT),
         .S_AXI_arready(axi_smc_M05_AXI_ARREADY),
@@ -541,12 +566,16 @@ module emulated_microscope
         .S_AXI_wready(axi_smc_M05_AXI_WREADY),
         .S_AXI_wstrb(axi_smc_M05_AXI_WSTRB),
         .S_AXI_wvalid(axi_smc_M05_AXI_WVALID),
-        .axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .TRIG_IN_ack(ila_LVDS_to_axis_axis_TRIG_OUT_ACK),
+        .TRIG_IN_trig(ila_LVDS_to_axis_axis_TRIG_OUT_TRIG),
+        .TRIG_OUT_ack(Microscope_Emulator_0_TRIG_OUT_ACK),
+        .TRIG_OUT_trig(Microscope_Emulator_0_TRIG_OUT_TRIG),
+        .aresetn_laser(processing_system7_0_FCLK_RESET2_N),
         .axi_clk(processing_system7_0_FCLK_CLK0),
+        .axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .en(Net),
         .frame_clk(laser_signal_generat_0_frame_clk_r),
         .image_size(IMAGE_SIZE_Dout),
-        .laser_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .laser_clk(processing_system7_0_FCLK_CLK4),
         .line_clk(laser_signal_generat_0_line_clk_r),
         .pixel_clk(laser_signal_generat_0_pixel_clk_r),
@@ -559,6 +588,9 @@ module emulated_microscope
   emulated_microscope_REFINDEX_BITS_0 REFINDEX_BITS
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(REFINDEX_BITS_Dout));
+  emulated_microscope_LD_LVDS_0 SECOND_ARESETN
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(SECOND_ARESETN_Dout));
   emulated_microscope_STOPRESULT_BITS_0 STOPRESULT_BITS
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(STOPRESULT_BITS_Dout));
@@ -616,7 +648,7 @@ module emulated_microscope
         .bram_we_a(axi_bram_ctrl_1_BRAM_PORTA_WE),
         .bram_wrdata_a(axi_bram_ctrl_1_BRAM_PORTA_DIN),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(axi_dma_0_M_AXI_SG_ARADDR[12:0]),
+        .s_axi_araddr(axi_dma_0_M_AXI_SG_ARADDR[11:0]),
         .s_axi_arburst(axi_dma_0_M_AXI_SG_ARBURST),
         .s_axi_arcache(axi_dma_0_M_AXI_SG_ARCACHE),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -626,7 +658,7 @@ module emulated_microscope
         .s_axi_arready(axi_dma_0_M_AXI_SG_ARREADY),
         .s_axi_arsize(axi_dma_0_M_AXI_SG_ARSIZE),
         .s_axi_arvalid(axi_dma_0_M_AXI_SG_ARVALID),
-        .s_axi_awaddr(axi_dma_0_M_AXI_SG_AWADDR[12:0]),
+        .s_axi_awaddr(axi_dma_0_M_AXI_SG_AWADDR[11:0]),
         .s_axi_awburst(axi_dma_0_M_AXI_SG_AWBURST),
         .s_axi_awcache(axi_dma_0_M_AXI_SG_AWCACHE),
         .s_axi_awlen(axi_dma_0_M_AXI_SG_AWLEN),
@@ -877,7 +909,7 @@ module emulated_microscope
         .sck_o(spi_sclk),
         .ss_i(1'b0),
         .ss_o(spi_cs_n));
-  emulated_microscope_axi_smc_0 axi_smc
+  emulated_microscope_axi_smc_0 axi_smc_main
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arburst(axi_smc_M00_AXI_ARBURST),
         .M00_AXI_arcache(axi_smc_M00_AXI_ARCACHE),
@@ -1068,11 +1100,10 @@ module emulated_microscope
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
-        .aclk1(processing_system7_0_FCLK_CLK4),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   emulated_microscope_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
-        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_1_BRAM_PORTA_ADDR}),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_1_BRAM_PORTA_ADDR}),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
         .clkb(axi_bram_ctrl_1_BRAM_PORTA_CLK),
         .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
@@ -1085,8 +1116,6 @@ module emulated_microscope
         .rstb(axi_bram_ctrl_1_BRAM_PORTA_RST),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
         .web(axi_bram_ctrl_1_BRAM_PORTA_WE));
-  emulated_microscope_high_0 high
-       (.dout(level_shifter_en));
   emulated_microscope_histogram_ILA_0 histogram_ILA
        (.clk(processing_system7_0_FCLK_CLK0),
         .probe0(disable_p),
@@ -1096,9 +1125,11 @@ module emulated_microscope
         .probe4(histo_0_bin_full_warning),
         .probe5(histo_0_premature_pixel_done_error),
         .probe6(histo_0_bin_written_but_never_read_warning),
+        .probe7(Histogramming_0_buffer_almost_full),
         .trig_in(slow_laser_ILA_TRIG_OUT_TRIG),
         .trig_in_ack(slow_laser_ILA_TRIG_OUT_ACK),
-        .trig_out_ack(1'b0));
+        .trig_out(histogram_ILA_TRIG_OUT_TRIG),
+        .trig_out_ack(histogram_ILA_TRIG_OUT_ACK));
   emulated_microscope_ila_DMA_out_0 ila_DMA_out
        (.clk(processing_system7_0_FCLK_CLK0),
         .probe0(axi_dma_0_M_AXI_S2MM_WREADY),
@@ -1144,31 +1175,48 @@ module emulated_microscope
         .probe6(1'b0),
         .probe7(axi_dma_0_M_AXI_S2MM_WVALID),
         .probe8(1'b0),
-        .probe9(1'b0));
+        .probe9(1'b0),
+        .trig_in(histogram_ILA_TRIG_OUT_TRIG),
+        .trig_in_ack(histogram_ILA_TRIG_OUT_ACK),
+        .trig_out(ila_DMA_out_TRIG_OUT_TRIG),
+        .trig_out_ack(ila_DMA_out_TRIG_OUT_ACK));
+  emulated_microscope_ila_DMA_out_1 ila_DMA_out1
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(Histogramming_0_M_AXIS_TREADY),
+        .probe1(Histogramming_0_M_AXIS_TDATA),
+        .probe2({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .probe3(Histogramming_0_M_AXIS_TVALID),
+        .probe4(Histogramming_0_M_AXIS_TLAST),
+        .probe5(1'b0),
+        .probe6({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .probe7(1'b0),
+        .probe8(1'b0),
+        .trig_in(ila_DMA_out_TRIG_OUT_TRIG),
+        .trig_in_ack(ila_DMA_out_TRIG_OUT_ACK));
   emulated_microscope_ila_LVDS_to_AXIS_0 ila_LVDS_to_AXIS
        (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(buffer_overflow),
-        .probe1(LVDS_to_AXI_Stream_0_axis_rd_data_count),
-        .probe2(LVDS_to_AXI_Stream_0_axis_wr_data_count),
-        .trig_in(ila_LVDS_to_axis_axis_TRIG_OUT_TRIG),
-        .trig_in_ack(ila_LVDS_to_axis_axis_TRIG_OUT_ACK),
-        .trig_out(ila_LVDS_to_AXIS_TRIG_OUT_TRIG),
-        .trig_out_ack(ila_LVDS_to_AXIS_TRIG_OUT_ACK));
+        .probe0(\^buffer_overflow ),
+        .probe1(LVDS_to_AXIS_IDDR_0_axis_rd_data_count),
+        .probe2(LVDS_to_AXIS_IDDR_0_axis_wr_data_count),
+        .trig_in(1'b0),
+        .trig_out_ack(1'b0));
   emulated_microscope_ila_LVDS_to_axis_axis_0 ila_LVDS_to_axis_axis
        (.clk(processing_system7_0_FCLK_CLK0),
         .probe0(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
         .probe1(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
         .probe2({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .probe3(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
-        .probe4(LVDS_to_AXIS_0_M_AXIS_0_TLAST),
+        .probe4(1'b0),
         .probe5(1'b0),
         .probe6({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .probe7(1'b0),
         .probe8(1'b0),
-        .trig_in(ila_LVDS_to_AXIS_TRIG_OUT_TRIG),
-        .trig_in_ack(ila_LVDS_to_AXIS_TRIG_OUT_ACK),
+        .trig_in(Histogramming_TRIG_OUT_TRIG),
+        .trig_in_ack(Histogramming_TRIG_OUT_ACK),
         .trig_out(ila_LVDS_to_axis_axis_TRIG_OUT_TRIG),
         .trig_out_ack(ila_LVDS_to_axis_axis_TRIG_OUT_ACK));
+  emulated_microscope_xlconstant_0_0 logic_high
+       (.dout(level_shifter_en));
   emulated_microscope_msglen_0 msglen
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(msglen_Dout));
@@ -1285,7 +1333,7 @@ module emulated_microscope
         .interconnect_aresetn(ARESETN_1),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .slowest_sync_clk(processing_system7_0_FCLK_CLK4));
+        .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   emulated_microscope_slow_laser_ILA_0 slow_laser_ILA
        (.clk(processing_system7_0_FCLK_CLK0),
         .probe0(laser_signal_generat_0_frame_clk_r),
@@ -1315,7 +1363,7 @@ module emulated_microscope
         .In2(histo_0_premature_pixel_done_error),
         .In3(histo_0_bin_full_warning),
         .In4(histo_0_bin_written_but_never_read_warning),
-        .In5(buffer_overflow),
+        .In5(\^buffer_overflow ),
         .dout(xlconcat_1_dout));
 endmodule
 

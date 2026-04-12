@@ -1,0 +1,36 @@
+{
+	"version": "1.0",
+	"modules": {
+		"LVDS_to_AXIS_IDDR": {
+			"proto_instances": {
+				"/DDR_Stream_to_AXI_St_1/AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"TDATA": { "actual": "tdata_out[63:0]"},
+						"TREADY": { "actual": "tready"},
+						"TVALID": { "actual": "tvalid_out"}
+					}
+				},
+				"/axis_data_fifo_0/M_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "m_axis_aclk"},
+						"TDATA": { "actual": "m_axis_tdata[63:0]"},
+						"TREADY": { "actual": "m_axis_tready"},
+						"TVALID": { "actual": "m_axis_tvalid"}
+					}
+				},
+				"/axis_data_fifo_0/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s_axis_aclk"},
+						"ARESETN": { "actual": "s_axis_aresetn"},
+						"TDATA": { "actual": "s_axis_tdata[63:0]"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}

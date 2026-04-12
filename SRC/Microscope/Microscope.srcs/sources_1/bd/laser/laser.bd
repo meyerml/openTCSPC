@@ -16,7 +16,8 @@
       "laser_signal_generat_0": "",
       "blk_mem_gen_0": "",
       "ila_laser": "",
-      "axi_smc": ""
+      "axi_smc": "",
+      "proc_sys_reset_0": ""
     },
     "interface_ports": {
       "S_AXI": {
@@ -752,6 +753,13 @@
             }
           }
         }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "16",
+        "xci_name": "laser_proc_sys_reset_0_0",
+        "xci_path": "ip\\laser_proc_sys_reset_0_0\\laser_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
       }
     },
     "interface_nets": {
@@ -808,9 +816,7 @@
       "laser_aresetn_1": {
         "ports": [
           "laser_aresetn",
-          "bram_ctrl_laser/s_axi_aresetn",
-          "axi_smc/aresetn",
-          "laser_signal_generat_0/aresetn"
+          "proc_sys_reset_0/ext_reset_in"
         ]
       },
       "laser_clk_0_1": {
@@ -819,7 +825,8 @@
           "bram_ctrl_laser/s_axi_aclk",
           "ila_laser/clk",
           "axi_smc/aclk",
-          "laser_signal_generat_0/clk"
+          "laser_signal_generat_0/clk",
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       },
       "laser_signal_generat_0_CNTVALUEOUT_dbg": {
@@ -898,6 +905,19 @@
         "ports": [
           "laser_signal_generat_0/warmup_pulse_counter_dbg",
           "ila_laser/probe0"
+        ]
+      },
+      "proc_sys_reset_0_interconnect_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/interconnect_aresetn",
+          "axi_smc/aresetn"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "bram_ctrl_laser/s_axi_aresetn",
+          "laser_signal_generat_0/aresetn"
         ]
       },
       "pulses_per_pixel_0_1": {

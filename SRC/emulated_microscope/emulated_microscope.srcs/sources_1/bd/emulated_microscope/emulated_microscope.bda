@@ -209,7 +209,7 @@
             "V4": {
                 "VT": "AC",
                 "BA": "0x40000000",
-                "HA": "0x40001FFF",
+                "HA": "0x40000FFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "Data_SG",
@@ -227,7 +227,7 @@
             "V5": {
                 "VT": "AC",
                 "BA": "0x40000000",
-                "HA": "0x40001FFF",
+                "HA": "0x40000FFF",
                 "BP": "C_S_AXI_BASEADDR",
                 "HP": "C_S_AXI_HIGHADDR",
                 "MA": "Data",
@@ -256,7 +256,7 @@
                 "SX": "/Microscope_Emulator_0",
                 "SI": "S_AXI",
                 "SS": "Mem0",
-                "SV": "EMBL:user:Microscope_Emulator:1.0",
+                "SV": "xilinx.com:user:Microscope_Emulator:1.13",
                 "TM": "both",
                 "TU": "memory"
             },

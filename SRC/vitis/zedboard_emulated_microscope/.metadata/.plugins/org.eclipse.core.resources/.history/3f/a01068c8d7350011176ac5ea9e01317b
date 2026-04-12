@@ -1,0 +1,43 @@
+// global_defines.h
+#ifndef GLOBAL_DEFINES_H
+#define GLOBAL_DEFINES_H
+
+
+//GPX2 parameters
+#define REF_INDEX_BITWIDTH 0 //16 //24 //0(no data out),2,4,8,16,24,6,or 12 bits wide
+#define STOP_DATA_BITWIDTH 20 //20 //14, 16, 18, or 20 bits wide
+
+//together with an LVDS_DATA_VALID_ADJUST of -160 ps, this actually works for 250 Mhz of DDR transfer
+
+//LVDS receiver parameters
+#define IDELAY_TAPS 0 //the taps for the idelay on the LVDS clock line
+#define CNTVALUEIN_SDO 26
+#define CNTVALUEIN_FRAME 26
+#define CNTVALUEIN_CLK 0
+
+
+#define MEASURE_TIME 0
+
+//microscope parameters
+//these are the actual information we need from a real, physical microscope
+// for now, these will be overriden by the settings in the laser emulator settings
+#define REFCLK_FREQUENCY 10000  //in kHz
+#define FRAME_WIDTH 8  //only square frames, so height is the same.
+
+
+
+//Laser Emulator Parameters
+#define REFCLK_FREQUENCY 10000  //in kHz
+#define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+#define ORIGINAL_FRAME_WIDTH 512  //used for cropping a part of the image
+#define IMAGE "CONVALLARIA_512"  //CONVALLARIA CHECKERBOARD BARCODE
+#define BRAM_WRAPAROUND 32768  //2^15
+#define PULSES_PER_PIXEL 4096  //how many laser pulses should be "fired" at each pixel?
+#define LOG_2_HIST_BIN_WIDTH 11  // log 2 of histogram bin width in picoseconds. larger values lead to less precision, but more compact histograms
+
+#define ORIGINAL_NUM_PIXELS (ORIGINAL_FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)  // the number of pixels in a frame
+#define NUM_PIXELS (FRAME_WIDTH*FRAME_WIDTH)  // the number of pixels in a frame
+
+
+
+#endif // GLOBAL_DEFINES_H

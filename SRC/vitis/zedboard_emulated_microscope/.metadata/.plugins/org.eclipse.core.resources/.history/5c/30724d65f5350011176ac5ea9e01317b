@@ -1,0 +1,658 @@
+/******************************************************************************
+this file contains the code related to the gpx2 itself,
+but also the LVDS_to_AXIS IP, as well as the histo_IP
+
+******************************************************************************/
+
+
+
+
+
+/*****************************************************************************/
+/***************************** Include Files *********************************/
+/*****************************************************************************/
+
+#include "gpx2_if.h"
+#include "../global_defines.h"
+#include "../dma/dma.h"
+#include <math.h>
+#include <stdio.h>
+#include "../dma/dma.h"
+
+/*****************************************************************************/
+/************************** Constant Definitions *****************************/
+/*****************************************************************************/
+
+
+/*****************************************************************************/
+/******************************* Typedefs ************************************/
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/************************** Variable Declarations ****************************/
+/*****************************************************************************/
+uint8_t activechannels;
+
+long int laser_period_ps;
+long int BIN_WIDTH;
+long int HISTOGRAM_BINS;
+
+int HistSizeInWords;
+
+/****************************************************************************/
+/***************** Macros (Inline Functions) Definitions ********************/
+/****************************************************************************/
+
+
+
+/*****************************************************************************/
+/************************** Function Prototypes ******************************/
+/*****************************************************************************/
+
+
+
+
+/*---------------------------------------------------------------------------*/
+/*------------------------------- FUNCTIONS ---------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+
+/*****************************************************************************
+ * Function: gpx2_Init()
+ *//**
+ *
+ * @brief		Initialises the gpx2 time-to-digital converter.
+ *
+ *
+ * @details		writes the gpx2s config registers via spi.
+ * 				the configuration of the GPX2 is also decided here.
+ * 				also sets some axi gpio registers for the FPGA IP blocks.
+ * 				also does some sanity checking to make sure the chosen values make sense.
+ *
+ * @return		Integer indicating result of configuration attempt.
+ * 				0 = SUCCESS, 1 = FAILURE
+ * @note
+ *
+****************************************************************************/
+
+int gpx2_Init()
+{
+	uint32_t refclock_divisions = 1000000000/REFCLK_FREQUENCY;
+
+	uint8_t reg3 = (refclock_divisions >> 0) & 0xFF;   // Least significant byte
+	uint8_t reg4 = (refclock_divisions >> 8) & 0xFF;   // Middle byte
+	uint8_t reg5 = (refclock_divisions >> 16) & 0x0F;  // Most significant byte of the three
+
+
+	//activechannels = STOP4ACTIVE | STOP3ACTIVE | STOP2ACTIVE | STOP1ACTIVE;
+
+	activechannels = STOP1ACTIVE;
+
+/*
+	xil_printf("Current Settings are expecting a reference clock frequency of %d kHz.\r\n", REFCLK_FREQUENCY);
+	switch (activechannels){
+	case STOP1ACTIVE:
+		xil_printf("Currently listening for STOP signals on channel 1\r\n");
+		break;
+	case STOP2ACTIVE:
+		xil_printf("Currently listening for STOP signals on channel 2\r\n");
+		break;
+	case STOP3ACTIVE:
+		xil_printf("Currently listening for STOP signals on channel 3\r\n");
+		break;
+	case STOP4ACTIVE:
+		xil_printf("Currently listening for STOP signals on channel 4\r\n");
+		break;
+	}
+	for (int w = 100000;w>0;w--){  //i dont know how to wait
+		int x = w;
+	}
+*/
+	//tell the spi master IP block where to read the results from
+	//if ((activechannels && STOP4ACTIVE) || (activechannels && STOP3ACTIVE )){
+	//	axiGpOutSet(RESULTCHANNEL1);
+	//} else {
+	//	axiGpOutClear(RESULTCHANNEL1);
+
+	//}
+	//if (activechannels && STOP2ACTIVE){
+	//	axiGpOutSet(RESULTCHANNEL0);
+	//} else {
+	//	axiGpOutClear(RESULTCHANNEL0);
+	//}
+
+
+
+	//gpx2 configuration register 0
+	uint8_t reset_index = RSTIDX_ENABLED;//DISABLED;
+	uint8_t disable_pin = DISABLE_ENABLED;//DISABLED;
+	uint8_t lvds_output = LVDS_OUTPUT_ENABLED;
+	uint8_t reference_clock = REFCLK_ENABLED;
+	uint8_t reg0 = reset_index  |  disable_pin | lvds_output | reference_clock | activechannels;
+
+	//gpx2 configuration register 1
+	uint8_t resolution = LOW_RESOLUTION; //HIGH_RESOLUTION2;
+	uint8_t channel_combine = NO_COMBINE;
+	uint8_t reg1 = resolution | channel_combine | activechannels;
+
+	//gpx2 configuration register 2
+	uint8_t refindex_config;
+	switch (REF_INDEX_BITWIDTH){
+	case 0:
+		refindex_config=0b000;
+		break;
+	case 2:
+		refindex_config=0b001;
+		break;
+	case 4:
+		refindex_config=0b010;
+		break;
+	case 8:
+		refindex_config=0b011;
+		break;
+	case 16:
+		refindex_config=0b100;
+		break;
+	case 24:
+		refindex_config=0b101;
+		break;
+	case 6:
+		refindex_config=0b110;
+		break;
+	case 12:
+		refindex_config=0b111;
+		break;
+	default:
+		xil_printf("an invalid REF_INDEX_BITWIDTH of &d was selected.", REF_INDEX_BITWIDTH);
+	}
+
+	uint8_t stopdata_config;
+	switch (STOP_DATA_BITWIDTH){
+	case 14:
+		stopdata_config=0b00;
+		break;
+	case 16:
+		stopdata_config=0b01;
+		break;
+	case 18:
+		stopdata_config=0b10;
+		break;
+	case 20:
+		stopdata_config=0b11;
+		break;
+	default:
+		xil_printf("an invalid STOP_DATA_BITWIDTH of &d was selected.", STOP_DATA_BITWIDTH);
+	}
+
+	uint8_t reg2 = 0x00; //0x1D;
+	//reg3 &= 0x3F; //delete the first two bits
+	uint8_t blockwise_fifo_read = DISABLED;  //BLOCKWISE_FIFO_READ_ENABLED;
+	uint8_t common_fifo_read = DISABLED;
+	uint8_t data_rate = LVS_DOUBLE_DATA_RATE_ENABLED;  //SDR;
+	reg2 |= data_rate | blockwise_fifo_read | common_fifo_read | stopdata_config << 3 | refindex_config;
+
+	uint8_t lvds_test_pattern = LVDS_TEST_PATTERN_ON; //DISABLED;  //LVDS_TEST_PATTERN_ON;
+	uint8_t reg6 = 0xC0 | lvds_test_pattern;
+
+	uint8_t reg7 = 0x43 | LVDS_DATA_VALID_ADJUST;
+	uint8_t GPX2_STARTUP_CONFIG[17] = {reg0, reg1, reg2, reg3, reg4, reg5, reg6, //0xC0,
+			reg7, 0xA1, 0x13, 0x00, 0x0A, 0xCC, 0xCC, 0xF1, 0x7D, 0x04 };	//uint8_t GPX2_STARTUP_CONFIG[17] = {0x31, 0x01, 0x1F, 0x40, 0x0D, 0x03, 0xC0,
+	//		0x53, 0xA1, 0x13, 0x00, 0x0A, 0xCC, 0xCC, 0x31, 0x8E, 0x04 };
+	//uint8_t GPX2_STARTUP_CONFIG[17] = {0x31, 0x01, 0x1F, 0x40, 0x0D, 0x03, 0xC0,
+	//		0x53, 0xA1, 0x13, 0x00, 0x0A, 0xCC, 0xCC, 0x31, 0x8E, 0x04 };
+	// 		uint8_t GPX2_STARTUP_CONFIG[17] = {0x11, 0x01, 0x9F, byte1, byte2, byte3, 0xC0,
+	//0x53, 0xA1, 0x13, 0x00, 0x0A, 0xCC, 0xCC, 0x31, 0x8E, 0x04 };	//uint8_t GPX2_STARTUP_CONFIG[17] = {0x31, 0x01, 0x1F, 0x40, 0x0D, 0x03, 0xC0,
+
+	uint8_t configReadBack[17] = {0};
+	/* Set SPI options for the PMOD_ACL.
+	 * Parameters can be found in xspi.h.
+	uint32_t options = XSP_CLK_ACTIVE_LOW_OPTION
+						| XSP_MANUAL_SSELECT_OPTION
+						| XSP_CLK_PHASE_1_OPTION
+						| XSP_MASTER_OPTION;
+	*/
+	/* Set SPI options for the GPX2 to work in SPI mode 1.
+	 * Parameters can be found in xspi.h. */
+	uint32_t options =  XSP_MANUAL_SSELECT_OPTION
+						| XSP_CLK_PHASE_1_OPTION
+						| XSP_MASTER_OPTION;
+
+	/* Initialise the AXI SPI block */
+	int status;
+	status = axi_spiInit(options);
+
+
+	/* If AXI SPI initialisation is successful, configure
+	 * the PmodACL with desired values for this project. */
+	//TODO: update with meaningful GPX2 register values
+	if (status == XST_SUCCESS)
+	{
+		//disableInterrupts();
+	    uint8_t command = POR_CMD;
+
+		spiWriteBytes(&command,1); //restart the gpx2 device
+
+
+		gpx2_WriteBytesContinuously(0x00, GPX2_STARTUP_CONFIG ,17);
+
+		gpx2_ReadBytesContinuously(0x00, configReadBack,17);
+		//enableInterrupts();
+		for (uint8_t b = 0; b<17; b++){
+			if(configReadBack[b] != GPX2_STARTUP_CONFIG[b]){
+				status = XST_FAILURE;
+			}
+		}
+
+
+		//start the gpx2 by sending the start command
+		command = INIT_START_CMD;
+		spiWriteBytes(&command,1);
+
+		/******************************************************************************
+		 * start setting up the FPGAs AXI GPIO registers related to the GPX2
+		 *
+		 *
+		 *
+		 ******************************************************************************/
+
+		const int MSGLEN = REF_INDEX_BITWIDTH + STOP_DATA_BITWIDTH;
+
+/*
+		//set msglen
+		if(MSGLEN&0x01){
+		axiGpOutSet(MSGLEN0);
+		}
+		if(MSGLEN&0x02){
+		axiGpOutSet(MSGLEN1);
+		}
+		if(MSGLEN&0x04){
+		axiGpOutSet(MSGLEN2);
+		}
+		if(MSGLEN&0x08){
+		axiGpOutSet(MSGLEN3);
+		}
+		if(MSGLEN&0x10){
+		axiGpOutSet(MSGLEN4);
+		}
+		if(MSGLEN&0x20){
+		axiGpOutSet(MSGLEN5);
+		}
+		*/
+		for (int i = 0; i <= 5; i++) {
+		    if (MSGLEN & (1 << i)) {
+		        axiGpOutSet(MSGLEN0 + i);
+		    }
+		}
+		// program the idelay unit:
+/*
+		if(IDELAY_TAPS&0x01){
+		axiGpOutSet(CNTVALUEIN0);
+		}
+		if(IDELAY_TAPS&0x02){
+		axiGpOutSet(CNTVALUEIN1);
+		}
+		if(IDELAY_TAPS&0x04){
+		axiGpOutSet(CNTVALUEIN2);
+		}
+		if(IDELAY_TAPS&0x08){
+		axiGpOutSet(CNTVALUEIN3);
+		}
+		if(IDELAY_TAPS&0x10){
+		axiGpOutSet(CNTVALUEIN4);
+		}
+		*/
+		/*
+		for (int i = 0; i <= 4; i++) {  //how wide are the bins of the histograms?
+		    if (IDELAY_TAPS & (1 << i)) {
+		        axiGpOutSet(CNTVALUEIN0 + i);
+		    }
+		}
+*/
+
+		//axiGpOutSet(LD);  // load the CNTVALUEIN into the idelay unit
+		//axiGpOutClear(LD);
+		for (int i = 0; i < 5; i++) {
+		    if (CNTVALUEIN_CLK & (1 << i)) {
+		        axiGpOutSet(CNTVALUEIN_CLK0 + i);
+		    }
+		}
+		for (int i = 0; i < 5; i++) {
+		    if (CNTVALUEIN_SDO & (1 << i)) {
+		        axiGpOutSet(CNTVALUEIN_SDO0 + i);
+		    }
+		}
+		for (int i = 0; i < 5; i++) {
+		    if (CNTVALUEIN_FRAME & (1 << i)) {
+		        axiGpOutSet(CNTVALUEIN_FRAME0 + i);
+		    }
+		}
+
+		axiGpOutSet(IDELAYE2_LD);  // load the CNTVALUEIN into the idelay unit
+		axiGpOutClear(IDELAYE2_LD);
+
+		//histo ip parameters
+
+		for (int i = 0; i <= 15; i++) {  //how wide are the bins of the histograms?
+		    if (LOG_2_HIST_BIN_WIDTH & (1 << i)) {
+		        axiGpOutSet(LOG_2_BINWIDTH0 + i);
+		    }
+		}
+		/*
+		for (int i = 0; i <= 31; i++) {  // how many bins from the histogram will we actually read? we might fill more bins by mistake (this should trigger a warning)
+		    if (FRAME_WIDTH & (1 << i)) {
+		        axiGpOutSet(IMAGE_SIZE0 + i);
+		    }
+		}
+*/
+
+
+		for (int i = 0; i <= 5; i++) {  // how many bits of an LVDS transfer belong to the refindex?
+		    if (REF_INDEX_BITWIDTH & (1 << i)) {
+		        axiGpOutSet(REFINDEX_BITS0 + i);
+		    }
+		}
+
+
+		for (int i = 0; i <= 5; i++) {  // how many bits of an LVDS transfer belong to the stopresult? opposed to the refindex
+		    if (STOP_DATA_BITWIDTH & (1 << i)) {
+		        axiGpOutSet(STOPRESULT_BITS0 + i);
+		    }
+		}
+
+		for (int i = 0; i <= 31; i++) {  // after how many pixels must the hist module send a tlast signal?
+		    if (NUM_PIXELS & (1 << i)) {
+		        axiGpOutSet(MAX_PIXELS0 + i);
+		    }
+		}
+		/*
+		for (int i = 0; i < 18; i++) {  // bram size in the laser emulator is limited: if too large an image is requested, just repeat the pixels
+		    if (BRAM_WRAPAROUND & (1 << i)) {
+		        axiGpOutSet(BRAM_WRAPAROUND0 + i);
+		    }
+		}
+
+		for (int i = 0; i <= 31; i++) {  // how many pulses per pixel are shot? not used at the moment
+		    if (PULSES_PER_PIXEL & (1 << i)) {
+		        axiGpOutSet(PULSES_PER_PIXEL0 + i);
+		    }
+		}
+*/
+
+		//int HistSizeInWords;
+
+		laser_period_ps = 1000000000/REFCLK_FREQUENCY;
+		BIN_WIDTH = pow(2, LOG_2_HIST_BIN_WIDTH);
+		long int histogram_bins_min = (long int)ceil((double) laser_period_ps / (double) BIN_WIDTH);
+
+		long int extra_bins = 12-(histogram_bins_min %12); // need to almost align with 16 byte boundary. almost because we have a 64bit start signal = 8 bytes = 4 bins
+		HISTOGRAM_BINS = histogram_bins_min + extra_bins; // should be devisible by 16 so that no axi transfer is incomplete and all histograms are aligned to the four-word boundary
+
+		HistSizeInWords =  ((HISTOGRAM_BINS / BINS_PER_AXI_TRANSACTION)*2)+2;  //plus 2 for start of histogram message
+
+
+		/*
+		const int TLAST_COUNT = HistSizeInWords/2;  //from words to axi transfers again
+				//(MAX_PKT_LEN*8/64)+1;  // after how many transfers of the axi stream between histogram IP and DMA IP will a tlast be sent? plus one because of start message for every histogram
+		//deprecated
+		for (int i = 0; i <= 7; i++) {  // how many axi stream transactions before a tlast signal is sent?
+		    if (TLAST_COUNT & (1 << i)) {
+		        axiGpOutSet(TLAST_COUNT0 + i);
+		    }
+		}
+
+
+*/
+
+
+
+		if ( HISTOGRAM_BINS > MAX_NUM_BINS){
+			printf("\n\r!!! this choice of refclk frequency and bin width would request a histogram of more bins than are available !!!\n\r");
+			status = XST_FAILURE;
+		}
+
+
+		for (int i = 0; i <= 14; i++) {  // how many bins from the histogram will we actually read? we might fill more bins by mistake (this should trigger a warning)
+		    if (HISTOGRAM_BINS & (1 << i)) {
+		        axiGpOutSet(BINS_TO_READ0 + i);
+		    }
+		}
+
+
+
+		//toggle mux towards the custom spi interface
+		//axiGpOutSet(SPI_SEL_1);
+		//axiSpiSelectOutSet(SPI_SELECT_1);
+		/*
+		gpx2_WriteByte(THRESH_TAP_REG, THRESH_TAP_VAL);
+		gpx2_WriteByte(DUR_REG, DUR_VAL);
+		gpx2_WriteByte(THRESH_INACT_REG, THRESH_INACT_VAL);
+		gpx2_WriteByte(TIME_INACT_REG, TIME_INACT_VAL);
+		gpx2_WriteByte(ACT_INACT_CTL_REG, ACT_INACT_CTL_VAL);
+		gpx2_WriteByte(TAP_AXES_REG, TAP_AXES_VAL);
+		gpx2_WriteByte(BW_RATE_REG, BW_RATE_VAL);
+		gpx2_WriteByte(POWER_CTL_REG, POWER_CTL_VAL);
+		gpx2_WriteByte(INT_ENABLE_REG, INT_ENABLE_VAL);
+		gpx2_WriteByte(INT_MAP_REG, INT_MAP_VAL);
+		gpx2_WriteByte(DATA_FORMAT_REG, DATA_FORMAT_VAL);
+		*/
+	}
+	// else just end
+
+	return status;
+
+}
+
+
+
+/*****************************************************************************
+ * Function: gpx2_ReadByte()
+ *//**
+ *
+ * @brief		Reads a single register of the GPX2.
+ *
+ * @return		Register read data, single byte (uint8_t).
+ *
+ * @param[in]	gpx2 register address to read from.
+ *
+ * @note
+ *
+****************************************************************************/
+
+uint8_t gpx2_ReadByte(uint8_t reg_addr)
+{
+
+	uint8_t nbytes = 2U;
+	uint8_t *read_data;
+
+	/* Data to put on SPI bus */
+	uint8_t tx_data[2] = {(reg_addr | 0x40), 0U};
+
+	/* Set nbytes = 2U; one byte for addr, and one for return data */
+	read_data =  spiReadBytes(tx_data, nbytes);
+	//uint8_t read_value = read_data[1];
+	/* Byte 1 is the read data */
+	return read_data[1];
+}
+
+
+/*****************************************************************************
+ * Function: gpx2_ReadBytesContinuously()
+ *//**
+ *
+ * @brief		Reads a single or multiple consecutive registers of the GPX2.
+ *
+ * @return		Register read data, single byte (uint8_t).
+ *
+ * @param[in]	gpx2 register address to read from.
+ *
+ * @note
+ *
+****************************************************************************/
+
+void gpx2_ReadBytesContinuously(uint8_t reg_addr, uint8_t* read_data, uint8_t nbytes)
+{
+    /* Data to put on SPI bus */
+    uint8_t tx_data[nbytes + 1];
+
+
+    /* Set the first byte to the register address with the MSB set */
+    tx_data[0] = reg_addr | 0x40;
+
+    /* Copy the write_data into tx_data */
+    for (uint8_t i = 0; i < nbytes; i++) {
+        tx_data[i + 1] = 0x00;
+    }
+
+    /* Read data into a temporary buffer */
+    uint8_t* temp_buffer = spiReadBytes(tx_data, nbytes+1);
+
+    /* Copy the read data into the provided read_data array */
+    for (uint8_t i = 0; i < nbytes; i++) {
+
+        read_data[i] = temp_buffer[i+1]; //the first byte is the loopback of the read command, so we drop it
+    }
+}
+
+
+/*****************************************************************************
+ * Function: gpx2_WriteByte()
+ *//**
+ *
+ * @brief		Writes to a single register of the GPX2.
+ *
+ *
+ * @return		Register read data, single byte (uint8_t).
+ *
+ * @note
+ *
+****************************************************************************/
+
+void gpx2_WriteByte(uint8_t reg_addr, uint8_t write_data)
+{
+
+	uint8_t nbytes = 2U;
+
+	/* Data to put on SPI bus */
+	uint8_t tx_data[2] = {(reg_addr |= 0x80), write_data};
+
+	/* Call AXI SPI I/F function */
+	spiWriteBytes(tx_data, nbytes);
+
+}
+
+
+/*****************************************************************************
+ * Function: gpx2_WriteBytesContinuously()
+ *//**
+ *
+ * @brief		Writes to a single or multiple consecutive registers of the GPX2.
+ *
+ *
+ * @return
+ *
+ * @note
+ *
+****************************************************************************/
+
+void gpx2_WriteBytesContinuously(uint8_t reg_addr, uint8_t* write_data, uint8_t nbytes)
+{
+    /* Data to put on SPI bus */
+    uint8_t tx_data[nbytes + 1];
+
+    /* Set the first byte to the register address with the MSB set */
+    tx_data[0] = reg_addr | 0x80;
+
+    /* Copy the write_data into tx_data */
+    for (uint8_t i = 0; i < nbytes; i++) {
+        tx_data[i + 1] = write_data[i];
+    }
+
+    /* Call AXI SPI I/F function */
+    spiWriteBytes(tx_data, nbytes + 1);
+}
+
+
+
+
+/*****************************************************************************
+ * Function: gpx2_ReadTDCData()
+ *//**
+ *
+ * @brief		Reads the GPX2 TDC data registers via spi
+ *
+ *
+ * @return		32-bit data: Lower 16-bits = X-data = [X1] [X0]
+ * 				Upper 16-bits = Y-data = [Y1] [Y0], i.e.
+ * 				Y1 = [31:24], Y0 = [23:16], X1 = [15:8], X0 = [7:0]
+ *
+ * @note
+ *
+****************************************************************************/
+/*
+uint32_t gpx2_ReadTDCData(void)
+{
+
+	//uint8_t start_addr;
+
+	// Set the SPI 'Read' and 'multi-byte' bits with the register value.
+	//start_addr = DATAX0_REG | 0xC0;
+
+	// Data to put on SPI bus
+	//uint8_t tx_data[5] = {start_addr, 0U, 0U, 0U, 0U};
+
+	// Pointer to the return data from SPI block
+	//uint8_t *xy_data_bytes;
+
+	// Set nbytes = 5U; byte 0 = start_addr, then 4 bytes to read back.
+	//xy_data_bytes =  spiReadBytes(tx_data, 5U);
+
+
+
+
+	 Format the return data into a 32-bit word:
+	  X0 = byte [1] = [7:0];
+	  X1 = byte [2] = [15:8];
+	  Y0 = byte [3] = [23:16];
+	  Y1 = byte [4] = [31:24];
+	uint32_t xy_data = 0;
+
+
+	return xy_data;
+
+}
+
+*/
+
+
+
+
+/*****************************************************************************
+ * Function: gpx2_IntrHandler()
+ *//**
+ *
+ * @brief		Interrupt handler for PmodACL INT1.
+ *
+ * @details		Handles the PmodACL interrupt 1 event. All we do is set LED3
+ * 				on the board. When the interrupt status is read using function
+ * 				gpx2_ReadIntrStatus(), the LED will be cleared.
+ *
+ * @return 		None
+ *
+ * @note		None
+ *
+****************************************************************************/
+/*
+void gpx2_IntrHandler(void)
+{
+	//axiGpOutSet(LED3);
+}
+
+
+
+*/
+/****** End functions *****/
+
+/****** End of File **********************************************************/
+

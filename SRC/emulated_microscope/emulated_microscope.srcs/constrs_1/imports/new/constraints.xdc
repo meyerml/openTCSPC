@@ -71,6 +71,8 @@ set_property -dict {PACKAGE_PIN T22 IOSTANDARD LVCMOS33} [get_ports buffer_overf
 
 #refclk and stop pins from signal generator:
 #JA4
-set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33 DRIVE 16 SLEW FAST} [get_ports refclk_out] 
+set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33 DRIVE 16 SLEW FAST} [get_ports refclk_out]
 #JB4
-set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33 DRIVE 16 SLEW FAST} [get_ports stop_out] 
+set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33 DRIVE 16 SLEW FAST} [get_ports stop_out]
+
+

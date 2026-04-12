@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  9 14:24:29 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Apr  3 23:41:14 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zedboard:part0:1.0" DEVICE="7z020" NAME="LVDS_to_AXIS" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -44,7 +44,7 @@
     <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_aresetn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
-        <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="aresetn"/>
+        <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="aresetn"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="31" NAME="axis_rd_data_count" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_axis_rd_data_count">
@@ -64,10 +64,6 @@
         <CONNECTION INSTANCE="IDELAY_FRAME" PORT="C"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="63" NAME="debug_axis_before_fifo_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="debug_axis_before_fifo_tlast" SIGIS="undef"/>
-    <PORT DIR="O" NAME="debug_axis_before_fifo_tready" SIGIS="undef"/>
-    <PORT DIR="O" NAME="debug_axis_before_fifo_tvalid" SIGIS="undef"/>
     <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="External_Ports_en">
       <CONNECTIONS>
         <CONNECTION INSTANCE="l_clk_out" PORT="en"/>
@@ -115,7 +111,7 @@
     </PORT>
     <PORT DIR="I" LEFT="5" NAME="msglen" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_msglen">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="msglen"/>
+        <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="msglen"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="sdo_n" SIGIS="undef" SIGNAME="External_Ports_sdo_n">
@@ -132,7 +128,7 @@
 
   <EXTERNALINTERFACES>
     <BUSINTERFACE BUSNAME="axis_data_fifo_0_M_AXIS" NAME="M_AXIS_0" TYPE="MASTER">
-      <PARAMETER NAME="CLK_DOMAIN" VALUE="LVDS_to_AXIS_clk_0"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="LVDS_to_AXIS_clk"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="50"/>
       <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
       <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
@@ -150,27 +146,6 @@
         <PORTMAP LOGICAL="TLAST" PHYSICAL="M_AXIS_0_tlast"/>
         <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_0_tready"/>
         <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_0_tvalid"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="DDR_fabric_even_simp_0_AXIS" NAME="debug_axis_before_fifo" TYPE="MONITOR">
-      <PARAMETER NAME="CLK_DOMAIN"/>
-      <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
-      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
-      <PARAMETER NAME="PHASE" VALUE="0.0"/>
-      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
-      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
-      <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-      <PORTMAPS>
-        <PORTMAP LOGICAL="TDATA" PHYSICAL="debug_axis_before_fifo_tdata"/>
-        <PORTMAP LOGICAL="TLAST" PHYSICAL="debug_axis_before_fifo_tlast"/>
-        <PORTMAP LOGICAL="TREADY" PHYSICAL="debug_axis_before_fifo_tready"/>
-        <PORTMAP LOGICAL="TVALID" PHYSICAL="debug_axis_before_fifo_tvalid"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -203,7 +178,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
             <CONNECTION INSTANCE="ila_LVDS" PORT="probe0"/>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="C"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="C"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -254,12 +229,11 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/DDR_fabric_even_simp_0" HWVERSION="1.0" INSTANCE="DDR_fabric_even_simp_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DDR_fabric_even_simpler" VLNV="xilinx.com:module_ref:DDR_fabric_even_simpler:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/DDR_Stream_to_AXI_St_0" HWVERSION="1.0" INSTANCE="DDR_Stream_to_AXI_St_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DDR_Stream_to_AXI_Stream" VLNV="xilinx.com:module_ref:DDR_Stream_to_AXI_Stream:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="CLOCKRATIO" VALUE="2"/>
         <PARAMETER NAME="NUM_TRANSACTIONS" VALUE="256"/>
-        <PARAMETER NAME="Component_Name" VALUE="LVDS_to_AXIS_DDR_fabric_even_simp_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="LVDS_to_AXIS_DDR_Stream_to_AXI_St_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -288,29 +262,29 @@
             <CONNECTION INSTANCE="External_Ports" PORT="msglen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="tdata_delayed" RIGHT="0" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tdata_delayed">
+        <PORT DIR="O" LEFT="63" NAME="tdata_delayed" RIGHT="0" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tdata_delayed">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="tlast_delayed" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tlast_delayed">
+        <PORT DIR="O" NAME="tlast_delayed" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tlast_delayed">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="tready" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tready">
+        <PORT DIR="I" NAME="tready" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="tvalid_delayed" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tvalid_delayed">
+        <PORT DIR="O" NAME="tvalid_delayed" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tvalid_delayed">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="DDR_fabric_even_simp_0_AXIS" NAME="AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="DDR_Stream_to_AXI_St_0_AXIS" NAME="AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -443,7 +417,7 @@
         <PORT DIR="O" NAME="DATAOUT" SIGIS="undef" SIGNAME="IDELAY_DATA_DATAOUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_LVDS" PORT="probe1"/>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="D"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="D"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="IDATAIN" SIGIS="undef" SIGNAME="DATA_IBUF_OUT">
@@ -479,7 +453,7 @@
         <PORT DIR="O" NAME="DATAOUT" SIGIS="undef" SIGNAME="IDELAY_FRAME_DATAOUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_LVDS" PORT="probe2"/>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="F"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="F"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="IDATAIN" SIGIS="undef" SIGNAME="FRAME_IBUF_OUT">
@@ -594,29 +568,29 @@
             <CONNECTION INSTANCE="External_Ports" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tdata_delayed">
+        <PORT DIR="I" LEFT="63" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tdata_delayed">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="tdata_delayed"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="tdata_delayed"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tlast_delayed">
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tlast_delayed">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="tlast_delayed"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="tlast_delayed"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tready">
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="tready"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="DDR_fabric_even_simp_0_tvalid_delayed">
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="DDR_Stream_to_AXI_St_0_tvalid_delayed">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DDR_fabric_even_simp_0" PORT="tvalid_delayed"/>
+            <CONNECTION INSTANCE="DDR_Stream_to_AXI_St_0" PORT="tvalid_delayed"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="DDR_fabric_even_simp_0_AXIS" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="DDR_Stream_to_AXI_St_0_AXIS" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="LVDS_to_AXIS_l_clk_in_n"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -638,7 +612,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axis_data_fifo_0_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="LVDS_to_AXIS_clk_0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="LVDS_to_AXIS_clk"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="50"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>

@@ -10,10 +10,6 @@ module LVDS_to_AXIS (
   M_AXIS_0_tlast,
   M_AXIS_0_tready,
   M_AXIS_0_tvalid,
-  debug_axis_before_fifo_tdata,
-  debug_axis_before_fifo_tlast,
-  debug_axis_before_fifo_tvalid,
-  debug_axis_before_fifo_tready,
   clk,
   en,
   aresetn,
@@ -37,7 +33,7 @@ module LVDS_to_AXIS (
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TDATA" *)
   (* X_INTERFACE_MODE = "master M_AXIS_0" *)
-  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 50, PHASE 0.0, CLK_DOMAIN LVDS_to_AXIS_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 50, PHASE 0.0, CLK_DOMAIN LVDS_to_AXIS_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
   output [63:0]M_AXIS_0_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TLAST" *)
   output M_AXIS_0_tlast;
@@ -45,19 +41,9 @@ module LVDS_to_AXIS (
   input M_AXIS_0_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_0 TVALID" *)
   output M_AXIS_0_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TDATA" *)
-  (* X_INTERFACE_MODE = "monitor slave debug_axis_before_fifo" *)
-  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME debug_axis_before_fifo, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0" *)
-  output [63:0]debug_axis_before_fifo_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TLAST" *)
-  output debug_axis_before_fifo_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TVALID" *)
-  output debug_axis_before_fifo_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 debug_axis_before_fifo TREADY" *)
-  output debug_axis_before_fifo_tready;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *)
   (* X_INTERFACE_MODE = "slave CLK.CLK" *)
-  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, FREQ_HZ 50, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN LVDS_to_AXIS_clk_0, ASSOCIATED_BUSIF M_AXIS_0, ASSOCIATED_RESET aresetn, INSERT_VIP 0" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, FREQ_HZ 50, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN LVDS_to_AXIS_clk, ASSOCIATED_BUSIF M_AXIS_0, ASSOCIATED_RESET aresetn, INSERT_VIP 0" *)
   input clk;
   (* X_INTERFACE_IGNORE = "true" *)
   input en;

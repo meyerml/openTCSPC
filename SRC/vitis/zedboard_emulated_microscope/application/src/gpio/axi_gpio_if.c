@@ -230,7 +230,7 @@ int axiGpioInit(void)
 	/* Inital Conditions */
 	//axiGpOutClear(SPI_SEL_1);
 	//axiGpOutClear(SPI_1_EN);
-	axiGpOutClear(LVDS_START);
+	axiGpOutClear(EMULATOR_START);
 	//axiGpOutClear(LED3);
 	/* All LEDs initially off */
 	//axiGpOutClear(LED0);
@@ -261,7 +261,7 @@ int axiGpioInit(void)
 	axiGpOutClear(CNTVALUEIN3);
 	axiGpOutClear(CNTVALUEIN4);
 
-	axiGpOutClear(LD);
+	axiGpOutClear(SECOND_ARESETN);
 
 	for(int i=0;i<16;i++){
 		axiGpOutClear(LOG_2_BINWIDTH0+i);
@@ -287,6 +287,22 @@ int axiGpioInit(void)
 	for(int i=0;i<32;i++){
 		axiGpOutClear(MAX_PIXELS0+i);
 	}
+
+
+	for(int i=0;i<5;i++){
+		axiGpOutClear(CNTVALUEIN_CLK0+i);
+	}
+
+	for(int i=0;i<5;i++){
+		axiGpOutClear(CNTVALUEIN_SDO0+i);
+	}
+
+	for(int i=0;i<5;i++){
+		axiGpOutClear(CNTVALUEIN_FRAME0+i);
+	}
+
+	axiGpOutClear(IDELAYE2_LD);
+
 	/*
 	for(int i=0;i<18;i++){
 		axiGpOutClear(BRAM_WRAPAROUND0+i);
