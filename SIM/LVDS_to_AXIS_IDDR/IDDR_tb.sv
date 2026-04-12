@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 
-module LVDS_to_AXI_Stream_tb;
+module IDDR_tb;
     // Parameters
     parameter CLK_PERIOD = 32; // Clock period in ns
-    parameter MSGLEN = 44;
+    parameter MSGLEN = 42;
 
     // Calculate the number of bits needed
-    parameter CNTR_WIDTH = $clog2(MSGLEN);
+    parameter CNTR_WIDTH = 6;  //$clog2(MSGLEN);
 
     // Values we control
     reg [CNTR_WIDTH-1:0] msglen;
@@ -24,6 +24,12 @@ module LVDS_to_AXI_Stream_tb;
     //reg tready;
     reg aresetn;
     reg ila_clk;
+    reg [4:0] CNTVALUEIN_CLK;
+    reg [4:0] CNTVALUEIN_SDO;
+    reg [4:0] CNTVALUEIN_FRAME;
+    reg LD;
+    reg TRIG_IN_trig;
+    wire TRIG_IN_ack;
 
     // Values the UUT controls
     //wire tvalid;
@@ -36,10 +42,10 @@ module LVDS_to_AXI_Stream_tb;
     reg [CNTR_WIDTH-1:0] sdo_bit_counter;
     reg start_always_block = 0; // Flag to start the always block
     reg [4:0]frame_counter = '0;
-    reg M_AXIS_0_tready = 0;
-    wire [63:0] M_AXIS_0_tdata;
-    wire M_AXIS_0_tlast;
-    wire M_AXIS_0_tvalid;
+    reg M_AXIS_tready = 0;
+    wire [63:0] M_AXIS_tdata;
+    wire M_AXIS_tlast;
+    wire M_AXIS_tvalid;
     wire [31:0] axis_rd_data_count;
     wire [31:0] axis_wr_data_count;
     //wire [63:0] debug_axis_before_fifo_tdata;
@@ -54,14 +60,14 @@ module LVDS_to_AXI_Stream_tb;
     reg on_transition_on;
     reg off_transition_on;
     reg idelay_ref_clk;
-    reg [4:0] CNTVALUEIN;
-    reg LD;
-    parameter NUM_PACKETS = 16;
-    reg ila_trig_in;
-    wire ila_trig_in_ack;
+    //reg [4:0] CNTVALUEIN;
+    //reg LD;
+   // parameter NUM_TRANSACTIONS = 16;
+    //reg ila_trig_in;
+    //wire ila_trig_in_ack;
     
     
-    LVDS_to_AXIS_wrapper #(.NUM_PACKETS(NUM_PACKETS)) uut(.*);
+    LVDS_to_AXIS_IDDR_wrapper uut(.*);
     
     //wire single_ended_frame;
     //wire single_ended_l_clk_in;
@@ -70,13 +76,17 @@ module LVDS_to_AXI_Stream_tb;
 
     //delay line initialization:
     initial begin
-        CNTVALUEIN = 0;
+        CNTVALUEIN_CLK = 0;
+        CNTVALUEIN_SDO = 2;
+        CNTVALUEIN_FRAME = 2;
+
+
         LD = 0;
         #100;
         LD=1;
         #100;
         LD = 0;
-        CNTVALUEIN = 0;
+        //CNTVALUEIN = 0;
     end 
     
     // Clock generation
@@ -111,7 +121,11 @@ module LVDS_to_AXI_Stream_tb;
 
     initial begin
         en = 0;
-        msglen = 0;
+        msglen = MSGLEN;
+        sdo_p <= 0;
+        sdo_n <= 1;
+        frame_p <= 0;
+        frame_n <= 1;
         //clockratio = 4;
         off_transition_on = 1'b0;
         on_transition_on = 1'b0;
@@ -132,10 +146,9 @@ module LVDS_to_AXI_Stream_tb;
         #20;
         aresetn = 1;
         frame_counter = '0;
-        M_AXIS_0_tready = 1;
+        M_AXIS_tready = 1;
 
         #200;
-        msglen = MSGLEN;
         #100;
         
         en = 1;
@@ -144,25 +157,31 @@ module LVDS_to_AXI_Stream_tb;
         //#10000;
         
         #3000;
-
+        #16;
         start_always_block = 1;
         on_transition_on = 1'b1;
 
        // #10000;
-        #3000;
+        #5000;
+        off_transition_on = 1'b1;
+
+        #10000;
+        //#16;
         
+        off_transition_on = 1'b1;
+
+        
+        //off_transition_on = 1'b1;
+        #10000;
+        #16;
         on_transition_on = 1'b1;
 
-        #3000;
-        
-        off_transition_on = 1'b1;
-        #6000;
-        off_transition_on = 1'b1;
-        #6000;
-        on_transition_on = 1'b1;
+        //off_transition_on = 1'b1;
+        //#6000;
+        //on_transition_on = 1'b1;
         //#702; // this leads to the negedge on starting transfers while the on_transition_on transfer is still ongoing:(
-        #1500;
-        on_transition_on = 1'b1;
+        //#1500;
+        //on_transition_on = 1'b1;
         //off_transition_on = 1'b1;
         //off_transition_on = 1'
         //off_transition_on = 1'b0;
@@ -173,50 +192,7 @@ module LVDS_to_AXI_Stream_tb;
        // M_AXIS_0_tready = 0;
     end
 
-    // todo: this has to be clocked twice as fast to send the correct data!
-    always @(negedge ddr_clk) begin
-    if (on_transition_on) begin
-    //always @(posedge l_clk_in_p) begin
-        if (start_always_block) begin
-            sdo_p <= sdo_data[sdo_bit_counter];
-            sdo_n <= !sdo_data[sdo_bit_counter];
 
-            if (sdo_bit_counter == MSGLEN-1) begin
-                frame_p <= 1;
-                frame_n <= 0;
-
-                //negedge_counter = negedge_counter + 1;
-
-
-            end else if (sdo_bit_counter == MSGLEN-1-8) begin
-                frame_p <= 0;
-                frame_n <= 1;
-                frame_counter <= frame_counter +1;
-                //if ( frame_counter == 4) start_always_block <= '0;
-            end
-
-            sdo_bit_counter <= sdo_bit_counter - 1;
-
-            if (sdo_bit_counter == 0) begin
-                //sdo_data <= ~sdo_data;
-                sdo_data <= sdo_data +1;
-
-                sdo_bit_counter <= MSGLEN -1;
-            end
-            
-            if ((sdo_bit_counter == 0)& (frame_counter ==4)) begin
-                    on_transition_on <= 1'b0;
-                    //start_always_block <= '0;
-                    frame_p <= 0;
-                    frame_n <= 1;
-                    sdo_bit_counter <= MSGLEN-1;
-                    frame_counter <= 0;
-            end
-        end
-        end
-    end
-    
-    
     
     always @(posedge ddr_clk) begin
     if (off_transition_on) begin
@@ -258,7 +234,50 @@ module LVDS_to_AXI_Stream_tb;
         end
         end
     end
+    
+    
+    always @(negedge ddr_clk) begin
+    if (on_transition_on) begin
+    //always @(posedge l_clk_in_p) begin
+        if (start_always_block) begin
+            sdo_p <= sdo_data[sdo_bit_counter];
+            sdo_n <= !sdo_data[sdo_bit_counter];
 
-    assign l_clk_in_p = lvds_clk;
-    assign l_clk_in_n = !lvds_clk;
+            if (sdo_bit_counter == MSGLEN-1) begin
+                frame_p <= 1;
+                frame_n <= 0;
+
+                //negedge_counter = negedge_counter + 1;
+
+
+            end else if (sdo_bit_counter == MSGLEN-1-8) begin
+                frame_p <= 0;
+                frame_n <= 1;
+                frame_counter <= frame_counter +1;
+                //if ( frame_counter == 4) start_always_block <= '0;
+            end
+
+            sdo_bit_counter <= sdo_bit_counter - 1;
+
+            if (sdo_bit_counter == 0) begin
+                //sdo_data <= ~sdo_data;
+                sdo_data <= sdo_data +1;
+
+                sdo_bit_counter <= MSGLEN -1;
+            end
+            
+            if ((sdo_bit_counter == 0)& (frame_counter ==4)) begin
+                    on_transition_on <= 1'b0;
+                    //start_always_block <= '0;
+                    frame_p <= 0;
+                    frame_n <= 1;
+                    sdo_bit_counter <= MSGLEN-1;
+                    frame_counter <= 0;
+            end
+        end
+        end
+    end
+
+    assign l_clk_in_p = !lvds_clk;
+    assign l_clk_in_n = lvds_clk;
 endmodule
