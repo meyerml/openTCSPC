@@ -28,13 +28,15 @@
 
 //Laser Emulator Parameters
 #define REFCLK_FREQUENCY 10000  //in kHz
-#define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+#define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
 #define ORIGINAL_FRAME_WIDTH 512  //used for cropping a part of the image
 #define IMAGE "CONVALLARIA_512"  //CONVALLARIA CHECKERBOARD BARCODE
 #define BRAM_WRAPAROUND 32768  //2^15
 #define PULSES_PER_PIXEL 4096  //how many laser pulses should be "fired" at each pixel?
-#define LOG_2_HIST_BIN_WIDTH 10  // log 2 of histogram bin width in picoseconds. larger values lead to less precision, but more compact histograms
 
+//histogram engine parameters
+#define LOG_2_HIST_BIN_WIDTH 8  // log 2 of histogram bin width in picoseconds. larger values lead to less precision, but more compact histograms
+#define HISTOGRAM_NUMBER_OF_BINS 0  // 0 for automatic calculation
 #define ORIGINAL_NUM_PIXELS (ORIGINAL_FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)  // the number of pixels in a frame
 #define NUM_PIXELS (FRAME_WIDTH*FRAME_WIDTH)  // the number of pixels in a frame
 

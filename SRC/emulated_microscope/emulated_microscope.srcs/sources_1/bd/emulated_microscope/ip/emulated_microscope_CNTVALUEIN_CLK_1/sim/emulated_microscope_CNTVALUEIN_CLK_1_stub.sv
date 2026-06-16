@@ -67,7 +67,7 @@ typedef bit bit_as_bool;
 (* SC_MODULE_EXPORT *)
 module emulated_microscope_CNTVALUEIN_CLK_1 (
   input bit [255 : 0] Din,
-  output bit [1 : 0] Dout
+  output bit [0 : 0] Dout
 );
 endmodule
 `endif
@@ -78,6 +78,6 @@ module emulated_microscope_CNTVALUEIN_CLK_1 (Din,Dout)
 (* integer foreign = "SystemC";
 *);
   input bit [255 : 0] Din;
-  output wire [1 : 0] Dout;
+  output wire [0 : 0] Dout;
 endmodule
 `endif

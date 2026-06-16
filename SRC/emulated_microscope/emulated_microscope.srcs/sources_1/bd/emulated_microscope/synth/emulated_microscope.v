@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Sun Apr 12 17:19:30 2026
+//Date        : Thu May 14 15:36:20 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target emulated_microscope.bd
 //Design      : emulated_microscope
@@ -124,7 +124,7 @@ module emulated_microscope
   wire Histogramming_0_buffer_almost_full;
   wire Histogramming_TRIG_OUT_ACK;
   wire Histogramming_TRIG_OUT_TRIG;
-  wire [1:0]IDELAYE2_LD_Dout;
+  wire [0:0]IDELAYE2_LD_Dout;
   wire [31:0]IMAGE_SIZE_Dout;
   wire [15:0]LOG_2_BINWIDTH_Dout;
   wire [63:0]LVDS_to_AXIS_0_M_AXIS_0_TDATA;
@@ -521,7 +521,7 @@ module emulated_microscope
         .CNTVALUEIN_CLK(CNTVALUEIN_CLK_Dout),
         .CNTVALUEIN_FRAME(CNTVALUEIN_FRAME_Dout),
         .CNTVALUEIN_SDO(CNTVALUEIN_SDO_Dout),
-        .LD(IDELAYE2_LD_Dout[0]),
+        .LD(IDELAYE2_LD_Dout),
         .M_AXIS_tdata(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
         .M_AXIS_tready(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
         .M_AXIS_tvalid(LVDS_to_AXIS_0_M_AXIS_0_TVALID),

@@ -2,14 +2,14 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Tue Mar 10 16:56:18 2026
+// Date        : Fri Apr 24 14:56:30 2026
 // Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/marce/OneDrive/Desktop/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_sorter_0_0/histo_sorter_0_0_sim_netlist.v
+//               c:/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_sorter_0_0/histo_sorter_0_0_sim_netlist.v
 // Design      : histo_sorter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7z020clg484-1
+// Device      : xczu3eg-sfvc784-1-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -112,190 +112,190 @@ module histo_sorter_0_0_sorter
   wire tdata_out2_carry__0_i_2_n_0;
   wire tdata_out2_carry__0_i_3_n_0;
   wire tdata_out2_carry__0_i_4_n_0;
+  wire tdata_out2_carry__0_i_5_n_0;
+  wire tdata_out2_carry__0_i_6_n_0;
+  wire tdata_out2_carry__0_i_7_n_0;
+  wire tdata_out2_carry__0_i_8_n_0;
   wire tdata_out2_carry__0_n_0;
   wire tdata_out2_carry__0_n_1;
+  wire tdata_out2_carry__0_n_10;
+  wire tdata_out2_carry__0_n_11;
+  wire tdata_out2_carry__0_n_12;
+  wire tdata_out2_carry__0_n_13;
+  wire tdata_out2_carry__0_n_14;
+  wire tdata_out2_carry__0_n_15;
   wire tdata_out2_carry__0_n_2;
   wire tdata_out2_carry__0_n_3;
   wire tdata_out2_carry__0_n_4;
   wire tdata_out2_carry__0_n_5;
   wire tdata_out2_carry__0_n_6;
   wire tdata_out2_carry__0_n_7;
-  wire tdata_out2_carry__10_i_1_n_0;
-  wire tdata_out2_carry__10_i_2_n_0;
-  wire tdata_out2_carry__10_i_3_n_0;
-  wire tdata_out2_carry__10_i_4_n_0;
-  wire tdata_out2_carry__10_n_0;
-  wire tdata_out2_carry__10_n_1;
-  wire tdata_out2_carry__10_n_2;
-  wire tdata_out2_carry__10_n_3;
-  wire tdata_out2_carry__10_n_4;
-  wire tdata_out2_carry__10_n_5;
-  wire tdata_out2_carry__10_n_6;
-  wire tdata_out2_carry__10_n_7;
-  wire tdata_out2_carry__11_i_1_n_0;
-  wire tdata_out2_carry__11_i_2_n_0;
-  wire tdata_out2_carry__11_i_3_n_0;
-  wire tdata_out2_carry__11_i_4_n_0;
-  wire tdata_out2_carry__11_n_0;
-  wire tdata_out2_carry__11_n_1;
-  wire tdata_out2_carry__11_n_2;
-  wire tdata_out2_carry__11_n_3;
-  wire tdata_out2_carry__11_n_4;
-  wire tdata_out2_carry__11_n_5;
-  wire tdata_out2_carry__11_n_6;
-  wire tdata_out2_carry__11_n_7;
-  wire tdata_out2_carry__12_i_1_n_0;
-  wire tdata_out2_carry__12_i_2_n_0;
-  wire tdata_out2_carry__12_i_3_n_0;
-  wire tdata_out2_carry__12_i_4_n_0;
-  wire tdata_out2_carry__12_n_0;
-  wire tdata_out2_carry__12_n_1;
-  wire tdata_out2_carry__12_n_2;
-  wire tdata_out2_carry__12_n_3;
-  wire tdata_out2_carry__12_n_4;
-  wire tdata_out2_carry__12_n_5;
-  wire tdata_out2_carry__12_n_6;
-  wire tdata_out2_carry__12_n_7;
-  wire tdata_out2_carry__13_i_1_n_0;
-  wire tdata_out2_carry__13_i_2_n_0;
-  wire tdata_out2_carry__13_i_3_n_0;
-  wire tdata_out2_carry__13_i_4_n_0;
-  wire tdata_out2_carry__13_n_0;
-  wire tdata_out2_carry__13_n_1;
-  wire tdata_out2_carry__13_n_2;
-  wire tdata_out2_carry__13_n_3;
-  wire tdata_out2_carry__13_n_4;
-  wire tdata_out2_carry__13_n_5;
-  wire tdata_out2_carry__13_n_6;
-  wire tdata_out2_carry__13_n_7;
-  wire tdata_out2_carry__14_i_1_n_0;
-  wire tdata_out2_carry__14_i_2_n_0;
-  wire tdata_out2_carry__14_i_3_n_0;
-  wire tdata_out2_carry__14_n_2;
-  wire tdata_out2_carry__14_n_3;
-  wire tdata_out2_carry__14_n_5;
-  wire tdata_out2_carry__14_n_6;
-  wire tdata_out2_carry__14_n_7;
+  wire tdata_out2_carry__0_n_8;
+  wire tdata_out2_carry__0_n_9;
   wire tdata_out2_carry__1_i_1_n_0;
   wire tdata_out2_carry__1_i_2_n_0;
   wire tdata_out2_carry__1_i_3_n_0;
   wire tdata_out2_carry__1_i_4_n_0;
+  wire tdata_out2_carry__1_i_5_n_0;
+  wire tdata_out2_carry__1_i_6_n_0;
+  wire tdata_out2_carry__1_i_7_n_0;
+  wire tdata_out2_carry__1_i_8_n_0;
   wire tdata_out2_carry__1_n_0;
   wire tdata_out2_carry__1_n_1;
+  wire tdata_out2_carry__1_n_10;
+  wire tdata_out2_carry__1_n_11;
+  wire tdata_out2_carry__1_n_12;
+  wire tdata_out2_carry__1_n_13;
+  wire tdata_out2_carry__1_n_14;
+  wire tdata_out2_carry__1_n_15;
   wire tdata_out2_carry__1_n_2;
   wire tdata_out2_carry__1_n_3;
   wire tdata_out2_carry__1_n_4;
   wire tdata_out2_carry__1_n_5;
   wire tdata_out2_carry__1_n_6;
   wire tdata_out2_carry__1_n_7;
+  wire tdata_out2_carry__1_n_8;
+  wire tdata_out2_carry__1_n_9;
   wire tdata_out2_carry__2_i_1_n_0;
   wire tdata_out2_carry__2_i_2_n_0;
   wire tdata_out2_carry__2_i_3_n_0;
   wire tdata_out2_carry__2_i_4_n_0;
+  wire tdata_out2_carry__2_i_5_n_0;
+  wire tdata_out2_carry__2_i_6_n_0;
+  wire tdata_out2_carry__2_i_7_n_0;
+  wire tdata_out2_carry__2_i_8_n_0;
   wire tdata_out2_carry__2_n_0;
   wire tdata_out2_carry__2_n_1;
+  wire tdata_out2_carry__2_n_10;
+  wire tdata_out2_carry__2_n_11;
+  wire tdata_out2_carry__2_n_12;
+  wire tdata_out2_carry__2_n_13;
+  wire tdata_out2_carry__2_n_14;
+  wire tdata_out2_carry__2_n_15;
   wire tdata_out2_carry__2_n_2;
   wire tdata_out2_carry__2_n_3;
   wire tdata_out2_carry__2_n_4;
   wire tdata_out2_carry__2_n_5;
   wire tdata_out2_carry__2_n_6;
   wire tdata_out2_carry__2_n_7;
+  wire tdata_out2_carry__2_n_8;
+  wire tdata_out2_carry__2_n_9;
   wire tdata_out2_carry__3_i_1_n_0;
   wire tdata_out2_carry__3_i_2_n_0;
   wire tdata_out2_carry__3_i_3_n_0;
   wire tdata_out2_carry__3_i_4_n_0;
+  wire tdata_out2_carry__3_i_5_n_0;
+  wire tdata_out2_carry__3_i_6_n_0;
+  wire tdata_out2_carry__3_i_7_n_0;
+  wire tdata_out2_carry__3_i_8_n_0;
   wire tdata_out2_carry__3_n_0;
   wire tdata_out2_carry__3_n_1;
+  wire tdata_out2_carry__3_n_10;
+  wire tdata_out2_carry__3_n_11;
+  wire tdata_out2_carry__3_n_12;
+  wire tdata_out2_carry__3_n_13;
+  wire tdata_out2_carry__3_n_14;
+  wire tdata_out2_carry__3_n_15;
   wire tdata_out2_carry__3_n_2;
   wire tdata_out2_carry__3_n_3;
   wire tdata_out2_carry__3_n_4;
   wire tdata_out2_carry__3_n_5;
   wire tdata_out2_carry__3_n_6;
   wire tdata_out2_carry__3_n_7;
+  wire tdata_out2_carry__3_n_8;
+  wire tdata_out2_carry__3_n_9;
   wire tdata_out2_carry__4_i_1_n_0;
   wire tdata_out2_carry__4_i_2_n_0;
   wire tdata_out2_carry__4_i_3_n_0;
   wire tdata_out2_carry__4_i_4_n_0;
+  wire tdata_out2_carry__4_i_5_n_0;
+  wire tdata_out2_carry__4_i_6_n_0;
+  wire tdata_out2_carry__4_i_7_n_0;
+  wire tdata_out2_carry__4_i_8_n_0;
   wire tdata_out2_carry__4_n_0;
   wire tdata_out2_carry__4_n_1;
+  wire tdata_out2_carry__4_n_10;
+  wire tdata_out2_carry__4_n_11;
+  wire tdata_out2_carry__4_n_12;
+  wire tdata_out2_carry__4_n_13;
+  wire tdata_out2_carry__4_n_14;
+  wire tdata_out2_carry__4_n_15;
   wire tdata_out2_carry__4_n_2;
   wire tdata_out2_carry__4_n_3;
   wire tdata_out2_carry__4_n_4;
   wire tdata_out2_carry__4_n_5;
   wire tdata_out2_carry__4_n_6;
   wire tdata_out2_carry__4_n_7;
+  wire tdata_out2_carry__4_n_8;
+  wire tdata_out2_carry__4_n_9;
   wire tdata_out2_carry__5_i_1_n_0;
   wire tdata_out2_carry__5_i_2_n_0;
   wire tdata_out2_carry__5_i_3_n_0;
   wire tdata_out2_carry__5_i_4_n_0;
+  wire tdata_out2_carry__5_i_5_n_0;
+  wire tdata_out2_carry__5_i_6_n_0;
+  wire tdata_out2_carry__5_i_7_n_0;
+  wire tdata_out2_carry__5_i_8_n_0;
   wire tdata_out2_carry__5_n_0;
   wire tdata_out2_carry__5_n_1;
+  wire tdata_out2_carry__5_n_10;
+  wire tdata_out2_carry__5_n_11;
+  wire tdata_out2_carry__5_n_12;
+  wire tdata_out2_carry__5_n_13;
+  wire tdata_out2_carry__5_n_14;
+  wire tdata_out2_carry__5_n_15;
   wire tdata_out2_carry__5_n_2;
   wire tdata_out2_carry__5_n_3;
   wire tdata_out2_carry__5_n_4;
   wire tdata_out2_carry__5_n_5;
   wire tdata_out2_carry__5_n_6;
   wire tdata_out2_carry__5_n_7;
+  wire tdata_out2_carry__5_n_8;
+  wire tdata_out2_carry__5_n_9;
   wire tdata_out2_carry__6_i_1_n_0;
   wire tdata_out2_carry__6_i_2_n_0;
   wire tdata_out2_carry__6_i_3_n_0;
   wire tdata_out2_carry__6_i_4_n_0;
-  wire tdata_out2_carry__6_n_0;
-  wire tdata_out2_carry__6_n_1;
+  wire tdata_out2_carry__6_i_5_n_0;
+  wire tdata_out2_carry__6_i_6_n_0;
+  wire tdata_out2_carry__6_i_7_n_0;
+  wire tdata_out2_carry__6_n_10;
+  wire tdata_out2_carry__6_n_11;
+  wire tdata_out2_carry__6_n_12;
+  wire tdata_out2_carry__6_n_13;
+  wire tdata_out2_carry__6_n_14;
+  wire tdata_out2_carry__6_n_15;
   wire tdata_out2_carry__6_n_2;
   wire tdata_out2_carry__6_n_3;
   wire tdata_out2_carry__6_n_4;
   wire tdata_out2_carry__6_n_5;
   wire tdata_out2_carry__6_n_6;
   wire tdata_out2_carry__6_n_7;
-  wire tdata_out2_carry__7_i_1_n_0;
-  wire tdata_out2_carry__7_i_2_n_0;
-  wire tdata_out2_carry__7_i_3_n_0;
-  wire tdata_out2_carry__7_i_4_n_0;
-  wire tdata_out2_carry__7_n_0;
-  wire tdata_out2_carry__7_n_1;
-  wire tdata_out2_carry__7_n_2;
-  wire tdata_out2_carry__7_n_3;
-  wire tdata_out2_carry__7_n_4;
-  wire tdata_out2_carry__7_n_5;
-  wire tdata_out2_carry__7_n_6;
-  wire tdata_out2_carry__7_n_7;
-  wire tdata_out2_carry__8_i_1_n_0;
-  wire tdata_out2_carry__8_i_2_n_0;
-  wire tdata_out2_carry__8_i_3_n_0;
-  wire tdata_out2_carry__8_i_4_n_0;
-  wire tdata_out2_carry__8_n_0;
-  wire tdata_out2_carry__8_n_1;
-  wire tdata_out2_carry__8_n_2;
-  wire tdata_out2_carry__8_n_3;
-  wire tdata_out2_carry__8_n_4;
-  wire tdata_out2_carry__8_n_5;
-  wire tdata_out2_carry__8_n_6;
-  wire tdata_out2_carry__8_n_7;
-  wire tdata_out2_carry__9_i_1_n_0;
-  wire tdata_out2_carry__9_i_2_n_0;
-  wire tdata_out2_carry__9_i_3_n_0;
-  wire tdata_out2_carry__9_i_4_n_0;
-  wire tdata_out2_carry__9_n_0;
-  wire tdata_out2_carry__9_n_1;
-  wire tdata_out2_carry__9_n_2;
-  wire tdata_out2_carry__9_n_3;
-  wire tdata_out2_carry__9_n_4;
-  wire tdata_out2_carry__9_n_5;
-  wire tdata_out2_carry__9_n_6;
-  wire tdata_out2_carry__9_n_7;
+  wire tdata_out2_carry__6_n_9;
   wire tdata_out2_carry_i_2_n_0;
   wire tdata_out2_carry_i_3_n_0;
   wire tdata_out2_carry_i_4_n_0;
   wire tdata_out2_carry_i_5_n_0;
+  wire tdata_out2_carry_i_6_n_0;
+  wire tdata_out2_carry_i_7_n_0;
+  wire tdata_out2_carry_i_8_n_0;
+  wire tdata_out2_carry_i_9_n_0;
   wire tdata_out2_carry_n_0;
   wire tdata_out2_carry_n_1;
+  wire tdata_out2_carry_n_10;
+  wire tdata_out2_carry_n_11;
+  wire tdata_out2_carry_n_12;
+  wire tdata_out2_carry_n_13;
+  wire tdata_out2_carry_n_14;
+  wire tdata_out2_carry_n_15;
   wire tdata_out2_carry_n_2;
   wire tdata_out2_carry_n_3;
   wire tdata_out2_carry_n_4;
   wire tdata_out2_carry_n_5;
   wire tdata_out2_carry_n_6;
   wire tdata_out2_carry_n_7;
+  wire tdata_out2_carry_n_8;
+  wire tdata_out2_carry_n_9;
   wire [0:0]tdata_out3;
   wire \tdata_out[0]_i_10_n_0 ;
   wire \tdata_out[0]_i_11_n_0 ;
@@ -512,8 +512,8 @@ module histo_sorter_0_0_sorter
   wire \tdata_out[9]_i_4_n_0 ;
   wire tvalid_in;
   wire tvalid_out;
-  wire [3:2]NLW_tdata_out2_carry__14_CO_UNCONNECTED;
-  wire [3:3]NLW_tdata_out2_carry__14_O_UNCONNECTED;
+  wire [7:6]NLW_tdata_out2_carry__6_CO_UNCONNECTED;
+  wire [7:7]NLW_tdata_out2_carry__6_O_UNCONNECTED;
 
   LUT2 #(
     .INIT(4'h8)) 
@@ -654,349 +654,199 @@ module histo_sorter_0_0_sorter
         .Q(log_2_BIN_WIDTH_r[9]),
         .R(1'b0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry
-       (.CI(1'b0),
-        .CO({tdata_out2_carry_n_0,tdata_out2_carry_n_1,tdata_out2_carry_n_2,tdata_out2_carry_n_3}),
-        .CYINIT(tdata_out3),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry_n_4,tdata_out2_carry_n_5,tdata_out2_carry_n_6,tdata_out2_carry_n_7}),
-        .S({tdata_out2_carry_i_2_n_0,tdata_out2_carry_i_3_n_0,tdata_out2_carry_i_4_n_0,tdata_out2_carry_i_5_n_0}));
+  CARRY8 tdata_out2_carry
+       (.CI(tdata_out3),
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry_n_0,tdata_out2_carry_n_1,tdata_out2_carry_n_2,tdata_out2_carry_n_3,tdata_out2_carry_n_4,tdata_out2_carry_n_5,tdata_out2_carry_n_6,tdata_out2_carry_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry_n_8,tdata_out2_carry_n_9,tdata_out2_carry_n_10,tdata_out2_carry_n_11,tdata_out2_carry_n_12,tdata_out2_carry_n_13,tdata_out2_carry_n_14,tdata_out2_carry_n_15}),
+        .S({tdata_out2_carry_i_2_n_0,tdata_out2_carry_i_3_n_0,tdata_out2_carry_i_4_n_0,tdata_out2_carry_i_5_n_0,tdata_out2_carry_i_6_n_0,tdata_out2_carry_i_7_n_0,tdata_out2_carry_i_8_n_0,tdata_out2_carry_i_9_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__0
+  CARRY8 tdata_out2_carry__0
        (.CI(tdata_out2_carry_n_0),
-        .CO({tdata_out2_carry__0_n_0,tdata_out2_carry__0_n_1,tdata_out2_carry__0_n_2,tdata_out2_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__0_n_4,tdata_out2_carry__0_n_5,tdata_out2_carry__0_n_6,tdata_out2_carry__0_n_7}),
-        .S({tdata_out2_carry__0_i_1_n_0,tdata_out2_carry__0_i_2_n_0,tdata_out2_carry__0_i_3_n_0,tdata_out2_carry__0_i_4_n_0}));
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry__0_n_0,tdata_out2_carry__0_n_1,tdata_out2_carry__0_n_2,tdata_out2_carry__0_n_3,tdata_out2_carry__0_n_4,tdata_out2_carry__0_n_5,tdata_out2_carry__0_n_6,tdata_out2_carry__0_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry__0_n_8,tdata_out2_carry__0_n_9,tdata_out2_carry__0_n_10,tdata_out2_carry__0_n_11,tdata_out2_carry__0_n_12,tdata_out2_carry__0_n_13,tdata_out2_carry__0_n_14,tdata_out2_carry__0_n_15}),
+        .S({tdata_out2_carry__0_i_1_n_0,tdata_out2_carry__0_i_2_n_0,tdata_out2_carry__0_i_3_n_0,tdata_out2_carry__0_i_4_n_0,tdata_out2_carry__0_i_5_n_0,tdata_out2_carry__0_i_6_n_0,tdata_out2_carry__0_i_7_n_0,tdata_out2_carry__0_i_8_n_0}));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFD)) 
     tdata_out2_carry__0_i_1
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__0_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFEFFFFFFFFFFFFFF)) 
+    .INIT(64'hFDFFFFFFFFFFFFFF)) 
     tdata_out2_carry__0_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__0_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFFFF)) 
+    .INIT(64'hFFFFFDFFFFFFFFFF)) 
     tdata_out2_carry__0_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__0_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFFFF)) 
+    .INIT(64'hFFFFFDFFFFFFFFFF)) 
     tdata_out2_carry__0_i_4
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[0]),
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__0_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__1
-       (.CI(tdata_out2_carry__0_n_0),
-        .CO({tdata_out2_carry__1_n_0,tdata_out2_carry__1_n_1,tdata_out2_carry__1_n_2,tdata_out2_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__1_n_4,tdata_out2_carry__1_n_5,tdata_out2_carry__1_n_6,tdata_out2_carry__1_n_7}),
-        .S({tdata_out2_carry__1_i_1_n_0,tdata_out2_carry__1_i_2_n_0,tdata_out2_carry__1_i_3_n_0,tdata_out2_carry__1_i_4_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__10
-       (.CI(tdata_out2_carry__9_n_0),
-        .CO({tdata_out2_carry__10_n_0,tdata_out2_carry__10_n_1,tdata_out2_carry__10_n_2,tdata_out2_carry__10_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__10_n_4,tdata_out2_carry__10_n_5,tdata_out2_carry__10_n_6,tdata_out2_carry__10_n_7}),
-        .S({tdata_out2_carry__10_i_1_n_0,tdata_out2_carry__10_i_2_n_0,tdata_out2_carry__10_i_3_n_0,tdata_out2_carry__10_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFDF)) 
-    tdata_out2_carry__10_i_1
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__10_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hDFFFFFFFFFFFFFFF)) 
-    tdata_out2_carry__10_i_2
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__10_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
-    tdata_out2_carry__10_i_3
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__10_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
-    tdata_out2_carry__10_i_4
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__10_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__11
-       (.CI(tdata_out2_carry__10_n_0),
-        .CO({tdata_out2_carry__11_n_0,tdata_out2_carry__11_n_1,tdata_out2_carry__11_n_2,tdata_out2_carry__11_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__11_n_4,tdata_out2_carry__11_n_5,tdata_out2_carry__11_n_6,tdata_out2_carry__11_n_7}),
-        .S({tdata_out2_carry__11_i_1_n_0,tdata_out2_carry__11_i_2_n_0,tdata_out2_carry__11_i_3_n_0,tdata_out2_carry__11_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFFDFFFFFFFFF)) 
-    tdata_out2_carry__11_i_1
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__11_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFDFFFFFFF)) 
-    tdata_out2_carry__11_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__11_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFDFFF)) 
-    tdata_out2_carry__11_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__11_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFDFFF)) 
-    tdata_out2_carry__11_i_4
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__11_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__12
-       (.CI(tdata_out2_carry__11_n_0),
-        .CO({tdata_out2_carry__12_n_0,tdata_out2_carry__12_n_1,tdata_out2_carry__12_n_2,tdata_out2_carry__12_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__12_n_4,tdata_out2_carry__12_n_5,tdata_out2_carry__12_n_6,tdata_out2_carry__12_n_7}),
-        .S({tdata_out2_carry__12_i_1_n_0,tdata_out2_carry__12_i_2_n_0,tdata_out2_carry__12_i_3_n_0,tdata_out2_carry__12_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFF7F)) 
-    tdata_out2_carry__12_i_1
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__12_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hDFFFFFFFFFFFFFFF)) 
-    tdata_out2_carry__12_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__12_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
-    tdata_out2_carry__12_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__12_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
-    tdata_out2_carry__12_i_4
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__12_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__13
-       (.CI(tdata_out2_carry__12_n_0),
-        .CO({tdata_out2_carry__13_n_0,tdata_out2_carry__13_n_1,tdata_out2_carry__13_n_2,tdata_out2_carry__13_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__13_n_4,tdata_out2_carry__13_n_5,tdata_out2_carry__13_n_6,tdata_out2_carry__13_n_7}),
-        .S({tdata_out2_carry__13_i_1_n_0,tdata_out2_carry__13_i_2_n_0,tdata_out2_carry__13_i_3_n_0,tdata_out2_carry__13_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFF7FFFFFFFFF)) 
-    tdata_out2_carry__13_i_1
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__13_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    tdata_out2_carry__13_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__13_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF7FFF)) 
-    tdata_out2_carry__13_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__13_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF7FFF)) 
-    tdata_out2_carry__13_i_4
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__13_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__14
-       (.CI(tdata_out2_carry__13_n_0),
-        .CO({NLW_tdata_out2_carry__14_CO_UNCONNECTED[3:2],tdata_out2_carry__14_n_2,tdata_out2_carry__14_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b1,1'b1}),
-        .O({NLW_tdata_out2_carry__14_O_UNCONNECTED[3],tdata_out2_carry__14_n_5,tdata_out2_carry__14_n_6,tdata_out2_carry__14_n_7}),
-        .S({1'b0,tdata_out2_carry__14_i_1_n_0,tdata_out2_carry__14_i_2_n_0,tdata_out2_carry__14_i_3_n_0}));
-  LUT6 #(
-    .INIT(64'h7FFFFFFFFFFFFFFF)) 
-    tdata_out2_carry__14_i_1
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__14_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFF7FFFFFFFFFFF)) 
-    tdata_out2_carry__14_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__14_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFF7FFFFFFFFFFF)) 
-    tdata_out2_carry__14_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__14_i_3_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFDFFFFFFFF)) 
-    tdata_out2_carry__1_i_1
+    tdata_out2_carry__0_i_5
        (.I0(STOPRESULT_BITS_r[3]),
         .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__0_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFDFFFFFF)) 
+    tdata_out2_carry__0_i_6
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    tdata_out2_carry__0_i_7
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__0_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    tdata_out2_carry__0_i_8
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__0_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 tdata_out2_carry__1
+       (.CI(tdata_out2_carry__0_n_0),
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry__1_n_0,tdata_out2_carry__1_n_1,tdata_out2_carry__1_n_2,tdata_out2_carry__1_n_3,tdata_out2_carry__1_n_4,tdata_out2_carry__1_n_5,tdata_out2_carry__1_n_6,tdata_out2_carry__1_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry__1_n_8,tdata_out2_carry__1_n_9,tdata_out2_carry__1_n_10,tdata_out2_carry__1_n_11,tdata_out2_carry__1_n_12,tdata_out2_carry__1_n_13,tdata_out2_carry__1_n_14,tdata_out2_carry__1_n_15}),
+        .S({tdata_out2_carry__1_i_1_n_0,tdata_out2_carry__1_i_2_n_0,tdata_out2_carry__1_i_3_n_0,tdata_out2_carry__1_i_4_n_0,tdata_out2_carry__1_i_5_n_0,tdata_out2_carry__1_i_6_n_0,tdata_out2_carry__1_i_7_n_0,tdata_out2_carry__1_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFF7)) 
+    tdata_out2_carry__1_i_1
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__1_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFDFFFFFF)) 
+    .INIT(64'hFDFFFFFFFFFFFFFF)) 
     tdata_out2_carry__1_i_2
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__1_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    .INIT(64'hFFFFFDFFFFFFFFFF)) 
     tdata_out2_carry__1_i_3
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__1_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    .INIT(64'hFFFFFDFFFFFFFFFF)) 
     tdata_out2_carry__1_i_4
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[0]),
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__1_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__2
-       (.CI(tdata_out2_carry__1_n_0),
-        .CO({tdata_out2_carry__2_n_0,tdata_out2_carry__2_n_1,tdata_out2_carry__2_n_2,tdata_out2_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__2_n_4,tdata_out2_carry__2_n_5,tdata_out2_carry__2_n_6,tdata_out2_carry__2_n_7}),
-        .S({tdata_out2_carry__2_i_1_n_0,tdata_out2_carry__2_i_2_n_0,tdata_out2_carry__2_i_3_n_0,tdata_out2_carry__2_i_4_n_0}));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFD)) 
+    .INIT(64'hFFFFFFFDFFFFFFFF)) 
+    tdata_out2_carry__1_i_5
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__1_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFDFFFFFF)) 
+    tdata_out2_carry__1_i_6
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__1_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    tdata_out2_carry__1_i_7
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__1_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    tdata_out2_carry__1_i_8
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__1_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 tdata_out2_carry__2
+       (.CI(tdata_out2_carry__1_n_0),
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry__2_n_0,tdata_out2_carry__2_n_1,tdata_out2_carry__2_n_2,tdata_out2_carry__2_n_3,tdata_out2_carry__2_n_4,tdata_out2_carry__2_n_5,tdata_out2_carry__2_n_6,tdata_out2_carry__2_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry__2_n_8,tdata_out2_carry__2_n_9,tdata_out2_carry__2_n_10,tdata_out2_carry__2_n_11,tdata_out2_carry__2_n_12,tdata_out2_carry__2_n_13,tdata_out2_carry__2_n_14,tdata_out2_carry__2_n_15}),
+        .S({tdata_out2_carry__2_i_1_n_0,tdata_out2_carry__2_i_2_n_0,tdata_out2_carry__2_i_3_n_0,tdata_out2_carry__2_i_4_n_0,tdata_out2_carry__2_i_5_n_0,tdata_out2_carry__2_i_6_n_0,tdata_out2_carry__2_i_7_n_0,tdata_out2_carry__2_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFEF)) 
     tdata_out2_carry__2_i_1
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1006,55 +856,95 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__2_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFDFFFFFFFFFFFFFF)) 
+    .INIT(64'hF7FFFFFFFFFFFFFF)) 
     tdata_out2_carry__2_i_2
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__2_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFDFFFFFFFFFF)) 
-    tdata_out2_carry__2_i_3
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__2_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFDFFFFFFFFFF)) 
-    tdata_out2_carry__2_i_4
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__2_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__3
-       (.CI(tdata_out2_carry__2_n_0),
-        .CO({tdata_out2_carry__3_n_0,tdata_out2_carry__3_n_1,tdata_out2_carry__3_n_2,tdata_out2_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__3_n_4,tdata_out2_carry__3_n_5,tdata_out2_carry__3_n_6,tdata_out2_carry__3_n_7}),
-        .S({tdata_out2_carry__3_i_1_n_0,tdata_out2_carry__3_i_2_n_0,tdata_out2_carry__3_i_3_n_0,tdata_out2_carry__3_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFFFDFFFFFFFF)) 
-    tdata_out2_carry__3_i_1
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFF7FFFFFFFFFF)) 
+    tdata_out2_carry__2_i_3
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_3_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFF7FFFFFFFFFF)) 
+    tdata_out2_carry__2_i_4
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFF7FFFFFFFF)) 
+    tdata_out2_carry__2_i_5
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF7FFFFFF)) 
+    tdata_out2_carry__2_i_6
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFF7FF)) 
+    tdata_out2_carry__2_i_7
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFF7FF)) 
+    tdata_out2_carry__2_i_8
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__2_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 tdata_out2_carry__3
+       (.CI(tdata_out2_carry__2_n_0),
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry__3_n_0,tdata_out2_carry__3_n_1,tdata_out2_carry__3_n_2,tdata_out2_carry__3_n_3,tdata_out2_carry__3_n_4,tdata_out2_carry__3_n_5,tdata_out2_carry__3_n_6,tdata_out2_carry__3_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry__3_n_8,tdata_out2_carry__3_n_9,tdata_out2_carry__3_n_10,tdata_out2_carry__3_n_11,tdata_out2_carry__3_n_12,tdata_out2_carry__3_n_13,tdata_out2_carry__3_n_14,tdata_out2_carry__3_n_15}),
+        .S({tdata_out2_carry__3_i_1_n_0,tdata_out2_carry__3_i_2_n_0,tdata_out2_carry__3_i_3_n_0,tdata_out2_carry__3_i_4_n_0,tdata_out2_carry__3_i_5_n_0,tdata_out2_carry__3_i_6_n_0,tdata_out2_carry__3_i_7_n_0,tdata_out2_carry__3_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFDF)) 
+    tdata_out2_carry__3_i_1
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__3_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFDFFFFFF)) 
+    .INIT(64'hEFFFFFFFFFFFFFFF)) 
     tdata_out2_carry__3_i_2
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1064,7 +954,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__3_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    .INIT(64'hFFFFEFFFFFFFFFFF)) 
     tdata_out2_carry__3_i_3
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1074,7 +964,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__3_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFDFF)) 
+    .INIT(64'hFFFFEFFFFFFFFFFF)) 
     tdata_out2_carry__3_i_4
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1083,16 +973,56 @@ module histo_sorter_0_0_sorter
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__3_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__4
-       (.CI(tdata_out2_carry__3_n_0),
-        .CO({tdata_out2_carry__4_n_0,tdata_out2_carry__4_n_1,tdata_out2_carry__4_n_2,tdata_out2_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__4_n_4,tdata_out2_carry__4_n_5,tdata_out2_carry__4_n_6,tdata_out2_carry__4_n_7}),
-        .S({tdata_out2_carry__4_i_1_n_0,tdata_out2_carry__4_i_2_n_0,tdata_out2_carry__4_i_3_n_0,tdata_out2_carry__4_i_4_n_0}));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFF7)) 
+    .INIT(64'hFFFFFFEFFFFFFFFF)) 
+    tdata_out2_carry__3_i_5
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__3_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFEFFFFFFF)) 
+    tdata_out2_carry__3_i_6
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__3_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFEFFF)) 
+    tdata_out2_carry__3_i_7
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__3_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFEFFF)) 
+    tdata_out2_carry__3_i_8
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__3_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 tdata_out2_carry__4
+       (.CI(tdata_out2_carry__3_n_0),
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry__4_n_0,tdata_out2_carry__4_n_1,tdata_out2_carry__4_n_2,tdata_out2_carry__4_n_3,tdata_out2_carry__4_n_4,tdata_out2_carry__4_n_5,tdata_out2_carry__4_n_6,tdata_out2_carry__4_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry__4_n_8,tdata_out2_carry__4_n_9,tdata_out2_carry__4_n_10,tdata_out2_carry__4_n_11,tdata_out2_carry__4_n_12,tdata_out2_carry__4_n_13,tdata_out2_carry__4_n_14,tdata_out2_carry__4_n_15}),
+        .S({tdata_out2_carry__4_i_1_n_0,tdata_out2_carry__4_i_2_n_0,tdata_out2_carry__4_i_3_n_0,tdata_out2_carry__4_i_4_n_0,tdata_out2_carry__4_i_5_n_0,tdata_out2_carry__4_i_6_n_0,tdata_out2_carry__4_i_7_n_0,tdata_out2_carry__4_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFDF)) 
     tdata_out2_carry__4_i_1
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1102,45 +1032,85 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__4_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFDFFFFFFFFFFFFFF)) 
+    .INIT(64'hDFFFFFFFFFFFFFFF)) 
     tdata_out2_carry__4_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__4_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFDFFFFFFFFFF)) 
+    .INIT(64'hFFFFDFFFFFFFFFFF)) 
     tdata_out2_carry__4_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__4_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFDFFFFFFFFFF)) 
+    .INIT(64'hFFFFDFFFFFFFFFFF)) 
     tdata_out2_carry__4_i_4
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[0]),
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__4_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__5
-       (.CI(tdata_out2_carry__4_n_0),
-        .CO({tdata_out2_carry__5_n_0,tdata_out2_carry__5_n_1,tdata_out2_carry__5_n_2,tdata_out2_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__5_n_4,tdata_out2_carry__5_n_5,tdata_out2_carry__5_n_6,tdata_out2_carry__5_n_7}),
-        .S({tdata_out2_carry__5_i_1_n_0,tdata_out2_carry__5_i_2_n_0,tdata_out2_carry__5_i_3_n_0,tdata_out2_carry__5_i_4_n_0}));
   LUT6 #(
-    .INIT(64'hFFFFFFF7FFFFFFFF)) 
+    .INIT(64'hFFFFFFDFFFFFFFFF)) 
+    tdata_out2_carry__4_i_5
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__4_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFDFFFFFFF)) 
+    tdata_out2_carry__4_i_6
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__4_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFDFFF)) 
+    tdata_out2_carry__4_i_7
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__4_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFDFFF)) 
+    tdata_out2_carry__4_i_8
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__4_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 tdata_out2_carry__5
+       (.CI(tdata_out2_carry__4_n_0),
+        .CI_TOP(1'b0),
+        .CO({tdata_out2_carry__5_n_0,tdata_out2_carry__5_n_1,tdata_out2_carry__5_n_2,tdata_out2_carry__5_n_3,tdata_out2_carry__5_n_4,tdata_out2_carry__5_n_5,tdata_out2_carry__5_n_6,tdata_out2_carry__5_n_7}),
+        .DI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({tdata_out2_carry__5_n_8,tdata_out2_carry__5_n_9,tdata_out2_carry__5_n_10,tdata_out2_carry__5_n_11,tdata_out2_carry__5_n_12,tdata_out2_carry__5_n_13,tdata_out2_carry__5_n_14,tdata_out2_carry__5_n_15}),
+        .S({tdata_out2_carry__5_i_1_n_0,tdata_out2_carry__5_i_2_n_0,tdata_out2_carry__5_i_3_n_0,tdata_out2_carry__5_i_4_n_0,tdata_out2_carry__5_i_5_n_0,tdata_out2_carry__5_i_6_n_0,tdata_out2_carry__5_i_7_n_0,tdata_out2_carry__5_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFF7F)) 
     tdata_out2_carry__5_i_1
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1150,7 +1120,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__5_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFF7FFFFFF)) 
+    .INIT(64'hDFFFFFFFFFFFFFFF)) 
     tdata_out2_carry__5_i_2
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1160,7 +1130,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__5_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFF7FF)) 
+    .INIT(64'hFFFFDFFFFFFFFFFF)) 
     tdata_out2_carry__5_i_3
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1170,7 +1140,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__5_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFF7FF)) 
+    .INIT(64'hFFFFDFFFFFFFFFFF)) 
     tdata_out2_carry__5_i_4
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1179,16 +1149,56 @@ module histo_sorter_0_0_sorter
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__5_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__6
-       (.CI(tdata_out2_carry__5_n_0),
-        .CO({tdata_out2_carry__6_n_0,tdata_out2_carry__6_n_1,tdata_out2_carry__6_n_2,tdata_out2_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__6_n_4,tdata_out2_carry__6_n_5,tdata_out2_carry__6_n_6,tdata_out2_carry__6_n_7}),
-        .S({tdata_out2_carry__6_i_1_n_0,tdata_out2_carry__6_i_2_n_0,tdata_out2_carry__6_i_3_n_0,tdata_out2_carry__6_i_4_n_0}));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEF)) 
+    .INIT(64'hFFFFFFDFFFFFFFFF)) 
+    tdata_out2_carry__5_i_5
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__5_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFDFFFFFFF)) 
+    tdata_out2_carry__5_i_6
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__5_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFDFFF)) 
+    tdata_out2_carry__5_i_7
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__5_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFDFFF)) 
+    tdata_out2_carry__5_i_8
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry__5_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY8 tdata_out2_carry__6
+       (.CI(tdata_out2_carry__5_n_0),
+        .CI_TOP(1'b0),
+        .CO({NLW_tdata_out2_carry__6_CO_UNCONNECTED[7:6],tdata_out2_carry__6_n_2,tdata_out2_carry__6_n_3,tdata_out2_carry__6_n_4,tdata_out2_carry__6_n_5,tdata_out2_carry__6_n_6,tdata_out2_carry__6_n_7}),
+        .DI({1'b0,1'b0,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .O({NLW_tdata_out2_carry__6_O_UNCONNECTED[7],tdata_out2_carry__6_n_9,tdata_out2_carry__6_n_10,tdata_out2_carry__6_n_11,tdata_out2_carry__6_n_12,tdata_out2_carry__6_n_13,tdata_out2_carry__6_n_14,tdata_out2_carry__6_n_15}),
+        .S({1'b0,tdata_out2_carry__6_i_1_n_0,tdata_out2_carry__6_i_2_n_0,tdata_out2_carry__6_i_3_n_0,tdata_out2_carry__6_i_4_n_0,tdata_out2_carry__6_i_5_n_0,tdata_out2_carry__6_i_6_n_0,tdata_out2_carry__6_i_7_n_0}));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     tdata_out2_carry__6_i_1
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1198,7 +1208,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__6_i_1_n_0));
   LUT6 #(
-    .INIT(64'hF7FFFFFFFFFFFFFF)) 
+    .INIT(64'hFFFF7FFFFFFFFFFF)) 
     tdata_out2_carry__6_i_2
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1208,169 +1218,55 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__6_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFF7FFFFFFFFFF)) 
+    .INIT(64'hFFFF7FFFFFFFFFFF)) 
     tdata_out2_carry__6_i_3
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__6_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFF7FFFFFFFFFF)) 
+    .INIT(64'hFFFFFF7FFFFFFFFF)) 
     tdata_out2_carry__6_i_4
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry__6_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__7
-       (.CI(tdata_out2_carry__6_n_0),
-        .CO({tdata_out2_carry__7_n_0,tdata_out2_carry__7_n_1,tdata_out2_carry__7_n_2,tdata_out2_carry__7_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__7_n_4,tdata_out2_carry__7_n_5,tdata_out2_carry__7_n_6,tdata_out2_carry__7_n_7}),
-        .S({tdata_out2_carry__7_i_1_n_0,tdata_out2_carry__7_i_2_n_0,tdata_out2_carry__7_i_3_n_0,tdata_out2_carry__7_i_4_n_0}));
   LUT6 #(
-    .INIT(64'hFFFFFFEFFFFFFFFF)) 
-    tdata_out2_carry__7_i_1
+    .INIT(64'hFFFFFFFF7FFFFFFF)) 
+    tdata_out2_carry__6_i_5
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__7_i_1_n_0));
+        .O(tdata_out2_carry__6_i_5_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEFFFFFFF)) 
-    tdata_out2_carry__7_i_2
+    .INIT(64'hFFFFFFFFFFFF7FFF)) 
+    tdata_out2_carry__6_i_6
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__7_i_2_n_0));
+        .O(tdata_out2_carry__6_i_6_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFEFFF)) 
-    tdata_out2_carry__7_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__7_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFEFFF)) 
-    tdata_out2_carry__7_i_4
+    .INIT(64'hFFFFFFFFFFFF7FFF)) 
+    tdata_out2_carry__6_i_7
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[0]),
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__7_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__8
-       (.CI(tdata_out2_carry__7_n_0),
-        .CO({tdata_out2_carry__8_n_0,tdata_out2_carry__8_n_1,tdata_out2_carry__8_n_2,tdata_out2_carry__8_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__8_n_4,tdata_out2_carry__8_n_5,tdata_out2_carry__8_n_6,tdata_out2_carry__8_n_7}),
-        .S({tdata_out2_carry__8_i_1_n_0,tdata_out2_carry__8_i_2_n_0,tdata_out2_carry__8_i_3_n_0,tdata_out2_carry__8_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFDF)) 
-    tdata_out2_carry__8_i_1
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__8_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hEFFFFFFFFFFFFFFF)) 
-    tdata_out2_carry__8_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__8_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFEFFFFFFFFFFF)) 
-    tdata_out2_carry__8_i_3
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__8_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFEFFFFFFFFFFF)) 
-    tdata_out2_carry__8_i_4
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__8_i_4_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 tdata_out2_carry__9
-       (.CI(tdata_out2_carry__8_n_0),
-        .CO({tdata_out2_carry__9_n_0,tdata_out2_carry__9_n_1,tdata_out2_carry__9_n_2,tdata_out2_carry__9_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b1,1'b1,1'b1,1'b1}),
-        .O({tdata_out2_carry__9_n_4,tdata_out2_carry__9_n_5,tdata_out2_carry__9_n_6,tdata_out2_carry__9_n_7}),
-        .S({tdata_out2_carry__9_i_1_n_0,tdata_out2_carry__9_i_2_n_0,tdata_out2_carry__9_i_3_n_0,tdata_out2_carry__9_i_4_n_0}));
-  LUT6 #(
-    .INIT(64'hFFFFFFDFFFFFFFFF)) 
-    tdata_out2_carry__9_i_1
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__9_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFDFFFFFFF)) 
-    tdata_out2_carry__9_i_2
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__9_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFDFFF)) 
-    tdata_out2_carry__9_i_3
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[1]),
-        .I4(STOPRESULT_BITS_r[0]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__9_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFDFFF)) 
-    tdata_out2_carry__9_i_4
-       (.I0(STOPRESULT_BITS_r[3]),
-        .I1(STOPRESULT_BITS_r[4]),
-        .I2(STOPRESULT_BITS_r[5]),
-        .I3(STOPRESULT_BITS_r[0]),
-        .I4(STOPRESULT_BITS_r[1]),
-        .I5(STOPRESULT_BITS_r[2]),
-        .O(tdata_out2_carry__9_i_4_n_0));
+        .O(tdata_out2_carry__6_i_7_n_0));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
     tdata_out2_carry_i_1
@@ -1382,17 +1278,17 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out3));
   LUT6 #(
-    .INIT(64'hFFFFFFFEFFFFFFFF)) 
+    .INIT(64'hFFFFFFFFFFFFFFFD)) 
     tdata_out2_carry_i_2
-       (.I0(STOPRESULT_BITS_r[4]),
-        .I1(STOPRESULT_BITS_r[3]),
+       (.I0(STOPRESULT_BITS_r[3]),
+        .I1(STOPRESULT_BITS_r[4]),
         .I2(STOPRESULT_BITS_r[5]),
         .I3(STOPRESULT_BITS_r[1]),
         .I4(STOPRESULT_BITS_r[0]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry_i_2_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFEFFFFFF)) 
+    .INIT(64'hFEFFFFFFFFFFFFFF)) 
     tdata_out2_carry_i_3
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1402,7 +1298,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    .INIT(64'hFFFFFEFFFFFFFFFF)) 
     tdata_out2_carry_i_4
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1412,7 +1308,7 @@ module histo_sorter_0_0_sorter
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry_i_4_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    .INIT(64'hFFFFFEFFFFFFFFFF)) 
     tdata_out2_carry_i_5
        (.I0(STOPRESULT_BITS_r[4]),
         .I1(STOPRESULT_BITS_r[3]),
@@ -1421,6 +1317,46 @@ module histo_sorter_0_0_sorter
         .I4(STOPRESULT_BITS_r[1]),
         .I5(STOPRESULT_BITS_r[2]),
         .O(tdata_out2_carry_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFEFFFFFFFF)) 
+    tdata_out2_carry_i_6
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFEFFFFFF)) 
+    tdata_out2_carry_i_7
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    tdata_out2_carry_i_8
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[1]),
+        .I4(STOPRESULT_BITS_r[0]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry_i_8_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    tdata_out2_carry_i_9
+       (.I0(STOPRESULT_BITS_r[4]),
+        .I1(STOPRESULT_BITS_r[3]),
+        .I2(STOPRESULT_BITS_r[5]),
+        .I3(STOPRESULT_BITS_r[0]),
+        .I4(STOPRESULT_BITS_r[1]),
+        .I5(STOPRESULT_BITS_r[2]),
+        .O(tdata_out2_carry_i_9_n_0));
   LUT6 #(
     .INIT(64'hAAAAA8080000A808)) 
     \tdata_out[0]_i_1 
@@ -1435,13 +1371,13 @@ module histo_sorter_0_0_sorter
     .INIT(4'h8)) 
     \tdata_out[0]_i_10 
        (.I0(tdata_in[42]),
-        .I1(tdata_out2_carry__9_n_6),
+        .I1(tdata_out2_carry__4_n_14),
         .O(\tdata_out[0]_i_10_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
     \tdata_out[0]_i_11 
        (.I0(tdata_in[34]),
-        .I1(tdata_out2_carry__7_n_6),
+        .I1(tdata_out2_carry__3_n_14),
         .O(\tdata_out[0]_i_11_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
@@ -1469,7 +1405,7 @@ module histo_sorter_0_0_sorter
         .I2(\tdata_out[0]_i_8_n_0 ),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(tdata_in[8]),
-        .I5(tdata_out2_carry__0_n_4),
+        .I5(tdata_out2_carry_n_8),
         .O(\tdata_out[0]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hB888B888B8BBB888)) 
@@ -1489,7 +1425,7 @@ module histo_sorter_0_0_sorter
         .I2(\tdata_out[0]_i_10_n_0 ),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(tdata_in[10]),
-        .I5(tdata_out2_carry__1_n_6),
+        .I5(tdata_out2_carry__0_n_14),
         .O(\tdata_out[0]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hB8BBB888B888B888)) 
@@ -1499,20 +1435,20 @@ module histo_sorter_0_0_sorter
         .I2(\tdata_out[0]_i_11_n_0 ),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(tdata_in[2]),
-        .I5(tdata_out2_carry_n_6),
+        .I5(tdata_out2_carry_n_14),
         .O(\tdata_out[0]_i_7_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
     \tdata_out[0]_i_8 
        (.I0(tdata_in[40]),
-        .I1(tdata_out2_carry__8_n_4),
+        .I1(tdata_out2_carry__3_n_8),
         .O(\tdata_out[0]_i_8_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \tdata_out[0]_i_9 
        (.I0(tdata_in[32]),
-        .I1(tdata_out2_carry__6_n_4),
+        .I1(tdata_out2_carry__2_n_8),
         .O(\tdata_out[0]_i_9_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
@@ -1548,10 +1484,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[10]_i_4 
        (.I0(tdata_in[42]),
-        .I1(tdata_out2_carry__9_n_6),
+        .I1(tdata_out2_carry__4_n_14),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[10]),
-        .I4(tdata_out2_carry__1_n_6),
+        .I4(tdata_out2_carry__0_n_14),
         .O(\tdata_out[10]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
@@ -1587,10 +1523,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[11]_i_4 
        (.I0(tdata_in[43]),
-        .I1(tdata_out2_carry__9_n_5),
+        .I1(tdata_out2_carry__4_n_13),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[11]),
-        .I4(tdata_out2_carry__1_n_5),
+        .I4(tdata_out2_carry__0_n_13),
         .O(\tdata_out[11]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
@@ -1626,10 +1562,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[12]_i_4 
        (.I0(tdata_in[44]),
-        .I1(tdata_out2_carry__9_n_4),
+        .I1(tdata_out2_carry__4_n_12),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[12]),
-        .I4(tdata_out2_carry__1_n_4),
+        .I4(tdata_out2_carry__0_n_12),
         .O(\tdata_out[12]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
@@ -1665,10 +1601,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[13]_i_4 
        (.I0(tdata_in[45]),
-        .I1(tdata_out2_carry__10_n_7),
+        .I1(tdata_out2_carry__4_n_11),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[13]),
-        .I4(tdata_out2_carry__2_n_7),
+        .I4(tdata_out2_carry__0_n_11),
         .O(\tdata_out[13]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
@@ -1704,10 +1640,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[14]_i_4 
        (.I0(tdata_in[46]),
-        .I1(tdata_out2_carry__10_n_6),
+        .I1(tdata_out2_carry__4_n_10),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[14]),
-        .I4(tdata_out2_carry__2_n_6),
+        .I4(tdata_out2_carry__0_n_10),
         .O(\tdata_out[14]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
@@ -1743,10 +1679,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[15]_i_4 
        (.I0(tdata_in[47]),
-        .I1(tdata_out2_carry__10_n_5),
+        .I1(tdata_out2_carry__4_n_9),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[15]),
-        .I4(tdata_out2_carry__2_n_5),
+        .I4(tdata_out2_carry__0_n_9),
         .O(\tdata_out[15]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
@@ -1781,7 +1717,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[16]_i_4 
-       (.I0(tdata_out2_carry__6_n_4),
+       (.I0(tdata_out2_carry__2_n_8),
         .I1(tdata_in[32]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[16]_i_4_n_0 ));
@@ -1789,10 +1725,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[16]_i_5 
        (.I0(tdata_in[48]),
-        .I1(tdata_out2_carry__10_n_4),
+        .I1(tdata_out2_carry__4_n_8),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[16]),
-        .I4(tdata_out2_carry__2_n_4),
+        .I4(tdata_out2_carry__0_n_8),
         .O(\tdata_out[16]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
@@ -1827,7 +1763,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[17]_i_4 
-       (.I0(tdata_out2_carry__7_n_7),
+       (.I0(tdata_out2_carry__3_n_15),
         .I1(tdata_in[33]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[17]_i_4_n_0 ));
@@ -1835,10 +1771,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[17]_i_5 
        (.I0(tdata_in[49]),
-        .I1(tdata_out2_carry__11_n_7),
+        .I1(tdata_out2_carry__5_n_15),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[17]),
-        .I4(tdata_out2_carry__3_n_7),
+        .I4(tdata_out2_carry__1_n_15),
         .O(\tdata_out[17]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
@@ -1873,7 +1809,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[18]_i_4 
-       (.I0(tdata_out2_carry__7_n_6),
+       (.I0(tdata_out2_carry__3_n_14),
         .I1(tdata_in[34]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[18]_i_4_n_0 ));
@@ -1881,10 +1817,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[18]_i_5 
        (.I0(tdata_in[50]),
-        .I1(tdata_out2_carry__11_n_6),
+        .I1(tdata_out2_carry__5_n_14),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[18]),
-        .I4(tdata_out2_carry__3_n_6),
+        .I4(tdata_out2_carry__1_n_14),
         .O(\tdata_out[18]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
@@ -1919,7 +1855,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[19]_i_4 
-       (.I0(tdata_out2_carry__7_n_5),
+       (.I0(tdata_out2_carry__3_n_13),
         .I1(tdata_in[35]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[19]_i_4_n_0 ));
@@ -1927,10 +1863,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[19]_i_5 
        (.I0(tdata_in[51]),
-        .I1(tdata_out2_carry__11_n_5),
+        .I1(tdata_out2_carry__5_n_13),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[19]),
-        .I4(tdata_out2_carry__3_n_5),
+        .I4(tdata_out2_carry__1_n_13),
         .O(\tdata_out[19]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
@@ -1966,10 +1902,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[1]_i_4 
        (.I0(tdata_in[33]),
-        .I1(tdata_out2_carry__7_n_7),
+        .I1(tdata_out2_carry__3_n_15),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[1]),
-        .I4(tdata_out2_carry_n_7),
+        .I4(tdata_out2_carry_n_15),
         .O(\tdata_out[1]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
@@ -2004,7 +1940,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[20]_i_4 
-       (.I0(tdata_out2_carry__7_n_4),
+       (.I0(tdata_out2_carry__3_n_12),
         .I1(tdata_in[36]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[20]_i_4_n_0 ));
@@ -2012,10 +1948,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[20]_i_5 
        (.I0(tdata_in[52]),
-        .I1(tdata_out2_carry__11_n_4),
+        .I1(tdata_out2_carry__5_n_12),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[20]),
-        .I4(tdata_out2_carry__3_n_4),
+        .I4(tdata_out2_carry__1_n_12),
         .O(\tdata_out[20]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
@@ -2050,7 +1986,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[21]_i_4 
-       (.I0(tdata_out2_carry__8_n_7),
+       (.I0(tdata_out2_carry__3_n_11),
         .I1(tdata_in[37]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[21]_i_4_n_0 ));
@@ -2058,10 +1994,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[21]_i_5 
        (.I0(tdata_in[53]),
-        .I1(tdata_out2_carry__12_n_7),
+        .I1(tdata_out2_carry__5_n_11),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[21]),
-        .I4(tdata_out2_carry__4_n_7),
+        .I4(tdata_out2_carry__1_n_11),
         .O(\tdata_out[21]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
@@ -2096,7 +2032,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[22]_i_4 
-       (.I0(tdata_out2_carry__8_n_6),
+       (.I0(tdata_out2_carry__3_n_10),
         .I1(tdata_in[38]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[22]_i_4_n_0 ));
@@ -2104,10 +2040,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[22]_i_5 
        (.I0(tdata_in[54]),
-        .I1(tdata_out2_carry__12_n_6),
+        .I1(tdata_out2_carry__5_n_10),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[22]),
-        .I4(tdata_out2_carry__4_n_6),
+        .I4(tdata_out2_carry__1_n_10),
         .O(\tdata_out[22]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
@@ -2142,7 +2078,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[23]_i_4 
-       (.I0(tdata_out2_carry__8_n_5),
+       (.I0(tdata_out2_carry__3_n_9),
         .I1(tdata_in[39]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[23]_i_4_n_0 ));
@@ -2150,10 +2086,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[23]_i_5 
        (.I0(tdata_in[55]),
-        .I1(tdata_out2_carry__12_n_5),
+        .I1(tdata_out2_carry__5_n_9),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[23]),
-        .I4(tdata_out2_carry__4_n_5),
+        .I4(tdata_out2_carry__1_n_9),
         .O(\tdata_out[23]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
@@ -2187,7 +2123,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[24]_i_4 
-       (.I0(tdata_out2_carry__8_n_4),
+       (.I0(tdata_out2_carry__3_n_8),
         .I1(tdata_in[40]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[24]_i_4_n_0 ));
@@ -2195,10 +2131,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[24]_i_5 
        (.I0(tdata_in[56]),
-        .I1(tdata_out2_carry__12_n_4),
+        .I1(tdata_out2_carry__5_n_8),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[24]),
-        .I4(tdata_out2_carry__4_n_4),
+        .I4(tdata_out2_carry__1_n_8),
         .O(\tdata_out[24]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
@@ -2232,7 +2168,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[25]_i_4 
-       (.I0(tdata_out2_carry__9_n_7),
+       (.I0(tdata_out2_carry__4_n_15),
         .I1(tdata_in[41]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[25]_i_4_n_0 ));
@@ -2240,10 +2176,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[25]_i_5 
        (.I0(tdata_in[57]),
-        .I1(tdata_out2_carry__13_n_7),
+        .I1(tdata_out2_carry__6_n_15),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[25]),
-        .I4(tdata_out2_carry__5_n_7),
+        .I4(tdata_out2_carry__2_n_15),
         .O(\tdata_out[25]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
@@ -2277,7 +2213,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[26]_i_4 
-       (.I0(tdata_out2_carry__9_n_6),
+       (.I0(tdata_out2_carry__4_n_14),
         .I1(tdata_in[42]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[26]_i_4_n_0 ));
@@ -2285,10 +2221,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[26]_i_5 
        (.I0(tdata_in[58]),
-        .I1(tdata_out2_carry__13_n_6),
+        .I1(tdata_out2_carry__6_n_14),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[26]),
-        .I4(tdata_out2_carry__5_n_6),
+        .I4(tdata_out2_carry__2_n_14),
         .O(\tdata_out[26]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
@@ -2322,7 +2258,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[27]_i_4 
-       (.I0(tdata_out2_carry__9_n_5),
+       (.I0(tdata_out2_carry__4_n_13),
         .I1(tdata_in[43]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[27]_i_4_n_0 ));
@@ -2330,10 +2266,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[27]_i_5 
        (.I0(tdata_in[59]),
-        .I1(tdata_out2_carry__13_n_5),
+        .I1(tdata_out2_carry__6_n_13),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[27]),
-        .I4(tdata_out2_carry__5_n_5),
+        .I4(tdata_out2_carry__2_n_13),
         .O(\tdata_out[27]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
@@ -2375,7 +2311,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[28]_i_5 
-       (.I0(tdata_out2_carry__9_n_4),
+       (.I0(tdata_out2_carry__4_n_12),
         .I1(tdata_in[44]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[28]_i_5_n_0 ));
@@ -2383,10 +2319,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[28]_i_6 
        (.I0(tdata_in[60]),
-        .I1(tdata_out2_carry__13_n_4),
+        .I1(tdata_out2_carry__6_n_12),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[28]),
-        .I4(tdata_out2_carry__5_n_4),
+        .I4(tdata_out2_carry__2_n_12),
         .O(\tdata_out[28]_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT4 #(
@@ -2428,7 +2364,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[29]_i_5 
-       (.I0(tdata_out2_carry__10_n_7),
+       (.I0(tdata_out2_carry__4_n_11),
         .I1(tdata_in[45]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[29]_i_5_n_0 ));
@@ -2436,10 +2372,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[29]_i_6 
        (.I0(tdata_in[61]),
-        .I1(tdata_out2_carry__14_n_7),
+        .I1(tdata_out2_carry__6_n_11),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[29]),
-        .I4(tdata_out2_carry__6_n_7),
+        .I4(tdata_out2_carry__2_n_11),
         .O(\tdata_out[29]_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT4 #(
@@ -2475,10 +2411,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[2]_i_4 
        (.I0(tdata_in[34]),
-        .I1(tdata_out2_carry__7_n_6),
+        .I1(tdata_out2_carry__3_n_14),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[2]),
-        .I4(tdata_out2_carry_n_6),
+        .I4(tdata_out2_carry_n_14),
         .O(\tdata_out[2]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT4 #(
@@ -2519,7 +2455,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[30]_i_5 
-       (.I0(tdata_out2_carry__10_n_6),
+       (.I0(tdata_out2_carry__4_n_10),
         .I1(tdata_in[46]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[30]_i_5_n_0 ));
@@ -2527,10 +2463,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[30]_i_6 
        (.I0(tdata_in[62]),
-        .I1(tdata_out2_carry__14_n_6),
+        .I1(tdata_out2_carry__6_n_10),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[30]),
-        .I4(tdata_out2_carry__6_n_6),
+        .I4(tdata_out2_carry__2_n_10),
         .O(\tdata_out[30]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hB800B800FF000000)) 
@@ -2572,7 +2508,7 @@ module histo_sorter_0_0_sorter
   LUT3 #(
     .INIT(8'h08)) 
     \tdata_out[31]_i_5 
-       (.I0(tdata_out2_carry__10_n_5),
+       (.I0(tdata_out2_carry__4_n_9),
         .I1(tdata_in[47]),
         .I2(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[31]_i_5_n_0 ));
@@ -2580,10 +2516,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[31]_i_6 
        (.I0(tdata_in[63]),
-        .I1(tdata_out2_carry__14_n_5),
+        .I1(tdata_out2_carry__6_n_9),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[31]),
-        .I4(tdata_out2_carry__6_n_5),
+        .I4(tdata_out2_carry__2_n_9),
         .O(\tdata_out[31]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hFF00B8000000B800)) 
@@ -2608,10 +2544,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[32]_i_3 
-       (.I0(tdata_out2_carry__10_n_4),
+       (.I0(tdata_out2_carry__4_n_8),
         .I1(tdata_in[48]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__6_n_4),
+        .I3(tdata_out2_carry__2_n_8),
         .I4(tdata_in[32]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[32]_i_3_n_0 ));
@@ -2646,10 +2582,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[33]_i_4 
-       (.I0(tdata_out2_carry__11_n_7),
+       (.I0(tdata_out2_carry__5_n_15),
         .I1(tdata_in[49]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__7_n_7),
+        .I3(tdata_out2_carry__3_n_15),
         .I4(tdata_in[33]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[33]_i_4_n_0 ));
@@ -2676,10 +2612,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[34]_i_3 
-       (.I0(tdata_out2_carry__11_n_6),
+       (.I0(tdata_out2_carry__5_n_14),
         .I1(tdata_in[50]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__7_n_6),
+        .I3(tdata_out2_carry__3_n_14),
         .I4(tdata_in[34]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[34]_i_3_n_0 ));
@@ -2714,10 +2650,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[35]_i_4 
-       (.I0(tdata_out2_carry__11_n_5),
+       (.I0(tdata_out2_carry__5_n_13),
         .I1(tdata_in[51]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__7_n_5),
+        .I3(tdata_out2_carry__3_n_13),
         .I4(tdata_in[35]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[35]_i_4_n_0 ));
@@ -2744,10 +2680,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[36]_i_3 
-       (.I0(tdata_out2_carry__11_n_4),
+       (.I0(tdata_out2_carry__5_n_12),
         .I1(tdata_in[52]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__7_n_4),
+        .I3(tdata_out2_carry__3_n_12),
         .I4(tdata_in[36]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[36]_i_3_n_0 ));
@@ -2782,10 +2718,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[37]_i_4 
-       (.I0(tdata_out2_carry__12_n_7),
+       (.I0(tdata_out2_carry__5_n_11),
         .I1(tdata_in[53]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__8_n_7),
+        .I3(tdata_out2_carry__3_n_11),
         .I4(tdata_in[37]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[37]_i_4_n_0 ));
@@ -2812,10 +2748,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[38]_i_3 
-       (.I0(tdata_out2_carry__12_n_6),
+       (.I0(tdata_out2_carry__5_n_10),
         .I1(tdata_in[54]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__8_n_6),
+        .I3(tdata_out2_carry__3_n_10),
         .I4(tdata_in[38]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[38]_i_3_n_0 ));
@@ -2850,10 +2786,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[39]_i_4 
-       (.I0(tdata_out2_carry__12_n_5),
+       (.I0(tdata_out2_carry__5_n_9),
         .I1(tdata_in[55]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__8_n_5),
+        .I3(tdata_out2_carry__3_n_9),
         .I4(tdata_in[39]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[39]_i_4_n_0 ));
@@ -2891,10 +2827,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[3]_i_4 
        (.I0(tdata_in[35]),
-        .I1(tdata_out2_carry__7_n_5),
+        .I1(tdata_out2_carry__3_n_13),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[3]),
-        .I4(tdata_out2_carry_n_5),
+        .I4(tdata_out2_carry_n_13),
         .O(\tdata_out[3]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFF00B8000000B800)) 
@@ -2919,10 +2855,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[40]_i_3 
-       (.I0(tdata_out2_carry__12_n_4),
+       (.I0(tdata_out2_carry__5_n_8),
         .I1(tdata_in[56]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__8_n_4),
+        .I3(tdata_out2_carry__3_n_8),
         .I4(tdata_in[40]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[40]_i_3_n_0 ));
@@ -2957,10 +2893,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[41]_i_4 
-       (.I0(tdata_out2_carry__13_n_7),
+       (.I0(tdata_out2_carry__6_n_15),
         .I1(tdata_in[57]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__9_n_7),
+        .I3(tdata_out2_carry__4_n_15),
         .I4(tdata_in[41]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[41]_i_4_n_0 ));
@@ -2987,10 +2923,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[42]_i_3 
-       (.I0(tdata_out2_carry__13_n_6),
+       (.I0(tdata_out2_carry__6_n_14),
         .I1(tdata_in[58]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__9_n_6),
+        .I3(tdata_out2_carry__4_n_14),
         .I4(tdata_in[42]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[42]_i_3_n_0 ));
@@ -3025,10 +2961,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[43]_i_4 
-       (.I0(tdata_out2_carry__13_n_5),
+       (.I0(tdata_out2_carry__6_n_13),
         .I1(tdata_in[59]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__9_n_5),
+        .I3(tdata_out2_carry__4_n_13),
         .I4(tdata_in[43]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[43]_i_4_n_0 ));
@@ -3055,10 +2991,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[44]_i_3 
-       (.I0(tdata_out2_carry__13_n_4),
+       (.I0(tdata_out2_carry__6_n_12),
         .I1(tdata_in[60]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__9_n_4),
+        .I3(tdata_out2_carry__4_n_12),
         .I4(tdata_in[44]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[44]_i_3_n_0 ));
@@ -3093,10 +3029,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[45]_i_4 
-       (.I0(tdata_out2_carry__14_n_7),
+       (.I0(tdata_out2_carry__6_n_11),
         .I1(tdata_in[61]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__10_n_7),
+        .I3(tdata_out2_carry__4_n_11),
         .I4(tdata_in[45]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[45]_i_4_n_0 ));
@@ -3123,10 +3059,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[46]_i_3 
-       (.I0(tdata_out2_carry__14_n_6),
+       (.I0(tdata_out2_carry__6_n_10),
         .I1(tdata_in[62]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__10_n_6),
+        .I3(tdata_out2_carry__4_n_10),
         .I4(tdata_in[46]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[46]_i_3_n_0 ));
@@ -3161,10 +3097,10 @@ module histo_sorter_0_0_sorter
   LUT6 #(
     .INIT(64'h000000008F808080)) 
     \tdata_out[47]_i_4 
-       (.I0(tdata_out2_carry__14_n_5),
+       (.I0(tdata_out2_carry__6_n_9),
         .I1(tdata_in[63]),
         .I2(log_2_BIN_WIDTH_r[4]),
-        .I3(tdata_out2_carry__10_n_5),
+        .I3(tdata_out2_carry__4_n_9),
         .I4(tdata_in[47]),
         .I5(log_2_BIN_WIDTH_r[5]),
         .O(\tdata_out[47]_i_4_n_0 ));
@@ -3194,7 +3130,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[48]_i_3 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[56]),
-        .I2(tdata_out2_carry__12_n_4),
+        .I2(tdata_out2_carry__5_n_8),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[48]_i_3_n_0 ));
   LUT4 #(
@@ -3202,7 +3138,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[48]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[48]),
-        .I2(tdata_out2_carry__10_n_4),
+        .I2(tdata_out2_carry__4_n_8),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[48]_i_4_n_0 ));
   LUT6 #(
@@ -3239,7 +3175,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[49]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[57]),
-        .I2(tdata_out2_carry__13_n_7),
+        .I2(tdata_out2_carry__6_n_15),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[49]_i_4_n_0 ));
   LUT4 #(
@@ -3247,7 +3183,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[49]_i_5 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[49]),
-        .I2(tdata_out2_carry__11_n_7),
+        .I2(tdata_out2_carry__5_n_15),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[49]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair25" *) 
@@ -3284,10 +3220,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[4]_i_4 
        (.I0(tdata_in[36]),
-        .I1(tdata_out2_carry__7_n_4),
+        .I1(tdata_out2_carry__3_n_12),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[4]),
-        .I4(tdata_out2_carry_n_4),
+        .I4(tdata_out2_carry_n_12),
         .O(\tdata_out[4]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFF00B8000000B800)) 
@@ -3315,7 +3251,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[50]_i_3 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[58]),
-        .I2(tdata_out2_carry__13_n_6),
+        .I2(tdata_out2_carry__6_n_14),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[50]_i_3_n_0 ));
   LUT4 #(
@@ -3323,7 +3259,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[50]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[50]),
-        .I2(tdata_out2_carry__11_n_6),
+        .I2(tdata_out2_carry__5_n_14),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[50]_i_4_n_0 ));
   LUT6 #(
@@ -3360,7 +3296,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[51]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[59]),
-        .I2(tdata_out2_carry__13_n_5),
+        .I2(tdata_out2_carry__6_n_13),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[51]_i_4_n_0 ));
   LUT4 #(
@@ -3368,7 +3304,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[51]_i_5 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[51]),
-        .I2(tdata_out2_carry__11_n_5),
+        .I2(tdata_out2_carry__5_n_13),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[51]_i_5_n_0 ));
   LUT6 #(
@@ -3396,7 +3332,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[52]_i_3 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[60]),
-        .I2(tdata_out2_carry__13_n_4),
+        .I2(tdata_out2_carry__6_n_12),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[52]_i_3_n_0 ));
   LUT4 #(
@@ -3404,7 +3340,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[52]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[52]),
-        .I2(tdata_out2_carry__11_n_4),
+        .I2(tdata_out2_carry__5_n_12),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[52]_i_4_n_0 ));
   LUT6 #(
@@ -3440,7 +3376,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[53]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[61]),
-        .I2(tdata_out2_carry__14_n_7),
+        .I2(tdata_out2_carry__6_n_11),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[53]_i_4_n_0 ));
   LUT4 #(
@@ -3448,7 +3384,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[53]_i_5 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[53]),
-        .I2(tdata_out2_carry__12_n_7),
+        .I2(tdata_out2_carry__5_n_11),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[53]_i_5_n_0 ));
   LUT6 #(
@@ -3483,7 +3419,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[54]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[62]),
-        .I2(tdata_out2_carry__14_n_6),
+        .I2(tdata_out2_carry__6_n_10),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[54]_i_4_n_0 ));
   LUT4 #(
@@ -3491,7 +3427,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[54]_i_5 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[54]),
-        .I2(tdata_out2_carry__12_n_6),
+        .I2(tdata_out2_carry__5_n_10),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[54]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
@@ -3527,7 +3463,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[55]_i_4 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[63]),
-        .I2(tdata_out2_carry__14_n_5),
+        .I2(tdata_out2_carry__6_n_9),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[55]_i_4_n_0 ));
   LUT4 #(
@@ -3535,7 +3471,7 @@ module histo_sorter_0_0_sorter
     \tdata_out[55]_i_5 
        (.I0(log_2_BIN_WIDTH_r[5]),
         .I1(tdata_in[55]),
-        .I2(tdata_out2_carry__12_n_5),
+        .I2(tdata_out2_carry__5_n_9),
         .I3(log_2_BIN_WIDTH_r[4]),
         .O(\tdata_out[55]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
@@ -3562,7 +3498,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[56]_i_3 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__13_n_4),
+        .I1(tdata_out2_carry__6_n_12),
         .I2(tdata_in[60]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3572,7 +3508,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[56]_i_4 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__12_n_4),
+        .I1(tdata_out2_carry__5_n_8),
         .I2(tdata_in[56]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3601,7 +3537,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[57]_i_3 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__14_n_7),
+        .I1(tdata_out2_carry__6_n_11),
         .I2(tdata_in[61]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3611,7 +3547,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[57]_i_4 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__13_n_7),
+        .I1(tdata_out2_carry__6_n_15),
         .I2(tdata_in[57]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3639,7 +3575,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[58]_i_3 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__14_n_6),
+        .I1(tdata_out2_carry__6_n_10),
         .I2(tdata_in[62]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3649,7 +3585,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[58]_i_4 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__13_n_6),
+        .I1(tdata_out2_carry__6_n_14),
         .I2(tdata_in[58]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3678,7 +3614,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[59]_i_3 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__14_n_5),
+        .I1(tdata_out2_carry__6_n_9),
         .I2(tdata_in[63]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3688,7 +3624,7 @@ module histo_sorter_0_0_sorter
     .INIT(32'h00000040)) 
     \tdata_out[59]_i_4 
        (.I0(log_2_BIN_WIDTH_r[4]),
-        .I1(tdata_out2_carry__13_n_5),
+        .I1(tdata_out2_carry__6_n_13),
         .I2(tdata_in[59]),
         .I3(log_2_BIN_WIDTH_r[5]),
         .I4(log_2_BIN_WIDTH_r[3]),
@@ -3727,10 +3663,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[5]_i_4 
        (.I0(tdata_in[37]),
-        .I1(tdata_out2_carry__8_n_7),
+        .I1(tdata_out2_carry__3_n_11),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[5]),
-        .I4(tdata_out2_carry__0_n_7),
+        .I4(tdata_out2_carry_n_11),
         .O(\tdata_out[5]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFF00B8000000B800)) 
@@ -3748,7 +3684,7 @@ module histo_sorter_0_0_sorter
        (.I0(log_2_BIN_WIDTH_r[3]),
         .I1(log_2_BIN_WIDTH_r[5]),
         .I2(tdata_in[60]),
-        .I3(tdata_out2_carry__13_n_4),
+        .I3(tdata_out2_carry__6_n_12),
         .I4(log_2_BIN_WIDTH_r[4]),
         .I5(log_2_BIN_WIDTH_r[2]),
         .O(\tdata_out[60]_i_2_n_0 ));
@@ -3776,7 +3712,7 @@ module histo_sorter_0_0_sorter
        (.I0(log_2_BIN_WIDTH_r[3]),
         .I1(log_2_BIN_WIDTH_r[5]),
         .I2(tdata_in[61]),
-        .I3(tdata_out2_carry__14_n_7),
+        .I3(tdata_out2_carry__6_n_11),
         .I4(log_2_BIN_WIDTH_r[4]),
         .I5(log_2_BIN_WIDTH_r[2]),
         .O(\tdata_out[61]_i_2_n_0 ));
@@ -3796,7 +3732,7 @@ module histo_sorter_0_0_sorter
        (.I0(log_2_BIN_WIDTH_r[3]),
         .I1(log_2_BIN_WIDTH_r[5]),
         .I2(tdata_in[62]),
-        .I3(tdata_out2_carry__14_n_6),
+        .I3(tdata_out2_carry__6_n_10),
         .I4(log_2_BIN_WIDTH_r[4]),
         .I5(log_2_BIN_WIDTH_r[2]),
         .O(\tdata_out[62]_i_2_n_0 ));
@@ -3828,7 +3764,7 @@ module histo_sorter_0_0_sorter
        (.I0(log_2_BIN_WIDTH_r[3]),
         .I1(log_2_BIN_WIDTH_r[5]),
         .I2(tdata_in[63]),
-        .I3(tdata_out2_carry__14_n_5),
+        .I3(tdata_out2_carry__6_n_9),
         .I4(log_2_BIN_WIDTH_r[4]),
         .I5(log_2_BIN_WIDTH_r[2]),
         .O(\tdata_out[63]_i_4_n_0 ));
@@ -3882,10 +3818,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[6]_i_4 
        (.I0(tdata_in[38]),
-        .I1(tdata_out2_carry__8_n_6),
+        .I1(tdata_out2_carry__3_n_10),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[6]),
-        .I4(tdata_out2_carry__0_n_6),
+        .I4(tdata_out2_carry_n_10),
         .O(\tdata_out[6]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
@@ -3921,10 +3857,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[7]_i_4 
        (.I0(tdata_in[39]),
-        .I1(tdata_out2_carry__8_n_5),
+        .I1(tdata_out2_carry__3_n_9),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[7]),
-        .I4(tdata_out2_carry__0_n_5),
+        .I4(tdata_out2_carry_n_9),
         .O(\tdata_out[7]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
@@ -3960,10 +3896,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[8]_i_4 
        (.I0(tdata_in[40]),
-        .I1(tdata_out2_carry__8_n_4),
+        .I1(tdata_out2_carry__3_n_8),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[8]),
-        .I4(tdata_out2_carry__0_n_4),
+        .I4(tdata_out2_carry_n_8),
         .O(\tdata_out[8]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
@@ -3999,10 +3935,10 @@ module histo_sorter_0_0_sorter
     .INIT(32'h8F808080)) 
     \tdata_out[9]_i_4 
        (.I0(tdata_in[41]),
-        .I1(tdata_out2_carry__9_n_7),
+        .I1(tdata_out2_carry__4_n_15),
         .I2(log_2_BIN_WIDTH_r[5]),
         .I3(tdata_in[9]),
-        .I4(tdata_out2_carry__1_n_7),
+        .I4(tdata_out2_carry__0_n_15),
         .O(\tdata_out[9]_i_4_n_0 ));
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AXIS_OUT TDATA" *) 
   FDCE \tdata_out_reg[0] 

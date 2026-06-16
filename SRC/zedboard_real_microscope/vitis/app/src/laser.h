@@ -1,0 +1,21 @@
+#ifndef LASER_H_
+#define LASER_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include "xparameters.h"
+#include "xil_io.h"  // For Xil_Out32 and Xil_In32
+
+
+#define MAX_PIXELS_IN_BRAM 262144
+#define BRAM_BASE_ADDR XPAR_MICROSCOPE_EMULATOR_0_BASEADDR
+
+// this function takes a binary file and writes it to the laser emulators BRAM via axi4lite
+int prepare_laser_emulator();
+extern int frame_done;
+
+
+void FrameIntrHandler();
+void BinWrittenButNeverReadIntrHandler();
+#endif //LASER

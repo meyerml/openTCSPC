@@ -1,0 +1,172 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.370978",
+   "Default View_TopLeft":"-976,-1337",
+   "DisplayPinsOfHiddenNets":"1",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 14 -x 6580 -y -730 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 14 -x 6580 -y -700 -defaultsOSRD
+preplace port port-id_sdo_p -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace port port-id_sdo_n -pg 1 -lvl 0 -x -10 -y 30 -defaultsOSRD
+preplace port port-id_l_clk_in_p -pg 1 -lvl 0 -x -10 -y -20 -defaultsOSRD
+preplace port port-id_l_clk_in_n -pg 1 -lvl 0 -x -10 -y -50 -defaultsOSRD
+preplace port port-id_frame_p -pg 1 -lvl 0 -x -10 -y -120 -defaultsOSRD
+preplace port port-id_frame_n -pg 1 -lvl 0 -x -10 -y -150 -defaultsOSRD
+preplace port port-id_l_clk_out_n -pg 1 -lvl 14 -x 6580 -y 50 -defaultsOSRD
+preplace port port-id_l_clk_out_p -pg 1 -lvl 14 -x 6580 -y 80 -defaultsOSRD
+preplace port port-id_spi_mosi -pg 1 -lvl 14 -x 6580 -y -880 -defaultsOSRD
+preplace port port-id_spi_miso -pg 1 -lvl 0 -x -10 -y -350 -defaultsOSRD
+preplace port port-id_spi_sclk -pg 1 -lvl 14 -x 6580 -y 390 -defaultsOSRD
+preplace port port-id_frame_clk -pg 1 -lvl 0 -x -10 -y 250 -defaultsOSRD
+preplace port port-id_line_clk -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace port port-id_pixel_clk -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
+preplace port port-id_frame_clk_sim -pg 1 -lvl 14 -x 6580 -y 1180 -defaultsOSRD
+preplace port port-id_line_clk_sim -pg 1 -lvl 14 -x 6580 -y 1210 -defaultsOSRD
+preplace port port-id_pixel_clk_sim -pg 1 -lvl 14 -x 6580 -y 1240 -defaultsOSRD
+preplace port port-id_refclk_out_sim -pg 1 -lvl 14 -x 6580 -y 1270 -defaultsOSRD
+preplace port port-id_stop_out_sim -pg 1 -lvl 14 -x 6580 -y 1300 -defaultsOSRD
+preplace portBus refres_p -pg 1 -lvl 14 -x 6580 -y -270 -defaultsOSRD
+preplace portBus disable_p -pg 1 -lvl 14 -x 6580 -y -40 -defaultsOSRD
+preplace portBus spi_cs_n -pg 1 -lvl 14 -x 6580 -y -70 -defaultsOSRD
+preplace portBus level_shifter_en -pg 1 -lvl 14 -x 6580 -y 250 -defaultsOSRD
+preplace portBus buffer_overflow -pg 1 -lvl 14 -x 6580 -y 140 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 3710 -y -860 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 9 -x 4770 -y -780 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 400 -y -560 -defaultsOSRD
+preplace inst EMULATOR_en -pg 1 -lvl 3 -x 1100 -y -1280 -defaultsOSRD
+preplace inst msglen -pg 1 -lvl 3 -x 1100 -y -1140 -defaultsOSRD
+preplace inst SECOND_ARESETN -pg 1 -lvl 3 -x 1100 -y -940 -defaultsOSRD
+preplace inst CNTVALUEIN_LVDS -pg 1 -lvl 3 -x 1100 -y -1040 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 1 -x 400 -y -1050 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 10 -x 5280 -y -130 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 12 -x 6130 -y -960 -defaultsOSRD
+preplace inst ila_DMA_out -pg 1 -lvl 12 -x 6130 -y -130 -defaultsOSRD
+preplace inst LOG_2_BINWIDTH -pg 1 -lvl 3 -x 1100 -y -800 -defaultsOSRD
+preplace inst REFINDEX_BITS -pg 1 -lvl 3 -x 1100 -y -500 -defaultsOSRD
+preplace inst STOPRESULT_BITS -pg 1 -lvl 3 -x 1100 -y -400 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 1 -x 400 -y -340 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 790 -y -510 -defaultsOSRD
+preplace inst TLAST_COUNT -pg 1 -lvl 3 -x 1100 -y -300 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 5 -x 2460 -y -710 -defaultsOSRD
+preplace inst BINS_TO_READ -pg 1 -lvl 3 -x 1100 -y -200 -defaultsOSRD
+preplace inst IMAGE_SIZE -pg 1 -lvl 3 -x 1100 -y -700 -defaultsOSRD
+preplace inst PULSES_PER_PIXEL -pg 1 -lvl 3 -x 1100 -y -600 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 2110 -y -440 -defaultsOSRD
+preplace inst util_idelay_ctrl_0 -pg 1 -lvl 5 -x 2460 -y -440 -defaultsOSRD
+preplace inst axi_smc_main -pg 1 -lvl 10 -x 5280 -y -440 -defaultsOSRD
+preplace inst slow_laser_ILA -pg 1 -lvl 8 -x 4300 -y -420 -defaultsOSRD
+preplace inst histogram_ILA -pg 1 -lvl 11 -x 5764 -y 310 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 1 -x 400 -y -170 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 1 -x 400 -y 0 -defaultsOSRD
+preplace inst MAX_PIXELS -pg 1 -lvl 3 -x 1100 -y -100 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 13 -x 6410 -y 240 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 12 -x 6130 -y 390 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 12 -x 6130 -y 210 -defaultsOSRD
+preplace inst ila_LVDS_to_AXIS -pg 1 -lvl 8 -x 4300 -y 330 -defaultsOSRD
+preplace inst ila_LVDS_to_axis_axis -pg 1 -lvl 8 -x 4300 -y -170 -defaultsOSRD
+preplace inst ila_DMA_out1 -pg 1 -lvl 10 -x 5280 -y 40 -defaultsOSRD
+preplace inst Histogramming -pg 1 -lvl 9 -x 4770 -y 440 -defaultsOSRD
+preplace inst LVDS_to_AXIS_IDDR -pg 1 -lvl 7 -x 3710 -y 610 -defaultsOSRD
+preplace inst logic_high -pg 1 -lvl 6 -x 2960 -y 360 -defaultsOSRD
+preplace inst CNTVALUEIN_CLK -pg 1 -lvl 3 -x 1100 -y 0 -defaultsOSRD
+preplace inst CNTVALUEIN_SDO -pg 1 -lvl 3 -x 1100 -y 100 -defaultsOSRD
+preplace inst IDELAYE2_LD -pg 1 -lvl 3 -x 1100 -y 300 -defaultsOSRD
+preplace inst CNTVALUEIN_FRAME -pg 1 -lvl 3 -x 1100 -y 200 -defaultsOSRD
+preplace inst Microscope_Emulator_0 -pg 1 -lvl 7 -x 3710 -y 1250 -defaultsOSRD
+preplace netloc ARESETN_1 1 9 3 5010 -980 NJ -980 N
+preplace netloc BINS_TO_READ_Dout 1 3 6 1210J 10 N 10 NJ 10 N 10 N 10 4520
+preplace netloc CNTVALUEIN_CLK_Dout 1 3 4 NJ 0 NJ 0 NJ 0 3400
+preplace netloc CNTVALUEIN_FRAME_Dout 1 3 4 NJ 200 2250J 190 NJ 190 3330
+preplace netloc CNTVALUEIN_SDO_Dout 1 3 4 NJ 100 NJ 100 NJ 100 3350
+preplace netloc EMULATOR_en_Dout 1 3 4 NJ -1280 NJ -1280 NJ -1280 3120
+preplace netloc Histogramming_0_buffer_almost_full 1 9 2 5060 400 NJ
+preplace netloc IDELAYE2_LD_Dout 1 3 4 NJ 300 NJ 300 NJ 300 3300
+preplace netloc IMAGE_SIZE_Dout 1 3 4 1250J -820 NJ -820 NJ -820 3100
+preplace netloc LOG_2_BINWIDTH_Dout 1 3 6 1220J -890 N -890 N -890 3050 -1100 N -1100 4450
+preplace netloc LVDS_to_AXIS_0_Buffer_overflow 1 4 10 2370 140 N 140 N 140 3950 140 N 140 N 140 N 140 5920 290 6280 140 N
+preplace netloc LVDS_to_AXIS_IDDR_0_axis_rd_data_count 1 7 1 4110 350n
+preplace netloc LVDS_to_AXIS_IDDR_0_axis_wr_data_count 1 7 1 4170 370n
+preplace netloc LVDS_to_AXIS_IDDR_0_l_clk_out_n 1 7 7 4140 120 NJ 120 NJ 120 5480J 50 NJ 50 NJ 50 NJ
+preplace netloc LVDS_to_AXIS_IDDR_0_l_clk_out_p 1 7 7 4130 -90 4440J -250 NJ -250 5500J -210 NJ -210 NJ -210 6510J
+preplace netloc MAX_PIXELS_Dout 1 3 6 NJ -100 NJ -100 NJ -100 3420 -80 NJ -80 4530
+preplace netloc Microscope_Emulator_0_frame_clk 1 7 7 4080J 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ
+preplace netloc Microscope_Emulator_0_line_clk 1 7 7 4100J 1210 NJ 1210 NJ 1210 NJ 1210 NJ 1210 NJ 1210 NJ
+preplace netloc Microscope_Emulator_0_pixel_clk 1 7 7 4160J 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ
+preplace netloc Microscope_Emulator_0_refclk_out 1 7 7 4090J 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ
+preplace netloc Microscope_Emulator_0_stop_out 1 7 7 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ
+preplace netloc PULSES_PER_PIXEL_Dout 1 3 4 NJ -600 NJ -600 NJ -600 3080
+preplace netloc REFINDEX_BITS_Dout 1 3 6 NJ -500 2250 -510 N -510 N -510 3940 -540 4550
+preplace netloc SECOND_ARESETN_Dout 1 3 6 1250J -850 NJ -850 NJ -850 3410 350 4070 430 4540
+preplace netloc STOPRESULT_BITS_Dout 1 3 6 1210 -300 N -300 N -300 N -300 NJ -300 4540
+preplace netloc axi_dma_0_s2mm_introut 1 4 7 2320 -260 N -260 N -260 NJ -260 N -260 NJ -260 5490
+preplace netloc axi_gpio_0_gpio2_io_o 1 1 1 550 -560n
+preplace netloc axi_gpio_0_gpio_io_o 1 2 1 980 -1280n
+preplace netloc axi_gpio_0_gpio_io_o1 1 1 1 550 -580n
+preplace netloc axi_gpio_1_gpio2_io_o 1 1 1 570 -520n
+preplace netloc axi_gpio_1_gpio_io_o 1 1 1 560 -540n
+preplace netloc axi_gpio_2_gpio2_io_o 1 1 1 590 -480n
+preplace netloc axi_gpio_2_gpio_io_o 1 1 1 580 -500n
+preplace netloc axi_gpio_3_gpio2_io_o 1 1 1 610 -440n
+preplace netloc axi_gpio_3_gpio_io_o 1 1 1 600 -460n
+preplace netloc axi_quad_spi_0_io0_o 1 1 13 NJ -1080 990 -880 NJ -880 N -880 N -880 3060 -1080 NJ -1080 N -1080 NJ -1080 NJ -1080 5980 -840 6280 -880 N
+preplace netloc axi_quad_spi_0_sck_o 1 1 13 NJ -1040 960 -870 NJ -870 N -870 N -870 3080 -1070 NJ -1070 N -1070 NJ -1070 NJ -1070 5990 -1080 N -1080 6520
+preplace netloc axi_quad_spi_0_ss_o 1 1 13 NJ -1020 910 -860 NJ -860 N -860 N -860 3100 -1060 NJ -1060 N -1060 NJ -1060 NJ -1060 5940 -1090 N -1090 6550
+preplace netloc frame_n_0_1 1 0 7 90 90 540 290 950 480 N 480 N 480 N 480 3090
+preplace netloc frame_p_0_1 1 0 7 60 460 N 460 N 460 N 460 N 460 N 460 3110
+preplace netloc histo_0_bin_full_warning 1 4 7 2360 170 N 170 N 170 N 170 N 170 5000 340 N
+preplace netloc histo_0_bin_written_but_never_read_warning 1 4 7 2350 200 N 200 3340 190 N 190 N 190 4990 380 N
+preplace netloc histo_0_disable_p 1 9 5 5050 270 5614 -40 N -40 N -40 N
+preplace netloc histo_0_negedge_frame 1 4 7 2340 210 NJ 210 N 210 NJ 210 N 210 5040 320 N
+preplace netloc histo_0_premature_pixel_done_error 1 4 7 2310 220 N 220 N 220 N 220 N 220 5030 360 N
+preplace netloc histo_0_refres_p 1 9 5 5070 280 5604J -220 N -220 N -220 6540
+preplace netloc io1_i_0_1 1 0 2 30J -430 540
+preplace netloc l_clk_in_n_1 1 0 7 40J 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 3070
+preplace netloc l_clk_in_p_1 1 0 7 80J 320 NJ 320 900J 490 NJ 490 NJ 490 NJ 490 3050
+preplace netloc laser_signal_generat_0_frame_clk_r 1 0 9 50 330 N 330 930 420 N 420 N 420 N 420 3320 360 4120 480 N
+preplace netloc laser_signal_generat_0_line_clk_r 1 0 9 20 340 N 340 890 450 N 450 N 450 N 450 3370 380 4090 520 N
+preplace netloc laser_signal_generat_0_pixel_clk_r 1 0 9 10 350 N 350 920 390 1970 270 N 270 N 270 N 270 3960 200 4430
+preplace netloc logic_high_dout 1 6 8 3290 370 3960 440 4510 200 N 200 5644 160 5900 310 N 310 6550
+preplace netloc msglen_Dout 1 3 4 N -1140 N -1140 N -1140 3310
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 12 240 310 NJ 310 940J 430 NJ 430 NJ 430 NJ 430 3360 -670 4150 -810 4560 -440 5090 240 5594 460 5950
+preplace netloc processing_system7_0_FCLK_CLK1 1 6 2 3440 -660 3950
+preplace netloc processing_system7_0_FCLK_CLK2 1 6 2 3450 -650 3940
+preplace netloc processing_system7_0_FCLK_CLK3 1 4 5 2330 290 N 290 3380 290 3970 500 N
+preplace netloc processing_system7_0_FCLK_RESET2_N 1 6 3 3430 -1050 3960 -800 N
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 12 260 280 NJ 280 960J 380 1940 280 NJ 280 NJ 280 3390 180 NJ 180 NJ 180 5010 170 5624J 150 5970
+preplace netloc sdo_n_0_1 1 0 7 30 400 610 440 N 440 N 440 N 440 N 440 3060
+preplace netloc sdo_p_0_1 1 0 7 70 300 N 300 910 500 N 500 N 500 N 500 3040
+preplace netloc util_vector_logic_0_Res 1 4 1 2250 -440n
+preplace netloc xlconcat_1_dout 1 5 2 2550 -810 3130
+preplace netloc Histogramming_0_M_AXIS 1 9 1 5020 -160n
+preplace netloc Histogramming_TRIG_OUT 1 7 3 4170 -270 NJ -270 4980
+preplace netloc LVDS_to_AXIS_0_M_AXIS_0 1 7 2 4060 230 4440
+preplace netloc Microscope_Emulator_0_TRIG_OUT 1 6 2 3480 390 3940
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 12 1 6270J 210n
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 12 1 6290J 250n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 10 2 N -140 5990
+preplace netloc axi_dma_0_M_AXI_SG 1 10 2 N -160 5910
+preplace netloc axi_mem_intercon_M00_AXI 1 6 7 3480 -1090 NJ -1090 N -1090 NJ -1090 NJ -1090 5910 -1100 6280
+preplace netloc axi_smc_M00_AXI 1 10 2 N -510 5930
+preplace netloc axi_smc_M01_AXI 1 9 2 5110 -570 5450
+preplace netloc axi_smc_M02_AXI 1 0 11 230 -1210 NJ -1210 NJ -1210 NJ -1210 NJ -1210 NJ -1210 N -1210 NJ -1210 N -1210 NJ -1210 5460
+preplace netloc axi_smc_M03_AXI 1 0 11 220 -1220 NJ -1220 NJ -1220 NJ -1220 NJ -1220 NJ -1220 N -1220 NJ -1220 N -1220 NJ -1220 5540
+preplace netloc axi_smc_M04_AXI 1 0 11 260 -1200 NJ -1200 NJ -1200 NJ -1200 NJ -1200 NJ -1200 N -1200 NJ -1200 N -1200 NJ -1200 5440
+preplace netloc axi_smc_main_M05_AXI 1 0 11 230 370 NJ 370 NJ 370 1950J 150 NJ 150 NJ 150 NJ 150 NJ 150 NJ 150 NJ 150 5470
+preplace netloc axi_smc_main_M06_AXI 1 0 11 250 360 NJ 360 NJ 360 1960J 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 5460
+preplace netloc axi_smc_main_M07_AXI 1 6 5 3470 -250 NJ -250 4430J -240 NJ -240 5450
+preplace netloc histogram_ILA_TRIG_OUT 1 11 1 5890 -150n
+preplace netloc ila_DMA_out1_TRIG_OUT 1 7 4 4170 130 NJ 130 NJ 130 5440
+preplace netloc ila_DMA_out_TRIG_OUT 1 9 4 5120 -270 NJ -270 NJ -270 6280
+preplace netloc ila_LVDS_to_axis_axis_TRIG_OUT 1 6 3 3460 -70 NJ -70 4430
+preplace netloc processing_system7_0_DDR 1 7 7 NJ -970 N -970 NJ -970 N -970 5960 -830 N -830 6540
+preplace netloc processing_system7_0_FIXED_IO 1 7 7 4070J -880 N -880 NJ -880 N -880 5910 -820 N -820 6530
+preplace netloc processing_system7_0_M_AXI_GP0 1 7 3 NJ -890 N -890 5050
+preplace netloc slow_laser_ILA_TRIG_OUT 1 8 3 NJ -420 4980J -310 5634
+levelinfo -pg 1 -10 400 790 1100 2110 2460 2960 3710 4300 4770 5280 5764 6130 6410 6580
+pagesize -pg 1 -db -bbox -sgen -430 -1940 6780 1390
+"
+}
+

@@ -58,7 +58,6 @@ module histo_negedge_detect_0_0 (
   clk,
   aresetn,
   edge_in,
-  edge_valid,
   detect_out
 );
 
@@ -71,14 +70,12 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 input wire aresetn;
 input wire edge_in;
-input wire edge_valid;
 output wire detect_out;
 
   negedge_detect inst (
     .clk(clk),
     .aresetn(aresetn),
     .edge_in(edge_in),
-    .edge_valid(edge_valid),
     .detect_out(detect_out)
   );
 endmodule

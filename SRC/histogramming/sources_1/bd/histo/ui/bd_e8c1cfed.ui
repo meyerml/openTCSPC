@@ -14,80 +14,79 @@
    "bachelorarbeit_Layers":"",
    "bachelorarbeit_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port AXIS_IN -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
-preplace port M_AXIS -pg 1 -lvl 4 -x 1430 -y 350 -defaultsOSRD
-preplace port TRIG_OUT -pg 1 -lvl 4 -x 1430 -y 200 -defaultsOSRD
-preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
-preplace port port-id_en -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace port port-id_frame_clk -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
-preplace port port-id_line_clk -pg 1 -lvl 0 -x 0 -y 1000 -defaultsOSRD
-preplace port port-id_pixel_clk -pg 1 -lvl 0 -x 0 -y 620 -defaultsOSRD
-preplace port port-id_negedge_frame -pg 1 -lvl 4 -x 1430 -y 870 -defaultsOSRD
-preplace port port-id_bin_full_warning -pg 1 -lvl 4 -x 1430 -y 450 -defaultsOSRD
-preplace port port-id_premature_pixel_done_error -pg 1 -lvl 4 -x 1430 -y 510 -defaultsOSRD
-preplace port port-id_bin_written_but_never_read_warning -pg 1 -lvl 4 -x 1430 -y 480 -defaultsOSRD
-preplace port port-id_buffer_almost_full -pg 1 -lvl 4 -x 1430 -y 380 -defaultsOSRD
-preplace port port-id_ila_clk -pg 1 -lvl 0 -x 0 -y 1110 -defaultsOSRD
-preplace portBus disable_p -pg 1 -lvl 4 -x 1430 -y 1010 -defaultsOSRD
-preplace portBus refres_p -pg 1 -lvl 4 -x 1430 -y 710 -defaultsOSRD
-preplace portBus REFINDEX_BITS -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
-preplace portBus STOPRESULT_BITS -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
-preplace portBus log_2_BIN_WIDTH -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
-preplace portBus BINS_TO_READ -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
-preplace portBus MAX_PIXELS -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 1200 -y 370 -defaultsOSRD
+preplace port AXIS_IN -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
+preplace port M_AXIS -pg 1 -lvl 4 -x 1450 -y 350 -defaultsOSRD
+preplace port TRIG_OUT -pg 1 -lvl 4 -x 1450 -y 200 -defaultsOSRD
+preplace port TRIG_IN_0 -pg 1 -lvl 0 -x -10 -y 490 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
+preplace port port-id_en -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace port port-id_frame_clk -pg 1 -lvl 0 -x -10 -y 780 -defaultsOSRD
+preplace port port-id_line_clk -pg 1 -lvl 0 -x -10 -y 1000 -defaultsOSRD
+preplace port port-id_pixel_clk -pg 1 -lvl 0 -x -10 -y 620 -defaultsOSRD
+preplace port port-id_negedge_frame -pg 1 -lvl 4 -x 1450 -y 870 -defaultsOSRD
+preplace port port-id_bin_full_warning -pg 1 -lvl 4 -x 1450 -y 450 -defaultsOSRD
+preplace port port-id_premature_pixel_done_error -pg 1 -lvl 4 -x 1450 -y 510 -defaultsOSRD
+preplace port port-id_bin_written_but_never_read_warning -pg 1 -lvl 4 -x 1450 -y 480 -defaultsOSRD
+preplace port port-id_buffer_almost_full -pg 1 -lvl 4 -x 1450 -y 380 -defaultsOSRD
+preplace port port-id_ila_clk -pg 1 -lvl 0 -x -10 -y 1110 -defaultsOSRD
+preplace portBus disable_p -pg 1 -lvl 4 -x 1450 -y 1010 -defaultsOSRD
+preplace portBus refres_p -pg 1 -lvl 4 -x 1450 -y 710 -defaultsOSRD
+preplace portBus REFINDEX_BITS -pg 1 -lvl 0 -x -10 -y 170 -defaultsOSRD
+preplace portBus STOPRESULT_BITS -pg 1 -lvl 0 -x -10 -y 200 -defaultsOSRD
+preplace portBus log_2_BIN_WIDTH -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace portBus BINS_TO_READ -pg 1 -lvl 0 -x -10 -y 410 -defaultsOSRD
+preplace portBus MAX_PIXELS -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
+preplace inst axis_data_fifo_histo -pg 1 -lvl 3 -x 1220 -y 370 -defaultsOSRD
 preplace inst in_line_and_in_frame -pg 1 -lvl 1 -x 350 -y 1040 -defaultsOSRD
-preplace inst not_recording -pg 1 -lvl 3 -x 1200 -y 1090 -defaultsOSRD
-preplace inst new_pixel_or_frame_done -pg 1 -lvl 3 -x 1200 -y 980 -defaultsOSRD
+preplace inst not_recording -pg 1 -lvl 3 -x 1220 -y 1150 -defaultsOSRD
+preplace inst new_pixel_or_frame_done -pg 1 -lvl 3 -x 1220 -y 1040 -defaultsOSRD
 preplace inst HISTOGRAM_ARBITER_FSM_0 -pg 1 -lvl 1 -x 350 -y 400 -defaultsOSRD
 preplace inst sorter_0 -pg 1 -lvl 1 -x 350 -y 130 -defaultsOSRD
 preplace inst frame_negedge_detect -pg 1 -lvl 1 -x 350 -y 800 -defaultsOSRD
-preplace inst HIGH -pg 1 -lvl 1 -x 350 -y 930 -defaultsOSRD
 preplace inst pixel_posedge_detect -pg 1 -lvl 1 -x 350 -y 640 -defaultsOSRD
-preplace inst ila_histo_out -pg 1 -lvl 3 -x 1200 -y 240 -defaultsOSRD
-preplace inst ila_histo_int -pg 1 -lvl 3 -x 1200 -y 680 -defaultsOSRD
+preplace inst ila_histo_out -pg 1 -lvl 3 -x 1220 -y 240 -defaultsOSRD
+preplace inst ila_histo_int -pg 1 -lvl 3 -x 1220 -y 710 -defaultsOSRD
 preplace inst ila_sorter_out1 -pg 1 -lvl 2 -x 770 -y 200 -defaultsOSRD
-preplace netloc BINS_READ_1 1 0 3 80 -60 N -60 1010
-preplace netloc HISTOGRAM_ARBITER_FSM_0_bin_full_warning 1 1 3 570 100 N 100 1400
-preplace netloc HISTOGRAM_ARBITER_FSM_0_bin_written_but_never_read_warning 1 1 3 580 110 N 110 1390
+preplace netloc BINS_READ_1 1 0 3 70 720 N 720 960
+preplace netloc HISTOGRAM_ARBITER_FSM_0_bin_full_warning 1 1 3 N 310 990 140 1410
+preplace netloc HISTOGRAM_ARBITER_FSM_0_bin_written_but_never_read_warning 1 1 3 N 330 1050 150 1390
 preplace netloc HISTOGRAM_ARBITER_FSM_0_bram_addr_dbg 1 1 2 610 590 N
 preplace netloc HISTOGRAM_ARBITER_FSM_0_main_fsm_state_dbg 1 1 2 640 530 N
-preplace netloc HISTOGRAM_ARBITER_FSM_0_pixel_counter_dbg 1 1 2 600 600 1000
-preplace netloc HISTOGRAM_ARBITER_FSM_0_premature_pixel_done_error 1 1 3 590 120 N 120 1380
+preplace netloc HISTOGRAM_ARBITER_FSM_0_pixel_counter_dbg 1 1 2 600 600 1040
+preplace netloc HISTOGRAM_ARBITER_FSM_0_premature_pixel_done_error 1 1 3 N 350 1030 130 1400
 preplace netloc HISTOGRAM_ARBITER_FSM_0_reading_fsm_state_dbg 1 1 2 630 550 N
-preplace netloc HISTOGRAM_ARBITER_FSM_0_tdata_dbg 1 1 2 570 630 930
-preplace netloc HISTOGRAM_ARBITER_FSM_0_tlast_dbg 1 1 2 580 620 940
-preplace netloc HISTOGRAM_ARBITER_FSM_0_tready_dbg 1 1 2 590 610 950
+preplace netloc HISTOGRAM_ARBITER_FSM_0_tdata_dbg 1 1 2 570 630 960
+preplace netloc HISTOGRAM_ARBITER_FSM_0_tlast_dbg 1 1 2 580 620 970
+preplace netloc HISTOGRAM_ARBITER_FSM_0_tready_dbg 1 1 2 590 610 980
 preplace netloc HISTOGRAM_ARBITER_FSM_0_tvalid_dbg 1 1 2 620 570 N
-preplace netloc MAX_PIXELS_1 1 0 3 70J -50 N -50 980
+preplace netloc MAX_PIXELS_1 1 0 3 50J 880 620 870 N
 preplace netloc REFINDEX_BITS_0_1 1 0 1 NJ 170
-preplace netloc STOPRESULT_BITS_0_1 1 0 1 50J 190n
-preplace netloc aresetn_0_1 1 0 3 60 -40 N -40 1020
+preplace netloc STOPRESULT_BITS_0_1 1 0 1 70J 190n
+preplace netloc aresetn_0_1 1 0 3 80 -20 N -20 1010
 preplace netloc axis_data_fifo_0_almost_full 1 3 1 N 380
-preplace netloc clk_0_1 1 0 3 100 0 640 130 1030
-preplace netloc clk_0_2 1 0 3 40J -10 NJ -10 1040
-preplace netloc edge_detect_0_detect_out 1 0 4 120 -30 NJ -30 970 140 1350
-preplace netloc en_0_1 1 0 3 110 -20 N -20 960
-preplace netloc frame_clk_1 1 0 3 50J 1110 590 710 N
-preplace netloc frame_clk_edge_detect1_detect_out 1 1 3 N 800 990 150 1360
-preplace netloc in_line_and_in_frame_Res 1 1 2 NJ 1040 1040
-preplace netloc line_clk_1 1 0 3 20J 1120 640 730 N
-preplace netloc log_2_BIN_WIDTH_0_1 1 0 1 90J 140n
-preplace netloc pixel_clk_1 1 0 3 30J 1130 620 690 N
-preplace netloc pixel_posedge_detect_detect_out 1 1 2 N 640 920
-preplace netloc util_vector_logic_0_Res 1 3 1 1340 1010n
-preplace netloc xlconstant_0_dout 1 0 2 130 1140 570
+preplace netloc clk_0_1 1 0 3 110 -10 640 130 980
+preplace netloc clk_0_2 1 0 3 40J -40 NJ -40 1070
+preplace netloc edge_detect_0_detect_out 1 0 4 120 -30 NJ -30 1020 120 1370
+preplace netloc en_0_1 1 0 3 90 900 N 900 1040
+preplace netloc frame_clk_1 1 0 3 20J 910 590 710 N
+preplace netloc frame_clk_edge_detect1_detect_out 1 1 3 N 800 1000 160 1360
+preplace netloc in_line_and_in_frame_Res 1 1 2 NJ 1040 900
+preplace netloc line_clk_1 1 0 3 130J 970 640 730 N
+preplace netloc log_2_BIN_WIDTH_0_1 1 0 1 100J 140n
+preplace netloc pixel_clk_1 1 0 3 30J 890 570 690 N
+preplace netloc pixel_posedge_detect_detect_out 1 1 2 N 640 950
+preplace netloc util_vector_logic_0_Res 1 3 1 1410 1010n
 preplace netloc AXIS_IN_1 1 0 1 NJ 70
-preplace netloc HISTOGRAM_ARBITER_FSM_0_AXIS_OUT 1 1 2 NJ 290 1050
-preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 1370 350n
-preplace netloc ila_histo_out_TRIG_OUT 1 2 2 1060 160 1340
-preplace netloc sorter_0_AXIS_OUT 1 0 2 130 10 630
-preplace netloc ila_sorter_out1_TRIG_OUT 1 2 2 930J 170 1370J
+preplace netloc HISTOGRAM_ARBITER_FSM_0_AXIS_OUT 1 1 2 NJ 290 1080
+preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 1380 350n
+preplace netloc ila_sorter_out1_TRIG_OUT 1 2 2 910J 170 1380J
+preplace netloc sorter_0_AXIS_OUT 1 0 2 130 10 570
+preplace netloc TRIG_IN_0_1 1 0 3 60J 0 NJ 0 1060J
 preplace cgraphic comment_1 place bot 25 44 textcolor 4 linecolor 3 linewidth 2
 preplace cgraphic comment_0 place bot 9 21 textcolor 4 linecolor 3 linewidth 2
-levelinfo -pg 1 0 350 770 1200 1430
-pagesize -pg 1 -db -bbox -sgen -220 -70 1730 1150
+levelinfo -pg 1 -10 350 770 1220 1450
+pagesize -pg 1 -db -bbox -sgen -220 -70 1750 1210
 ",
    "bachelorarbeit_Layout_Default":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
@@ -150,8 +149,8 @@ levelinfo -pg 1 0 280 690 860
 pagesize -pg 1 -db -bbox -sgen -200 0 1140 1100
 ",
    "bachelorarbeit_PinnedBlocks":"",
-   "bachelorarbeit_ScaleFactor":"1.6245",
-   "bachelorarbeit_TopLeft":"979,47",
+   "bachelorarbeit_ScaleFactor":"0.150887",
+   "bachelorarbeit_TopLeft":"-2015,-1365",
    "comment_0":"disables the gpx2 when not recording a pixel
 ",
    "comment_1":"resets gpx2 refindex counter when new pixel is started",

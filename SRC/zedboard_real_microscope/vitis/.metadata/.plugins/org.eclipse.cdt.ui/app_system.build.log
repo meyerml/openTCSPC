@@ -1,0 +1,21 @@
+17:11:07 **** Incremental Build of configuration Debug for project app_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 54328 C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/platform.xpfm standalone_domain C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app_system/Debug/system.bif
+
+****** Software Commandline Tool (XSCT) v2024.2.0
+  **** SW Build 5239620 on Sun Nov 10 09:56:12 MST 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+sdcard_gen --xpfm C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/platform.xpfm --sys_config platform --bif C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app_system/Debug/system.bif --bitstream C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app/_ide/bitstream/zedboard_real_microscope_wrapper.bit --elf C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app/Debug/app.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app/_ide/bitstream/zedboard_real_microscope_wrapper.bit
+Running C:/Xilinx/Vitis/2024.2/bin/bootgen  -image C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+17:11:15 Build Finished (took 8s.592ms)
+

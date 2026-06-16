@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "histo_axis_data_fifo_0_0",
-    "cell_name": "axis_data_fifo_0",
+    "cell_name": "axis_data_fifo_histo",
     "component_reference": "xilinx.com:ip:axis_data_fifo:2.0",
     "ip_revision": "15",
     "gen_directory": "../../../../../../histogramming.gen/sources_1/bd/histo/ip/histo_axis_data_fifo_0_0",
@@ -35,7 +35,7 @@
         "Component_Name": [ { "value": "histo_axis_data_fifo_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "C_FAMILY": [ { "value": "zynq", "resolve_type": "generated", "usage": "all" } ],
+        "C_FAMILY": [ { "value": "zynquplus", "resolve_type": "generated", "usage": "all" } ],
         "C_AXIS_TDATA_WIDTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -53,17 +53,17 @@
         "C_PROG_FULL_THRESH": [ { "value": "11", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zedboard:part0:1.0" } ],
+        "ARCHITECTURE": [ { "value": "zynquplus" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7z020" } ],
-        "PACKAGE": [ { "value": "clg484" } ],
+        "DEVICE": [ { "value": "xczu3eg" } ],
+        "PACKAGE": [ { "value": "sfvc784" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "" } ]
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],

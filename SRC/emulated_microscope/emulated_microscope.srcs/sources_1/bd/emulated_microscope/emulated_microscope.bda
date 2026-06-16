@@ -256,7 +256,7 @@
                 "SX": "/Microscope_Emulator_0",
                 "SI": "S_AXI",
                 "SS": "Mem0",
-                "SV": "xilinx.com:user:Microscope_Emulator:1.13",
+                "SV": "xilinx.com:user:Microscope_Emulator:1.14",
                 "TM": "both",
                 "TU": "memory"
             },

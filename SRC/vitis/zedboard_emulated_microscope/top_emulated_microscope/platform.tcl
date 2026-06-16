@@ -69,3 +69,8 @@ platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/t
 platform generate -domains 
 platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope20.xsa}
 platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope21.xsa}
+platform generate -domains 
+platform active {top_emulated_microscope}
+platform config -updatehw {C:/openTCSPC3/Projects/zedboard_emulated_microscope/top_emulated_microscope22.xsa}
+platform generate -domains 

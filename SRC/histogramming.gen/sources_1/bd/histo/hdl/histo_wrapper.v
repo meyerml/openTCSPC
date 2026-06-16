@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Wed Apr  1 14:26:49 2026
+//Date        : Wed May 20 22:47:14 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target histo_wrapper.bd
 //Design      : histo_wrapper
@@ -23,6 +23,8 @@ module histo_wrapper
     M_AXIS_tvalid,
     REFINDEX_BITS,
     STOPRESULT_BITS,
+    TRIG_IN_0_ack,
+    TRIG_IN_0_trig,
     TRIG_OUT_ack,
     TRIG_OUT_trig,
     aresetn,
@@ -52,6 +54,8 @@ module histo_wrapper
   output M_AXIS_tvalid;
   input [5:0]REFINDEX_BITS;
   input [5:0]STOPRESULT_BITS;
+  output TRIG_IN_0_ack;
+  input TRIG_IN_0_trig;
   input TRIG_OUT_ack;
   output TRIG_OUT_trig;
   input aresetn;
@@ -82,6 +86,8 @@ module histo_wrapper
   wire M_AXIS_tvalid;
   wire [5:0]REFINDEX_BITS;
   wire [5:0]STOPRESULT_BITS;
+  wire TRIG_IN_0_ack;
+  wire TRIG_IN_0_trig;
   wire TRIG_OUT_ack;
   wire TRIG_OUT_trig;
   wire aresetn;
@@ -113,6 +119,8 @@ module histo_wrapper
         .M_AXIS_tvalid(M_AXIS_tvalid),
         .REFINDEX_BITS(REFINDEX_BITS),
         .STOPRESULT_BITS(STOPRESULT_BITS),
+        .TRIG_IN_0_ack(TRIG_IN_0_ack),
+        .TRIG_IN_0_trig(TRIG_IN_0_trig),
         .TRIG_OUT_ack(TRIG_OUT_ack),
         .TRIG_OUT_trig(TRIG_OUT_trig),
         .aresetn(aresetn),

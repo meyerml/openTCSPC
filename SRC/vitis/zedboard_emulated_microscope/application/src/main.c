@@ -37,7 +37,7 @@
 #include "gpx2/gpx2_if.h"
 #include "laser.h"
 #include "dma/dma.h"
-
+#include "xtime_l.h"
 // Declare the global array using uint32_t or u32 if properly defined
 //alignas(16) uint32_t image_buffer[DESTINATIONLENGTH];
 uint8_t* image_buffer = NULL;
@@ -199,6 +199,9 @@ int main(void){
 	axiGpOutSet(SECOND_ARESETN);
 	sleep(1);  //make sure all axi gpio are stable
 	enableInterrupts();
+
+    XTime tStart, tEnd;
+    XTime_GetTime(&tStart);
 	axiGpOutSet(EMULATOR_START);  //the DMA is already waiting, so start the LVDS engine
 
 	//int DMAstatus = DMAStart(image_buffer, DESTINATION_LENGTH);
@@ -238,6 +241,11 @@ int main(void){
 		//Xil_DCacheInvalidateRange((INTPTR)image_buffer, DESTINATIONLENGTH);
 
 	}
+    XTime_GetTime(&tEnd);
+
+    xil_printf("Output took %llu clock cycles.\n", 2*(tEnd - tStart));
+	int duration_ms = (((tEnd - tStart) / ((COUNTS_PER_SECOND/1000))));
+	xil_printf("Output took %d ms.\n", duration_ms);
 
 	/*
 	 * Test finished, write out data

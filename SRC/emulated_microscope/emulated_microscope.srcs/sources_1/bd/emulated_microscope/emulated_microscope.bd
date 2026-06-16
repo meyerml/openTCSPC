@@ -373,7 +373,7 @@
             "value": "100.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "250.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -463,7 +463,7 @@
             "value": "100000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "10000000"
+            "value": "250000000"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -775,7 +775,7 @@
             "value": "100"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "10"
+            "value": "250"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10"
@@ -3384,7 +3384,7 @@
         "inst_hier_path": "logic_high"
       },
       "Microscope_Emulator_0": {
-        "vlnv": "xilinx.com:user:Microscope_Emulator:1.13",
+        "vlnv": "xilinx.com:user:Microscope_Emulator:1.14",
         "ip_revision": "2",
         "xci_name": "emulated_microscope_Microscope_Emulator_1_0",
         "xci_path": "ip\\emulated_microscope_Microscope_Emulator_1_0\\emulated_microscope_Microscope_Emulator_1_0.xci",
@@ -3447,7 +3447,7 @@
         "inst_hier_path": "IDELAYE2_LD",
         "parameters": {
           "DIN_FROM": {
-            "value": "176"
+            "value": "175"
           },
           "DIN_TO": {
             "value": "175"
@@ -3456,7 +3456,7 @@
             "value": "256"
           },
           "DOUT_WIDTH": {
-            "value": "2"
+            "value": "1"
           }
         }
       },
@@ -3996,8 +3996,8 @@
           "ila_DMA_out1/clk",
           "Histogramming/clk",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "Microscope_Emulator_0/axi_clk",
-          "LVDS_to_AXIS_IDDR/clk"
+          "LVDS_to_AXIS_IDDR/clk",
+          "Microscope_Emulator_0/axi_clk"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {

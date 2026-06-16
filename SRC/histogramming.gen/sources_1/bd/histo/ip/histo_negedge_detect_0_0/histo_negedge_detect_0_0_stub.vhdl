@@ -2,13 +2,13 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Tue Mar 10 16:56:14 2026
+-- Date        : Fri Apr 24 14:56:25 2026
 -- Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/marce/OneDrive/Desktop/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_negedge_detect_0_0/histo_negedge_detect_0_0_stub.vhdl
+--               c:/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_negedge_detect_0_0/histo_negedge_detect_0_0_stub.vhdl
 -- Design      : histo_negedge_detect_0_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7z020clg484-1
+-- Device      : xczu3eg-sfvc784-1-e
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -18,7 +18,6 @@ entity histo_negedge_detect_0_0 is
     clk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
     edge_in : in STD_LOGIC;
-    edge_valid : in STD_LOGIC;
     detect_out : out STD_LOGIC
   );
 
@@ -36,7 +35,7 @@ architecture stub of histo_negedge_detect_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "clk,aresetn,edge_in,edge_valid,detect_out";
+  attribute black_box_pad_pin of stub : architecture is "clk,aresetn,edge_in,detect_out";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_MODE : string;

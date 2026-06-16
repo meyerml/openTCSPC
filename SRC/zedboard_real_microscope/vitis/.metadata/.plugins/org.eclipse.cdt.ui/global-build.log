@@ -1,0 +1,104 @@
+Nothing to build in platform 'platform'
+
+17:45:40 **** Incremental Build of configuration Debug for project app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/laser.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/laser.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/laser.d" -MT"src/laser.o" -o "src/laser.o" "../src/laser.c"
+In file included from ../src/dma/dma.h:38,
+                 from ../src/laser.c:2:
+../src/dma/../global_defines.h:34: warning: "FRAME_WIDTH" redefined
+   34 | #define FRAME_WIDTH 16  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+      | 
+../src/dma/../global_defines.h:28: note: this is the location of the previous definition
+   28 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
+      | 
+../src/dma/dma.h:63:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   63 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+../src/laser.c: In function 'prepare_laser_emulator':
+../src/laser.c:31:19: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   31 |         if (IMAGE == "CHECKERBOARD_512"){
+      |                   ^~
+../src/laser.c:32:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
+   32 |                 binary_data = &checkerboard_512;
+      |                             ^
+../src/laser.c:33:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   33 |         } else if (IMAGE == "CONVALLARIA"){
+      |                          ^~
+../src/laser.c:34:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[16384]' {aka 'const long unsigned int (*)[16384]'} [-Wincompatible-pointer-types]
+   34 |                 binary_data = &convallaria;
+      |                             ^
+../src/laser.c:35:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   35 |         } else if (IMAGE == "BARCODE"){
+      |                          ^~
+../src/laser.c:36:37: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[16384]' {aka 'const long unsigned int (*)[16384]'} [-Wincompatible-pointer-types]
+   36 |                         binary_data = &barcode;
+      |                                     ^
+../src/laser.c:37:25: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   37 |         }else if (IMAGE == "BARCODE_512"){
+      |                         ^~
+../src/laser.c:38:37: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
+   38 |                         binary_data = &barcode_512;
+      |                                     ^
+../src/laser.c:39:25: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   39 |         }else if (IMAGE == "CONVALLARIA_512"){
+      |                         ^~
+../src/laser.c:40:29: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'const uint32_t (*)[262144]' {aka 'const long unsigned int (*)[262144]'} [-Wincompatible-pointer-types]
+   40 |                 binary_data = &convallaria_512;
+      |                             ^
+../src/laser.c:46:25: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+   46 |         if((NUM_PIXELS)>pow(2,18)){
+      |                         ^~~
+../src/laser.c:8:1: note: include '<math.h>' or provide a declaration of 'pow'
+    7 | #include "images/convallaria_512.h"
+  +++ |+#include <math.h>
+    8 | 
+../src/laser.c:46:25: warning: incompatible implicit declaration of built-in function 'pow' [-Wbuiltin-declaration-mismatch]
+   46 |         if((NUM_PIXELS)>pow(2,18)){
+      |                         ^~~
+../src/laser.c:46:25: note: include '<math.h>' or provide a declaration of 'pow'
+In file included from ../src/laser.h:7,
+                 from ../src/laser.c:1:
+C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/sw/platform/standalone_domain/bspinclude/include/xparameters.h:223:45: warning: initialization of 'void *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  223 | #define XPAR_MICROSCOPE_EMULATOR_0_BASEADDR 0x40040000
+      |                                             ^~~~~~~~~~
+../src/laser.h:12:24: note: in expansion of macro 'XPAR_MICROSCOPE_EMULATOR_0_BASEADDR'
+   12 | #define BRAM_BASE_ADDR XPAR_MICROSCOPE_EMULATOR_0_BASEADDR
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/laser.c:52:22: note: in expansion of macro 'BRAM_BASE_ADDR'
+   52 |     void *bram_ptr = BRAM_BASE_ADDR;
+      |                      ^~~~~~~~~~~~~~
+../src/laser.c:80:21: warning: unused variable 'debug_var' [-Wunused-variable]
+   80 |                 int debug_var = 1;
+      |                     ^~~~~~~~~
+../src/laser.c:85:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+   85 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
+      |                                 ^
+../src/laser.c:102:60: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  102 |                 if(((i%ORIGINAL_FRAME_WIDTH)<FRAME_WIDTH)&i<(FRAME_WIDTH*ORIGINAL_FRAME_WIDTH)){
+      |                                                           ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/laser.c:117:33: warning: initialization of 'uint32_t' {aka 'long unsigned int'} from 'uint32_t *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+  117 |         uint32_t bram_ptr_neu = (uint32_t*)(bram_ptr + bram_addr*4);
+      |                                 ^
+../src/laser.c: In function 'FrameIntrHandler':
+../src/laser.c:132:9: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  132 |         sleep(1);  //allow transfers to complete before continueing
+      |         ^~~~~
+'Finished building: ../src/laser.c'
+' '
+'Building target: app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/sw/platform/standalone_domain/bsplib/lib -o "app.elf"  ./src/wdt/scuwdt_if.o  ./src/uart/ps7_uart1_if.o  ./src/spi/axi_spi_if.o  ./src/sd/sdCard.o  ./src/gpx2/gpx2_if.o  ./src/gpio/axi_gpio_if.o ./src/gpio/ps7_gpio_if.o  ./src/dma/dma.o  ./src/intr_sys.o ./src/laser.o ./src/main.o ./src/platform.o ./src/report.o ./src/system_config.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+3424448	   2896	151050368	154477712	9352490	app.elf
+'Finished building: app.elf.size'
+' '

@@ -64,15 +64,15 @@ module laser_signal_generator #(
     
     //debug outputs
     output wire [4:0] CNTVALUEOUT_dbg_0, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_1, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_2, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_3, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_4, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_5, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_6, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_7, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_8, //debugging output to verify the IDELAYE2 delay value is updated
-    output wire [4:0] CNTVALUEOUT_dbg_9, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_1, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_2, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_3, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_4, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_5, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_6, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_7, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_8, //debugging output to verify the IDELAYE2 delay value is updated
+   // output wire [4:0] CNTVALUEOUT_dbg_9, //debugging output to verify the IDELAYE2 delay value is updated
 
     output wire [$clog2(warmup_pulses)-1:0] warmup_pulse_counter_dbg,
     output wire  start_frame_dbg,
@@ -360,16 +360,16 @@ DelayChain DelayChain_inst (
    .CNTVALUEIN(CNTVALUEIN),   // 5-bit input: Counter value input
    .refclk_in(refclk_out),           // 1-bit input: Internal delay data input
    .LD(LD_r),   // signal to load a new CLNTVALUEIN
-   .CNTVALUEOUT_0(CNTVALUEOUT_dbg_0),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_1(CNTVALUEOUT_dbg_1),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_2(CNTVALUEOUT_dbg_2),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_3(CNTVALUEOUT_dbg_3),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_4(CNTVALUEOUT_dbg_4),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_5(CNTVALUEOUT_dbg_5),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_6(CNTVALUEOUT_dbg_6),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_7(CNTVALUEOUT_dbg_7),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_8(CNTVALUEOUT_dbg_8),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
-   .CNTVALUEOUT_9(CNTVALUEOUT_dbg_9)  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   .CNTVALUEOUT_0(CNTVALUEOUT_dbg_0)  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_1(CNTVALUEOUT_dbg_1),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_2(CNTVALUEOUT_dbg_2),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_3(CNTVALUEOUT_dbg_3)  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_4(CNTVALUEOUT_dbg_4),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_5(CNTVALUEOUT_dbg_5),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_6(CNTVALUEOUT_dbg_6),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_7(CNTVALUEOUT_dbg_7),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_8(CNTVALUEOUT_dbg_8),  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
+   //.CNTVALUEOUT_9(CNTVALUEOUT_dbg_9)  //the CNTVALUEOUT of the first IDELAYE2 Element. for verifying that the load was successful
 
 );
 

@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xlslice_v1_0_4_xlslice,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "emulated_microscope_CNTVALUEIN_CLK_1,xlslice_v1_0_4_xlslice,{}" *)
-(* CORE_GENERATION_INFO = "emulated_microscope_CNTVALUEIN_CLK_1,xlslice_v1_0_4_xlslice,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=256,DIN_FROM=176,DIN_TO=175}" *)
+(* CORE_GENERATION_INFO = "emulated_microscope_CNTVALUEIN_CLK_1,xlslice_v1_0_4_xlslice,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=256,DIN_FROM=175,DIN_TO=175}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module emulated_microscope_CNTVALUEIN_CLK_1 (
   Din,
@@ -60,11 +60,11 @@ module emulated_microscope_CNTVALUEIN_CLK_1 (
 );
 
 input wire [255 : 0] Din;
-output wire [1 : 0] Dout;
+output wire [0 : 0] Dout;
 
   xlslice_v1_0_4_xlslice #(
     .DIN_WIDTH(256),
-    .DIN_FROM(176),
+    .DIN_FROM(175),
     .DIN_TO(175)
   ) inst (
     .Din(Din),

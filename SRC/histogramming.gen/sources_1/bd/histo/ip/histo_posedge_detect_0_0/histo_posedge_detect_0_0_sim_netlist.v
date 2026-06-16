@@ -2,14 +2,14 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Tue Mar 10 16:56:14 2026
+// Date        : Fri Apr 24 14:56:26 2026
 // Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/marce/OneDrive/Desktop/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_posedge_detect_0_0/histo_posedge_detect_0_0_sim_netlist.v
+//               c:/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_posedge_detect_0_0/histo_posedge_detect_0_0_sim_netlist.v
 // Design      : histo_posedge_detect_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7z020clg484-1
+// Device      : xczu3eg-sfvc784-1-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -20,26 +20,22 @@ module histo_posedge_detect_0_0
    (clk,
     aresetn,
     edge_in,
-    edge_valid,
     detect_out);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN histo_clk, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aresetn;
   input edge_in;
-  input edge_valid;
   output detect_out;
 
   wire aresetn;
   wire clk;
   wire detect_out;
   wire edge_in;
-  wire edge_valid;
 
   histo_posedge_detect_0_0_posedge_detect inst
        (.aresetn(aresetn),
         .clk(clk),
         .detect_out(detect_out),
-        .edge_in(edge_in),
-        .edge_valid(edge_valid));
+        .edge_in(edge_in));
 endmodule
 
 (* ORIG_REF_NAME = "posedge_detect" *) 
@@ -47,68 +43,50 @@ module histo_posedge_detect_0_0_posedge_detect
    (detect_out,
     edge_in,
     clk,
-    edge_valid,
     aresetn);
   output detect_out;
   input edge_in;
   input clk;
-  input edge_valid;
   input aresetn;
 
   wire aresetn;
   wire clk;
   wire detect_out;
-  wire detect_out0_n_0;
   wire detect_out_i_1_n_0;
+  wire detect_out_i_2_n_0;
   wire edge_in;
-  wire edge_valid;
-  wire edge_valid_old;
-  wire edge_valid_very_old;
   wire old;
   wire very_old;
   wire very_very_old;
   wire very_very_old_i_1_n_0;
 
-  LUT3 #(
-    .INIT(8'h20)) 
-    detect_out0
+  LUT2 #(
+    .INIT(4'h2)) 
+    detect_out_i_1
        (.I0(very_old),
         .I1(very_very_old),
-        .I2(edge_valid_very_old),
-        .O(detect_out0_n_0));
+        .O(detect_out_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
-    detect_out_i_1
+    detect_out_i_2
        (.I0(aresetn),
-        .O(detect_out_i_1_n_0));
+        .O(detect_out_i_2_n_0));
   FDCE detect_out_reg
        (.C(clk),
         .CE(1'b1),
-        .CLR(detect_out_i_1_n_0),
-        .D(detect_out0_n_0),
+        .CLR(detect_out_i_2_n_0),
+        .D(detect_out_i_1_n_0),
         .Q(detect_out));
-  FDCE edge_valid_old_reg
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(detect_out_i_1_n_0),
-        .D(edge_valid),
-        .Q(edge_valid_old));
-  FDCE edge_valid_very_old_reg
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(detect_out_i_1_n_0),
-        .D(edge_valid_old),
-        .Q(edge_valid_very_old));
   FDCE old_reg
        (.C(clk),
         .CE(1'b1),
-        .CLR(detect_out_i_1_n_0),
+        .CLR(detect_out_i_2_n_0),
         .D(edge_in),
         .Q(old));
   FDCE very_old_reg
        (.C(clk),
         .CE(1'b1),
-        .CLR(detect_out_i_1_n_0),
+        .CLR(detect_out_i_2_n_0),
         .D(old),
         .Q(very_old));
   LUT3 #(

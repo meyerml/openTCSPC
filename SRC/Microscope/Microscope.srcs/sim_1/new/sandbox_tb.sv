@@ -222,10 +222,12 @@ module laser_emulator_tb;
                         .S_AXI_wready(axi4lite_master.wready),
                         .S_AXI_wstrb(axi4lite_master.wstrb),
                         .S_AXI_wvalid(axi4lite_master.wvalid),
-                        .axi_aresetn(aresetn),
-                        .laser_aresetn(aresetn),
-                       // .TRIG_IN_ack(),
-                       // .TRIG_IN_trig(),
+                        .axi_resetn(aresetn),
+                        .aresetn_laser(aresetn),
+                        .TRIG_IN_ack(),
+                        .TRIG_IN_trig(),
+                        .TRIG_OUT_ack(),
+                        .TRIG_OUT_trig(),
                         .axi_clk(clk),
                         
                                     .*);

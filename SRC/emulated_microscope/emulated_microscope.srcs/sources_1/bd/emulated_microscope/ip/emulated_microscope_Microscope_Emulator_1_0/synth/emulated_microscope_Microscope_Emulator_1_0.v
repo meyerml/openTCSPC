@@ -47,12 +47,12 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:Microscope_Emulator:1.13
+// IP VLNV: xilinx.com:user:Microscope_Emulator:1.14
 // IP Revision: 2
 
 (* X_CORE_INFO = "Microscope_Emulator,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "emulated_microscope_Microscope_Emulator_1_0,Microscope_Emulator,{}" *)
-(* CORE_GENERATION_INFO = "emulated_microscope_Microscope_Emulator_1_0,Microscope_Emulator,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Microscope_Emulator,x_ipVersion=1.13,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "emulated_microscope_Microscope_Emulator_1_0,Microscope_Emulator,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Microscope_Emulator,x_ipVersion=1.14,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "IPI" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module emulated_microscope_Microscope_Emulator_1_0 (

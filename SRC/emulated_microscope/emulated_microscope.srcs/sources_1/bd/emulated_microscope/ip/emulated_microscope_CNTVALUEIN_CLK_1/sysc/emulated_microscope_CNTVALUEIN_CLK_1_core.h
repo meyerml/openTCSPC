@@ -39,7 +39,7 @@ class emulated_microscope_CNTVALUEIN_CLK_1_core : public sc_module
    
     public: 
         sc_in< sc_bv<256 > >   Din;
-        sc_out< sc_bv <2 > >  Dout;
+        sc_out< sc_bv <1 > >  Dout;
 
 };
 

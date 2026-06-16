@@ -3,7 +3,7 @@
 [properties]
 ACTIVE=1
 RUNTIME=10us
-TOP=LVDS_to_AXIS_IDDR_tb
+TOP=IDDR_tb
 XSIM.SIMULATE.RUNTIME=10us
 
 [files]

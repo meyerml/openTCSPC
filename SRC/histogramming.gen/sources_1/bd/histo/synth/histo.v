@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Wed Apr  1 14:26:49 2026
+//Date        : Wed May 20 22:47:14 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target histo.bd
 //Design      : histo
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "histo,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=histo,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "histo.hwdef" *) 
+(* CORE_GENERATION_INFO = "histo,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=histo,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "histo.hwdef" *) 
 module histo
    (AXIS_IN_tdata,
     AXIS_IN_tlast,
@@ -24,6 +24,8 @@ module histo
     M_AXIS_tvalid,
     REFINDEX_BITS,
     STOPRESULT_BITS,
+    TRIG_IN_0_ack,
+    TRIG_IN_0_trig,
     TRIG_OUT_ack,
     TRIG_OUT_trig,
     aresetn,
@@ -53,6 +55,8 @@ module histo
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output M_AXIS_tvalid;
   input [5:0]REFINDEX_BITS;
   input [5:0]STOPRESULT_BITS;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN_0 ACK" *) (* X_INTERFACE_MODE = "Slave" *) output TRIG_IN_0_ack;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN_0 TRIG" *) input TRIG_IN_0_trig;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *) (* X_INTERFACE_MODE = "Master" *) input TRIG_OUT_ack;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *) output TRIG_OUT_trig;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
@@ -98,6 +102,8 @@ module histo
   wire M_AXIS_tvalid;
   wire [5:0]REFINDEX_BITS;
   wire [5:0]STOPRESULT_BITS;
+  wire TRIG_IN_0_ack;
+  wire TRIG_IN_0_trig;
   wire TRIG_OUT_ack;
   wire TRIG_OUT_trig;
   wire aresetn;
@@ -109,8 +115,6 @@ module histo
   wire en;
   wire frame_clk;
   wire ila_clk;
-  wire ila_histo_out_TRIG_OUT_ACK;
-  wire ila_histo_out_TRIG_OUT_TRIG;
   wire [0:0]in_line_and_in_frame_Res;
   wire line_clk;
   wire [15:0]log_2_BIN_WIDTH;
@@ -123,10 +127,7 @@ module histo
   wire sorter_0_AXIS_OUT_TLAST;
   wire sorter_0_AXIS_OUT_TREADY;
   wire sorter_0_AXIS_OUT_TVALID;
-  wire [0:0]xlconstant_0_dout;
 
-  histo_xlconstant_0_0 HIGH
-       (.dout(xlconstant_0_dout));
   histo_HISTOGRAM_ARBITER_FSM_0_0 HISTOGRAM_ARBITER_FSM_0
        (.BINS_TO_READ(BINS_TO_READ),
         .MAX_PIXELS(MAX_PIXELS),
@@ -153,7 +154,7 @@ module histo
         .tvalid_dbg(HISTOGRAM_ARBITER_FSM_0_tvalid_dbg),
         .tvalid_in(sorter_0_AXIS_OUT_TVALID),
         .tvalid_out(HISTOGRAM_ARBITER_FSM_0_AXIS_OUT_TVALID));
-  histo_axis_data_fifo_0_0 axis_data_fifo_0
+  histo_axis_data_fifo_0_0 axis_data_fifo_histo
        (.almost_full(buffer_almost_full),
         .m_axis_tdata(M_AXIS_tdata),
         .m_axis_tlast(M_AXIS_tlast),
@@ -169,8 +170,7 @@ module histo
        (.aresetn(aresetn),
         .clk(clk),
         .detect_out(negedge_frame),
-        .edge_in(frame_clk),
-        .edge_valid(xlconstant_0_dout));
+        .edge_in(frame_clk));
   histo_ila_0_0 ila_histo_int
        (.clk(ila_clk),
         .probe0(HISTOGRAM_ARBITER_FSM_0_main_fsm_state_dbg),
@@ -183,7 +183,10 @@ module histo
         .probe15(pixel_posedge_detect_detect_out),
         .probe16(BINS_TO_READ),
         .probe17(MAX_PIXELS),
+        .probe18(premature_pixel_done_error),
+        .probe19(bin_written_but_never_read_warning),
         .probe2(HISTOGRAM_ARBITER_FSM_0_tvalid_dbg),
+        .probe20(bin_full_warning),
         .probe3(HISTOGRAM_ARBITER_FSM_0_bram_addr_dbg),
         .probe4(HISTOGRAM_ARBITER_FSM_0_pixel_counter_dbg),
         .probe5(HISTOGRAM_ARBITER_FSM_0_tready_dbg),
@@ -191,8 +194,8 @@ module histo
         .probe7(HISTOGRAM_ARBITER_FSM_0_tdata_dbg),
         .probe8(pixel_clk),
         .probe9(frame_clk),
-        .trig_in(ila_histo_out_TRIG_OUT_TRIG),
-        .trig_in_ack(ila_histo_out_TRIG_OUT_ACK));
+        .trig_in(TRIG_IN_0_trig),
+        .trig_in_ack(TRIG_IN_0_ack));
   histo_ila_sorter_0 ila_histo_out
        (.clk(clk),
         .probe0(HISTOGRAM_ARBITER_FSM_0_AXIS_OUT_TREADY),
@@ -203,9 +206,7 @@ module histo
         .probe5(1'b0),
         .probe6({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .probe7(1'b0),
-        .probe8(1'b0),
-        .trig_out(ila_histo_out_TRIG_OUT_TRIG),
-        .trig_out_ack(ila_histo_out_TRIG_OUT_ACK));
+        .probe8(1'b0));
   histo_ila_histo_out_0 ila_sorter_out1
        (.clk(clk),
         .probe0(sorter_0_AXIS_OUT_TREADY),
@@ -234,8 +235,7 @@ module histo
        (.aresetn(aresetn),
         .clk(clk),
         .detect_out(pixel_posedge_detect_detect_out),
-        .edge_in(pixel_clk),
-        .edge_valid(xlconstant_0_dout));
+        .edge_in(pixel_clk));
   histo_sorter_0_0 sorter_0
        (.REFINDEX_BITS(REFINDEX_BITS),
         .STOPRESULT_BITS(STOPRESULT_BITS),

@@ -2056,7 +2056,7 @@
         "C_PROBE1_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_PROBE0_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_DATA_DEPTH": [ { "value": "1024", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_NUM_OF_PROBES": [ { "value": "9", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_NUM_OF_PROBES": [ { "value": "9", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_XLNX_HW_PROBE_INFO": [ { "value": "DEFAULT", "resolve_type": "user", "usage": "all" } ],
         "Component_Name": [ { "value": "histo_ila_histo_out_0", "resolve_type": "user", "usage": "all" } ],
         "C_PROBE70_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -3116,8 +3116,8 @@
         "C_SLOT_0_AXIS_TID_WIDTH": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_0_AXIS_TUSER_WIDTH": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_SLOT_0_AXIS_TDEST_WIDTH": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_ENABLE_ILA_AXI_MON": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "C_MONITOR_TYPE": [ { "value": "AXI", "resolve_type": "user", "usage": "all" } ]
+        "C_ENABLE_ILA_AXI_MON": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_MONITOR_TYPE": [ { "value": "AXI", "value_src": "user", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "C_XLNX_HW_PROBE_INFO": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
@@ -3125,7 +3125,7 @@
         "C_XLNX_HW_PROBE_INFO_DUMMY2": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
         "C_XLNX_HW_PROBE_INFO_DUMMY3": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
         "C_XLNX_HW_PROBE_INFO_DUMMY4": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
-        "C_XDEVICEFAMILY": [ { "value": "zynq", "resolve_type": "generated", "usage": "all" } ],
+        "C_XDEVICEFAMILY": [ { "value": "zynquplus", "resolve_type": "generated", "usage": "all" } ],
         "C_CORE_TYPE": [ { "value": "1", "format": "long", "usage": "all" } ],
         "C_CORE_INFO1": [ { "value": "0", "format": "long", "usage": "all" } ],
         "C_CORE_INFO2": [ { "value": "0", "format": "long", "usage": "all" } ],
@@ -6246,17 +6246,17 @@
         "C_CLKOUT0_DIVIDE_F": [ { "value": "10", "resolve_type": "generated", "format": "float", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zedboard:part0:1.0" } ],
+        "ARCHITECTURE": [ { "value": "zynquplus" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7z020" } ],
-        "PACKAGE": [ { "value": "clg484" } ],
+        "DEVICE": [ { "value": "xczu3eg" } ],
+        "PACKAGE": [ { "value": "sfvc784" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "" } ]
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],

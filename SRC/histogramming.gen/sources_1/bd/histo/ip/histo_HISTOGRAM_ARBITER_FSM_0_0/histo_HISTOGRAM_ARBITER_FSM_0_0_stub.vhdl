@@ -2,13 +2,13 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Tue Mar 31 01:52:28 2026
+-- Date        : Fri Apr 24 14:56:27 2026
 -- Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_HISTOGRAM_ARBITER_FSM_0_0/histo_HISTOGRAM_ARBITER_FSM_0_0_stub.vhdl
 -- Design      : histo_HISTOGRAM_ARBITER_FSM_0_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7z020clg484-1
+-- Device      : xczu3eg-sfvc784-1-e
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

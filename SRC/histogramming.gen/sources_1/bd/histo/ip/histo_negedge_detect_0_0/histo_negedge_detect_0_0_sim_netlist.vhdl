@@ -2,14 +2,14 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Tue Mar 10 16:56:14 2026
+-- Date        : Fri Apr 24 14:56:25 2026
 -- Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/marce/OneDrive/Desktop/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_negedge_detect_0_0/histo_negedge_detect_0_0_sim_netlist.vhdl
+--               c:/openTCSPC3/SRC/histogramming.gen/sources_1/bd/histo/ip/histo_negedge_detect_0_0/histo_negedge_detect_0_0_sim_netlist.vhdl
 -- Design      : histo_negedge_detect_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7z020clg484-1
+-- Device      : xczu3eg-sfvc784-1-e
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -20,7 +20,6 @@ entity histo_negedge_detect_0_0_negedge_detect is
     detect_out : out STD_LOGIC;
     edge_in : in STD_LOGIC;
     clk : in STD_LOGIC;
-    edge_valid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -28,62 +27,43 @@ entity histo_negedge_detect_0_0_negedge_detect is
 end histo_negedge_detect_0_0_negedge_detect;
 
 architecture STRUCTURE of histo_negedge_detect_0_0_negedge_detect is
-  signal detect_out0_n_0 : STD_LOGIC;
   signal detect_out_i_1_n_0 : STD_LOGIC;
-  signal edge_valid_old : STD_LOGIC;
-  signal edge_valid_very_old : STD_LOGIC;
+  signal detect_out_i_2_n_0 : STD_LOGIC;
   signal old : STD_LOGIC;
   signal very_old : STD_LOGIC;
   signal very_very_old : STD_LOGIC;
   signal very_very_old_i_1_n_0 : STD_LOGIC;
 begin
-detect_out0: unisim.vcomponents.LUT3
+detect_out_i_1: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"08"
+      INIT => X"2"
     )
         port map (
       I0 => very_very_old,
-      I1 => edge_valid_very_old,
-      I2 => very_old,
-      O => detect_out0_n_0
+      I1 => very_old,
+      O => detect_out_i_1_n_0
     );
-detect_out_i_1: unisim.vcomponents.LUT1
+detect_out_i_2: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => aresetn,
-      O => detect_out_i_1_n_0
+      O => detect_out_i_2_n_0
     );
 detect_out_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => detect_out_i_1_n_0,
-      D => detect_out0_n_0,
+      CLR => detect_out_i_2_n_0,
+      D => detect_out_i_1_n_0,
       Q => detect_out
-    );
-edge_valid_old_reg: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => detect_out_i_1_n_0,
-      D => edge_valid,
-      Q => edge_valid_old
-    );
-edge_valid_very_old_reg: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => detect_out_i_1_n_0,
-      D => edge_valid_old,
-      Q => edge_valid_very_old
     );
 old_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => detect_out_i_1_n_0,
+      CLR => detect_out_i_2_n_0,
       D => edge_in,
       Q => old
     );
@@ -91,7 +71,7 @@ very_old_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => detect_out_i_1_n_0,
+      CLR => detect_out_i_2_n_0,
       D => old,
       Q => very_old
     );
@@ -123,7 +103,6 @@ entity histo_negedge_detect_0_0 is
     clk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
     edge_in : in STD_LOGIC;
-    edge_valid : in STD_LOGIC;
     detect_out : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -154,7 +133,6 @@ inst: entity work.histo_negedge_detect_0_0_negedge_detect
       aresetn => aresetn,
       clk => clk,
       detect_out => detect_out,
-      edge_in => edge_in,
-      edge_valid => edge_valid
+      edge_in => edge_in
     );
 end STRUCTURE;

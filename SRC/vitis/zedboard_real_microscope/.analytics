@@ -1,0 +1,97 @@
+timestamp=[2026-06-04 21:04:56], mode=WORKBENCH_START, duration=0:00:07.106, duration_ms=7106, data={}
+timestamp=[2026-06-04 21:04:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.564, duration_ms=564, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2026-06-04 21:04:58], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.881, duration_ms=881, data={}
+timestamp=[2026-06-05 07:56:24], mode=WORKBENCH_START, duration=0:00:12.429, duration_ms=12429, data={}
+timestamp=[2026-06-05 07:56:25], mode=WORKBENCH_UI_INIT, duration=0:00:00.701, duration_ms=701, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2026-06-05 07:56:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.811, duration_ms=811, data={}
+timestamp=[2026-06-05 07:58:48], mode=PLATFORM_CREATION, duration=0:00:32.643, duration_ms=32643, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-06-05 08:22:29], mode=APP_CREATION, duration=0:00:11.237, duration_ms=11237, data={name=app, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=platform, application_type=application}
+timestamp=[2026-06-08 12:21:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.335, duration_ms=335, data={}
+timestamp=[2026-06-08 12:21:58], mode=WORKBENCH_START, duration=0:00:09.585, duration_ms=9585, data={}
+timestamp=[2026-06-08 12:21:59], mode=WORKBENCH_UI_INIT, duration=0:00:01.209, duration_ms=1209, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-08 12:44:17], mode=PLATFORM_GENERATION, duration=0:00:41.483, duration_ms=41483, data={name=platform}
+timestamp=[2026-06-08 12:45:14], mode=BUILD, duration=0:00:06.998, duration_ms=6998, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 12:45:29], mode=BUILD, duration=0:00:07.410, duration_ms=7410, data={name=app_system, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 17:07:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.400, duration_ms=400, data={}
+timestamp=[2026-06-08 17:07:48], mode=WORKBENCH_START, duration=0:00:15.390, duration_ms=15390, data={}
+timestamp=[2026-06-08 17:07:49], mode=WORKBENCH_UI_INIT, duration=0:00:00.775, duration_ms=775, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-08 17:13:11], mode=PLATFORM_GENERATION, duration=0:00:38.581, duration_ms=38581, data={name=platform}
+timestamp=[2026-06-08 17:13:33], mode=BUILD, duration=0:00:07.023, duration_ms=7023, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 17:13:47], mode=BUILD, duration=0:00:07.332, duration_ms=7332, data={name=app_system, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 17:32:54], mode=PLATFORM_GENERATION, duration=0:00:07.044, duration_ms=7044, data={name=platform}
+timestamp=[2026-06-08 17:32:55], mode=BUILD, duration=0:00:00.720, duration_ms=720, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-08 17:33:04], mode=BUILD, duration=0:00:08.351, duration_ms=8351, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 19:12:21], mode=PLATFORM_GENERATION, duration=0:00:18.995, duration_ms=18995, data={name=platform}
+timestamp=[2026-06-08 19:12:51], mode=BUILD, duration=0:00:07.531, duration_ms=7531, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 19:13:06], mode=BUILD, duration=0:00:07.677, duration_ms=7677, data={name=app_system, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 19:36:14], mode=WORKBENCH_START, duration=0:00:11.179, duration_ms=11179, data={}
+timestamp=[2026-06-08 19:36:14], mode=WORKBENCH_UI_INIT, duration=0:00:00.489, duration_ms=489, data={editors_count=11, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-08 19:36:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.256, duration_ms=256, data={}
+timestamp=[2026-06-08 21:47:13], mode=WORKBENCH_START, duration=0:00:11.221, duration_ms=11221, data={}
+timestamp=[2026-06-08 21:47:14], mode=WORKBENCH_UI_INIT, duration=0:00:01.033, duration_ms=1033, data={editors_count=11, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-08 21:47:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.372, duration_ms=372, data={}
+timestamp=[2026-06-08 22:26:35], mode=PLATFORM_GENERATION, duration=0:00:15.791, duration_ms=15791, data={name=platform}
+timestamp=[2026-06-08 22:26:36], mode=BUILD, duration=0:00:00.388, duration_ms=388, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-08 22:26:58], mode=BUILD, duration=0:00:07.333, duration_ms=7333, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 22:27:12], mode=BUILD, duration=0:00:07.305, duration_ms=7305, data={name=app_system, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 23:16:41], mode=PLATFORM_GENERATION, duration=0:00:12.996, duration_ms=12996, data={name=platform}
+timestamp=[2026-06-08 23:16:41], mode=BUILD, duration=0:00:00.288, duration_ms=288, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-08 23:17:02], mode=BUILD, duration=0:00:06.591, duration_ms=6591, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 23:17:17], mode=BUILD, duration=0:00:07.349, duration_ms=7349, data={name=app_system, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 23:28:00], mode=BUILD, duration=0:00:00.305, duration_ms=305, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-08 23:28:07], mode=BUILD, duration=0:00:07.099, duration_ms=7099, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 23:49:13], mode=BUILD, duration=0:00:04.894, duration_ms=4894, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 23:50:19], mode=BUILD, duration=0:00:01.044, duration_ms=1044, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-08 23:53:10], mode=BUILD, duration=0:00:04.528, duration_ms=4528, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-11 15:06:54], mode=WORKBENCH_START, duration=0:00:12.279, duration_ms=12279, data={}
+timestamp=[2026-06-11 15:06:55], mode=WORKBENCH_UI_INIT, duration=0:00:00.890, duration_ms=890, data={editors_count=12, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-11 15:06:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.380, duration_ms=380, data={}
+timestamp=[2026-06-11 15:08:38], mode=PLATFORM_GENERATION, duration=0:00:26.498, duration_ms=26498, data={name=platform}
+timestamp=[2026-06-11 15:08:39], mode=BUILD, duration=0:00:00.394, duration_ms=394, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-11 15:09:04], mode=BUILD, duration=0:00:08.763, duration_ms=8763, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-11 15:16:55], mode=BUILD, duration=0:00:04.432, duration_ms=4432, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-11 17:41:58], mode=BUILD, duration=0:00:04.562, duration_ms=4562, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-11 18:23:08], mode=BUILD, duration=0:00:04.713, duration_ms=4713, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-11 20:18:34], mode=BUILD, duration=0:00:06.459, duration_ms=6459, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:06:31], mode=PLATFORM_GENERATION, duration=0:00:15.277, duration_ms=15277, data={name=platform}
+timestamp=[2026-06-12 11:06:33], mode=BUILD, duration=0:00:01.933, duration_ms=1933, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:11:09], mode=BUILD, duration=0:00:00.748, duration_ms=748, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:11:49], mode=BUILD, duration=0:00:00.971, duration_ms=971, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:12:13], mode=BUILD, duration=0:00:00.303, duration_ms=303, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-12 11:12:19], mode=BUILD, duration=0:00:05.996, duration_ms=5996, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:12:38], mode=BUILD, duration=0:00:00.714, duration_ms=714, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:12:55], mode=BUILD, duration=0:00:00.735, duration_ms=735, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:13:38], mode=BUILD, duration=0:00:01.874, duration_ms=1874, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:15:36], mode=BUILD, duration=0:00:01.118, duration_ms=1118, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 11:17:05], mode=BUILD, duration=0:00:01.533, duration_ms=1533, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 13:35:55], mode=BUILD, duration=0:00:01.427, duration_ms=1427, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 15:50:11], mode=BUILD, duration=0:00:03.793, duration_ms=3793, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 16:01:56], mode=BUILD, duration=0:00:01.533, duration_ms=1533, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 16:09:28], mode=BUILD, duration=0:00:02.066, duration_ms=2066, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 16:15:54], mode=BUILD, duration=0:00:01.494, duration_ms=1494, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 16:16:23], mode=BUILD, duration=0:00:05.449, duration_ms=5449, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-12 16:22:58], mode=BUILD, duration=0:00:01.576, duration_ms=1576, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:13:06], mode=WORKBENCH_START, duration=0:00:10.031, duration_ms=10031, data={}
+timestamp=[2026-06-14 20:13:07], mode=WORKBENCH_UI_INIT, duration=0:00:00.819, duration_ms=819, data={editors_count=11, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-14 20:13:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.332, duration_ms=332, data={}
+timestamp=[2026-06-14 20:24:34], mode=PLATFORM_GENERATION, duration=0:00:26.014, duration_ms=26014, data={name=platform}
+timestamp=[2026-06-14 20:24:35], mode=BUILD, duration=0:00:00.397, duration_ms=397, data={name=app, configuration=Debug, clean_build=true}
+timestamp=[2026-06-14 20:24:58], mode=BUILD, duration=0:00:06.809, duration_ms=6809, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:31:56], mode=BUILD, duration=0:00:02.861, duration_ms=2861, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:37:44], mode=BUILD, duration=0:00:01.435, duration_ms=1435, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:39:12], mode=BUILD, duration=0:00:00.708, duration_ms=708, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:39:23], mode=BUILD, duration=0:00:01.345, duration_ms=1345, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:40:01], mode=BUILD, duration=0:00:01.340, duration_ms=1340, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:42:42], mode=BUILD, duration=0:00:01.380, duration_ms=1380, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-14 20:43:41], mode=BUILD, duration=0:00:01.360, duration_ms=1360, data={name=app, configuration=Debug, clean_build=false}
+timestamp=[2026-06-16 10:24:22], mode=WORKBENCH_START, duration=0:00:13.908, duration_ms=13908, data={}
+timestamp=[2026-06-16 10:24:24], mode=WORKBENCH_UI_INIT, duration=0:00:02.158, duration_ms=2158, data={editors_count=11, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-16 10:24:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.876, duration_ms=876, data={}
+timestamp=[2026-06-16 15:39:51], mode=WORKBENCH_START, duration=0:00:09.735, duration_ms=9735, data={}
+timestamp=[2026-06-16 15:39:52], mode=WORKBENCH_UI_INIT, duration=0:00:00.838, duration_ms=838, data={editors_count=11, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-16 15:39:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.368, duration_ms=368, data={}
+timestamp=[2026-06-16 16:45:01], mode=WORKBENCH_START, duration=0:00:09.856, duration_ms=9856, data={}
+timestamp=[2026-06-16 16:45:01], mode=WORKBENCH_UI_INIT, duration=0:00:00.832, duration_ms=832, data={editors_count=11, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,app,app_system,platform}
+timestamp=[2026-06-16 16:45:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.310, duration_ms=310, data={}
+timestamp=[2026-06-16 17:06:36], mode=PLATFORM_GENERATION, duration=0:00:48.664, duration_ms=48664, data={name=platform}
+timestamp=[2026-06-16 17:06:53], mode=BUILD, duration=0:00:00.653, duration_ms=653, data={name=app, configuration=Debug, clean_build=false}

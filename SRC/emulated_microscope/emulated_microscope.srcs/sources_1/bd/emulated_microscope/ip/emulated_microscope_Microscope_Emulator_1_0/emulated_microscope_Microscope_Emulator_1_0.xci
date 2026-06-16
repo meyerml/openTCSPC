@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "emulated_microscope_Microscope_Emulator_1_0",
     "cell_name": "Microscope_Emulator_0",
-    "component_reference": "xilinx.com:user:Microscope_Emulator:1.13",
+    "component_reference": "xilinx.com:user:Microscope_Emulator:1.14",
     "ip_revision": "2",
     "gen_directory": ".",
     "parameters": {

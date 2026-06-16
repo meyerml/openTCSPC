@@ -1,6 +1,6 @@
 Nothing to build in platform 'top_emulated_microscope'
 
-19:08:38 **** Incremental Build of configuration Debug for project application ****
+17:21:35 **** Incremental Build of configuration Debug for project application ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -11,7 +11,7 @@ make --no-print-directory main-build
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpx2/gpx2_if.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/gpx2/gpx2_if.d" -MT"src/gpx2/gpx2_if.o" -o "src/gpx2/gpx2_if.o" "../src/gpx2/gpx2_if.c"
 In file included from ../src/gpx2/gpx2_if.c:16:
 ../src/gpx2/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/gpx2/../global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -28,7 +28,7 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dma/dma.o" -mcpu=c
 In file included from ../src/dma/dma.h:38,
                  from ../src/dma/dma.c:41:
 ../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/dma/../global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -63,7 +63,7 @@ In file included from ../src/dma/dma.h:38,
                  from ../src/intr_sys.h:44,
                  from ../src/intr_sys.c:35:
 ../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/dma/../global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -79,7 +79,7 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/laser.o" -mcpu=cor
 In file included from ../src/dma/dma.h:38,
                  from ../src/laser.c:2:
 ../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/dma/../global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -166,7 +166,7 @@ In file included from ../src/dma/dma.h:38,
                  from ../src/main.h:47,
                  from ../src/main.c:31:
 ../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/dma/../global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -178,16 +178,16 @@ In file included from ../src/dma/dma.h:38,
 ../src/main.c:140:20: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
   140 |                 if(pow(2, STOP_DATA_BITWIDTH)<laser_period_ps){
       |                    ^~~
-../src/main.c:37:1: note: include '<math.h>' or provide a declaration of 'pow'
-   36 | #include "sleep.h"
+../src/main.c:41:1: note: include '<math.h>' or provide a declaration of 'pow'
+   40 | #include "xtime_l.h"
   +++ |+#include <math.h>
-   37 | #include "gpx2/gpx2_if.h"
+   41 | // Declare the global array using uint32_t or u32 if properly defined
 ../src/main.c:140:20: warning: incompatible implicit declaration of built-in function 'pow' [-Wbuiltin-declaration-mismatch]
   140 |                 if(pow(2, STOP_DATA_BITWIDTH)<laser_period_ps){
       |                    ^~~
 ../src/main.c:140:20: note: include '<math.h>' or provide a declaration of 'pow'
-../src/main.c:235:13: warning: unused variable 'debugvar' [-Wunused-variable]
-  235 |         int debugvar = 0;
+../src/main.c:238:13: warning: unused variable 'debugvar' [-Wunused-variable]
+  238 |         int debugvar = 0;
       |             ^~~~~~~~
 'Finished building: ../src/main.c'
 ' '
@@ -196,7 +196,7 @@ In file included from ../src/dma/dma.h:38,
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/report.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/openTCSPC3/SRC/vitis/zedboard_emulated_microscope/top_emulated_microscope/export/top_emulated_microscope/sw/top_emulated_microscope/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/report.d" -MT"src/report.o" -o "src/report.o" "../src/report.c"
 In file included from ../src/report.c:6:
 ../src/global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -218,7 +218,7 @@ In file included from ../src/dma/dma.h:38,
                  from ../src/system_config.h:49,
                  from ../src/system_config.c:36:
 ../src/dma/../global_defines.h:31: warning: "FRAME_WIDTH" redefined
-   31 | #define FRAME_WIDTH 512  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
+   31 | #define FRAME_WIDTH 128  //only square frames, so height is the same. laser emulator can only handle <= 64 becuase its bram is too small
       | 
 ../src/dma/../global_defines.h:25: note: this is the location of the previous definition
    25 | #define FRAME_WIDTH 8  //only square frames, so height is the same.
@@ -248,6 +248,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size application.elf  |tee "application.elf.size"
    text	   data	    bss	    dec	    hex	filename
-3386297	   2820	134234832	137623949	833f98d	application.elf
+3386739	   2820	134234832	137624391	833fb47	application.elf
 'Finished building: application.elf.size'
 ' '

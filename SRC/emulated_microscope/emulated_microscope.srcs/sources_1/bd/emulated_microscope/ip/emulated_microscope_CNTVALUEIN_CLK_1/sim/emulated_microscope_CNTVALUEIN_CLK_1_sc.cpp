@@ -62,7 +62,7 @@ emulated_microscope_CNTVALUEIN_CLK_1_sc::emulated_microscope_CNTVALUEIN_CLK_1_sc
   // initialize module
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("DIN_WIDTH", "256");
-    model_param_props.addLong("DIN_FROM", "176");
+    model_param_props.addLong("DIN_FROM", "175");
     model_param_props.addLong("DIN_TO", "175");
     model_param_props.addString("COMPONENT_NAME", "emulated_microscope_CNTVALUEIN_CLK_1");
 

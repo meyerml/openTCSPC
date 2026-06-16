@@ -81,7 +81,7 @@ public:
   // module pin-to-pin RTL interface
 
   sc_core::sc_in< sc_dt::sc_bv<256> > Din;
-  sc_core::sc_out< sc_dt::sc_bv<2> > Dout;
+  sc_core::sc_out< sc_dt::sc_bv<1> > Dout;
 
   // Dummy Signals for IP Ports
 
@@ -110,7 +110,7 @@ public:
   // module pin-to-pin RTL interface
 
   sc_core::sc_in< sc_dt::sc_bv<256> > Din;
-  sc_core::sc_out< sc_dt::sc_bv<2> > Dout;
+  sc_core::sc_out< sc_dt::sc_bv<1> > Dout;
 
   // Dummy Signals for IP Ports
 
@@ -139,7 +139,7 @@ public:
   // module pin-to-pin RTL interface
 
   sc_core::sc_in< sc_dt::sc_bv<256> > Din;
-  sc_core::sc_out< sc_dt::sc_bv<2> > Dout;
+  sc_core::sc_out< sc_dt::sc_bv<1> > Dout;
 
   // Dummy Signals for IP Ports
 
@@ -168,7 +168,7 @@ public:
   // module pin-to-pin RTL interface
 
   sc_core::sc_in< sc_dt::sc_bv<256> > Din;
-  sc_core::sc_out< sc_dt::sc_bv<2> > Dout;
+  sc_core::sc_out< sc_dt::sc_bv<1> > Dout;
 
   // Dummy Signals for IP Ports
 
@@ -201,7 +201,7 @@ public:
   // module pin-to-pin RTL interface
 
   sc_core::sc_in< sc_dt::sc_bv<256> > Din;
-  sc_core::sc_out< sc_dt::sc_bv<2> > Dout;
+  sc_core::sc_out< sc_dt::sc_bv<1> > Dout;
 
   // Dummy Signals for IP Ports
 

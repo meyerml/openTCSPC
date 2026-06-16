@@ -59,11 +59,11 @@ module emulated_microscope_CNTVALUEIN_CLK_1 (
 );
 
 input wire [255 : 0] Din;
-output wire [1 : 0] Dout;
+output wire [0 : 0] Dout;
 
   xlslice_v1_0_4_xlslice #(
     .DIN_WIDTH(256),
-    .DIN_FROM(176),
+    .DIN_FROM(175),
     .DIN_TO(175)
   ) inst (
     .Din(Din),
