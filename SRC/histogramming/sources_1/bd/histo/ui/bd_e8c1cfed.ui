@@ -17,7 +17,7 @@
 preplace port AXIS_IN -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
 preplace port M_AXIS -pg 1 -lvl 4 -x 1450 -y 350 -defaultsOSRD
 preplace port TRIG_OUT -pg 1 -lvl 4 -x 1450 -y 200 -defaultsOSRD
-preplace port TRIG_IN_0 -pg 1 -lvl 0 -x -10 -y 490 -defaultsOSRD
+preplace port TRIG_IN -pg 1 -lvl 0 -x -10 -y 490 -defaultsOSRD
 preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
 preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
 preplace port port-id_en -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
@@ -79,10 +79,10 @@ preplace netloc pixel_posedge_detect_detect_out 1 1 2 N 640 950
 preplace netloc util_vector_logic_0_Res 1 3 1 1410 1010n
 preplace netloc AXIS_IN_1 1 0 1 NJ 70
 preplace netloc HISTOGRAM_ARBITER_FSM_0_AXIS_OUT 1 1 2 NJ 290 1080
+preplace netloc TRIG_IN 1 0 3 60J 0 NJ 0 1060
 preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 1380 350n
 preplace netloc ila_sorter_out1_TRIG_OUT 1 2 2 910J 170 1380J
 preplace netloc sorter_0_AXIS_OUT 1 0 2 130 10 570
-preplace netloc TRIG_IN_0_1 1 0 3 60J 0 NJ 0 1060J
 preplace cgraphic comment_1 place bot 25 44 textcolor 4 linecolor 3 linewidth 2
 preplace cgraphic comment_0 place bot 9 21 textcolor 4 linecolor 3 linewidth 2
 levelinfo -pg 1 -10 350 770 1220 1450
@@ -149,8 +149,8 @@ levelinfo -pg 1 0 280 690 860
 pagesize -pg 1 -db -bbox -sgen -200 0 1140 1100
 ",
    "bachelorarbeit_PinnedBlocks":"",
-   "bachelorarbeit_ScaleFactor":"0.150887",
-   "bachelorarbeit_TopLeft":"-2015,-1365",
+   "bachelorarbeit_ScaleFactor":"0.845408",
+   "bachelorarbeit_TopLeft":"-237,752",
    "comment_0":"disables the gpx2 when not recording a pixel
 ",
    "comment_1":"resets gpx2 refindex counter when new pixel is started",

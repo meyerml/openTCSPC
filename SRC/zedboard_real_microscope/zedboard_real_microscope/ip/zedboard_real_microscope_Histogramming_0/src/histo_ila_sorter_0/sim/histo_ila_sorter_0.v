@@ -48,8 +48,7 @@
 `timescale 1ns / 1ps
 module histo_ila_sorter_0 (
 clk,
-trig_out,
-trig_out_ack,
+
 
 probe0,
 probe1,
@@ -63,8 +62,7 @@ probe8
 );
 
 input clk;
-output trig_out;
-input trig_out_ack;
+
 
 input [0 : 0] probe0;
 input [63 : 0] probe1;

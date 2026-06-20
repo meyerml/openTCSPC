@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:LVDS_to_AXIS_IDDR:1.23
+// IP VLNV: xilinx.com:user:LVDS_to_AXIS_IDDR:1.27
 // IP Revision: 2
 
 `timescale 1ns/1ps
@@ -56,15 +56,13 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module zedboard_real_microscope_LVDS_to_AXIS_IDDR_0 (
   Buffer_overflow,
-  CNTVALUEIN_CLK,
-  CNTVALUEIN_FRAME,
-  CNTVALUEIN_SDO,
-  LD,
   M_AXIS_tdata,
   M_AXIS_tready,
   M_AXIS_tvalid,
   TRIG_IN_ack,
   TRIG_IN_trig,
+  TRIG_OUT_ack,
+  TRIG_OUT_trig,
   aresetn,
   axis_rd_data_count,
   axis_wr_data_count,
@@ -84,10 +82,6 @@ module zedboard_real_microscope_LVDS_to_AXIS_IDDR_0 (
 );
 
 output wire Buffer_overflow;
-input wire [4 : 0] CNTVALUEIN_CLK;
-input wire [4 : 0] CNTVALUEIN_FRAME;
-input wire [4 : 0] CNTVALUEIN_SDO;
-input wire LD;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, CLK_DOMAIN zedboard_real_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -101,6 +95,11 @@ output wire M_AXIS_tvalid;
 output wire TRIG_IN_ack;
 (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *)
 input wire TRIG_IN_trig;
+(* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *)
+(* X_INTERFACE_MODE = "master" *)
+input wire TRIG_OUT_ack;
+(* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *)
+output wire TRIG_OUT_trig;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -150,15 +149,13 @@ input wire [0 : 0] sdo_p;
 
   LVDS_to_AXIS_IDDR inst (
     .Buffer_overflow(Buffer_overflow),
-    .CNTVALUEIN_CLK(CNTVALUEIN_CLK),
-    .CNTVALUEIN_FRAME(CNTVALUEIN_FRAME),
-    .CNTVALUEIN_SDO(CNTVALUEIN_SDO),
-    .LD(LD),
     .M_AXIS_tdata(M_AXIS_tdata),
     .M_AXIS_tready(M_AXIS_tready),
     .M_AXIS_tvalid(M_AXIS_tvalid),
     .TRIG_IN_ack(TRIG_IN_ack),
     .TRIG_IN_trig(TRIG_IN_trig),
+    .TRIG_OUT_ack(TRIG_OUT_ack),
+    .TRIG_OUT_trig(TRIG_OUT_trig),
     .aresetn(aresetn),
     .axis_rd_data_count(axis_rd_data_count),
     .axis_wr_data_count(axis_wr_data_count),

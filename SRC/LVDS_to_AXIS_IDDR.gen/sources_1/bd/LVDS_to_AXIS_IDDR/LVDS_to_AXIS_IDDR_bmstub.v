@@ -28,10 +28,8 @@ module LVDS_to_AXIS_IDDR (
   aresetn,
   clk,
   ila_clk,
-  LD,
-  CNTVALUEIN_FRAME,
-  CNTVALUEIN_SDO,
-  CNTVALUEIN_CLK
+  TRIG_OUT_ack,
+  TRIG_OUT_trig
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
@@ -101,14 +99,11 @@ module LVDS_to_AXIS_IDDR (
   (* X_INTERFACE_MODE = "slave CLK.ILA_CLK" *)
   (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ILA_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN LVDS_to_AXIS_IDDR_ila_clk, INSERT_VIP 0" *)
   input ila_clk;
-  (* X_INTERFACE_IGNORE = "true" *)
-  input LD;
-  (* X_INTERFACE_IGNORE = "true" *)
-  input [4:0]CNTVALUEIN_FRAME;
-  (* X_INTERFACE_IGNORE = "true" *)
-  input [4:0]CNTVALUEIN_SDO;
-  (* X_INTERFACE_IGNORE = "true" *)
-  input [4:0]CNTVALUEIN_CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *)
+  (* X_INTERFACE_MODE = "master TRIG_OUT" *)
+  input TRIG_OUT_ack;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *)
+  output TRIG_OUT_trig;
 
   // stub module has no contents
 

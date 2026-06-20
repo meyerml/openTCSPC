@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "zedboard_real_microscope_Histogramming_0",
     "cell_name": "Histogramming",
-    "component_reference": "xilinx.com:user:Histogramming:1.8",
+    "component_reference": "xilinx.com:user:Histogramming:1.9",
     "ip_revision": "2",
     "gen_directory": ".",
     "parameters": {
@@ -48,6 +48,8 @@
         "M_AXIS_tvalid": [ { "direction": "out" } ],
         "REFINDEX_BITS": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
         "STOPRESULT_BITS": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "TRIG_IN_ack": [ { "direction": "out" } ],
+        "TRIG_IN_trig": [ { "direction": "in" } ],
         "TRIG_OUT_ack": [ { "direction": "in" } ],
         "TRIG_OUT_trig": [ { "direction": "out" } ],
         "aresetn": [ { "direction": "in" } ],
@@ -126,6 +128,15 @@
           "port_maps": {
             "ACK": [ { "physical_name": "TRIG_OUT_ack" } ],
             "TRIG": [ { "physical_name": "TRIG_OUT_trig" } ]
+          }
+        },
+        "TRIG_IN": {
+          "vlnv": "xilinx.com:interface:trigger:1.0",
+          "abstraction_type": "xilinx.com:interface:trigger_rtl:1.0",
+          "mode": "slave",
+          "port_maps": {
+            "ACK": [ { "physical_name": "TRIG_IN_ack" } ],
+            "TRIG": [ { "physical_name": "TRIG_IN_trig" } ]
           }
         },
         "RST.ARESETN": {

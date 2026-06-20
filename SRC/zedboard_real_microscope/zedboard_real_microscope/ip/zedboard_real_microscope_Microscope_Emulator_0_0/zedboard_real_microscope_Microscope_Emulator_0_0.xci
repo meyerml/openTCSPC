@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "zedboard_real_microscope_Microscope_Emulator_0_0",
     "cell_name": "Microscope_Emulator_0",
-    "component_reference": "xilinx.com:user:Microscope_Emulator:1.14",
+    "component_reference": "xilinx.com:user:Microscope_Emulator:1.15",
     "ip_revision": "2",
     "gen_directory": ".",
     "parameters": {

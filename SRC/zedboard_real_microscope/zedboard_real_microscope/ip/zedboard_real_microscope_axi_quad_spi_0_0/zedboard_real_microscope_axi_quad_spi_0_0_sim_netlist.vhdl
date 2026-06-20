@@ -2,11 +2,11 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Mon Jun  8 18:38:53 2026
+-- Date        : Thu Jun 18 22:01:37 2026
 -- Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top zedboard_real_microscope_axi_quad_spi_0_0 -prefix
---               zedboard_real_microscope_axi_quad_spi_0_0_ emulated_microscope_axi_quad_spi_0_0_sim_netlist.vhdl
--- Design      : emulated_microscope_axi_quad_spi_0_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/openTCSPC3/SRC/zedboard_real_microscope/zedboard_real_microscope/ip/zedboard_real_microscope_axi_quad_spi_0_0/zedboard_real_microscope_axi_quad_spi_0_0_sim_netlist.vhdl
+-- Design      : zedboard_real_microscope_axi_quad_spi_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg484-1
@@ -555,6 +555,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_cdc_sync is
     prmry_in : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_cdc_sync : entity is "cdc_sync";
 end zedboard_real_microscope_axi_quad_spi_0_0_cdc_sync;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_cdc_sync is
@@ -701,6 +703,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_counter_f is
     s_axi_aclk : in STD_LOGIC;
     \icount_out_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_counter_f : entity is "counter_f";
 end zedboard_real_microscope_axi_quad_spi_0_0_counter_f;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_counter_f is
@@ -1161,6 +1165,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_cross_clk_sync_fifo_1 is
     modf_strobe_int : in STD_LOGIC;
     SPISEL_sync : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_cross_clk_sync_fifo_1 : entity is "cross_clk_sync_fifo_1";
 end zedboard_real_microscope_axi_quad_spi_0_0_cross_clk_sync_fifo_1;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_cross_clk_sync_fifo_1 is
@@ -2346,6 +2352,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_interrupt_control is
     bus2ip_wrce_int : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_interrupt_control : entity is "interrupt_control";
 end zedboard_real_microscope_axi_quad_spi_0_0_interrupt_control;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_interrupt_control is
@@ -2731,6 +2739,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_qspi_cntrl_reg is
     \FIFO_EXISTS.data_Exists_RcFIFO_int_d1\ : in STD_LOGIC;
     \GEN_IP_IRPT_STATUS_REG[8].GEN_REG_STATUS.ip_irpt_status_reg_reg[8]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_qspi_cntrl_reg : entity is "qspi_cntrl_reg";
 end zedboard_real_microscope_axi_quad_spi_0_0_qspi_cntrl_reg;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_qspi_cntrl_reg is
@@ -2922,6 +2932,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_qspi_fifo_ifmodule is
     p_4_in : in STD_LOGIC;
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_qspi_fifo_ifmodule : entity is "qspi_fifo_ifmodule";
 end zedboard_real_microscope_axi_quad_spi_0_0_qspi_fifo_ifmodule;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_qspi_fifo_ifmodule is
@@ -3060,6 +3072,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_qspi_mode_0_module is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_qspi_mode_0_module : entity is "qspi_mode_0_module";
 end zedboard_real_microscope_axi_quad_spi_0_0_qspi_mode_0_module;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_qspi_mode_0_module is
@@ -4922,6 +4936,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_qspi_status_slave_sel_reg is
     p_3_in : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_qspi_status_slave_sel_reg : entity is "qspi_status_slave_sel_reg";
 end zedboard_real_microscope_axi_quad_spi_0_0_qspi_status_slave_sel_reg;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_qspi_status_slave_sel_reg is
@@ -4972,6 +4988,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_reset_sync_module is
     reset2ip_reset_int : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_reset_sync_module : entity is "reset_sync_module";
 end zedboard_real_microscope_axi_quad_spi_0_0_reset_sync_module;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_reset_sync_module is
@@ -5051,6 +5069,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_soft_reset is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     reset_trig_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_soft_reset : entity is "soft_reset";
 end zedboard_real_microscope_axi_quad_spi_0_0_soft_reset;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_soft_reset is
@@ -5596,6 +5616,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_gray : entity is 2;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_gray : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -9725,6 +9747,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_sync_rst is
   attribute INIT of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_sync_rst : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of zedboard_real_microscope_axi_quad_spi_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -10007,6 +10031,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_counter_updn is
     rst_d1 : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end zedboard_real_microscope_axi_quad_spi_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_counter_updn is
@@ -14651,6 +14677,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_bit is
     prog_full : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_bit is
@@ -14828,6 +14856,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_reg_vec is
@@ -16591,6 +16621,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of zedboard_real_microscope_axi_quad_spi_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of zedboard_real_microscope_axi_quad_spi_0_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : integer;
   attribute P_ECC_MODE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_memory_base : entity is 0;
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -17357,6 +17389,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_address_decoder is
     s_axi_awready : in STD_LOGIC;
     s_axi_awready_0 : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_address_decoder : entity is "address_decoder";
 end zedboard_real_microscope_axi_quad_spi_0_0_address_decoder;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_address_decoder is
@@ -18708,6 +18742,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_rst is
     \guf.underflow_i_reg\ : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_rst is
@@ -19847,6 +19883,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_slave_attachment : entity is "slave_attachment";
 end zedboard_real_microscope_axi_quad_spi_0_0_slave_attachment;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_slave_attachment is
@@ -20801,6 +20839,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_base : entity is 0;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_base : entity is "1'b0";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_base : entity is 8;
   attribute PE_THRESH_MAX : integer;
@@ -23540,6 +23580,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end zedboard_real_microscope_axi_quad_spi_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_axi_lite_ipif is
@@ -23706,6 +23748,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_async is
   attribute FIFO_WRITE_DEPTH of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_async : entity is 256;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_async : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_async : entity is "xpm_fifo_async";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of zedboard_real_microscope_axi_quad_spi_0_0_xpm_fifo_async : entity is 10;
   attribute PROG_FULL_THRESH : integer;
@@ -24187,6 +24231,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_async_fifo_fg is
     p_2_in : in STD_LOGIC;
     spicr_9_lsb_to_spi_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_async_fifo_fg : entity is "async_fifo_fg";
 end zedboard_real_microscope_axi_quad_spi_0_0_async_fifo_fg;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_async_fifo_fg is
@@ -24674,6 +24720,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_qspi_core_interface is
     io1_i_sync : in STD_LOGIC;
     io0_i_sync : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_qspi_core_interface : entity is "qspi_core_interface";
 end zedboard_real_microscope_axi_quad_spi_0_0_qspi_core_interface;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_qspi_core_interface is
@@ -25994,6 +26042,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi_top is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi_top : entity is "axi_quad_spi_top";
 end zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi_top;
 
 architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi_top is
@@ -26567,6 +26617,8 @@ entity zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi is
   attribute C_XIP_MODE of zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi : entity is 0;
   attribute C_XIP_PERF_MODE : integer;
   attribute C_XIP_PERF_MODE of zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi : entity is "axi_quad_spi";
   attribute dont_touch : string;
   attribute dont_touch of zedboard_real_microscope_axi_quad_spi_0_0_axi_quad_spi : entity is "yes";
   attribute downgradeipidentifiedwarnings : string;
@@ -26770,7 +26822,7 @@ entity zedboard_real_microscope_axi_quad_spi_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of zedboard_real_microscope_axi_quad_spi_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of zedboard_real_microscope_axi_quad_spi_0_0 : entity is "emulated_microscope_axi_quad_spi_0_0,axi_quad_spi,{}";
+  attribute CHECK_LICENSE_TYPE of zedboard_real_microscope_axi_quad_spi_0_0 : entity is "zedboard_real_microscope_axi_quad_spi_0_0,axi_quad_spi,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zedboard_real_microscope_axi_quad_spi_0_0 : entity is "yes";
   attribute x_core_info : string;
@@ -26873,7 +26925,7 @@ architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0 is
   attribute x_interface_mode : string;
   attribute x_interface_mode of ext_spi_clk : signal is "slave spi_clk";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of ext_spi_clk : signal is "XIL_INTERFACENAME spi_clk, ASSOCIATED_BUSIF SPI_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of ext_spi_clk : signal is "XIL_INTERFACENAME spi_clk, ASSOCIATED_BUSIF SPI_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN zedboard_real_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of io0_i : signal is "xilinx.com:interface:spi:1.0 SPI_0 IO0_I";
   attribute x_interface_mode of io0_i : signal is "master SPI_0";
   attribute x_interface_parameter of io0_i : signal is "XIL_INTERFACENAME SPI_0, BOARD.ASSOCIATED_PARAM QSPI_BOARD_INTERFACE";
@@ -26887,7 +26939,7 @@ architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0 is
   attribute x_interface_parameter of ip2intc_irpt : signal is "XIL_INTERFACENAME interrupt, SENSITIVITY EDGE_RISING, PortWidth 1";
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 lite_clk CLK";
   attribute x_interface_mode of s_axi_aclk : signal is "slave lite_clk";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME lite_clk, ASSOCIATED_BUSIF AXI_LITE, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME lite_clk, ASSOCIATED_BUSIF AXI_LITE, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN zedboard_real_microscope_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 lite_reset RST";
   attribute x_interface_mode of s_axi_aresetn : signal is "slave lite_reset";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME lite_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
@@ -26908,7 +26960,7 @@ architecture STRUCTURE of zedboard_real_microscope_axi_quad_spi_0_0 is
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE AWADDR";
   attribute x_interface_mode of s_axi_awaddr : signal is "slave AXI_LITE";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME AXI_LITE, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME AXI_LITE, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN zedboard_real_microscope_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE RRESP";

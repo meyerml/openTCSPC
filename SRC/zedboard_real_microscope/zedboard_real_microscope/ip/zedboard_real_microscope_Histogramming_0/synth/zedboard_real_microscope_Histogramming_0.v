@@ -47,12 +47,12 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:Histogramming:1.8
+// IP VLNV: xilinx.com:user:Histogramming:1.9
 // IP Revision: 2
 
 (* X_CORE_INFO = "histo,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "zedboard_real_microscope_Histogramming_0,histo,{}" *)
-(* CORE_GENERATION_INFO = "zedboard_real_microscope_Histogramming_0,histo,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Histogramming,x_ipVersion=1.8,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "zedboard_real_microscope_Histogramming_0,histo,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Histogramming,x_ipVersion=1.9,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "IPI" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module zedboard_real_microscope_Histogramming_0 (
@@ -68,6 +68,8 @@ module zedboard_real_microscope_Histogramming_0 (
   M_AXIS_tvalid,
   REFINDEX_BITS,
   STOPRESULT_BITS,
+  TRIG_IN_ack,
+  TRIG_IN_trig,
   TRIG_OUT_ack,
   TRIG_OUT_trig,
   aresetn,
@@ -111,6 +113,11 @@ input wire M_AXIS_tready;
 output wire M_AXIS_tvalid;
 input wire [5 : 0] REFINDEX_BITS;
 input wire [5 : 0] STOPRESULT_BITS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN ACK" *)
+(* X_INTERFACE_MODE = "slave" *)
+output wire TRIG_IN_ack;
+(* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *)
+input wire TRIG_IN_trig;
 (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *)
 (* X_INTERFACE_MODE = "master" *)
 input wire TRIG_OUT_ack;
@@ -157,6 +164,8 @@ output wire [0 : 0] refres_p;
     .M_AXIS_tvalid(M_AXIS_tvalid),
     .REFINDEX_BITS(REFINDEX_BITS),
     .STOPRESULT_BITS(STOPRESULT_BITS),
+    .TRIG_IN_ack(TRIG_IN_ack),
+    .TRIG_IN_trig(TRIG_IN_trig),
     .TRIG_OUT_ack(TRIG_OUT_ack),
     .TRIG_OUT_trig(TRIG_OUT_trig),
     .aresetn(aresetn),

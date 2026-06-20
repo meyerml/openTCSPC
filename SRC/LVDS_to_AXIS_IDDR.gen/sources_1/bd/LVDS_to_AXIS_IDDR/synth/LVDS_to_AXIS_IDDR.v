@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Sun Apr 12 20:14:44 2026
+//Date        : Fri Jun 19 11:55:10 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target LVDS_to_AXIS_IDDR.bd
 //Design      : LVDS_to_AXIS_IDDR
@@ -10,18 +10,16 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "LVDS_to_AXIS_IDDR,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=LVDS_to_AXIS_IDDR,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "LVDS_to_AXIS_IDDR.hwdef" *) 
+(* CORE_GENERATION_INFO = "LVDS_to_AXIS_IDDR,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=LVDS_to_AXIS_IDDR,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "LVDS_to_AXIS_IDDR.hwdef" *) 
 module LVDS_to_AXIS_IDDR
    (Buffer_overflow,
-    CNTVALUEIN_CLK,
-    CNTVALUEIN_FRAME,
-    CNTVALUEIN_SDO,
-    LD,
     M_AXIS_tdata,
     M_AXIS_tready,
     M_AXIS_tvalid,
     TRIG_IN_ack,
     TRIG_IN_trig,
+    TRIG_OUT_ack,
+    TRIG_OUT_trig,
     aresetn,
     axis_rd_data_count,
     axis_wr_data_count,
@@ -39,15 +37,13 @@ module LVDS_to_AXIS_IDDR
     sdo_n,
     sdo_p);
   output Buffer_overflow;
-  input [4:0]CNTVALUEIN_CLK;
-  input [4:0]CNTVALUEIN_FRAME;
-  input [4:0]CNTVALUEIN_SDO;
-  input LD;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, CLK_DOMAIN LVDS_to_AXIS_IDDR_clk, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [63:0]M_AXIS_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input M_AXIS_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output M_AXIS_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN ACK" *) (* X_INTERFACE_MODE = "Slave" *) output TRIG_IN_ack;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *) input TRIG_IN_trig;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *) (* X_INTERFACE_MODE = "Master" *) input TRIG_OUT_ack;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *) output TRIG_OUT_trig;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
   output [31:0]axis_rd_data_count;
   output [31:0]axis_wr_data_count;
@@ -66,28 +62,20 @@ module LVDS_to_AXIS_IDDR
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SDO_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SDO_P, CLK_DOMAIN LVDS_to_AXIS_IDDR_sdo_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input [0:0]sdo_p;
 
   wire Buffer_overflow;
-  wire [4:0]CNTVALUEIN_CLK;
-  wire [4:0]CNTVALUEIN_FRAME;
-  wire [4:0]CNTVALUEIN_SDO;
   wire [63:0]DDR_Stream_to_AXI_St_1_AXIS_TDATA;
   wire DDR_Stream_to_AXI_St_1_AXIS_TREADY;
   wire DDR_Stream_to_AXI_St_1_AXIS_TVALID;
-  wire FRAME_IBUF_OUT;
-  wire [0:0]FRAME_IBUF_OUT1;
+  wire [0:0]FRAME_IBUF_OUT;
   wire IBUFDS_DO_0_O;
-  wire [4:0]IDELAYE2_CLOCK_0_CNTVALUEOUT;
-  wire IDELAYE2_CLOCK_0_DATAOUT;
-  wire [4:0]IDELAYE2_FRAME_CNTVALUEOUT;
-  wire [4:0]IDELAYE2_SDO_CNTVALUEOUT;
-  wire LD;
   wire [63:0]M_AXIS_tdata;
   wire M_AXIS_tready;
   wire M_AXIS_tvalid;
   wire [0:0]Net;
-  wire SDO_IBUF_OUT;
-  wire [0:0]SDO_IBUF_OUT1;
+  wire [0:0]SDO_IBUF_OUT;
   wire TRIG_IN_ack;
   wire TRIG_IN_trig;
+  wire TRIG_OUT_ack;
+  wire TRIG_OUT_trig;
   wire aresetn;
   wire [31:0]axis_rd_data_count;
   wire [31:0]axis_wr_data_count;
@@ -121,36 +109,15 @@ module LVDS_to_AXIS_IDDR
   LVDS_to_AXIS_IDDR_FRAME_0 FRAME
        (.IBUF_DS_N(frame_n),
         .IBUF_DS_P(frame_p),
-        .IBUF_OUT(FRAME_IBUF_OUT1));
+        .IBUF_OUT(FRAME_IBUF_OUT));
   LVDS_to_AXIS_IDDR_IBUFDS_DO_0_0 IBUFDS_DO_0
        (.I(l_clk_in_p),
         .IB(l_clk_in_n),
         .O(IBUFDS_DO_0_O));
-  LVDS_to_AXIS_IDDR_IDELAYE2_CLOCK_0_0 IDELAYE2_CLOCK_0
-       (.CNTVALUEIN(CNTVALUEIN_CLK),
-        .CNTVALUEOUT(IDELAYE2_CLOCK_0_CNTVALUEOUT),
-        .DATAOUT(IDELAYE2_CLOCK_0_DATAOUT),
-        .IDATAIN(IBUFDS_DO_0_O),
-        .LD(LD),
-        .clk(clk));
-  LVDS_to_AXIS_IDDR_IDELAYE2_FRAME_0 IDELAYE2_FRAME
-       (.CNTVALUEIN(CNTVALUEIN_FRAME),
-        .CNTVALUEOUT(IDELAYE2_FRAME_CNTVALUEOUT),
-        .DATAOUT(FRAME_IBUF_OUT),
-        .IDATAIN(FRAME_IBUF_OUT1),
-        .LD(LD),
-        .clk(clk));
-  LVDS_to_AXIS_IDDR_IDELAYE2_SDO_0 IDELAYE2_SDO
-       (.CNTVALUEIN(CNTVALUEIN_SDO),
-        .CNTVALUEOUT(IDELAYE2_SDO_CNTVALUEOUT),
-        .DATAOUT(SDO_IBUF_OUT),
-        .IDATAIN(SDO_IBUF_OUT1),
-        .LD(LD),
-        .clk(clk));
   LVDS_to_AXIS_IDDR_SDO_0 SDO
        (.IBUF_DS_N(sdo_n),
         .IBUF_DS_P(sdo_p),
-        .IBUF_OUT(SDO_IBUF_OUT1));
+        .IBUF_OUT(SDO_IBUF_OUT));
   LVDS_to_AXIS_IDDR_axis_data_fifo_0_0 axis_data_fifo_0
        (.axis_rd_data_count(axis_rd_data_count),
         .axis_wr_data_count(axis_wr_data_count),
@@ -169,9 +136,6 @@ module LVDS_to_AXIS_IDDR
         .probe0(SDO_IBUF_OUT),
         .probe1(FRAME_IBUF_OUT),
         .probe2(Net),
-        .probe3(IDELAYE2_SDO_CNTVALUEOUT),
-        .probe4(IDELAYE2_FRAME_CNTVALUEOUT),
-        .probe5(IDELAYE2_CLOCK_0_CNTVALUEOUT),
         .trig_in(TRIG_IN_trig),
         .trig_in_ack(TRIG_IN_ack),
         .trig_out(ila_LVDS_fast_TRIG_OUT_TRIG),
@@ -188,7 +152,9 @@ module LVDS_to_AXIS_IDDR
         .probe7(1'b0),
         .probe8(1'b0),
         .trig_in(ila_LVDS_fast_TRIG_OUT_TRIG),
-        .trig_in_ack(ila_LVDS_fast_TRIG_OUT_ACK));
+        .trig_in_ack(ila_LVDS_fast_TRIG_OUT_ACK),
+        .trig_out(TRIG_OUT_trig),
+        .trig_out_ack(TRIG_OUT_ack));
   LVDS_to_AXIS_IDDR_lvds_output_0_0 lvds_output_0
        (.clk(lvds_clk),
         .diff_n(l_clk_out_n),
@@ -202,6 +168,6 @@ module LVDS_to_AXIS_IDDR
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .slowest_sync_clk(Net));
   LVDS_to_AXIS_IDDR_util_ds_buf_0_0 util_ds_buf_0
-       (.BUFG_I(IDELAYE2_CLOCK_0_DATAOUT),
+       (.BUFG_I(IBUFDS_DO_0_O),
         .BUFG_O(Net));
 endmodule

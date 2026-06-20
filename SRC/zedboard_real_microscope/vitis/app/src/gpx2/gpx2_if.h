@@ -143,10 +143,11 @@ extern long int HISTOGRAM_BINS;
 #define LVDS_TEST_PATTERN_ON 0x10
 
 //reg7 settings
-//#define LVDS_DATA_VALID_ADJUST 0x10  //0ps delay
-//#define LVDS_DATA_VALID_ADJUST 0x11  //320ps delay
-//#define LVDS_DATA_VALID_ADJUST 0x01  //160ps delay
 #define LVDS_DATA_VALID_ADJUST 0x00  //-160ps delay: for 250 MHz, this settings, together with 0 taps on the idelay, works
+//#define LVDS_DATA_VALID_ADJUST 0x01  //0ps delay
+//#define LVDS_DATA_VALID_ADJUST 0x10  //160ps delay
+//#define LVDS_DATA_VALID_ADJUST 0x11  //320ps delay
+
 
 #define MAX_NUM_BINS 16384  //the histogram is buffered inside the FPGAs BRAM.
 //to avoid this limited memory from overflowing, the number of bins per histogram must be less than or equal to this number

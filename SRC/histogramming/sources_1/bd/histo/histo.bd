@@ -1,8 +1,8 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC87A6B5AF32723D2",
-      "device": "xczu3eg-sfvc784-1-e",
+      "boundary_crc": "0xE0338CAB80226935",
+      "device": "xc7z020clg484-1",
       "gen_directory": "../../../../histogramming.gen/sources_1/bd/histo",
       "name": "histo",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -188,17 +188,17 @@
           }
         }
       },
-      "TRIG_IN_0": {
+      "TRIG_IN": {
         "mode": "Slave",
         "vlnv_bus_definition": "xilinx.com:interface:trigger:1.0",
         "vlnv": "xilinx.com:interface:trigger_rtl:1.0",
         "port_maps": {
           "ACK": {
-            "physical_name": "TRIG_IN_0_ack",
+            "physical_name": "TRIG_IN_ack",
             "direction": "O"
           },
           "TRIG": {
-            "physical_name": "TRIG_IN_0_trig",
+            "physical_name": "TRIG_IN_trig",
             "direction": "I"
           }
         }
@@ -1217,9 +1217,9 @@
           "ila_histo_out/SLOT_0_AXIS"
         ]
       },
-      "TRIG_IN_0_1": {
+      "TRIG_IN": {
         "interface_ports": [
-          "TRIG_IN_0",
+          "TRIG_IN",
           "ila_histo_int/TRIG_IN"
         ]
       },
@@ -1345,9 +1345,9 @@
           "axis_data_fifo_histo/s_axis_aresetn",
           "ila_histo_int/probe11",
           "HISTOGRAM_ARBITER_FSM_0/aresetn",
-          "sorter_0/aresetn",
           "frame_negedge_detect/aresetn",
-          "pixel_posedge_detect/aresetn"
+          "pixel_posedge_detect/aresetn",
+          "sorter_0/aresetn"
         ]
       },
       "axis_data_fifo_0_almost_full": {
@@ -1363,9 +1363,9 @@
           "ila_sorter_out1/clk",
           "ila_histo_out/clk",
           "HISTOGRAM_ARBITER_FSM_0/clk",
-          "sorter_0/clk",
           "frame_negedge_detect/clk",
-          "pixel_posedge_detect/clk"
+          "pixel_posedge_detect/clk",
+          "sorter_0/clk"
         ]
       },
       "clk_0_2": {

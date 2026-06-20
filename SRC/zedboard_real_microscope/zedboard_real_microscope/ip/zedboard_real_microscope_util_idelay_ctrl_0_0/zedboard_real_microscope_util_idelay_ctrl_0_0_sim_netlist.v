@@ -2,25 +2,25 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Mon Jun  8 18:44:28 2026
+// Date        : Thu Jun 18 22:00:53 2026
 // Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top zedboard_real_microscope_util_idelay_ctrl_0_0 -prefix
-//               zedboard_real_microscope_util_idelay_ctrl_0_0_ emulated_microscope_util_idelay_ctrl_0_0_sim_netlist.v
-// Design      : emulated_microscope_util_idelay_ctrl_0_0
+// Command     : write_verilog -force -mode funcsim
+//               c:/openTCSPC3/SRC/zedboard_real_microscope/zedboard_real_microscope/ip/zedboard_real_microscope_util_idelay_ctrl_0_0/zedboard_real_microscope_util_idelay_ctrl_0_0_sim_netlist.v
+// Design      : zedboard_real_microscope_util_idelay_ctrl_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg484-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "emulated_microscope_util_idelay_ctrl_0_0,util_idelay_ctrl_v1_0_4_util_idelay_ctrl,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "util_idelay_ctrl_v1_0_4_util_idelay_ctrl,Vivado 2024.2" *) 
+(* CHECK_LICENSE_TYPE = "zedboard_real_microscope_util_idelay_ctrl_0_0,util_idelay_ctrl_v1_0_4_util_idelay_ctrl,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "util_idelay_ctrl_v1_0_4_util_idelay_ctrl,Vivado 2024.2" *) 
 (* NotValidForBitStream *)
 module zedboard_real_microscope_util_idelay_ctrl_0_0
    (rdy,
     ref_clk,
     rst);
   output rdy;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ref_clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ref_clk, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN emulated_microscope_processing_system7_0_0_FCLK_CLK3, INSERT_VIP 0" *) input ref_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ref_clk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ref_clk, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN zedboard_real_microscope_processing_system7_0_0_FCLK_CLK3, INSERT_VIP 0" *) input ref_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
 
   wire rdy;
@@ -34,7 +34,7 @@ module zedboard_real_microscope_util_idelay_ctrl_0_0
         .rst(rst));
 endmodule
 
-(* SIM_DEVICE = "7SERIES" *) 
+(* ORIG_REF_NAME = "util_idelay_ctrl_v1_0_4_util_idelay_ctrl" *) (* SIM_DEVICE = "7SERIES" *) 
 module zedboard_real_microscope_util_idelay_ctrl_0_0_util_idelay_ctrl_v1_0_4_util_idelay_ctrl
    (rdy,
     ref_clk,

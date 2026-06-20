@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Tue Jun 16 11:31:42 2026
+-- Date        : Thu Jun 18 22:08:34 2026
 -- Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/openTCSPC3/SRC/zedboard_real_microscope/zedboard_real_microscope/ip/zedboard_real_microscope_axi_smc_main_0/zedboard_real_microscope_axi_smc_main_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top zedboard_real_microscope_axi_smc_main_0 -prefix
+--               zedboard_real_microscope_axi_smc_main_0_ zedboard_real_microscope_axi_smc_main_0_stub.vhdl
 -- Design      : zedboard_real_microscope_axi_smc_main_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

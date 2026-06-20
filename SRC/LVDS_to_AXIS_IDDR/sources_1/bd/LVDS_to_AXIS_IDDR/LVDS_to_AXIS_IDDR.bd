@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4822EC2C3A505D0F",
+      "boundary_crc": "0x2EC25884DE73FAD",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../LVDS_to_AXIS_IDDR.gen/sources_1/bd/LVDS_to_AXIS_IDDR",
       "name": "LVDS_to_AXIS_IDDR",
@@ -19,9 +19,6 @@
       "DDR_Stream_to_AXI_St_1": "",
       "ila_LVDS_fast": "",
       "util_ds_buf_0": "",
-      "IDELAYE2_FRAME": "",
-      "IDELAYE2_SDO": "",
-      "IDELAYE2_CLOCK_0": "",
       "IBUFDS_DO_0": "",
       "ila_before_axi_fifo": ""
     },
@@ -113,6 +110,21 @@
           "TRIG": {
             "physical_name": "TRIG_IN_trig",
             "direction": "I"
+          }
+        }
+      },
+      "TRIG_OUT": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:trigger:1.0",
+        "vlnv": "xilinx.com:interface:trigger_rtl:1.0",
+        "port_maps": {
+          "ACK": {
+            "physical_name": "TRIG_OUT_ack",
+            "direction": "I"
+          },
+          "TRIG": {
+            "physical_name": "TRIG_OUT_trig",
+            "direction": "O"
           }
         }
       }
@@ -408,24 +420,6 @@
             "value_src": "default"
           }
         }
-      },
-      "LD": {
-        "direction": "I"
-      },
-      "CNTVALUEIN_FRAME": {
-        "direction": "I",
-        "left": "4",
-        "right": "0"
-      },
-      "CNTVALUEIN_SDO": {
-        "direction": "I",
-        "left": "4",
-        "right": "0"
-      },
-      "CNTVALUEIN_CLK": {
-        "direction": "I",
-        "left": "4",
-        "right": "0"
       }
     },
     "components": {
@@ -637,10 +631,38 @@
             }
           },
           "D": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "LVDS_to_AXIS_IDDR_sdo_n",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "F": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "LVDS_to_AXIS_IDDR_frame_n",
+                "value_src": "ip_prop"
+              }
+            }
           }
         }
       },
@@ -658,16 +680,16 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "6"
+            "value": "3"
           },
           "C_PROBE3_WIDTH": {
-            "value": "5"
+            "value": "1"
           },
           "C_PROBE4_WIDTH": {
-            "value": "5"
+            "value": "1"
           },
           "C_PROBE5_WIDTH": {
-            "value": "5"
+            "value": "1"
           },
           "C_TRIGIN_EN": {
             "value": "true"
@@ -686,163 +708,6 @@
         "parameters": {
           "C_BUF_TYPE": {
             "value": "BUFG"
-          }
-        }
-      },
-      "IDELAYE2_FRAME": {
-        "vlnv": "xilinx.com:module_ref:IDELAYE2_DATA:1.0",
-        "ip_revision": "1",
-        "xci_name": "LVDS_to_AXIS_IDDR_IDELAYE2_FRAME_0",
-        "xci_path": "ip\\LVDS_to_AXIS_IDDR_IDELAYE2_FRAME_0\\LVDS_to_AXIS_IDDR_IDELAYE2_FRAME_0.xci",
-        "inst_hier_path": "IDELAYE2_FRAME",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IDELAYE2_DATA",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "LVDS_to_AXIS_IDDR_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "CNTVALUEIN": {
-            "direction": "I",
-            "left": "4",
-            "right": "0"
-          },
-          "LD": {
-            "direction": "I"
-          },
-          "IDATAIN": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "LVDS_to_AXIS_IDDR_frame_n",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "DATAOUT": {
-            "direction": "O"
-          },
-          "CNTVALUEOUT": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
-          }
-        }
-      },
-      "IDELAYE2_SDO": {
-        "vlnv": "xilinx.com:module_ref:IDELAYE2_DATA:1.0",
-        "ip_revision": "1",
-        "xci_name": "LVDS_to_AXIS_IDDR_IDELAYE2_SDO_0",
-        "xci_path": "ip\\LVDS_to_AXIS_IDDR_IDELAYE2_SDO_0\\LVDS_to_AXIS_IDDR_IDELAYE2_SDO_0.xci",
-        "inst_hier_path": "IDELAYE2_SDO",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IDELAYE2_DATA",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "LVDS_to_AXIS_IDDR_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "CNTVALUEIN": {
-            "direction": "I",
-            "left": "4",
-            "right": "0"
-          },
-          "LD": {
-            "direction": "I"
-          },
-          "IDATAIN": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "LVDS_to_AXIS_IDDR_sdo_n",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "DATAOUT": {
-            "direction": "O"
-          },
-          "CNTVALUEOUT": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
-          }
-        }
-      },
-      "IDELAYE2_CLOCK_0": {
-        "vlnv": "xilinx.com:module_ref:IDELAYE2_CLOCK:1.0",
-        "ip_revision": "1",
-        "xci_name": "LVDS_to_AXIS_IDDR_IDELAYE2_CLOCK_0_0",
-        "xci_path": "ip\\LVDS_to_AXIS_IDDR_IDELAYE2_CLOCK_0_0\\LVDS_to_AXIS_IDDR_IDELAYE2_CLOCK_0_0.xci",
-        "inst_hier_path": "IDELAYE2_CLOCK_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "IDELAYE2_CLOCK",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "LVDS_to_AXIS_IDDR_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "CNTVALUEIN": {
-            "direction": "I",
-            "left": "4",
-            "right": "0"
-          },
-          "LD": {
-            "direction": "I"
-          },
-          "IDATAIN": {
-            "direction": "I"
-          },
-          "DATAOUT": {
-            "direction": "O"
-          },
-          "CNTVALUEOUT": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
           }
         }
       },
@@ -914,7 +779,7 @@
             "value": "true"
           },
           "C_TRIGOUT_EN": {
-            "value": "false"
+            "value": "true"
           }
         }
       }
@@ -944,44 +809,26 @@
           "ila_LVDS_fast/TRIG_OUT",
           "ila_before_axi_fifo/TRIG_IN"
         ]
+      },
+      "ila_before_axi_fifo_TRIG_OUT": {
+        "interface_ports": [
+          "TRIG_OUT",
+          "ila_before_axi_fifo/TRIG_OUT"
+        ]
       }
     },
     "nets": {
-      "CNTVALUEIN_0_1": {
-        "ports": [
-          "CNTVALUEIN_FRAME",
-          "IDELAYE2_FRAME/CNTVALUEIN"
-        ]
-      },
-      "CNTVALUEIN_0_2": {
-        "ports": [
-          "CNTVALUEIN_SDO",
-          "IDELAYE2_SDO/CNTVALUEIN"
-        ]
-      },
-      "CNTVALUEIN_0_3": {
-        "ports": [
-          "CNTVALUEIN_CLK",
-          "IDELAYE2_CLOCK_0/CNTVALUEIN"
-        ]
-      },
       "FRAME_IBUF_OUT": {
         "ports": [
-          "IDELAYE2_FRAME/DATAOUT",
+          "FRAME/IBUF_OUT",
           "ila_LVDS_fast/probe1",
           "DDR_Stream_to_AXI_St_1/F"
-        ]
-      },
-      "FRAME_IBUF_OUT1": {
-        "ports": [
-          "FRAME/IBUF_OUT",
-          "IDELAYE2_FRAME/IDATAIN"
         ]
       },
       "IBUFDS_DO_0_O": {
         "ports": [
           "IBUFDS_DO_0/O",
-          "IDELAYE2_CLOCK_0/IDATAIN"
+          "util_ds_buf_0/BUFG_I"
         ]
       },
       "IBUF_DS_N_0_1": {
@@ -1020,38 +867,6 @@
           "SDO/IBUF_DS_P"
         ]
       },
-      "IDELAYE2_CLOCK_0_CNTVALUEOUT": {
-        "ports": [
-          "IDELAYE2_CLOCK_0/CNTVALUEOUT",
-          "ila_LVDS_fast/probe5"
-        ]
-      },
-      "IDELAYE2_CLOCK_0_DATAOUT": {
-        "ports": [
-          "IDELAYE2_CLOCK_0/DATAOUT",
-          "util_ds_buf_0/BUFG_I"
-        ]
-      },
-      "IDELAYE2_FRAME_CNTVALUEOUT": {
-        "ports": [
-          "IDELAYE2_FRAME/CNTVALUEOUT",
-          "ila_LVDS_fast/probe4"
-        ]
-      },
-      "IDELAYE2_SDO_CNTVALUEOUT": {
-        "ports": [
-          "IDELAYE2_SDO/CNTVALUEOUT",
-          "ila_LVDS_fast/probe3"
-        ]
-      },
-      "LD_0_1": {
-        "ports": [
-          "LD",
-          "IDELAYE2_CLOCK_0/LD",
-          "IDELAYE2_FRAME/LD",
-          "IDELAYE2_SDO/LD"
-        ]
-      },
       "Net": {
         "ports": [
           "util_ds_buf_0/BUFG_O",
@@ -1064,15 +879,9 @@
       },
       "SDO_IBUF_OUT": {
         "ports": [
-          "IDELAYE2_SDO/DATAOUT",
+          "SDO/IBUF_OUT",
           "ila_LVDS_fast/probe0",
           "DDR_Stream_to_AXI_St_1/D"
-        ]
-      },
-      "SDO_IBUF_OUT1": {
-        "ports": [
-          "SDO/IBUF_OUT",
-          "IDELAYE2_SDO/IDATAIN"
         ]
       },
       "aresetn_0_1": {
@@ -1114,8 +923,8 @@
       "en_0_1": {
         "ports": [
           "en",
-          "DDR_Stream_to_AXI_St_1/enable",
-          "lvds_output_0/en"
+          "lvds_output_0/en",
+          "DDR_Stream_to_AXI_St_1/enable"
         ]
       },
       "lvds_output_0_diff_n": {
@@ -1133,10 +942,7 @@
       "m_axis_aclk_0_1": {
         "ports": [
           "clk",
-          "axis_data_fifo_0/m_axis_aclk",
-          "IDELAYE2_CLOCK_0/clk",
-          "IDELAYE2_FRAME/clk",
-          "IDELAYE2_SDO/clk"
+          "axis_data_fifo_0/m_axis_aclk"
         ]
       },
       "msglen_0_1": {

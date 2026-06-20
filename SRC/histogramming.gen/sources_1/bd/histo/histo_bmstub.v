@@ -16,6 +16,8 @@ module histo (
   M_AXIS_tvalid,
   TRIG_OUT_ack,
   TRIG_OUT_trig,
+  TRIG_IN_ack,
+  TRIG_IN_trig,
   aresetn,
   clk,
   disable_p,
@@ -34,9 +36,7 @@ module histo (
   bin_written_but_never_read_warning,
   MAX_PIXELS,
   buffer_almost_full,
-  ila_clk,
-  TRIG_IN_0_ack,
-  TRIG_IN_0_trig
+  ila_clk
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 AXIS_IN TDATA" *)
@@ -64,6 +64,11 @@ module histo (
   input TRIG_OUT_ack;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *)
   output TRIG_OUT_trig;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN ACK" *)
+  (* X_INTERFACE_MODE = "slave TRIG_IN" *)
+  output TRIG_IN_ack;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *)
+  input TRIG_IN_trig;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *)
   (* X_INTERFACE_MODE = "slave RST.ARESETN" *)
   (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -110,11 +115,6 @@ module histo (
   (* X_INTERFACE_MODE = "slave CLK.ILA_CLK" *)
   (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ILA_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN histo_clk_0, INSERT_VIP 0" *)
   input ila_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN_0 ACK" *)
-  (* X_INTERFACE_MODE = "slave TRIG_IN_0" *)
-  output TRIG_IN_0_ack;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN_0 TRIG" *)
-  input TRIG_IN_0_trig;
 
   // stub module has no contents
 

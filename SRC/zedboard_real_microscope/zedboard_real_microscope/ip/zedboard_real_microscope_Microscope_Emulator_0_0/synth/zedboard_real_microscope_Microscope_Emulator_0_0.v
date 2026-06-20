@@ -47,12 +47,12 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:Microscope_Emulator:1.14
+// IP VLNV: xilinx.com:user:Microscope_Emulator:1.15
 // IP Revision: 2
 
 (* X_CORE_INFO = "Microscope_Emulator,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "zedboard_real_microscope_Microscope_Emulator_0_0,Microscope_Emulator,{}" *)
-(* CORE_GENERATION_INFO = "zedboard_real_microscope_Microscope_Emulator_0_0,Microscope_Emulator,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Microscope_Emulator,x_ipVersion=1.14,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "zedboard_real_microscope_Microscope_Emulator_0_0,Microscope_Emulator,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Microscope_Emulator,x_ipVersion=1.15,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "IPI" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module zedboard_real_microscope_Microscope_Emulator_0_0 (

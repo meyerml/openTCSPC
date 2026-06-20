@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Tue Jun 16 11:22:26 2026
+//Date        : Fri Jun 19 12:07:36 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target zedboard_real_microscope.bd
 //Design      : zedboard_real_microscope
@@ -167,7 +167,7 @@ module s00_couplers_imp_W7XFIS
         .s_axi_wvalid(S_AXI_wvalid));
 endmodule
 
-(* CORE_GENERATION_INFO = "zedboard_real_microscope,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zedboard_real_microscope,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=45,numReposBlks=43,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=3,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "zedboard_real_microscope.hwdef" *) 
+(* CORE_GENERATION_INFO = "zedboard_real_microscope,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zedboard_real_microscope,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=38,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=3,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "zedboard_real_microscope.hwdef" *) 
 module zedboard_real_microscope
    (DDR_addr,
     DDR_ba,
@@ -287,24 +287,30 @@ module zedboard_real_microscope
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [63:0]Histogramming_0_M_AXIS_TDATA;
-  wire Histogramming_0_M_AXIS_TLAST;
-  wire Histogramming_0_M_AXIS_TREADY;
-  wire Histogramming_0_M_AXIS_TVALID;
+  (* CONN_BUS_INFO = "Histogramming_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]Histogramming_0_M_AXIS_TDATA;
+  (* CONN_BUS_INFO = "Histogramming_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire Histogramming_0_M_AXIS_TLAST;
+  (* CONN_BUS_INFO = "Histogramming_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire Histogramming_0_M_AXIS_TREADY;
+  (* CONN_BUS_INFO = "Histogramming_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire Histogramming_0_M_AXIS_TVALID;
   wire Histogramming_0_buffer_almost_full;
-  wire Histogramming_TRIG_OUT_ACK;
-  wire Histogramming_TRIG_OUT_TRIG;
+  (* CONN_BUS_INFO = "Histogramming_TRIG_OUT xilinx.com:interface:trigger:1.0 None ACK" *) (* DONT_TOUCH *) wire [0:0]Histogramming_TRIG_OUT_ACK;
+  (* CONN_BUS_INFO = "Histogramming_TRIG_OUT xilinx.com:interface:trigger:1.0 None TRIG" *) (* DONT_TOUCH *) wire Histogramming_TRIG_OUT_TRIG;
   wire [0:0]IDELAYE2_LD_Dout;
   wire [31:0]IMAGE_SIZE_Dout;
   wire [15:0]LOG_2_BINWIDTH_Dout;
-  wire [63:0]LVDS_to_AXIS_0_M_AXIS_0_TDATA;
-  wire LVDS_to_AXIS_0_M_AXIS_0_TREADY;
-  wire LVDS_to_AXIS_0_M_AXIS_0_TVALID;
+  wire LVDS_to_AXIS_0_Buffer_overflow;
+  (* CONN_BUS_INFO = "LVDS_to_AXIS_0_M_AXIS_0 xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]LVDS_to_AXIS_0_M_AXIS_0_TDATA;
+  (* CONN_BUS_INFO = "LVDS_to_AXIS_0_M_AXIS_0 xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire LVDS_to_AXIS_0_M_AXIS_0_TREADY;
+  (* CONN_BUS_INFO = "LVDS_to_AXIS_0_M_AXIS_0 xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire LVDS_to_AXIS_0_M_AXIS_0_TVALID;
   wire [31:0]LVDS_to_AXIS_IDDR_0_axis_rd_data_count;
   wire [31:0]LVDS_to_AXIS_IDDR_0_axis_wr_data_count;
+  wire LVDS_to_AXIS_IDDR_TRIG_OUT_ACK;
+  wire LVDS_to_AXIS_IDDR_TRIG_OUT_TRIG;
   wire [31:0]MAX_PIXELS_Dout;
   wire Microscope_Emulator_0_TRIG_OUT_ACK;
   wire Microscope_Emulator_0_TRIG_OUT_TRIG;
+  wire Microscope_Emulator_0_frame_clk;
+  wire Microscope_Emulator_0_line_clk;
+  wire Microscope_Emulator_0_pixel_clk;
   wire [31:0]PULSES_PER_PIXEL_Dout;
   wire [5:0]REFINDEX_BITS_Dout;
   wire [0:0]SECOND_ARESETN_Dout;
@@ -323,51 +329,51 @@ module zedboard_real_microscope
   wire axi_bram_ctrl_1_BRAM_PORTA_EN;
   wire axi_bram_ctrl_1_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_1_BRAM_PORTA_WE;
-  wire [31:0]axi_dma_0_M_AXI_S2MM_AWADDR;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWADDR" *) (* DONT_TOUCH *) wire [31:0]axi_dma_0_M_AXI_S2MM_AWADDR;
   wire [1:0]axi_dma_0_M_AXI_S2MM_AWBURST;
-  wire [3:0]axi_dma_0_M_AXI_S2MM_AWCACHE;
-  wire [7:0]axi_dma_0_M_AXI_S2MM_AWLEN;
-  wire [2:0]axi_dma_0_M_AXI_S2MM_AWPROT;
-  wire axi_dma_0_M_AXI_S2MM_AWREADY;
-  wire [2:0]axi_dma_0_M_AXI_S2MM_AWSIZE;
-  wire axi_dma_0_M_AXI_S2MM_AWVALID;
-  wire axi_dma_0_M_AXI_S2MM_BREADY;
-  wire [1:0]axi_dma_0_M_AXI_S2MM_BRESP;
-  wire axi_dma_0_M_AXI_S2MM_BVALID;
-  wire [63:0]axi_dma_0_M_AXI_S2MM_WDATA;
-  wire axi_dma_0_M_AXI_S2MM_WLAST;
-  wire axi_dma_0_M_AXI_S2MM_WREADY;
-  wire [7:0]axi_dma_0_M_AXI_S2MM_WSTRB;
-  wire axi_dma_0_M_AXI_S2MM_WVALID;
-  wire [31:0]axi_dma_0_M_AXI_SG_ARADDR;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWCACHE" *) (* DONT_TOUCH *) wire [3:0]axi_dma_0_M_AXI_S2MM_AWCACHE;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWLEN" *) (* DONT_TOUCH *) wire [7:0]axi_dma_0_M_AXI_S2MM_AWLEN;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWPROT" *) (* DONT_TOUCH *) wire [2:0]axi_dma_0_M_AXI_S2MM_AWPROT;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_AWREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWSIZE" *) (* DONT_TOUCH *) wire [2:0]axi_dma_0_M_AXI_S2MM_AWSIZE;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_AWVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_BREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BRESP" *) (* DONT_TOUCH *) wire [1:0]axi_dma_0_M_AXI_S2MM_BRESP;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_BVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WDATA" *) (* DONT_TOUCH *) wire [63:0]axi_dma_0_M_AXI_S2MM_WDATA;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WLAST" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_WLAST;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_WREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WSTRB" *) (* DONT_TOUCH *) wire [7:0]axi_dma_0_M_AXI_S2MM_WSTRB;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_S2MM_WVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARADDR" *) (* DONT_TOUCH *) wire [31:0]axi_dma_0_M_AXI_SG_ARADDR;
   wire [1:0]axi_dma_0_M_AXI_SG_ARBURST;
-  wire [3:0]axi_dma_0_M_AXI_SG_ARCACHE;
-  wire [7:0]axi_dma_0_M_AXI_SG_ARLEN;
-  wire [2:0]axi_dma_0_M_AXI_SG_ARPROT;
-  wire axi_dma_0_M_AXI_SG_ARREADY;
-  wire [2:0]axi_dma_0_M_AXI_SG_ARSIZE;
-  wire axi_dma_0_M_AXI_SG_ARVALID;
-  wire [31:0]axi_dma_0_M_AXI_SG_AWADDR;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARCACHE" *) (* DONT_TOUCH *) wire [3:0]axi_dma_0_M_AXI_SG_ARCACHE;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARLEN" *) (* DONT_TOUCH *) wire [7:0]axi_dma_0_M_AXI_SG_ARLEN;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARPROT" *) (* DONT_TOUCH *) wire [2:0]axi_dma_0_M_AXI_SG_ARPROT;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_ARREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARSIZE" *) (* DONT_TOUCH *) wire [2:0]axi_dma_0_M_AXI_SG_ARSIZE;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 ARVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_ARVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWADDR" *) (* DONT_TOUCH *) wire [31:0]axi_dma_0_M_AXI_SG_AWADDR;
   wire [1:0]axi_dma_0_M_AXI_SG_AWBURST;
-  wire [3:0]axi_dma_0_M_AXI_SG_AWCACHE;
-  wire [7:0]axi_dma_0_M_AXI_SG_AWLEN;
-  wire [2:0]axi_dma_0_M_AXI_SG_AWPROT;
-  wire axi_dma_0_M_AXI_SG_AWREADY;
-  wire [2:0]axi_dma_0_M_AXI_SG_AWSIZE;
-  wire axi_dma_0_M_AXI_SG_AWVALID;
-  wire axi_dma_0_M_AXI_SG_BREADY;
-  wire [1:0]axi_dma_0_M_AXI_SG_BRESP;
-  wire axi_dma_0_M_AXI_SG_BVALID;
-  wire [31:0]axi_dma_0_M_AXI_SG_RDATA;
-  wire axi_dma_0_M_AXI_SG_RLAST;
-  wire axi_dma_0_M_AXI_SG_RREADY;
-  wire [1:0]axi_dma_0_M_AXI_SG_RRESP;
-  wire axi_dma_0_M_AXI_SG_RVALID;
-  wire [31:0]axi_dma_0_M_AXI_SG_WDATA;
-  wire axi_dma_0_M_AXI_SG_WLAST;
-  wire axi_dma_0_M_AXI_SG_WREADY;
-  wire [3:0]axi_dma_0_M_AXI_SG_WSTRB;
-  wire axi_dma_0_M_AXI_SG_WVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWCACHE" *) (* DONT_TOUCH *) wire [3:0]axi_dma_0_M_AXI_SG_AWCACHE;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWLEN" *) (* DONT_TOUCH *) wire [7:0]axi_dma_0_M_AXI_SG_AWLEN;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWPROT" *) (* DONT_TOUCH *) wire [2:0]axi_dma_0_M_AXI_SG_AWPROT;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_AWREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWSIZE" *) (* DONT_TOUCH *) wire [2:0]axi_dma_0_M_AXI_SG_AWSIZE;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 AWVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_AWVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 BREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_BREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 BRESP" *) (* DONT_TOUCH *) wire [1:0]axi_dma_0_M_AXI_SG_BRESP;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 BVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_BVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 RDATA" *) (* DONT_TOUCH *) wire [31:0]axi_dma_0_M_AXI_SG_RDATA;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 RLAST" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_RLAST;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 RREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_RREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 RRESP" *) (* DONT_TOUCH *) wire [1:0]axi_dma_0_M_AXI_SG_RRESP;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 RVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_RVALID;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 WDATA" *) (* DONT_TOUCH *) wire [31:0]axi_dma_0_M_AXI_SG_WDATA;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 WLAST" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_WLAST;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 WREADY" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_WREADY;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 WSTRB" *) (* DONT_TOUCH *) wire [3:0]axi_dma_0_M_AXI_SG_WSTRB;
+  (* CONN_BUS_INFO = "axi_dma_0_M_AXI_SG xilinx.com:interface:aximm:1.0 AXI4 WVALID" *) (* DONT_TOUCH *) wire axi_dma_0_M_AXI_SG_WVALID;
   wire axi_dma_0_s2mm_introut;
   wire [31:0]axi_gpio_0_gpio2_io_o;
   wire [255:0]axi_gpio_0_gpio_io_o;
@@ -547,34 +553,23 @@ module zedboard_real_microscope
   wire axi_smc_main_M07_AXI_WREADY;
   wire [3:0]axi_smc_main_M07_AXI_WSTRB;
   wire axi_smc_main_M07_AXI_WVALID;
-  wire \^buffer_overflow ;
-  wire [0:0]disable_p;
-  wire frame_clk;
-  wire frame_clk_sim;
   wire frame_n;
   wire frame_p;
   wire histo_0_bin_full_warning;
   wire histo_0_bin_written_but_never_read_warning;
+  wire [0:0]histo_0_disable_p;
   wire histo_0_negedge_frame;
   wire histo_0_premature_pixel_done_error;
-  wire histogram_ILA_TRIG_OUT_ACK;
-  wire histogram_ILA_TRIG_OUT_TRIG;
-  wire ila_DMA_out1_TRIG_OUT_ACK;
-  wire ila_DMA_out1_TRIG_OUT_TRIG;
-  wire ila_DMA_out_TRIG_OUT_ACK;
-  wire ila_DMA_out_TRIG_OUT_TRIG;
-  wire ila_LVDS_to_axis_axis_TRIG_OUT_ACK;
-  wire ila_LVDS_to_axis_axis_TRIG_OUT_TRIG;
+  wire [0:0]histo_0_refres_p;
   wire l_clk_in_n;
   wire l_clk_in_p;
   wire l_clk_out_n;
   wire l_clk_out_p;
+  wire laser_signal_generat_0_frame_clk_r;
+  wire laser_signal_generat_0_line_clk_r;
+  wire laser_signal_generat_0_pixel_clk_r;
   wire [0:0]level_shifter_en;
-  wire line_clk;
-  wire line_clk_sim;
   wire [5:0]msglen_Dout;
-  wire pixel_clk;
-  wire pixel_clk_sim;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_CLK1;
   wire processing_system7_0_FCLK_CLK2;
@@ -619,21 +614,28 @@ module zedboard_real_microscope
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
   wire refclk_out_sim;
-  wire [0:0]refres_p;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire sdo_n;
   wire sdo_p;
-  wire slow_laser_ILA_TRIG_OUT_ACK;
-  wire slow_laser_ILA_TRIG_OUT_TRIG;
   wire [0:0]spi_cs_n;
   wire spi_miso;
   wire spi_mosi;
   wire spi_sclk;
   wire stop_out_sim;
+  (* CONN_BUS_INFO = "system_ila_TRIG_OUT xilinx.com:interface:trigger:1.0 None ACK" *) (* DONT_TOUCH *) wire system_ila_TRIG_OUT_ACK;
+  (* CONN_BUS_INFO = "system_ila_TRIG_OUT xilinx.com:interface:trigger:1.0 None TRIG" *) (* DONT_TOUCH *) wire [0:0]system_ila_TRIG_OUT_TRIG;
   wire [0:0]util_vector_logic_0_Res;
   wire [5:0]xlconcat_1_dout;
 
-  assign buffer_overflow[0] = \^buffer_overflow ;
+  assign buffer_overflow[0] = LVDS_to_AXIS_0_Buffer_overflow;
+  assign disable_p[0] = histo_0_disable_p;
+  assign frame_clk_sim = Microscope_Emulator_0_frame_clk;
+  assign laser_signal_generat_0_frame_clk_r = frame_clk;
+  assign laser_signal_generat_0_line_clk_r = line_clk;
+  assign laser_signal_generat_0_pixel_clk_r = pixel_clk;
+  assign line_clk_sim = Microscope_Emulator_0_line_clk;
+  assign pixel_clk_sim = Microscope_Emulator_0_pixel_clk;
+  assign refres_p[0] = histo_0_refres_p;
   zedboard_real_microscope_BINS_TO_READ_0 BINS_TO_READ
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(BINS_TO_READ_Dout));
@@ -664,6 +666,8 @@ module zedboard_real_microscope
         .M_AXIS_tvalid(Histogramming_0_M_AXIS_TVALID),
         .REFINDEX_BITS(REFINDEX_BITS_Dout),
         .STOPRESULT_BITS(STOPRESULT_BITS_Dout),
+        .TRIG_IN_ack(LVDS_to_AXIS_IDDR_TRIG_OUT_ACK),
+        .TRIG_IN_trig(LVDS_to_AXIS_IDDR_TRIG_OUT_TRIG),
         .TRIG_OUT_ack(Histogramming_TRIG_OUT_ACK),
         .TRIG_OUT_trig(Histogramming_TRIG_OUT_TRIG),
         .aresetn(SECOND_ARESETN_Dout),
@@ -671,16 +675,16 @@ module zedboard_real_microscope
         .bin_written_but_never_read_warning(histo_0_bin_written_but_never_read_warning),
         .buffer_almost_full(Histogramming_0_buffer_almost_full),
         .clk(processing_system7_0_FCLK_CLK0),
-        .disable_p(disable_p),
+        .disable_p(histo_0_disable_p),
         .en(level_shifter_en),
-        .frame_clk(frame_clk),
+        .frame_clk(laser_signal_generat_0_frame_clk_r),
         .ila_clk(processing_system7_0_FCLK_CLK3),
-        .line_clk(line_clk),
+        .line_clk(laser_signal_generat_0_line_clk_r),
         .log_2_BIN_WIDTH(LOG_2_BINWIDTH_Dout),
         .negedge_frame(histo_0_negedge_frame),
-        .pixel_clk(pixel_clk),
+        .pixel_clk(laser_signal_generat_0_pixel_clk_r),
         .premature_pixel_done_error(histo_0_premature_pixel_done_error),
-        .refres_p(refres_p));
+        .refres_p(histo_0_refres_p));
   zedboard_real_microscope_IDELAYE2_LD_0 IDELAYE2_LD
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(IDELAYE2_LD_Dout));
@@ -691,16 +695,14 @@ module zedboard_real_microscope
        (.Din(axi_gpio_0_gpio_io_o),
         .Dout(LOG_2_BINWIDTH_Dout));
   zedboard_real_microscope_LVDS_to_AXIS_IDDR_0 LVDS_to_AXIS_IDDR
-       (.Buffer_overflow(\^buffer_overflow ),
-        .CNTVALUEIN_CLK(CNTVALUEIN_CLK_Dout),
-        .CNTVALUEIN_FRAME(CNTVALUEIN_FRAME_Dout),
-        .CNTVALUEIN_SDO(CNTVALUEIN_SDO_Dout),
-        .LD(IDELAYE2_LD_Dout),
+       (.Buffer_overflow(LVDS_to_AXIS_0_Buffer_overflow),
         .M_AXIS_tdata(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
         .M_AXIS_tready(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
         .M_AXIS_tvalid(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
         .TRIG_IN_ack(Microscope_Emulator_0_TRIG_OUT_ACK),
         .TRIG_IN_trig(Microscope_Emulator_0_TRIG_OUT_TRIG),
+        .TRIG_OUT_ack(LVDS_to_AXIS_IDDR_TRIG_OUT_ACK),
+        .TRIG_OUT_trig(LVDS_to_AXIS_IDDR_TRIG_OUT_TRIG),
         .aresetn(SECOND_ARESETN_Dout),
         .axis_rd_data_count(LVDS_to_AXIS_IDDR_0_axis_rd_data_count),
         .axis_wr_data_count(LVDS_to_AXIS_IDDR_0_axis_wr_data_count),
@@ -740,19 +742,19 @@ module zedboard_real_microscope
         .S_AXI_wready(axi_smc_main_M07_AXI_WREADY),
         .S_AXI_wstrb(axi_smc_main_M07_AXI_WSTRB),
         .S_AXI_wvalid(axi_smc_main_M07_AXI_WVALID),
-        .TRIG_IN_ack(ila_LVDS_to_axis_axis_TRIG_OUT_ACK),
-        .TRIG_IN_trig(ila_LVDS_to_axis_axis_TRIG_OUT_TRIG),
+        .TRIG_IN_ack(system_ila_TRIG_OUT_ACK),
+        .TRIG_IN_trig(system_ila_TRIG_OUT_TRIG),
         .TRIG_OUT_ack(Microscope_Emulator_0_TRIG_OUT_ACK),
         .TRIG_OUT_trig(Microscope_Emulator_0_TRIG_OUT_TRIG),
         .aresetn_laser(processing_system7_0_FCLK_RESET2_N),
         .axi_clk(processing_system7_0_FCLK_CLK0),
         .axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .en(EMULATOR_en_Dout),
-        .frame_clk(frame_clk_sim),
+        .frame_clk(Microscope_Emulator_0_frame_clk),
         .image_size(IMAGE_SIZE_Dout),
         .laser_clk(processing_system7_0_FCLK_CLK2),
-        .line_clk(line_clk_sim),
-        .pixel_clk(pixel_clk_sim),
+        .line_clk(Microscope_Emulator_0_line_clk),
+        .pixel_clk(Microscope_Emulator_0_pixel_clk),
         .pulses_per_pixel(PULSES_PER_PIXEL_Dout),
         .refclk_out(refclk_out_sim),
         .stop_out(stop_out_sim));
@@ -1290,107 +1292,6 @@ module zedboard_real_microscope
         .rstb(axi_bram_ctrl_1_BRAM_PORTA_RST),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
         .web(axi_bram_ctrl_1_BRAM_PORTA_WE));
-  zedboard_real_microscope_histogram_ILA_0 histogram_ILA
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(disable_p),
-        .probe1(refres_p),
-        .probe2(axi_dma_0_s2mm_introut),
-        .probe3(histo_0_negedge_frame),
-        .probe4(histo_0_bin_full_warning),
-        .probe5(histo_0_premature_pixel_done_error),
-        .probe6(histo_0_bin_written_but_never_read_warning),
-        .probe7(Histogramming_0_buffer_almost_full),
-        .trig_in(slow_laser_ILA_TRIG_OUT_TRIG),
-        .trig_in_ack(slow_laser_ILA_TRIG_OUT_ACK),
-        .trig_out(histogram_ILA_TRIG_OUT_TRIG),
-        .trig_out_ack(histogram_ILA_TRIG_OUT_ACK));
-  zedboard_real_microscope_ila_DMA_out_0 ila_DMA_out
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(axi_dma_0_M_AXI_S2MM_WREADY),
-        .probe1(axi_dma_0_M_AXI_S2MM_AWADDR),
-        .probe10({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .probe11(axi_dma_0_M_AXI_S2MM_AWVALID),
-        .probe12(axi_dma_0_M_AXI_S2MM_AWREADY),
-        .probe13({1'b0,1'b0}),
-        .probe14(axi_dma_0_M_AXI_S2MM_WDATA),
-        .probe15(axi_dma_0_M_AXI_S2MM_WSTRB),
-        .probe16(1'b0),
-        .probe17({1'b0,1'b0,1'b0}),
-        .probe18(axi_dma_0_M_AXI_S2MM_AWPROT),
-        .probe19(1'b0),
-        .probe2(axi_dma_0_M_AXI_S2MM_BRESP),
-        .probe20(1'b0),
-        .probe21(axi_dma_0_M_AXI_S2MM_AWLEN),
-        .probe22(1'b0),
-        .probe23(axi_dma_0_M_AXI_S2MM_AWSIZE),
-        .probe24(axi_dma_0_M_AXI_S2MM_AWBURST),
-        .probe25(1'b0),
-        .probe26(1'b0),
-        .probe27({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .probe28({1'b0,1'b1,1'b1}),
-        .probe29({1'b0,1'b1}),
-        .probe3(axi_dma_0_M_AXI_S2MM_BVALID),
-        .probe30(1'b0),
-        .probe31({1'b0,1'b0,1'b1,1'b1}),
-        .probe32(axi_dma_0_M_AXI_S2MM_AWCACHE),
-        .probe33({1'b0,1'b0,1'b0,1'b0}),
-        .probe34({1'b0,1'b0,1'b0,1'b0}),
-        .probe35(1'b0),
-        .probe36({1'b0,1'b0,1'b0,1'b0}),
-        .probe37({1'b0,1'b0,1'b0,1'b0}),
-        .probe38(1'b0),
-        .probe39(1'b0),
-        .probe4(axi_dma_0_M_AXI_S2MM_BREADY),
-        .probe40(1'b0),
-        .probe41(1'b0),
-        .probe42(axi_dma_0_M_AXI_S2MM_WLAST),
-        .probe43(1'b0),
-        .probe5({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .probe6(1'b0),
-        .probe7(axi_dma_0_M_AXI_S2MM_WVALID),
-        .probe8(1'b0),
-        .probe9(1'b0),
-        .trig_in(histogram_ILA_TRIG_OUT_TRIG),
-        .trig_in_ack(histogram_ILA_TRIG_OUT_ACK),
-        .trig_out(ila_DMA_out_TRIG_OUT_TRIG),
-        .trig_out_ack(ila_DMA_out_TRIG_OUT_ACK));
-  zedboard_real_microscope_ila_DMA_out1_0 ila_DMA_out1
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(Histogramming_0_M_AXIS_TREADY),
-        .probe1(Histogramming_0_M_AXIS_TDATA),
-        .probe2({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .probe3(Histogramming_0_M_AXIS_TVALID),
-        .probe4(Histogramming_0_M_AXIS_TLAST),
-        .probe5(1'b0),
-        .probe6({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .probe7(1'b0),
-        .probe8(1'b0),
-        .trig_in(ila_DMA_out_TRIG_OUT_TRIG),
-        .trig_in_ack(ila_DMA_out_TRIG_OUT_ACK),
-        .trig_out(ila_DMA_out1_TRIG_OUT_TRIG),
-        .trig_out_ack(ila_DMA_out1_TRIG_OUT_ACK));
-  zedboard_real_microscope_ila_LVDS_to_AXIS_0 ila_LVDS_to_AXIS
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(\^buffer_overflow ),
-        .probe1(LVDS_to_AXIS_IDDR_0_axis_rd_data_count),
-        .probe2(LVDS_to_AXIS_IDDR_0_axis_wr_data_count),
-        .trig_in(ila_DMA_out1_TRIG_OUT_TRIG),
-        .trig_in_ack(ila_DMA_out1_TRIG_OUT_ACK));
-  zedboard_real_microscope_ila_LVDS_to_axis_axis_0 ila_LVDS_to_axis_axis
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
-        .probe1(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
-        .probe2({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .probe3(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
-        .probe4(1'b0),
-        .probe5(1'b0),
-        .probe6({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .probe7(1'b0),
-        .probe8(1'b0),
-        .trig_in(Histogramming_TRIG_OUT_TRIG),
-        .trig_in_ack(Histogramming_TRIG_OUT_ACK),
-        .trig_out(ila_LVDS_to_axis_axis_TRIG_OUT_TRIG),
-        .trig_out_ack(ila_LVDS_to_axis_axis_TRIG_OUT_ACK));
   zedboard_real_microscope_logic_high_0 logic_high
        (.dout(level_shifter_en));
   zedboard_real_microscope_msglen_0 msglen
@@ -1510,16 +1411,91 @@ module zedboard_real_microscope
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  zedboard_real_microscope_slow_laser_ILA_0 slow_laser_ILA
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(frame_clk),
-        .probe1(line_clk),
-        .probe2(pixel_clk),
-        .probe3(frame_clk_sim),
-        .probe4(line_clk_sim),
-        .probe5(pixel_clk_sim),
-        .trig_out(slow_laser_ILA_TRIG_OUT_TRIG),
-        .trig_out_ack(slow_laser_ILA_TRIG_OUT_ACK));
+  zedboard_real_microscope_system_ila_0_0 system_ila
+       (.SLOT_0_AXIS_tdata(LVDS_to_AXIS_0_M_AXIS_0_TDATA),
+        .SLOT_0_AXIS_tlast(1'b0),
+        .SLOT_0_AXIS_tready(LVDS_to_AXIS_0_M_AXIS_0_TREADY),
+        .SLOT_0_AXIS_tvalid(LVDS_to_AXIS_0_M_AXIS_0_TVALID),
+        .SLOT_1_AXIS_tdata(Histogramming_0_M_AXIS_TDATA),
+        .SLOT_1_AXIS_tlast(Histogramming_0_M_AXIS_TLAST),
+        .SLOT_1_AXIS_tready(Histogramming_0_M_AXIS_TREADY),
+        .SLOT_1_AXIS_tvalid(Histogramming_0_M_AXIS_TVALID),
+        .SLOT_2_AXI_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .SLOT_2_AXI_arcache({1'b0,1'b0,1'b1,1'b1}),
+        .SLOT_2_AXI_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .SLOT_2_AXI_arprot({1'b0,1'b0,1'b0}),
+        .SLOT_2_AXI_arready(1'b0),
+        .SLOT_2_AXI_arsize({1'b0,1'b1,1'b1}),
+        .SLOT_2_AXI_arvalid(1'b0),
+        .SLOT_2_AXI_awaddr(axi_dma_0_M_AXI_S2MM_AWADDR),
+        .SLOT_2_AXI_awcache(axi_dma_0_M_AXI_S2MM_AWCACHE),
+        .SLOT_2_AXI_awlen(axi_dma_0_M_AXI_S2MM_AWLEN),
+        .SLOT_2_AXI_awprot(axi_dma_0_M_AXI_S2MM_AWPROT),
+        .SLOT_2_AXI_awready(axi_dma_0_M_AXI_S2MM_AWREADY),
+        .SLOT_2_AXI_awsize(axi_dma_0_M_AXI_S2MM_AWSIZE),
+        .SLOT_2_AXI_awvalid(axi_dma_0_M_AXI_S2MM_AWVALID),
+        .SLOT_2_AXI_bready(axi_dma_0_M_AXI_S2MM_BREADY),
+        .SLOT_2_AXI_bresp(axi_dma_0_M_AXI_S2MM_BRESP),
+        .SLOT_2_AXI_bvalid(axi_dma_0_M_AXI_S2MM_BVALID),
+        .SLOT_2_AXI_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .SLOT_2_AXI_rlast(1'b0),
+        .SLOT_2_AXI_rready(1'b0),
+        .SLOT_2_AXI_rvalid(1'b0),
+        .SLOT_2_AXI_wdata(axi_dma_0_M_AXI_S2MM_WDATA),
+        .SLOT_2_AXI_wlast(axi_dma_0_M_AXI_S2MM_WLAST),
+        .SLOT_2_AXI_wready(axi_dma_0_M_AXI_S2MM_WREADY),
+        .SLOT_2_AXI_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
+        .SLOT_2_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID),
+        .SLOT_3_AXI_araddr(axi_dma_0_M_AXI_SG_ARADDR),
+        .SLOT_3_AXI_arcache(axi_dma_0_M_AXI_SG_ARCACHE),
+        .SLOT_3_AXI_arlen(axi_dma_0_M_AXI_SG_ARLEN),
+        .SLOT_3_AXI_arprot(axi_dma_0_M_AXI_SG_ARPROT),
+        .SLOT_3_AXI_arready(axi_dma_0_M_AXI_SG_ARREADY),
+        .SLOT_3_AXI_arsize(axi_dma_0_M_AXI_SG_ARSIZE),
+        .SLOT_3_AXI_arvalid(axi_dma_0_M_AXI_SG_ARVALID),
+        .SLOT_3_AXI_awaddr(axi_dma_0_M_AXI_SG_AWADDR),
+        .SLOT_3_AXI_awcache(axi_dma_0_M_AXI_SG_AWCACHE),
+        .SLOT_3_AXI_awlen(axi_dma_0_M_AXI_SG_AWLEN),
+        .SLOT_3_AXI_awprot(axi_dma_0_M_AXI_SG_AWPROT),
+        .SLOT_3_AXI_awready(axi_dma_0_M_AXI_SG_AWREADY),
+        .SLOT_3_AXI_awsize(axi_dma_0_M_AXI_SG_AWSIZE),
+        .SLOT_3_AXI_awvalid(axi_dma_0_M_AXI_SG_AWVALID),
+        .SLOT_3_AXI_bready(axi_dma_0_M_AXI_SG_BREADY),
+        .SLOT_3_AXI_bresp(axi_dma_0_M_AXI_SG_BRESP),
+        .SLOT_3_AXI_bvalid(axi_dma_0_M_AXI_SG_BVALID),
+        .SLOT_3_AXI_rdata(axi_dma_0_M_AXI_SG_RDATA),
+        .SLOT_3_AXI_rlast(axi_dma_0_M_AXI_SG_RLAST),
+        .SLOT_3_AXI_rready(axi_dma_0_M_AXI_SG_RREADY),
+        .SLOT_3_AXI_rresp(axi_dma_0_M_AXI_SG_RRESP),
+        .SLOT_3_AXI_rvalid(axi_dma_0_M_AXI_SG_RVALID),
+        .SLOT_3_AXI_wdata(axi_dma_0_M_AXI_SG_WDATA),
+        .SLOT_3_AXI_wlast(axi_dma_0_M_AXI_SG_WLAST),
+        .SLOT_3_AXI_wready(axi_dma_0_M_AXI_SG_WREADY),
+        .SLOT_3_AXI_wstrb(axi_dma_0_M_AXI_SG_WSTRB),
+        .SLOT_3_AXI_wvalid(axi_dma_0_M_AXI_SG_WVALID),
+        .TRIG_IN_ack(Histogramming_TRIG_OUT_ACK),
+        .TRIG_IN_trig(Histogramming_TRIG_OUT_TRIG),
+        .TRIG_OUT_ack(system_ila_TRIG_OUT_ACK),
+        .TRIG_OUT_trig(system_ila_TRIG_OUT_TRIG),
+        .clk(processing_system7_0_FCLK_CLK0),
+        .probe0(Microscope_Emulator_0_frame_clk),
+        .probe1(Microscope_Emulator_0_line_clk),
+        .probe10(histo_0_refres_p),
+        .probe11(axi_dma_0_s2mm_introut),
+        .probe12(histo_0_negedge_frame),
+        .probe13(histo_0_bin_full_warning),
+        .probe14(histo_0_premature_pixel_done_error),
+        .probe15(histo_0_bin_written_but_never_read_warning),
+        .probe16(Histogramming_0_buffer_almost_full),
+        .probe2(Microscope_Emulator_0_pixel_clk),
+        .probe3(laser_signal_generat_0_frame_clk_r),
+        .probe4(laser_signal_generat_0_line_clk_r),
+        .probe5(laser_signal_generat_0_pixel_clk_r),
+        .probe6(LVDS_to_AXIS_0_Buffer_overflow),
+        .probe7(LVDS_to_AXIS_IDDR_0_axis_rd_data_count),
+        .probe8(LVDS_to_AXIS_IDDR_0_axis_wr_data_count),
+        .probe9(histo_0_disable_p),
+        .resetn(rst_ps7_0_100M_peripheral_aresetn));
   zedboard_real_microscope_util_idelay_ctrl_0_0 util_idelay_ctrl_0
        (.ref_clk(processing_system7_0_FCLK_CLK3),
         .rst(util_vector_logic_0_Res));
@@ -1542,7 +1518,7 @@ module zedboard_real_microscope
         .In2(histo_0_premature_pixel_done_error),
         .In3(histo_0_bin_full_warning),
         .In4(histo_0_bin_written_but_never_read_warning),
-        .In5(\^buffer_overflow ),
+        .In5(LVDS_to_AXIS_0_Buffer_overflow),
         .dout(xlconcat_1_dout));
 endmodule
 

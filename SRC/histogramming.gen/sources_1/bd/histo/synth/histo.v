@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Wed May 20 22:47:14 2026
+//Date        : Fri Jun 19 11:50:37 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target histo.bd
 //Design      : histo
@@ -24,8 +24,8 @@ module histo
     M_AXIS_tvalid,
     REFINDEX_BITS,
     STOPRESULT_BITS,
-    TRIG_IN_0_ack,
-    TRIG_IN_0_trig,
+    TRIG_IN_ack,
+    TRIG_IN_trig,
     TRIG_OUT_ack,
     TRIG_OUT_trig,
     aresetn,
@@ -55,8 +55,8 @@ module histo
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output M_AXIS_tvalid;
   input [5:0]REFINDEX_BITS;
   input [5:0]STOPRESULT_BITS;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN_0 ACK" *) (* X_INTERFACE_MODE = "Slave" *) output TRIG_IN_0_ack;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN_0 TRIG" *) input TRIG_IN_0_trig;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN ACK" *) (* X_INTERFACE_MODE = "Slave" *) output TRIG_IN_ack;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *) input TRIG_IN_trig;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *) (* X_INTERFACE_MODE = "Master" *) input TRIG_OUT_ack;
   (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT TRIG" *) output TRIG_OUT_trig;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
@@ -102,8 +102,8 @@ module histo
   wire M_AXIS_tvalid;
   wire [5:0]REFINDEX_BITS;
   wire [5:0]STOPRESULT_BITS;
-  wire TRIG_IN_0_ack;
-  wire TRIG_IN_0_trig;
+  wire TRIG_IN_ack;
+  wire TRIG_IN_trig;
   wire TRIG_OUT_ack;
   wire TRIG_OUT_trig;
   wire aresetn;
@@ -194,8 +194,8 @@ module histo
         .probe7(HISTOGRAM_ARBITER_FSM_0_tdata_dbg),
         .probe8(pixel_clk),
         .probe9(frame_clk),
-        .trig_in(TRIG_IN_0_trig),
-        .trig_in_ack(TRIG_IN_0_ack));
+        .trig_in(TRIG_IN_trig),
+        .trig_in_ack(TRIG_IN_ack));
   histo_ila_sorter_0 ila_histo_out
        (.clk(clk),
         .probe0(HISTOGRAM_ARBITER_FSM_0_AXIS_OUT_TREADY),

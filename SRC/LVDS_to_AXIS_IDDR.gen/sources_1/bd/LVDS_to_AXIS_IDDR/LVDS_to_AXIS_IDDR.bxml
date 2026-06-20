@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="LVDS_to_AXIS_IDDR" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1776017687"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1776017687"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1776017687"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1776017687"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1781862914"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1781862914"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1781862914"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1781862914"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\LVDS_to_AXIS_IDDR.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

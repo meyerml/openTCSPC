@@ -81,9 +81,9 @@ set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports pixel_clk]
 ###SIMULATION SIGNALS
 #refclk and stop pins from signal generator:
 #JB1
-set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33 DRIVE 16 SLEW FAST} [get_ports refclk_out_sim]
+set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33 DRIVE 8 SLEW SLOW} [get_ports refclk_out_sim]
 #JB2
-set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33 DRIVE 16 SLEW FAST} [get_ports stop_out_sim]
+set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33 DRIVE 8 SLEW SLOW} [get_ports stop_out_sim]
 
 #JA7
 set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports frame_clk_sim]

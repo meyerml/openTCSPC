@@ -14,9 +14,9 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BD1333" && level==0 && jtag_device_ctx=="jsn-Zed-210248BD1333-23727093-0"}
-fpga -file C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app/_ide/bitstream/zedboard_real_microscope_wrapper.bit
+fpga -file C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app/_ide/bitstream/zedboard_real_microscope_wrapper_8_slow.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/hw/zedboard_real_microscope_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/platform/export/platform/hw/zedboard_real_microscope_wrapper_8_slow.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/app/_ide/psinit/ps7_init.tcl

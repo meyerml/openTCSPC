@@ -1,0 +1,16 @@
+
+#
+# Trigger on the 4th rising edge of debug probe called "pixel_clk"
+#
+state wait_for_4th_rising_edge_of_pixel_clk:
+  if ((zedboard_real_microscope_i/system_ila/inst/probe5 == 1'bR) && ($counter0 == 16'h0001)) then
+    reset_counter $counter0;
+    trigger;
+  elseif (zedboard_real_microscope_i/system_ila/inst/probe5 == 1'bR) then
+    increment_counter $counter0;
+    goto wait_for_4th_rising_edge_of_pixel_clk;
+  else
+    goto wait_for_4th_rising_edge_of_pixel_clk;
+  endif
+	    		
+    

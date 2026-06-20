@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Sun Apr 12 20:14:45 2026
+//Date        : Fri Jun 19 11:55:10 2026
 //Host        : LAPTOP-UKM8GMC3 running 64-bit major release  (build 9200)
 //Command     : generate_target LVDS_to_AXIS_IDDR_wrapper.bd
 //Design      : LVDS_to_AXIS_IDDR_wrapper
@@ -12,15 +12,13 @@
 
 module LVDS_to_AXIS_IDDR_wrapper
    (Buffer_overflow,
-    CNTVALUEIN_CLK,
-    CNTVALUEIN_FRAME,
-    CNTVALUEIN_SDO,
-    LD,
     M_AXIS_tdata,
     M_AXIS_tready,
     M_AXIS_tvalid,
     TRIG_IN_ack,
     TRIG_IN_trig,
+    TRIG_OUT_ack,
+    TRIG_OUT_trig,
     aresetn,
     axis_rd_data_count,
     axis_wr_data_count,
@@ -38,15 +36,13 @@ module LVDS_to_AXIS_IDDR_wrapper
     sdo_n,
     sdo_p);
   output Buffer_overflow;
-  input [4:0]CNTVALUEIN_CLK;
-  input [4:0]CNTVALUEIN_FRAME;
-  input [4:0]CNTVALUEIN_SDO;
-  input LD;
   output [63:0]M_AXIS_tdata;
   input M_AXIS_tready;
   output M_AXIS_tvalid;
   output TRIG_IN_ack;
   input TRIG_IN_trig;
+  input TRIG_OUT_ack;
+  output TRIG_OUT_trig;
   input aresetn;
   output [31:0]axis_rd_data_count;
   output [31:0]axis_wr_data_count;
@@ -65,15 +61,13 @@ module LVDS_to_AXIS_IDDR_wrapper
   input [0:0]sdo_p;
 
   wire Buffer_overflow;
-  wire [4:0]CNTVALUEIN_CLK;
-  wire [4:0]CNTVALUEIN_FRAME;
-  wire [4:0]CNTVALUEIN_SDO;
-  wire LD;
   wire [63:0]M_AXIS_tdata;
   wire M_AXIS_tready;
   wire M_AXIS_tvalid;
   wire TRIG_IN_ack;
   wire TRIG_IN_trig;
+  wire TRIG_OUT_ack;
+  wire TRIG_OUT_trig;
   wire aresetn;
   wire [31:0]axis_rd_data_count;
   wire [31:0]axis_wr_data_count;
@@ -93,15 +87,13 @@ module LVDS_to_AXIS_IDDR_wrapper
 
   LVDS_to_AXIS_IDDR LVDS_to_AXIS_IDDR_i
        (.Buffer_overflow(Buffer_overflow),
-        .CNTVALUEIN_CLK(CNTVALUEIN_CLK),
-        .CNTVALUEIN_FRAME(CNTVALUEIN_FRAME),
-        .CNTVALUEIN_SDO(CNTVALUEIN_SDO),
-        .LD(LD),
         .M_AXIS_tdata(M_AXIS_tdata),
         .M_AXIS_tready(M_AXIS_tready),
         .M_AXIS_tvalid(M_AXIS_tvalid),
         .TRIG_IN_ack(TRIG_IN_ack),
         .TRIG_IN_trig(TRIG_IN_trig),
+        .TRIG_OUT_ack(TRIG_OUT_ack),
+        .TRIG_OUT_trig(TRIG_OUT_trig),
         .aresetn(aresetn),
         .axis_rd_data_count(axis_rd_data_count),
         .axis_wr_data_count(axis_wr_data_count),

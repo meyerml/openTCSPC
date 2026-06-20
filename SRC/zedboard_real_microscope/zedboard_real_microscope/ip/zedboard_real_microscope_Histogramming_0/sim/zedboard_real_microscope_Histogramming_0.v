@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:Histogramming:1.8
+// IP VLNV: xilinx.com:user:Histogramming:1.9
 // IP Revision: 2
 
 `timescale 1ns/1ps
@@ -67,6 +67,8 @@ module zedboard_real_microscope_Histogramming_0 (
   M_AXIS_tvalid,
   REFINDEX_BITS,
   STOPRESULT_BITS,
+  TRIG_IN_ack,
+  TRIG_IN_trig,
   TRIG_OUT_ack,
   TRIG_OUT_trig,
   aresetn,
@@ -110,6 +112,11 @@ input wire M_AXIS_tready;
 output wire M_AXIS_tvalid;
 input wire [5 : 0] REFINDEX_BITS;
 input wire [5 : 0] STOPRESULT_BITS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN ACK" *)
+(* X_INTERFACE_MODE = "slave" *)
+output wire TRIG_IN_ack;
+(* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_IN TRIG" *)
+input wire TRIG_IN_trig;
 (* X_INTERFACE_INFO = "xilinx.com:interface:trigger:1.0 TRIG_OUT ACK" *)
 (* X_INTERFACE_MODE = "master" *)
 input wire TRIG_OUT_ack;
@@ -156,6 +163,8 @@ output wire [0 : 0] refres_p;
     .M_AXIS_tvalid(M_AXIS_tvalid),
     .REFINDEX_BITS(REFINDEX_BITS),
     .STOPRESULT_BITS(STOPRESULT_BITS),
+    .TRIG_IN_ack(TRIG_IN_ack),
+    .TRIG_IN_trig(TRIG_IN_trig),
     .TRIG_OUT_ack(TRIG_OUT_ack),
     .TRIG_OUT_trig(TRIG_OUT_trig),
     .aresetn(aresetn),

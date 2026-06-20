@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 20 22:47:16 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jun 19 11:50:38 2026" VIVADOVERSION="2024.2">
 
-  <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="histo" PACKAGE="sfvc784" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zedboard:part0:1.0" DEVICE="7z020" NAME="histo" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" LEFT="63" NAME="AXIS_IN_tdata" RIGHT="0" SIGIS="undef" SIGNAME="sorter_0_tdata_in">
@@ -66,12 +66,12 @@
         <CONNECTION INSTANCE="sorter_0" PORT="STOPRESULT_BITS"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="TRIG_IN_0_ack" SIGIS="undef" SIGNAME="ila_histo_int_trig_in_ack">
+    <PORT DIR="O" NAME="TRIG_IN_ack" SIGIS="undef" SIGNAME="ila_histo_int_trig_in_ack">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_histo_int" PORT="trig_in_ack"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="TRIG_IN_0_trig" SIGIS="undef" SIGNAME="ila_histo_int_trig_in">
+    <PORT DIR="I" NAME="TRIG_IN_trig" SIGIS="undef" SIGNAME="ila_histo_int_trig_in">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ila_histo_int" PORT="trig_in"/>
       </CONNECTIONS>
@@ -91,9 +91,9 @@
         <CONNECTION INSTANCE="axis_data_fifo_histo" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="ila_histo_int" PORT="probe11"/>
         <CONNECTION INSTANCE="HISTOGRAM_ARBITER_FSM_0" PORT="aresetn"/>
-        <CONNECTION INSTANCE="sorter_0" PORT="aresetn"/>
         <CONNECTION INSTANCE="frame_negedge_detect" PORT="aresetn"/>
         <CONNECTION INSTANCE="pixel_posedge_detect" PORT="aresetn"/>
+        <CONNECTION INSTANCE="sorter_0" PORT="aresetn"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="bin_full_warning" SIGIS="undef" SIGNAME="HISTOGRAM_ARBITER_FSM_0_bin_full_warning">
@@ -117,9 +117,9 @@
         <CONNECTION INSTANCE="ila_sorter_out1" PORT="clk"/>
         <CONNECTION INSTANCE="ila_histo_out" PORT="clk"/>
         <CONNECTION INSTANCE="HISTOGRAM_ARBITER_FSM_0" PORT="clk"/>
-        <CONNECTION INSTANCE="sorter_0" PORT="clk"/>
         <CONNECTION INSTANCE="frame_negedge_detect" PORT="clk"/>
         <CONNECTION INSTANCE="pixel_posedge_detect" PORT="clk"/>
+        <CONNECTION INSTANCE="sorter_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="disable_p" RIGHT="0" SIGIS="undef" SIGNAME="not_recording_Res">
@@ -229,10 +229,10 @@
         <PORTMAP LOGICAL="TRIG" PHYSICAL="TRIG_OUT_trig"/>
       </PORTMAPS>
     </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_TRIG_IN_0" NAME="TRIG_IN_0" TYPE="TARGET">
+    <BUSINTERFACE BUSNAME="External_Interface_TRIG_IN" NAME="TRIG_IN" TYPE="TARGET">
       <PORTMAPS>
-        <PORTMAP LOGICAL="ACK" PHYSICAL="TRIG_IN_0_ack"/>
-        <PORTMAP LOGICAL="TRIG" PHYSICAL="TRIG_IN_0_trig"/>
+        <PORTMAP LOGICAL="ACK" PHYSICAL="TRIG_IN_ack"/>
+        <PORTMAP LOGICAL="TRIG" PHYSICAL="TRIG_IN_trig"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -433,7 +433,7 @@
         <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_ECC_MODE" VALUE="0"/>
-        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_FIFO_DEPTH" VALUE="2048"/>
         <PARAMETER NAME="C_FIFO_MEMORY_TYPE" VALUE="auto"/>
         <PARAMETER NAME="C_FIFO_MODE" VALUE="1"/>
@@ -3725,7 +3725,7 @@
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="1"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="0"/>
         <PARAMETER NAME="C_USE_TEST_REG" VALUE="1"/>
-        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO_DUMMY1" VALUE="DEFAULT"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO_DUMMY2" VALUE="DEFAULT"/>
@@ -3855,17 +3855,17 @@
         </PORT>
         <PORT DIR="I" NAME="trig_in" SIGIS="undef" SIGNAME="ila_histo_int_trig_in">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="histo_imp" PORT="TRIG_IN_0_trig"/>
+            <CONNECTION INSTANCE="histo_imp" PORT="TRIG_IN_trig"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="trig_in_ack" SIGIS="undef" SIGNAME="ila_histo_int_trig_in_ack">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="histo_imp" PORT="TRIG_IN_0_ack"/>
+            <CONNECTION INSTANCE="histo_imp" PORT="TRIG_IN_ack"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="External_Interface_TRIG_IN_0" NAME="TRIG_IN" TYPE="TARGET" VLNV="xilinx.com:interface:trigger:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_TRIG_IN" NAME="TRIG_IN" TYPE="TARGET" VLNV="xilinx.com:interface:trigger:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ACK" PHYSICAL="trig_in_ack"/>
             <PORTMAP LOGICAL="TRIG" PHYSICAL="trig_in"/>
@@ -6995,7 +6995,7 @@
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="0"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="0"/>
         <PARAMETER NAME="C_USE_TEST_REG" VALUE="1"/>
-        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO_DUMMY1" VALUE="DEFAULT"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO_DUMMY2" VALUE="DEFAULT"/>
@@ -10170,7 +10170,7 @@
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="0"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="1"/>
         <PARAMETER NAME="C_USE_TEST_REG" VALUE="1"/>
-        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO_DUMMY1" VALUE="DEFAULT"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO_DUMMY2" VALUE="DEFAULT"/>

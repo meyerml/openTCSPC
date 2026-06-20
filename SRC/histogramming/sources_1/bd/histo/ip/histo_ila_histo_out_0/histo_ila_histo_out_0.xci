@@ -3125,7 +3125,7 @@
         "C_XLNX_HW_PROBE_INFO_DUMMY2": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
         "C_XLNX_HW_PROBE_INFO_DUMMY3": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
         "C_XLNX_HW_PROBE_INFO_DUMMY4": [ { "value": "DEFAULT", "resolve_type": "generated", "usage": "all" } ],
-        "C_XDEVICEFAMILY": [ { "value": "zynquplus", "resolve_type": "generated", "usage": "all" } ],
+        "C_XDEVICEFAMILY": [ { "value": "zynq", "resolve_type": "generated", "usage": "all" } ],
         "C_CORE_TYPE": [ { "value": "1", "format": "long", "usage": "all" } ],
         "C_CORE_INFO1": [ { "value": "0", "format": "long", "usage": "all" } ],
         "C_CORE_INFO2": [ { "value": "0", "format": "long", "usage": "all" } ],
@@ -6246,17 +6246,17 @@
         "C_CLKOUT0_DIVIDE_F": [ { "value": "10", "resolve_type": "generated", "format": "float", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "zynquplus" } ],
-        "BASE_BOARD_PART": [ { "value": "" } ],
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zedboard:part0:1.0" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xczu3eg" } ],
-        "PACKAGE": [ { "value": "sfvc784" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg484" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "E" } ]
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],

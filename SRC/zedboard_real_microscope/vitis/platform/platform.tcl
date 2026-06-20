@@ -22,3 +22,21 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate -domains standalone_domain 
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper.xsa}
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper2.xsa}
+platform generate -domains 
+platform active {platform}
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper3.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper4.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper5.xsa}
+platform generate -domains 
+platform active {platform}
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper_fast_slew.xsa}
+platform generate -domains 
+platform active {platform}
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper_8_fast.xsa}
+platform generate -domains 
+platform config -updatehw {C:/openTCSPC3/SRC/zedboard_real_microscope/vitis/zedboard_real_microscope_wrapper_8_slow.xsa}
+platform generate -domains 

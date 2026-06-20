@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:user:Microscope_Emulator:1.14
+// IP VLNV: xilinx.com:user:Microscope_Emulator:1.15
 // IP Revision: 2
 
 `timescale 1ns/1ps
